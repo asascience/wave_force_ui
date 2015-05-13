@@ -1,0 +1,84 @@
+body{
+	background-image: url("/static/img/watermark.jpg");
+	background-repeat: no-repeat;
+	background-position:70%  20%;
+	background-attachment: fixed;
+}
+
+.main-row{	
+	margin-top: 50px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.sidebar{
+	margin-top: 100px;
+}
+
+.sidebar-image{
+	margin-bottom: 50px;	
+}
+
+.wave-force-nav{
+	border-color : #5476A4;
+	color:white;
+	background-color : #5476A4 ;
+	position: absolute;
+	margin-left: 40%;
+	margin-right: 100px;
+	border-radius: 10px;	
+	min-width: 1000px;
+}
+
+.wave-force-nav-link{
+	color:white;
+}
+
+#navbar{
+	min-width: 1200px;
+}
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}
+
+.wave-force-toc{
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	width: 250px !important;
+}
+
+.wave-force-toc li{
+	background-color:#5476A4;
+}
+
+.wave-force-toc li a{	
+	color:white ;
+}
+
+
+.wave-force-toc>li>a:focus, .wave-force-toc>li>a:hover{
+	color: black;
+}
+
+.content-page{
+	margin-top: 200px;
+	margin-left: 100px;		
+}
+
+.page-header{
+	color: #366196;
+}
+
+.page-header-text{
+	margin-top: 200px;
+	margin-left: 100px;
+}
+
+.image-row{
+	margin-top: 50px;
+}
+
+

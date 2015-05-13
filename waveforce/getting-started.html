@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Wave Force">
+    <meta name="author" content="RPS ASA">
+    <link rel="icon" href="/static/img/favicon.ico">
+
+    <title>Wave Force</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/static/css/index.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top wave-force-nav">
+      <div class="container-fluid">
+        <div class="navbar-header">          
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a class="wave-force-nav-link" href="#">Home</a></li>
+            <li><a class="wave-force-nav-link" href="#">Software</a></li>
+            <li><a class="wave-force-nav-link" href="#">Products</a></li>
+            <li><a class="wave-force-nav-link" href="#">Real-time Data</a></li>
+            <li><a class="wave-force-nav-link" href="#">Documentation</a></li>
+            <li><a class="wave-force-nav-link" href="#">Contact us</a></li>
+            <li><a class="wave-force-nav-link" href="#">Help</a></li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid ">
+      <div class="row main-row">
+        <div class="col-sm-4 col-md-3 sidebar">
+          <img src="/static/img/waveforce.png" class="sidebar-image">
+
+          <ul class="nav nav-sidebar wave-force-toc">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/getting-started.html">Getting Started</a></li>
+            <li><a href="#">Loading Data</a></li>
+            <li><a href="#">Data Exploration</a></li>
+            <li><a href="#">Data Utilities Module</a></li>
+            <li><a href="#">Wave System Module</a></li>
+            <li><a href="#">Spectral Fitting Module</a></li>
+            <li><a href="#">Sea State Analysis Module</a></li>
+            <li><a href="#">Swell Map Module</a></li>
+            <li><a href="#">Evaluation Module</a></li>
+            <li><a href="#">Exporting Data</a></li>
+            <li><a href="#">XWaves Tutorial</a></li>
+            <li><a href="#">Reference</a></li>
+          </ul>         
+        </div>
+
+
+        <div class="col-sm-8 main content-page">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">              
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="static/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      $.getJSON( "/static/json/getting-started.json", function( data ) {
+        var panels = Object.keys(data);
+        $.each(panels, function( index, panel ) {          
+          console.log(panel)
+          console.log(data[panel]);
+          var active = false;
+          if (index==0){
+            active = true
+          }
+          $('#accordion').append(generateListItem(panel,data[panel],active,index))
+        });
+        
+      });
+
+      function generateListItem(name,content,active,index){
+        var col_html = ""
+        var col_class = ""
+        if (active){
+          col_html = 'class="collapsed"'
+        }
+
+        html = '<div class="panel panel-default">'+
+              '<div class="panel-heading" role="tab" id="heading'+index+'">'+
+                '<h4 class="panel-title">'+
+                  '<a '+col_html+' data-toggle="collapse" data-parent="#accordion" href="#collapse'+index+'" aria-expanded="true" aria-controls="collapse'+index+'">'+
+                    name+
+                  '</a>'+
+                '</h4>'+
+              '</div>'+
+              '<div id="collapse'+index+'" class="panel-collapse collapse '+col_class+'" role="tabpanel" aria-labelledby="heading'+index+'">'+
+                '<div class="panel-body">'+
+                  content+
+                '</div>'+
+              '</div>'+
+            '</div>'
+            return html;
+
+      }
+
+    </script>
+
+
+  </body>
+</html>

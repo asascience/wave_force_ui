@@ -1,0 +1,8 @@
+*.swp
+*.swo
+*.pyc
+*.DS_Store
+**/node_modules
+**/nohup.out
+**/components/*
+**/static/lib
