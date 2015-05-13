@@ -30,7 +30,7 @@ body{
 	min-width: 1000px;
 }
 
-.wave-force-nav-link{
+#navbar li a{
 	color:white;
 }
 
