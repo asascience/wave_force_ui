@@ -71,7 +71,7 @@
         </div>
 
 
-        <div class="col-sm-8 main content-page">
+        <div class="col-sm-7 main content-page">
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">              
           </div>
         </div>
@@ -87,14 +87,18 @@
     <script>
       $.getJSON( "/static/json/getting-started.json", function( data ) {
         var panels = Object.keys(data);
-        $.each(panels, function( index, panel ) {          
-          console.log(panel)
+        $.each(panels, function( index, panel ) {                    
           console.log(data[panel]);
+          
+          
           var active = false;
           if (index==0){
             active = true
           }
           $('#accordion').append(generateListItem(panel,data[panel],active,index))
+                    
+          $('#content_panel_'+index).load( data[panel] );
+
         });
         
       });
@@ -115,7 +119,7 @@
                 '</h4>'+
               '</div>'+
               '<div id="collapse'+index+'" class="panel-collapse collapse '+col_class+'" role="tabpanel" aria-labelledby="heading'+index+'">'+
-                '<div class="panel-body">'+
+                '<div id='+"content_panel_"+index +' class="panel-body">'+
                   content+
                 '</div>'+
               '</div>'+
