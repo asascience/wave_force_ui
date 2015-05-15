@@ -1,0 +1,145 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u3222">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u3223-223" data-muse-uid="U3223">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U3223" template="spectral-fitting-module.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="blue-heading">Spectral Fit Parameter Table</p>
+        <p class="body">Adjustable parameters in the Spectral Fit Parameter Table allow the user to select processing options for the <span id="u3223-4">Spectral Fit Module</span>.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3223-8">​</span><span><span class="actAsInlineDiv normal_text" id="u4026"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u4020"><!-- image --><img id="u4020_img" src="/static/img/spectral%20fit%20parameters%20table.jpg" alt="" width="719" height="437" data-muse-uid="U4020" data-muse-src="/static/img/spectral%20fit%20parameters%20table.jpg" /></span></span>
+            </span><span></span></p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The <span id="u3223-14">Spectral Fit Parameter Table</span> is very similar to the <span id="u3223-16">Wave Systems Parameter Table</span><span>.&nbsp; It is divided into 3 main sections:</span></p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3223-22"><span id="u3223-20">1. </span>Commands (Left column of buttons)</p>
+        <p class="body" id="u3223-25"><span id="u3223-23">2. </span>Parameters (center column of inputs)</p>
+        <p class="body" id="u3223-28"><span id="u3223-26">3. </span>Interactive Display (right column).</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span>The features in each of these sections are described below.</span></p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">1.&nbsp; Commands</p>
+        <p class="body">The commands appearing on the left side of the Spectral Fit Parameters Table control the saving and use of selected parameters.&nbsp; The following commands and options are available:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3223-40"><span id="u3223-38">Named Settings</span> – Select from a list of pre-existing parameter settings.&nbsp; Parameter values will automatically update.&nbsp; To see the results of these new parameters in the plot, click Update Plot.</p>
+        <p class="body" id="u3223-43"><span class="Bolded-body-text">Update</span> – Update the displayed parameters to the current named parameter set.</p>
+        <p class="body" id="u3223-46"><span class="Bolded-body-text">Save New</span> – Save the displayed parameters to a new named parameter set.&nbsp; User will be prompted to provide a name for the new parameter set.</p>
+        <p class="body" id="u3223-49"><span class="Bolded-body-text">Reset</span> – Reset displayed parameters to saved values</p>
+        <p class="body" id="u3223-52"><span class="Bolded-body-text">Delete </span>– Delete the current named parameter set</p>
+        <p class="body" id="u3223-55"><span class="Bolded-body-text">Run</span> – Process the data set using the current named parameter set</p>
+        <p class="body" id="u3223-58"><span class="Bolded-body-text">Cancel </span>– Exit the Spectral Fit Parameter Table without processing any data</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">2.&nbsp; Parameters</p>
+        <p class="body">The processing parameters allow the user to specify the type of fits to apply to wind sea and swell partitions.</p>
+        <p class="body"><span id="u3223-64">1D Energy Fits</span></p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The following 1D fits can be selected:</p>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-73">
+            <li class="body"><span id="u3223-70">JONSWAP-</span> Least squares fit of a JONSWAP variance density spectrum.&nbsp; There are 2 options for this fit, Default or Advanced.&nbsp; See JONSWAP Fit Type parameter in the Fit Controls section below.</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-78">
+            <li class="body"><span id="u3223-75">Gaussian</span> – Least squares fit to a Gaussian variance density spectrum.&nbsp; The significant wave height (Hs), peak period (Tp), and standard deviation of the Gaussian (σ) are computed.</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-83">
+            <li class="body"><span id="u3223-80">Lognormal </span>– Least squares fit to a variation of the Gaussian spectral form, allowing for some asymmetry in shape.&nbsp; The significant wave height (Hs), peak period (Tp), and standard deviation of the Gaussian (σ) are computed.</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-88">
+            <li class="body"><span id="u3223-85">Ochi-Hubble </span>– Least squares fit to the Ochi-Hubble spectral form (single peak).&nbsp; The significant wave height (Hs), peak period (Tp), and spectral shape parameter (λ) are computed.</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3223-92">2D Directional Fits</p>
+        <p class="body">Directional distributions provide mean direction and spread values that are based on standard model forms.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The following directional distributions are available:</p>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-102">
+            <li class="body"><span id="u3223-99">Ewans Swell </span>– Based on supplied Tp and peak direction (p) computes a wrapped normal directional distribution Q (f,) for swell (Ewans, 2001).</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-107">
+            <li class="body"><span id="u3223-104">Ewans Windsea</span> - Based on supplied Tp and peak direction (p) computes a symmetric double Gaussian directional distribution Q(f,) for wind sea (Ewans, 1998)</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-112">
+            <li class="body"><span id="u3223-109">Cos^2n </span>– a least squares fit of a cos2n() distribution to the wave directions.&nbsp; Here the resulting value of n is saved as a directional fit parameter.</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3223-116">Fit Controls</p>
+        <p class="body">The user has the option of turning on two Fit Conservation options:</p>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-123">
+            <li class="body"><span id="u3223-120">Wave Height Conservation</span> – The fitted wave heights are replaced with the input data wave heights</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-128">
+            <li class="body"><span id="u3223-125">Wave Period Conservation</span> – If the fitted peak wave periods fall outside the user-specified tolerance, they are replaced with the input data wave periods</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body">Furthermore the user can select between <span id="u3223-131">Default </span>or <span id="u3223-133">Advanced</span> JONSWAP fit types:</p>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-140">
+            <li class="body"><span id="u3223-137">Default </span>– Uses a modified form of JONSWAP that is based on significant wave height (Hs), peak period (Tp), and peak enhancement factor (Gamma, γ).&nbsp; Sigma A and Sigma B are held constant at 0.07 and 0.09, respectively.&nbsp; Alpha is then computed independently based on Hs, Tp and γ.</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-146">
+            <li class="body"><span id="u3223-142">Advanced JONSWAP</span> – A traditional JONSWAP fit of Alpha, peak period, and gamma.&nbsp; Peak period is based on a 3-point parabolic fit to the spectral peak.&nbsp; Sigma A and Sigma B are initially held constant at 0.07 and 0.09, respectively.&nbsp; Several post-processing options for Sigma A and Sigma B are available in the <span id="u3223-144">Spectral Fit Selection Tool.</span></li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">3.&nbsp; Interactive Display</p>
+        <p class="body">The plot window on the right side of the Wave Systems Parameter Table can be used to view the results of various parameter settings prior to processing data.&nbsp; The following user-controls are provided:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3223-154">Plot Title</span> – Right click on the plot title to select from several display options:</p>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-161">
+            <li class="body"><span id="u3223-158">Wave System 1D Fits</span> –Compares the partition 1D spectra to the computed 1D spectral fits in the current record</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-166">
+            <li class="body"><span id="u3223-163">Composite 1D Fit</span> –Compares the full 1D spectrum with the composite 1D fit computed from linear summation of the partition 1D fits in the current record</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-171">
+            <li class="body"><span id="u3223-168">System Directional Fits</span> – Compares the system 1D direction spectrum to the computed 1D direction spectra fit for each partition in the current record</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-176">
+            <li class="body"><span id="u3223-173">Composite Directional Fit</span> - Compares the composite 1D direction spectra to the computed 1D direction spectral fit for the entire spectrum in the current record</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-181">
+            <li class="body"><span id="u3223-178">Composite Directional Distribution</span> – A 2D plot of the composite directional distribution computed from the 2D partition fits in the current record</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-186">
+            <li class="body"><span id="u3223-183">Observed Directional Distribution</span> – A 2D plot of the observed directional distribution from the current record</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3223-191">
+            <li class="body"><span id="u3223-188">Fit Error Table</span> – Presents the least squares correlation coefficient (r) for each fit in the current record</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3223-193">Change Plot Date and Time </span>– Navigate through the data file records using the Previous and Next buttons or by clicking on the scroll-down arrow in the date-time box under the plot.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3223-197">Update Plot </span>– Update the plot to reflect the selected parameter settings.</p>
+        <p class="body" id="u3223-200">&nbsp;</p>
+        <p class="body"><span id="u3223-201">Switch to Linear / Log Plot </span>– Switch plot axes to linear or logarithmic scale.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">Additional Help</p>
+        <p class="body">An overview of spectral fitting appears in the tutorial <span id="u3223-208">Spectral Fitting</span>.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">References</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Ewans, K. C., 1998.&nbsp; Observations of the Directional Spectrum of Fetch-Limited Waves, J. Phys. Oceanog., v.28, pp.495-512.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Ewans, K. C., Directional Spreading in Ocean Swell, WAVES 2001.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>

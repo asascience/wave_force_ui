@@ -1,0 +1,121 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u4063">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u4064-224" data-muse-uid="U4064">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U4064" template="sea-state-analysis-module.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="blue-heading">Sea State Overview</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The Sea State Module is designed to generate probability and extremal statistics for use as Metocean design criteria in engineering studies. The user can select from a variety of output formats, including scatter diagrams, joint occurrence tables, and extremes including recurrence interval (return period) tables and graphics.&nbsp; The user has full control to select directional bins, required output fields, and the desired output interval.&nbsp; Output display options include plots, EXCEL tables and ASCII listings of sea state quantities.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The integration of Sea State Module is depicted in the following Figure. If probability and or extremal statistics are desired for individual sea and swell components, then the user should first run the Wave Systems Module&nbsp; on observed or modeled wave spectra data.&nbsp; This produces a set of wave partitions for the input data set.&nbsp; An optional next step is to run the Spectral Fit Module to compute standard parametric fits (i.e., JONSWAP, Gaussian, etc.) to the wave partition domains.&nbsp; The partition fit results are saved along with the wave partitions data, resulting in two different representations of the sea conditions (observed and fitted).&nbsp; The Sea State Module uses these results to produce a specified description of the sea conditions represented by the data.&nbsp; The diagram below depicts the various data processing options.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;<span><span class="actAsInlineDiv normal_text" id="u4091"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u4085"><!-- image --><img id="u4085_img" src="/static/img/sea%20state%20module%20figure.png" alt="" width="692" height="347" data-muse-uid="U4085" data-muse-src="/static/img/sea%20state%20module%20figure.png" /></span></span>
+            </span><span></span></p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u4064-16">Integration of Sea State Module</p>
+        <p class="body" id="u4064-17">&nbsp;</p>
+        <p class="body" id="u4064-18">&nbsp;</p>
+        <p class="subheading">Extremal Analysis</p>
+        <p class="body">Included in the Sea State Module is an extreme value analysis for wave height and wind speed using a custom Peaks-over-Threshold (PoT) routine and selected extreme analysis tools from WAFO (Wave Analysis for Fatigue and Oceanography), a MATLAB toolbox with routines for statistical analysis of random waves and random loads.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">There are generally two accepted procedures in performing an extreme value analysis, the block maxima method and the PoT method. Both methods are used in the analysis.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Below is a step by step explanation of the methodology used to determine the extreme values.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u4064-32"><span id="u4064-30">1. </span>The wave height and wind speed time series data was divided into 1 year blocks.</p>
+        <p class="body" id="u4064-35"><span id="u4064-33">2. </span>The annual maximum was extracted for each block.</p>
+        <p class="body" id="u4064-40"><span id="u4064-36">3.</span> Parameter estimation for the GEV, Gumbel, and Weibull distributions are computed using the Maximum Likelihood&nbsp;
+            <br />&nbsp;&nbsp;&nbsp; (ML) method.</p>
+        <p class="body" id="u4064-43"><span id="u4064-41">4.</span> For PoT analysis wave heights and wind speeds above the user defined threshold are extracted.</p>
+        <p class="body" id="u4064-48"><span id="u4064-44">5.</span> Parameter estimation for the GPD (General Pareto Distribution) are calculated using the Maximum Product of
+            <br />&nbsp;&nbsp;&nbsp; Spacings method.</p>
+        <p class="body" id="u4064-51"><span id="u4064-49">6.</span> Return values were calculated for each distribution for 5, 10, 25, 50, 100, and 500-yr return periods.</p>
+        <p class="body" id="u4064-56"><span id="u4064-52">7. </span>If selected by the user, 95% confidence intervals are calculated for each distribution using the profile log likelihood
+            <br />&nbsp;&nbsp;&nbsp; method.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">For directional analysis, the data was binned by mean wave/wind direction into sectors defined by the user in the <span id="u4064-59">Sea State Parameters Table</span> and steps 1-7 above were performed on each bin. The analysis is only performed if at least 1% of the dataset falls within the bin.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Using the Sea State Module</p>
+        <p class="body">The <span id="u4064-67">Sea State Module</span> is activated by selecting Sea State from the Module pull-down menu.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u4064-72">NOTE:&nbsp; Wave Systems need to be run with the Extract Windsea option in order for the Sea State Module to compute wind-sea statistics.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The user is also given the option to run the <span id="u4064-75">Spectral Fit Module </span>if desired.&nbsp; Spectral Fit is only required if the user desires to have the Sea State results computed from fitted data.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Once the required Modules have been run the <span id="u4064-80">Sea State Parameters Table</span> opens to allow the user to specify how the data are to be processed.&nbsp; Here the user can specify the type of data to use (input data or fitted), and various properties of the output.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Processing commences once the user selects RUN on the <span id="u4064-85">Sea State Parameters Table</span>.&nbsp; Sea State will use <span id="u4064-87">Wave Systems</span> data if available and, if selected, <span id="u4064-89">Spectral Fit</span> data to set up a Sea History Table that provides a time series of sea state specification data. A variety of statistical joint occurrence tables and climatology plots are then computed from these data.&nbsp; When Sea State processing is finished a special sea state layout page in <span id="u4064-91">Data View</span> opens to provide the user access to all Sea State Module products.&nbsp; Each of these products is described below.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Sea State Tables</p>
+        <p class="body">The Sea State statistical tables are accessed from the Sea State options in the Table pull-down menu in <span id="u4064-98">Data View</span>.&nbsp; For each table type the view options are:</p>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u4064-108">
+            <li class="body">View Table – A separate text editor window opens to view table contents</li>
+            <li class="body">Export to ASCII File – A text file is saved to disk with table contents (user provides filename and location)</li>
+            <li class="body">Export to Microsoft Excel File – An Excel file is saved to disk with the table contents (user provides filename and location)&nbsp; The Excel file automatically opens for user inspection.</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body">The various table types are listed and described below.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Sea State Tables</p>
+        <p class="body">Table Description</p>
+        <p class="body">Joint Occurrence Joint occurrence (%) of wind sea and swell systems</p>
+        <p class="body">Hs-Tp Scatter System occurrence (%) over Hs and Tp bins</p>
+        <p class="body">Hs-Tp-Dm Scatter System occurrence (%) over Hs and Tp bins in directional sectors</p>
+        <p class="body">Hs-Dm Scatter System occurrence (%) over Hs and Dm bins</p>
+        <p class="body">Tp-Dm Scatter System occurrence (%) over Tp and Dm bins</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">Joint Occurrence Table</p>
+        <p class="body">Based on information in the Sea History Table, the Sea State Module will produce a Joint Occurrence Table for windsea and existing swell systems.&nbsp; As the example shown below depicts, this table provides the occurrence frequency (%) of both solitary and joint system events.&nbsp; Calms are also counted. This table is only available if Wave Systems processing has been performed on the data.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Example Joint Occurrence Table (%)</p>
+        <p class="body">Conditions Primary Swell&nbsp; Primary and Secondary Swell No Swell Total</p>
+        <p class="body">Wind Sea 22.3 38.6 14.6 75.5</p>
+        <p class="body">No Wind Sea 12.4 12.1 0 24.5</p>
+        <p class="body">Total 34.7 50.7 14.6 100</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Scatter Tables</p>
+        <p class="body">Scatter Tables summarize the sea state history by depicting the distribution of wave system occurrence (%) over the domains of significant wave height (Hs), peak period (Tp) and mean direction (Dm), if available.&nbsp; Scatter Tables are computed separately for each wave system.&nbsp; For example, if there are three wave systems in the Sea State Table, three sets of scatter tables will be produced.&nbsp; Scatter Tables are normalized by one of the following approaches as selected in the <span id="u4064-150">Sea State Parameters Table</span>:</p>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u4064-163">
+            <li class="body"><span id="u4064-154">Component </span>– Scatter Tables provide occurrence percentages relative to individual wave components (Windsea, swell1, etc.).&nbsp; This is only available if <span id="u4064-156">Wave Systems</span> processing has been performed on the data.</li>
+            <li class="body">Total – Scatter Tables provide occurrence percentages relative to all components present.&nbsp; Calm conditions are included in the computation.</li>
+            <li class="body">None – Scatter Tables provide the number of observations</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body">An example Wind Sea Hs-Tp Scatter Table appears in below.&nbsp; In this case the ‘Component’ normalization was selected.&nbsp; Note that occurrences for each system are presented relative to the total occurrence of that system, provided at the top of the table.&nbsp; All occurrences include a counting of calm (system absent) time periods.&nbsp; The Hs and Tp bin widths and Dm directional sectors are all user-specified in the <span id="u4064-166">Sea State Parameters Table</span>.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Example Wind Sea Hs-Tp Scatter Table</p>
+        <p class="body">Wind Sea Occurrence:&nbsp; 52 %</p>
+        <p class="body">Tp (s)</p>
+        <p class="body">Hs (m) 3-4 4-5 5-6 6-7 7-8 8-9 9-10 10-11 11-12 12-13 Total</p>
+        <p class="body">0-0.5 3.4 7.3 8.6 9.6 5.9 2.1 1.2 0.1&nbsp;&nbsp; 38.2</p>
+        <p class="body">0.5-1.0 0.8 9.4 12.1 12.5 11.3 6.5 3.8 0.6 0.04 0.02 57.2</p>
+        <p class="body">1.0-1.5&nbsp; 0.2 0.5 0.7 0.7 1.3 0.7 0.2 0.04 0.02 4.5</p>
+        <p class="body">1.5-2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.1 0.2&nbsp;&nbsp; 0.1</p>
+        <p class="body">Total 4.2 16.9 21.3 22.8 17.9 9.9 5.7 1.1 0.08 0.04 100</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"> </p>
+        <p class="blue-heading">Extreme Value Analysis Tables</p>
+        <p class="body">The Extreme Value Analysis tables are accessed from the Extremes options in the Table pull-down menu in <span id="u4064-194">Data View</span>.&nbsp; There are two different types of output tables:</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Peaks Table</p>
+        <p class="body">A listing of the extracted wind speed and wave height peaks sorted in descending order, giving the date, time, and magnitude of each.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Recurrence Interval Table</p>
+        <p class="body">The recurrence interval tables provide the 5, 10, 25, 50, 100, and 500-yr wave height and wind speed return values for each distribution. Tables are also generated for each directional bin and the lower and upper confidence bounds are provided if available.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">Sea State Plots</p>
+        <p class="body">Sea State plots are displayed in a special <span id="u4064-211">Data View</span> layout page. See the <span id="u4064-213">Plot Library</span> for a description of available plots.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">REFERENCES</p>
+        <p class="body">Brodtkorb, P.A., Johannesson, P., Lindgren, G., Rychlik, I., Ryden, J. and Sjo, E. (2000). &quot;WAFO - a Matlab toolbox for analysis of random waves and loads&quot;, Proceedings of the 10th International Offshore and Polar Engineering conference, Seattle, Vol III, pp. 343-350.</p>
+        <p class="body">&nbsp;</p>
+        <p id="u4064-222">&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>

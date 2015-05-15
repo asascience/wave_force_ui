@@ -1,0 +1,71 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u3271">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u3272-141" data-muse-uid="U3272">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U3272" template="spectral-fitting-module.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p id="u3272-4"><span id="u3272">​</span><span><span class="actAsInlineDiv normal_text" id="u3304"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3298"><!-- image --><img id="u3298_img" src="/static/img/spectral%20fit%201.jpg" alt="" width="653" height="472" data-muse-uid="U3298" data-muse-src="/static/img/spectral%20fit%201.jpg" /></span></span>
+            </span><span></span></p>
+        <p id="u3272-5">&nbsp;</p>
+        <p class="blue-heading">Spectral Fit Module</p>
+        <p class="body">The&nbsp; <span id="u3272-9">Spectral Fit Module </span>computes a variety of 1D fit and 2D fit parameters suitable for engineering design applications.&nbsp; Specific features include:</p>
+        <ul class="list0 nls-None" id="u3272-24">
+            <li class="body">JONSWAP, Gaussian, Lognormal and Ochi-Hubble 1D partition fits</li>
+            <li class="body">Windsea, swell, and Cos^2n directional distributions</li>
+            <li class="body">Composite full-spectrum fit parameters</li>
+            <li class="body">Interactive Fit Selection Window</li>
+            <li class="body">User-guided display of fit results</li>
+            <li class="body">User-selected export of partition statistics and fit parameters</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3272-26">Spectral Fit</span> operates on the wave spectral partitions computed by the <span id="u3272-28">Wave Systems Module</span>. Processing options for Spectral Fit are set in the <span id="u3272-30">Spectral Fit Parameters Table</span>, which opens upon selecting Spectral Fit from the Module pull-down menu.&nbsp; Spectral Fit results can be fine-tuned using the <span id="u3272-32">Spectral Fit Selection Tool</span>.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The<span id="u3272-37"> Data View Module</span> includes several features to support the display and export of Spectral Fit results.&nbsp; A Spectral Fit Plot Library allows the comparison of fit results to original data.&nbsp; A Data Export Utility allows the user to design a custom table of fit results to export.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The <span id="u3272-42">Spectral Fit Module</span> computes a variety of 1D (non-directional) and 2D (Directional) fit parameters for the spectral partitions computed by the <span id="u3272-44">Wave Systems Module</span>.&nbsp; The user can select the type of fits applied to both wind sea and swell partitions.&nbsp; Furthermore, Spectral Fit will linearly combine these fits to compute a composite fit for the full (parent) spectrum.&nbsp; A variety of display options allow the user to compare fit results to actual data.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Launching the Spectral Fit Module</p>
+        <p class="body"><span id="u3272-50">Spectral Fit i</span>s launched by selecting the Spectral Fit command on the Module pull-down menu.&nbsp; The <span id="u3272-52">Wave Systems Module</span> must be run before spectral fitting can performed.&nbsp; The <span id="u3272-54">Spectral Fit Parameters Table</span> is then used to set processing options.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">1D Spectrum Fitting</p>
+        <p class="body">Once the user selects Run in the <span id="u3272-61">Spectral Fit Parameters Table</span>, a sequence of fitting operations is performed.&nbsp; The first step is the computation of variance density (1D) spectrum fits.&nbsp; An efficient multivariate nonlinear optimization approach (Lagarias et al., 1998) is employed to optimize model fits to partitioned spectra.&nbsp; The following 1D fits are computed for each wave partition:</p>
+        <ul class="list0 nls-None" id="u3272-67">
+            <li class="body"><span id="u3272-64">JONSWAP</span>- Least squares fit of a JONSWAP variance density spectrum.&nbsp; There are two options here:</li>
+        </ul>
+        <p class="body" id="u3272-70"><span id="u3272-68">1.</span> Default – Uses a modified form of JONSWAP that is based on significant wave height (Hs), peak period (Tp), and peak enhancement factor (Gamma, γ).&nbsp; Sigma A and Sigma B are held constant at 0.07 and 0.09, respectively.&nbsp; Alpha is then computed independently based on Hs, Tp and γ.</p>
+        <p class="body" id="u3272-73"><span id="u3272-71">2. </span>Advanced JONSWAP – A traditional JONSWAP fit of Alpha, peak period, and gamma.&nbsp; Peak period is based on a 3-point parabolic fit to the spectral peak.&nbsp; Sigma A and Sigma B are held initially held constant at 0.07 and 0.09, respectively.&nbsp; Several post-processing options for Sigma A and Sigma B are available in the Spectral Fit Selection Tool.</p>
+        <ul class="list0 nls-None" id="u3272-83">
+            <li class="body"><span id="u3272-74">Gaussian</span> – Least squares fit to a Gaussian variance density spectrum.&nbsp; The significant wave height (Hs), peak period (Tp), and standard deviation of the Gaussian (σ) are computed.</li>
+            <li class="body"><span id="u3272-77">Lognormal</span> – Least squares fit to a variation of the Gaussian spectral form, allowing for some asymmetry in shape.&nbsp; The significant wave height (Hs), peak period (Tp), and standard deviation of the Gaussian (σ) are computed.</li>
+            <li class="body"><span id="u3272-80">Ochi-Hubble</span> – Least squares fit to the Ochi-Hubble spectral form for a single peak.&nbsp; The significant wave height (Hs), peak period (Tp), and spectral shape parameter (λ) are computed.</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Directional Distributions</p>
+        <p class="body">Once all of the 1D fits are completed, the user-selected directional distributions for wind sea and swell are computed.&nbsp; Directional distributions provide mean direction and spread values that are based on standard model forms.</p>
+        <p class="body">The following directional distributions are available:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3272-94"><span id="u3272-92">Ewans Swell</span> – Based on supplied Tp and peak direction (p) computes a wrapped normal directional distribution Q (f,) for swell (Ewans, 2001).</p>
+        <p class="body" id="u3272-95">&nbsp;</p>
+        <p class="body" id="u3272-98"><span id="u3272-96">Ewans Windsea</span> - Based on supplied Tp and peak direction (p) computes a symmetric double Gaussian directional distribution Q(f,) for wind sea (Ewans, 1998)</p>
+        <p class="body" id="u3272-99">&nbsp;</p>
+        <p class="body" id="u3272-102"><span id="u3272-100">Cos^2n</span> – a least squares fit of a cos2n() distribution to the wave directions.&nbsp; Here the resulting value of n is saved as a directional fit parameter.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Composite Fits</p>
+        <p class="body">Once all of the individual partition 1D and 2D fits are generated, a set of composite fit results are computed based on the user-selected fit options in the <span id="u3272-107">Spectral Fit Parameters Table</span>.&nbsp; Composite fits are generated from a linear summation of the individual 1D and 2D partition fits for each record.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">After the composite fits are computed the spectral fit plot page opens up in <span id="u3272-112">Data View</span>.&nbsp; Available plot types are listed in the <span id="u3272-114">Plot Library</span>.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Fit Selection Tool</p>
+        <p class="body">Once Spectral Fit data processing is complete, the interactive <span id="u3272-121">Spectral Fit Selection Tool</span> can be used to modify the fits applied to each wave system.&nbsp; A variety of fit performance data and plots are included, as well as tools to modify the computation of Sigma A and Sigma B in advanced JONSWAP fits.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Fit Data Export</p>
+        <p class="body">The Data Export Utility is used to save Spectral Fit data fields to external ASCII-, EXCEL- and MATLAB-formatted data files.&nbsp; The user can select specific data fields to write to these files.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Additional Help</p>
+        <p class="body">An overview of spectral fitting appears in the tutorial Spectral Fitting.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">References</p>
+        <p class="body">Lagarias, J.C., A. Reeds, M.H. Wright and P.E. Wright, 1998.&nbsp; Convergence properties of the Nelder-Mead Simplex Method in low dimensions, SIAM Journal of Optimization, 9(1), 112-147.</p>
+        <p class="blue-heading">&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>

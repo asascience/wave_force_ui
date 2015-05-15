@@ -1,0 +1,85 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u4343">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u4344-172" data-muse-uid="U4344">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U4344" template="reference.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="blue-heading">NetCDF Tools</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">An optional feature of XWaves is to read and write from NetCDF files.&nbsp; XWaves uses the native MATLAB NetCDF functions along with the MEXNC and SNCTOOLS function sets to interface with NetCDF files.&nbsp; Information on these can be found at:
+            <br /><a class="nonblock" href="http://mexcdf.sourceforge.net/" target="_blank">http://mexcdf.sourceforge.net/</a>.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Everything required to interface with NetCDF is included in the XWaves toolkit.&nbsp; Both 32- and 64-bit machines are supported.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">See the <span id="u4344-15">XWaves NetCDF</span> Interface tutorial for a detailed description of all the NetCDF features in XWaves.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">NetCDF Interface</p>
+        <p class="subheading">Overview</p>
+        <p class="body"><span><span class="actAsDiv normal_text" id="u4772"><!-- content --><span class="actAsDiv clip_frame" id="u4766"><!-- image --><img class="block" id="u4766_img" src="/static/img/netcdf1.png" alt="" width="379" height="410" data-muse-uid="U4766" data-muse-src="/static/img/netcdf1.png" /></span></span>
+            </span>A NetCDF (Network Common Data Form) interface is included with the XWaves ocean wave field analysis toolbox. The NetCDF libraries are a freely-distributed set of read and write utilities for array-oriented data that include utilities for C, FORTRAN, C++, Java, MATLAB and other languages. XWaves uses the native MATLAB NetCDF functions along with the MEXNC and SNCTOOLS function sets to interface with NetCDF files.&nbsp; Information on these can be found at:
+            <br /><a class="nonblock" href="http://mexcdf.sourceforge.net/.">http://mexcdf.sourceforge.net/.&nbsp; </a> The use of a NetCDF interface in XWaves essentially removes the file size limitations on both data processing and the creation of graphical displays. Furthermore this capability has been developed to work in the 64-bit architecture. This interface significantly increases the utility of XWaves for applications involving very large data sets</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">XWaves Data Interfaces</p>
+        <p class="body">XWaves operates on the data structure wavedat that is stored as a MATLAB *.mat binary file.&nbsp; This data structure includes the following elements:</p>
+        <ul class="list0 nls-None" id="u4344-43">
+            <li class="body">Supporting metadata</li>
+            <li class="body">Observed or modeled wave spectra data and related statistics</li>
+            <li class="body">Parameters for processing the data in XWaves</li>
+            <li class="body">Processed results</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="caption" id="u4344-46">Expansion of XWaves configuration with a NetCDF data interface.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">As the left side of the Figure below depicts, all of the <span id="u4344-50">XWaves</span> modules are designed to operate on the <span id="u4344-52">wavedat</span> data structure.&nbsp; As data are processed, results are automatically added to wavedat.&nbsp; The user has the option of saving these updates in the original *.mat-file or creating a new *.mat-file on disk.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The integration of NetCDF file formats within <span id="u4344-57">XWaves</span> introduces a new functional component called the Data Parser.&nbsp; As depicted in the Figure, the Parser maintains a 2-way flow of data between the XWaves modules and the NetCDF data file.&nbsp; Essentially the Parser extracts NetCDF data as needed and writes NetCDF data as produced by <span id="u4344-59">XWaves</span>.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The primary functions of the Parser are to:</p>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u4344-80">
+            <li class="body">Establish a linkage between the NetCDF data fields and the <span id="u4344-67">wavedat</span> fields</li>
+            <li class="body">Communicate with individual modules on data needs</li>
+            <li class="body">Populate resident <span id="u4344-73">wavedat</span> structure with data as required</li>
+            <li class="body">Write results to the NetCDF data file as produced</li>
+            <li class="body">Operate on 32-bit and 64-bit Windows machines</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body">Hence <span id="u4344-83">XWaves</span> has two slightly distinct modes of operation; (1) the original wavedat mode where all the information needed for processing and all of the processing results are stored in memory, and (2) the NetCDF mode where information is loaded as needed into memory from a NetCDF file and moved back out of memory (and into the NetCDF file) as new information is produced.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">All of the internal <span id="u4344-88">XWaves</span> functions continue to obtain all required data and information from the resident wavedat data structure.&nbsp; The Parser moves data in and out of this structure as it is needed and produced.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Required NetCDF Tools</p>
+        <p class="body">The latest versions of MEXNC and SNCTOOLS are used for the XWaves NetCDF interface.&nbsp; MEXNC is a mex-file interface to NetCDF files for MATLAB.&nbsp;&nbsp; It is compiled with NetCDF library versions 3.6.0 or higher, which includes the benefit of Large File Support.&nbsp;&nbsp; Both 32-bit and 64-bit versions of MEXNC are employed.&nbsp; SNCTOOLS is a set of m-files that sit on top of MEXNC.&nbsp; XWaves will use SNCTOOLS to operate the MEXNC interface.&nbsp; Information on these can be found at:
+            <br /><a class="nonblock" href="http://mexcdf.sourceforge.net/" target="_blank">http://mexcdf.sourceforge.net/</a></p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">XWaves Enhancements</p>
+        <p class="body">When working with NetCDF data files in XWaves, the user is presented with the following features and options:</p>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u4344-144">
+            <li class="body"><span id="u4344-106">File Menu: </span><span id="u4344-107">Open NetCDF file</span> –Open and load records from a NetCDF data file.</li>
+            <li class="body"><span id="u4344-110">File Menu: </span>Save to NetCDF– Export data to a new NetCDF file.</li>
+            <li class="body"><span id="u4344-113">File Menu: </span>Subset to XWaves File – Export data from any active file (<span id="u4344-115">waveda</span><span id="u4344-116">t</span> or NetCDF) to a new XWaves data file (<span id="u4344-118">wavedat</span> format).</li>
+            <li class="body"><span id="u4344-121">Settings Menu:</span> NetCDF– View and adjust NetCDF data interface settings.&nbsp; Toggle data processing wait bars on or off.</li>
+            <li class="body"><span id="u4344-124">DataView</span><span id="u4344-125"> Record Scrolling </span>– Data View reads in only the information needed to create the existing plots.</li>
+            <li class="body"><span id="u4344-128">Utilities</span><span id="u4344-129"> Modul</span>e – Operational NetCDF interface to Utilities functions.</li>
+            <li class="body"><span id="u4344-132">Wave Systems</span><span id="u4344-133"> Module</span> – NetCDF interface provides selective record I/O to eliminate memory issues.</li>
+            <li class="body"><span id="u4344-136">Spectral Fit </span><span id="u4344-137">Module</span> – NetCDF interface provides selective record I/O to eliminate memory issues.</li>
+            <li class="body"><span id="u4344-140">Evaluate</span><span id="u4344-141"> Module</span> – Select 2 NetCDF data files for a temporal correlation comparison.</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">XWaves Features Not Supported</p>
+        <p class="body">The following <span id="u4344-149">XWaves</span> features and Modules are not yet supported by NetCDF:</p>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u4344-161">
+            <li class="body"><span id="u4344-153">Sea State</span><span id="u4344-154"> Module </span>– Data not archived in NetCDF file</li>
+            <li class="body" id="u4344-158"><span id="u4344-157">Partition Editor</span></li>
+            <li class="body" id="u4344-160"><span id="u4344-159">Wave Systems Editor</span></li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Note that the user has the option of exporting NetCDF data to an <span id="u4344-165">XWaves </span>file (see File Menu commands above) and then having access to all <span id="u4344-167">XWaves</span> capabilities for processing their data.</p>
+        <p class="subheading">&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>

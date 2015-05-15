@@ -1,0 +1,76 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u2417">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u2418-179" data-muse-uid="U2418">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U2418" template="loading-data.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="blue-heading">Import Raw Data</p>
+        <p class="body">From the File dropdown menu, mouse over Load Raw Data to see all of the available <span id="u2418-4">data types</span>. Select the appropriate data type and a Verify Parameters window will appear with the default settings for that data type. Click on Modify to create your own settings in the <span id="u2418-6">Import</span> <span id="u2418-8">Parameters Table</span>.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">Import Parameters Table</p>
+        <p class="body">The <span id="u2418-15">Import Parameters Table</span> is used to select and prepare raw data for loading.&nbsp; The user can select the files to load, specify to use measured or estimated winds, apply data smoothing or sub-setting, etc.&nbsp; The specific contents of the table vary depending on what data type are selected to load.&nbsp; For example, loading <span id="u2418-17">Datawell Waverider *.SPT</span> files requires the user to identify the latitude, longitude and water depth at the observation station, whereas this information is included in the <span id="u2418-19">Coastal Data Information Program (CDIP)</span> raw data and not a required user input.&nbsp; The selected settings are saved to a named parameter set, and can be retrieved at any time.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The various user inputs to the <span id="u2418-24">Import Parameters Table</span> are described below. Not all of these will be available for each data type.</p>
+        <p class="subheading">&nbsp;</p>
+        <p class="subheading">Parameter Set Name</p>
+        <p class="body">This option allows the user to select a named set of import parameters.&nbsp; If changes are made in the <span id="u2418-31">Import Parameters Table</span>, the user is requested to provide a new name for the parameter set when the <span id="u2418-33">Select </span>button is activated.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Station Location</p>
+        <p class="body">Enter the <span id="u2418-40">Latitude</span> (+N/-S) and <span id="u2418-42">Longitude</span> (+E/-W) of the data in decimal degrees</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Estimate Winds</p>
+        <p class="body">This parameter is used to specify how the winds will be obtained for processing:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u2418-51">&nbsp;Yes</span> – Wind data will not be provided by the user, and the winds will be estimated from the input wave spectra.</p>
+        <p class="body"><span id="u2418-54">&nbsp;No</span> – Wind data will be provided by the user.&nbsp; Choose the wind file to be processed by using the Select button to the right.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">If the user is providing wind data, they must reside in a MATLAB *.mat file containing the variable wind with the following 8 column-oriented data fields:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;&nbsp;&nbsp; Year (YYYY),&nbsp; Month (MM),&nbsp; Day (DD), Hour (hh),&nbsp; Minute (mm), Second (mm), Wind_Direction (deg From),&nbsp; Wind Speed (m/s)</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The duration of this file must cover the time period of the wave data.&nbsp; For each wave record, the wind file is searched for a matching wind record.&nbsp; If no matching records exist at this time, the software will either interpolate the wind data (u and v components) to the time of the wave record or estimate the winds over large data gaps.&nbsp; See <span id="u2418-65">Wind Data Processing </span>below for additional details.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Observation Year</p>
+        <p class="body">Enter the year that the observations were made.&nbsp; This parameter is necessary for data types that do not include the year in the filename.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Magnetic Compass Correction (deg)</p>
+        <p class="body">As many conventional wave sensors collect wave direction data using a magnetic compass, correction is necessary in order to rotate the wave directions relative to True North.&nbsp; Most of the data formatters allow the user to input a <span id="u2418-77">Magnetic Compass</span> Correction factor to facilitate this correction.&nbsp; This parameter is the magnetic declination, sometimes called magnetic variation, which is the angle between magnetic north and true north. The <span id="u2418-79">Magnetic Compass Correction </span>should be entered as positive east of true north and negative when west.&nbsp; The input wave directions will be rotated by this angle to generate directions relative to True North.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The magnetic compass correction is a function of latitude and longitude and can be computed on a web page hosted by the National Geophysical Data Center:&nbsp; <a class="nonblock" href="http://www.ngdc.noaa.gov/geomag/declination.shtml" target="_blank">http://www.ngdc.noaa.gov/geomag/declination.shtml</a>.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Water Depth (m)</p>
+        <p class="body">Enter the approximate water depth in meters at the data location.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Processing Method</p>
+        <p class="body">For <span id="u2418-98">Datawell</span> data select either On-Board or Off-Board data processing.&nbsp; Spectra computed by the buoy software and then transmitted are considered On-Board.&nbsp; Spectra computed by a base station from transmitted time series are considered Off-Board.&nbsp; This designation is important as the <span id="u2418-100">Datawell</span> software uses different spectral energy units for each.&nbsp; <span id="u2418-102">All spectra</span> will be stored in units of m2/Hz/deg.</p>
+        <p class="subheading">&nbsp;</p>
+        <p class="subheading">First File to Process</p>
+        <p class="body">Click <span id="u2418-109">Select </span>to navigate to the first data file to process.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Last File to Process</p>
+        <p class="body">Click <span id="u2418-116">Select</span> to navigate to the last data file to process.&nbsp; Click <span id="u2418-118">Process</span> All to select all the files in the folder.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Select Records (OWI NetCDF only)</p>
+        <p class="body">Click <span id="u2418-125">Select Records</span> to select which records from the NetCDF file that are to be imported. A message box will ask the user to <span id="u2418-127">Import All Records</span>, to <span id="u2418-129">View Records</span> List in order to manually select records, or to Cancel in order to return to the Import Parameters Table.&nbsp; Clicking <span id="u2418-131">View Records List</span> brings up a selection box that lists all the records by date and number.&nbsp; Multiple records can be selected using the left mouse click + Shift or Ctrl.&nbsp; The selection box defaults to the last selected records.&nbsp; After selecting records, the Import Parameters Table will update which records are selected.&nbsp; Only one group contiguous records can be selected and imported at a time.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Angle Bins</p>
+        <p class="body">Enter the desired number of angle bins in the output directional spectra.&nbsp; Hit the <span id="u2418-138">Enter</span> Key and the angular resolution for this number of bins will be computed.&nbsp; Input spectra are linearly interpolated to the requested resolution.</p>
+        <p class="body">The use of this feature can greatly reduce output file sizes and save on processing times for large data sets.&nbsp; Measured data are often set at a directional resolution that is much greater than the instrument can actually resolve.&nbsp; Try setting your angular resolution at 10 or 15 degrees, corresponding to 36 or 24 angle bins.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Smoothing Interval (h)</p>
+        <p class="body">Enter the desired wave spectrum smoothing interval in hours.&nbsp; Over this specified duration window, a running average of the input directional wave spectra will be performed.&nbsp; This feature is helpful for noisy spectra, usually obtained from short time series, and will help reduce processing time.&nbsp; Enter a <span id="u2418-147">Smoothing Interval</span> of 0 for no smoothing.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Data SubSample Interval (h)</p>
+        <p class="body">Select the desired interval in hours for record sub-sampling.&nbsp; Records that fall in-between this interval will be removed.&nbsp; For example, if a 3-h <span id="u2418-154">Data SubSamplet</span> Interval is selected for data that is provided hourly, every third record will be saved.&nbsp; Set the <span id="u2418-156">Data SubSample</span> <span id="u2418-158">Interval</span> to 0 to save every record.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">Wind Data Processing</p>
+        <p class="body">The <span id="u2418-165">Wave Systems</span> routines require wind information to separate windsea from swell wave components.&nbsp; If winds are not provided, the 10-m wind speed (U10) and direction (if 2D data) will be estimated based on the shape of the input wave spectra.&nbsp; If wind data are provided by the user, the following two wind data processing options are available through a separate Wind Processing Options window that appears after the Import Parameters Table:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u2418-169">Estimate Winds in Data Gaps </span>– Enter Yes to estimate winds in large gaps in the input wind data file.&nbsp; The user will be prompted to specify the maximum gap duration (h) for interpolating winds. Wind information in data gaps larger that this will be estimated.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u2418-173">Wind Measurement Height </span>– The processing routines are based on wind speeds at 10-m height (U10).&nbsp; If winds are provided from a different measurement height, they will be adjusted to a neutral 10-m height following Large and Pond (1981), J. Phys. Oceanog., 11, 324-336.&nbsp; Enter ‘0’ if the measurement height is unknown and no adjustments will be made.</p>
+        <p class="body">&nbsp;</p>
+        <p id="u2418-177">&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>

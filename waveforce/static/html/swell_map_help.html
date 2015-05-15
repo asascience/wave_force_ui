@@ -1,0 +1,117 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u4109">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u4110-270" data-muse-uid="U4110">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U4110" template="swell-map-module.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="blue-heading"><span id="u4110">​</span><span><span class="actAsInlineDiv normal_text" id="u4141"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u4135"><!-- image --><img id="u4135_img" src="/static/img/swell%20map%20module%201.jpg" alt="" width="402" height="354" data-muse-uid="U4135" data-muse-src="/static/img/swell%20map%20module%201.jpg" /></span></span>
+            </span><span></span></p>
+        <p class="blue-heading">Swell Map Module</p>
+        <p class="body">The <span id="u4110-8">Swell Map Module </span>uses the principle of wave dispersion to estimate the time and location of the various swell events.&nbsp; The results are displayed on an interactive world map.&nbsp; The display shows great-circle swell propagation routes from the estimated sources to the observation location.&nbsp; A variety of map projections and display features are available.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The <span id="u4110-13">Swell Map</span> results are estimates.&nbsp; Erroneous results, including swell sources over land, are possible.&nbsp; As the <span id="u4110-15">Swell Map</span> calculations are based on deep water linear wave theory, the estimated source locations will not be accurate for wave observations made in shallow water.&nbsp; Furthermore the calculations assume a point source, so estimates of swell sources from moving storm systems can have a degree of error introduced.&nbsp; Finally, the user is cautioned that numerical wave predictions do not behave as point sources and hence model data do not work well with <span id="u4110-17">Swell Map</span> calculations.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Swell Map Features</p>
+        <p class="Definitions"><span class="Bolded-body-text">Worldwide Coastline Database </span>– Allows users to view their data over a high resolution NOAA NGDC GSHHS map database.</p>
+        <p class="Definitions">&nbsp;</p>
+        <p class="Definitions"><span class="Bolded-body-text">Multiple Projection, Customizable Maps</span> – Users can choose between 17 different projection types, change land and ocean colors, add bathymetry data,&nbsp; specify map dimensions, or freely zoom in and out using the toolbar.</p>
+        <p class="Definitions">&nbsp;</p>
+        <p class="Definitions"><span class="Bolded-body-text">Customizable Data Display</span> – Users can select which Events to display, customize track line color, width, and style, all using the interactive sliding legend.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Swell Map Data Processing</p>
+        <p class="body">Swell Map is activated from the Module pull-down menu.&nbsp; Swell Map has 2 adjustable parameters that the user can modify.&nbsp; These appear in the Swell Map Parameter Table which opens when Swell Map is launched from the Module pull-down menu.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Swell Map Parameter Table</p>
+        <p class="body">These swell tracking parameters help identify specific swell events based on deep water linear wave theory.&nbsp; The user can select values based on observation variability and duration of expected events.&nbsp; The results of chosen settings can be inspected using the Swell Map module displays.&nbsp; The two&nbsp; parameters are described below.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u4110-46">Variance Threshold</p>
+        <p class="body">This parameter controls the allowable data scatter (or variance) about the fitted line that is used to identify swell source events. The max mean square error is defined as</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u4110-51">&nbsp; MSE = 1e-5 * 10^ef * Slope^2, where ef is the variance threshold</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Values are set in the range of&nbsp; -1,0,1,2,3, etc. Increase the value to raise the number of identified swell events.&nbsp; Values of 1-4 are typical.&nbsp; Fractional values are allowed.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Minimum Number of Records</p>
+        <p class="body">This parameter sets the minimum number of records for a swell event to be considered valid.&nbsp; For half-hourly wave data, start with a value of 5, corresponding to a 2.5 hour period.&nbsp; Increasing the Minimum Number of Records will require the swell events to be active for longer time periods and decrease your output number of swell sources.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Swell Map Pull-Down Menu Commands</p>
+        <p class="body" id="u4110-64">Options</p>
+        <p class="body" id="u4110-65">&nbsp;</p>
+        <p class="body" id="u4110-68"><span class="Bolded-body-text">Reprocess Data</span> - Return to the Swell Map Parameter Table</p>
+        <p class="body" id="u4110-75"><span class="Bolded-body-text">Export to Google Earth</span><span class="Bolded-body-text superscript">®</span><span class="Bolded-body-text"> </span>- Export Swell Map Event data to a KML file that can be read by Google Earth by using <span class="Bolded-body-text">GOOGLE EARTH TOOLBOX</span> functions (see details below).&nbsp; The user is given the option to launch Google Earth after the KML file is saved.</p>
+        <p class="body"><span class="Bolded-body-text">Events -</span> Submenu containing the following options for customizing Event displays. .&nbsp; These options are also available on the legend.</p>
+        <p class="body" id="u4110-81"><span class="Bolded-body-text">Show All* </span>- Set all Events in data to visible.&nbsp; This option only appears in Events menu when the legend is off.</p>
+        <p class="body" id="u4110-84"><span class="Bolded-body-text">Hide All*</span> - Set all Events in data to invisible.&nbsp; This option only appears in Events menu when the legend is off.</p>
+        <p class="body" id="u4110-87"><span class="Bolded-body-text">Show/Hide Event Numbers </span>- Toggle Event numbers on or off.</p>
+        <p class="body"><span class="Bolded-body-text">Event Information</span> - Display available Event information in a pop-up dialog window. Multiple events can be selected at once and separate dialog windows will appear for each Event.</p>
+        <p class="body" id="u4110-93"><span class="Bolded-body-text">Zoom to Event </span>- Automatically adjusts map to view selected Event.&nbsp; Event will be set visible if currently invisible.</p>
+        <p class="body" id="u4110-96"><span class="Bolded-body-text">Zoom Visible Events </span>- Automatically adjusts map to view all currently visible Events.</p>
+        <p class="body" id="u4110-99"><span class="Bolded-body-text">Show Only Events</span> - Users can select which Events they would like to view.&nbsp; All other Events will be set to invisible.</p>
+        <p class="body"><span class="Bolded-body-text">Edit</span> - Submenu containing the following options for adjusting Event settings.&nbsp; These options are also available for individual events on the legend.</p>
+        <p class="body"><span class="Bolded-body-text">Event Color </span>- Adjust color of Event track line and marker.&nbsp; Multiple Events can be selected.&nbsp; User will be prompted to select a color for each selected Event.&nbsp; Pressing Cancel will skip the color choice for that Event.</p>
+        <p class="body">Marker Size - Adjust size of marker color. Multiple Events can be selected at once, selection method similar to above. 15 is default.</p>
+        <p class="body"><span id="u4110-108">Line Style </span>- Adjust line style of Event track lines.&nbsp; Multiple Events can be selected at once, selection method similar to above. Solid line is default.</p>
+        <p class="body" id="u4110-113"><span id="u4110-111">Line Width </span>- Adjust line width of Event track lines.&nbsp; Multiple Events can be selected at once, selection method similar to above. 1 is default.</p>
+        <p class="body" id="u4110-116"><span id="u4110-114">Station </span>- Submenu containing the following options for customizing the data Station</p>
+        <p class="body" id="u4110-119"><span id="u4110-117">Zoom to Station </span>- Automatically adjust map view to center on the data Station.</p>
+        <p class="body" id="u4110-122"><span id="u4110-120">Station Information </span>- Display available Station information in a pop-up dialog window.</p>
+        <p class="body" id="u4110-125"><span id="u4110-123">Change Station Color </span>- Adjust color of Station marker.&nbsp; Default is black.</p>
+        <p class="body" id="u4110-128"><span id="u4110-126">Change Station Size</span> - Adjust size of Station marker. Default is 20.</p>
+        <p class="body" id="u4110-131"><span id="u4110-129">Map Toolbar </span>- Toggle the map toolbar on or off.</p>
+        <p class="body" id="u4110-134"><span id="u4110-132">Map Legend </span>- Toggle the map legend on or off.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Map</p>
+        <p class="body" id="u4110-140"><span id="u4110-138">Projection </span>- Submenu containing 17 different map projection types.&nbsp; Projections described below.</p>
+        <p class="body"><span id="u4110-141">Coastline Detail </span>- Select detail level for map coastline.&nbsp; Swell Map will automatically adjust detail level for the zoom level, up to level 3.&nbsp; Level 4 and 5 are only suggested for use at close up views of the Earth. Process time is greatly increases at high detail levels.&nbsp; Coastline Detail level can also be selected using the toolbar, see below.</p>
+        <p class="body" id="u4110-148"><span id="u4110-144">Data</span> -<span id="u4110-146"> </span>Submenu containing options for overlaying additional data onto the world map.&nbsp; Currently setup for elevation data.</p>
+        <p class="body" id="u4110-151"><span id="u4110-149">Hide Data</span> - Set elevation data to invisible.</p>
+        <p class="body" id="u4110-154"><span id="u4110-152">Colored Data </span>- Set elevation data to display as colored contours.</p>
+        <p class="body" id="u4110-157"><span id="u4110-155">Black Data </span>- Set elevation data to display as black contours.</p>
+        <p class="body" id="u4110-160"><span id="u4110-158">Color Filled Data </span>- Set elevation data (ocean depths only, range not adjustable) to display in color filled contours.</p>
+        <p class="body"><span id="u4110-161">Map Data Range </span>- Adjust elevation data display range and resolution.&nbsp; Smaller increments will increase map display process time.&nbsp; Default is: Min: -100000, Increment: 2000, Max 100000</p>
+        <p class="body" id="u4110-166"><span id="u4110-164">Land Color</span>-&nbsp; Adjust color of land masses on world map.</p>
+        <p class="body" id="u4110-169"><span id="u4110-167">Ocean Color</span> - Adjust color of bodies of water on world map.</p>
+        <p class="body" id="u4110-172"><span id="u4110-170">Refresh </span>– Round map dimensions to nearest degree and redraw current view of Swell Map keeping current settings.</p>
+        <p class="body"><span id="u4110-173">Enter View</span> - Map dimensions and coast detail level can be manually entered here.&nbsp; The map will not automatically adjust for best window view or detail level when using Enter View.&nbsp; If there are erroneous values the changes are discarded and the prompt will reappear.&nbsp; Blank dimensions will be discarded and replaced with last values.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Swell Map Toolbar</p>
+        <p class="body">&nbsp;<span><span class="actAsInlineDiv normal_text" id="u4188"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u4182"><!-- image --><img id="u4182_img" src="/static/img/swell%20map%20module%20toolbar.jpg" alt="" width="359" height="29" data-muse-uid="U4182" data-muse-src="/static/img/swell%20map%20module%20toolbar.jpg" /></span></span>
+            </span><span></span></p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u4110-186"><span id="u4110-184">Arrow</span> - Normal cursor mode.&nbsp; The legend can only be used in this mode.</p>
+        <p class="body" id="u4110-189"><span id="u4110-187">Zoom Window </span>- Zoom Window cursor mode.&nbsp; Left click and hold to select an area of the map to view.</p>
+        <p class="body" id="u4110-192"><span id="u4110-190">Zoom In</span> - Zoom In cursor mode.&nbsp; Left click on the map to center the map to that point and zoom in.</p>
+        <p class="body" id="u4110-195"><span id="u4110-193">Zoom Out </span>- Zoom Out cursor mode.&nbsp; Left click on the map to center to map to that point and zoom out.</p>
+        <p class="body" id="u4110-198"><span id="u4110-196">Pan View </span>- Pan View cursor mode.&nbsp; Left click on the map to center the map to that point.</p>
+        <p class="body" id="u4110-201"><span id="u4110-199">Zoom Visible Events </span>- Automatically adjusts map to view all currently visible Events.</p>
+        <p class="body"><span id="u4110-202">View Reset </span>- Returns map view to default view of the Earth with the data Station at the center.</p>
+        <p class="body">Coastline Detail Level 1 – 5 Select detail level for map coastline.&nbsp; Swell Map will automatically adjust detail level for the zoom level, up to level 3.&nbsp; Level 4 and 5 are only suggested for use at close up views of the Earth. Process time is greatly increases at high detail levels.&nbsp; Coastline Detail level can also be selected using the Coastline Detail submenu in the Map pull-down menu, see above.</p>
+        <p class="body"><span id="u4110-207">Export to Google Earth</span><span class="superscript" id="u4110-208">®</span><span id="u4110-209"> </span>- Export Swell Map Event data to a KML file that can be read by Google Earth. This option can also be found in the Options pull-down menu, see above.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4110-213">Swell Map Legend </span>The Swell Map Legend displays Event numbers and colors and provides access to settings for each Event.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4110-217">Swell Map Projection Types</span> There are 17 different projection types available for use in Swell Map including Azimuthal, Cylindrical, Conic, and Global projections.&nbsp; Miller Cylindrical is the default projection type.&nbsp; More information on the different map projections is available at the M_Map website at: <a class="nonblock" href="http://www2.ocgy.ubc.ca/~rich/private/mapug.html#p2.1" target="_blank">http://www2.ocgy.ubc.ca/~rich/private/mapug.html#p2.1</a></p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">M_Map</p>
+        <p class="body">&nbsp;<span><span class="actAsInlineDiv normal_text" id="u4201"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u4195"><!-- image --><img id="u4195_img" src="/static/img/swell%20map%20module%202.jpg" alt="" width="82" height="82" data-muse-uid="U4195" data-muse-src="/static/img/swell%20map%20module%202.jpg" /></span></span>
+            </span><span></span></p>
+        <p class="body">Swell Map is built using M_Map, a mapping package for Matlab.</p>
+        <p class="body">M_Map is available free and is provided “as is” without warranty of any kind.</p>
+        <p class="body">Please visit the M_Map website at: <a class="nonblock" href="http://www2.ocgy.ubc.ca/~rich/map.html" target="_blank">http://www2.ocgy.ubc.ca/~rich/map.html</a></p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Global Self-consistent, Hierarchical, High-resolution Shoreline Database - GSHHS</p>
+        <p class="body">The GSHHS database is available free online at the NOAA Nation Geophysical Data Center website:
+            <br /><a class="nonblock" href="http://www.ngdc.noaa.gov/mgg/shorelines/gshhs.html" target="_blank">http://www.ngdc.noaa.gov/mgg/shorelines/gshhs.html</a> and is also included with the software.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4110-247">GOOGLE EARTH TOOLBOX</span> by Scott L. Davis and Jurriaan H. Spaaks is available free at the MATLAB Central File Exchange:</p>
+        <p class="body">&nbsp;<a class="nonblock" href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=12954&amp;objectType=FILE" target="_blank">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=12954&amp;objectType=FILE</a></p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;Some of its functions are provided here to work with Swell Map Module.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;See README.txt in folder: &lt;<span id="u4110-259">path to software</span>&gt;\programs\SwellMap\GoodEarthToolbox</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;GOOGLE EARTH is also available free at: <a class="nonblock" href="http://earth.google.com/" target="_blank">http://earth.google.com/</a></p>
+        <p class="body">&nbsp;</p>
+        <p id="u4110-268">&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>
