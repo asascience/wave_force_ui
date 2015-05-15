@@ -13,15 +13,11 @@
     <script src="/static/lib/jquery/dist/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Bootstrap core CSS -->
-
     <link href="/static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link href="/static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/css/site_global.css?4283238856"/>
-    <link rel="stylesheet" type="text/css" href="/static/css/master_a-master.css?4206305167" />
-    <link rel="stylesheet" type="text/css" href="/static/css/getting-started.css?4032190740" id="pagesheet" />
-    <!-- <link href="/static/css/docs.min.css" rel="stylesheet"> -->
-
+    <link rel="stylesheet" type="text/css" href="/static/css/master_a-master.css?4206305167"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/xwaves-tutorial.css?3939668849" id="pagesheet"/>
 </head>
 
 <body>
@@ -55,7 +51,7 @@
             <div class="col-sm-4 col-md-3 sidebar">
                 <nav class="bs-docs-sidebar affix">
                     <img src="/static/img/waveforce.png" class="sidebar-image">
-                    <ul id="sidebarToc" class="nav bs-docs-sidenav wave-force-toc">
+                    <ul id="sidebarToc" class="nav bs-docs-sidenav nav-sidebar wave-force-toc">
                     </ul>
                 </nav>
             </div>
@@ -78,9 +74,12 @@
         });
     });
 
-    $.getJSON("/static/json/getting-started.json", function(data) {
+    $.getJSON("/static/json/xwaves-tutorial.json", function(data) {
         var panels = Object.keys(data);
         $.each(panels, function(index, panel) {
+            console.log(data[panel]);
+
+
             var active = false;
             if (index == 0) {
                 active = true

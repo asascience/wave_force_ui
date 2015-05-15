@@ -1,0 +1,134 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u4241">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u4242-229" data-muse-uid="U4242">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U4242" template="evaluation-module.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="blue-heading">Evaluate Module</p>
+        <p class="subheading">Evaluate Overview</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The <span id="u4242-7">Evaluate Module</span> is designed to allow a robust statistical comparison to be made between two data sets. The user has the option of choosing between two operating modes, a Quick <span id="u4242-9">Compare and Evaluate </span>mode. The Quick Compare mode allows the user to compare two data sets using a set of comparison plots in <span id="u4242-11">DataView</span>. The Evaluate mode is an in-depth analysis between two data sets. Statistical temporal correlation (TC) analyses are performed on wind speed and height, and wave height, period and direction. The Evaluate Module GUI allows the user to select different analysis options such as applying smoothing, subsampling, and wave height and wind speed thresholds to the baseline data set. The integration of Evaluate Module is depicted in the following Figure. Results are displayed in a set of Evaluate plots and tables in <span id="u4242-13">DataView</span>.</p>
+        <p id="u4242-16">&nbsp;</p>
+        <p id="u4242-20"><span id="u4242-17">​</span><span><span class="actAsInlineDiv normal_text" id="u4340"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u4334"><!-- image --><img id="u4334_img" src="/static/img/evaluate%20module%201.png" alt="" width="426" height="352" data-muse-uid="U4334" data-muse-src="/static/img/evaluate%20module%201.png" /></span></span>
+            </span><span></span></p>
+        <p id="u4242-21">&nbsp;</p>
+        <p class="blue-heading">Using the Evaluate Module</p>
+        <p class="body">To open the Evaluate Module parameters, select Evaluate from the Module pull-down menu. The Evaluate Parameters Table opens to allow the user to specify how the data are to be processed.&nbsp; Here the user can select the baseline and evaluate data sets and specify the many different analysis options.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Processing commences once the user selects RUN on the Evaluate Parameters Table.&nbsp; Both the baseline and evaluate data sets will be loaded.&nbsp; The baseline data is smoothed and subsampled as specified by the user. The baseline data frequency and direction bins are interpolated to match that of the evaluate data set and the time stamps are matched closest in time. A temporal correlation analysis is performed on wind data (if available), wave data, and wave systems data (if specified by the user). If Wave Systems analysis was selected and the baseline data has not been processed with the Wave Systems Module, the user will be directed to the Wave Systems Parameters Table to set up wave systems processing. When Evaluate processing is finished a special Evaluate layout page in Data View opens to provide the user access to all Evaluate Module products.&nbsp; Each of these products is described below.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">Error Analysis</p>
+        <p class="body">The error metrics used to quantify the temporal correlation comparisons are as follows:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">For n values of baseline measurements m and evaluate measurements h the bias (evaluate – baseline)</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">b=1/n ∑▒〖h-m;〗</p>
+        <p class="body">Root-mean-square (RMS) error</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">E_RMS=[(∑▒(h-m)^2 )/n]^0.5;</p>
+        <p class="body">Scatter index</p>
+        <p class="body">SI=σ_d/m</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Where the standard deviation of difference is given by</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">σ_d=[(∑_i▒(h_i-m_i-b)^2 )/(n-1)]^0.5</p>
+        <p class="body">For directional data, the angular bias is calculated by</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">b_a {█(tan^(-1)⁡〖(S/C)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for S&gt;0,C&gt;0〗;@tan^(-1)⁡(S/C)+π&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for C&lt;0; and,@tan^(-1)⁡(S/C)+2π&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; forS&lt;0,C&gt;0)┤</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Where S and C are computed from the directional differences Δθ = |θ¬h-θm| by</p>
+        <p class="body">S=∑_(i=1)^n▒sin⁡(∆θ_i ) ,and</p>
+        <p class="body">C=∑_(i=1)^n▒cos⁡(∆θ_i )</p>
+        <p class="body">The circular correlation is computed by</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">cor=(∑_(i=1)^n▒sin⁡(θ_m-(θ_m ) ̅ )&nbsp;&nbsp; sin⁡(θ_h-(θ_h ) ̅ ))/√(∑_(i=1)^n▒〖[sin⁡(θ_m-(θ_m ) ̅ ) ]^2 ∑_(i=1)^n▒[sin⁡(θ_h-(θ_h ) ̅ ) ]^2 〗)</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">In addition, wave height is calculated for each frequency bin and sorted into 11 equally spaced wave height bins. The wave heights are calculated by</p>
+        <p class="body">√(S(f)*d(f))</p>
+        <p class="body">Where S(f) is the spectral density as a function of frequency and d(f) is the frequency bandwidth.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The wave height bias is then calculated for each bin that contains more than 5 observations in time.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">Evaluate Plots</p>
+        <p class="body">Evaluate plots are displayed in a special Data View layout page.&nbsp; This page is toggled on and off through the Evaluate command in the Data View Layout pull-down menu.&nbsp; See the Plot Library for a list of available plots.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">Export Data Menu Commands</p>
+        <p class="body">The user can export a text file containing the error metric tables by selecting Fixed Format -&gt; Evaluate Error Metrics from the Tables dropdown menu in the DataView Module. The data can be exported as a Microsoft Excel file or ASCII text file.</p>
+        <p class="body">An example Error Metric table output is shown below. This analysis was performed on wind data and two swell groups of Wave Systems.</p>
+        <p class="body">Evaluate Module Error Metrics for Waverider_Sep and Duck3mwr_SWAN</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Wind Speed Error Metrics</p>
+        <p class="body">Comp&nbsp;&nbsp; Bias(m/s)&nbsp;&nbsp; RMS(m/s)&nbsp;&nbsp; SI&nbsp;&nbsp;&nbsp; R^2</p>
+        <p class="body">wind&nbsp;&nbsp; 0.530&nbsp;&nbsp; 3.755&nbsp;&nbsp; 0.432&nbsp;&nbsp; 0.891</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Wind Direction Error Metrics</p>
+        <p class="body">Comp&nbsp;&nbsp; Circ. Corr. Circ. Bias(deg)</p>
+        <p class="body">wind&nbsp;&nbsp; 0.828&nbsp;&nbsp; 7.975</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Wave Height Error Metrics</p>
+        <p class="body">Comp&nbsp;&nbsp; Bias(m)&nbsp;&nbsp; RMS(m)&nbsp;&nbsp; SI&nbsp;&nbsp;&nbsp; R^2</p>
+        <p class="body">bulk&nbsp;&nbsp; 0.012&nbsp;&nbsp; 0.444&nbsp;&nbsp; 0.175&nbsp;&nbsp; 0.977</p>
+        <p class="body">ws&nbsp;&nbsp; 0.125&nbsp;&nbsp; 0.428&nbsp;&nbsp; 0.141&nbsp;&nbsp; 0.990</p>
+        <p class="body">sw1&nbsp;&nbsp; -0.012&nbsp;&nbsp; 0.293&nbsp;&nbsp; 0.210&nbsp;&nbsp; 0.929</p>
+        <p class="body">sw2&nbsp;&nbsp; -0.022&nbsp;&nbsp; 0.413&nbsp;&nbsp; 0.196&nbsp;&nbsp; 0.979</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Peak Period Error Metrics</p>
+        <p class="body">Comp&nbsp;&nbsp; Bias(s)&nbsp;&nbsp; RMS(s)&nbsp;&nbsp; SI&nbsp;&nbsp;&nbsp; R^2</p>
+        <p class="body">bulk&nbsp;&nbsp; -0.196&nbsp;&nbsp; 2.513&nbsp;&nbsp; 0.189&nbsp;&nbsp; 0.724</p>
+        <p class="body">ws&nbsp;&nbsp; 0.203&nbsp;&nbsp; 0.634&nbsp;&nbsp; 0.071&nbsp;&nbsp; 0.991</p>
+        <p class="body">sw1&nbsp;&nbsp; 0.184&nbsp;&nbsp; 0.525&nbsp;&nbsp; 0.081&nbsp;&nbsp; 0.941</p>
+        <p class="body">sw2&nbsp;&nbsp; 0.137&nbsp;&nbsp; 2.373&nbsp;&nbsp; 0.185&nbsp;&nbsp; 0.799</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Mean Period Error Metrics</p>
+        <p class="body">Comp&nbsp;&nbsp; Bias(s)&nbsp;&nbsp; RMS(s)&nbsp;&nbsp; SI&nbsp;&nbsp; R^2</p>
+        <p class="body">bulk&nbsp;&nbsp; 0.005&nbsp;&nbsp; 1.121&nbsp;&nbsp; 0.160&nbsp;&nbsp; 0.530</p>
+        <p class="body">ws&nbsp;&nbsp; 0.587&nbsp;&nbsp; 1.209&nbsp;&nbsp; 0.197&nbsp;&nbsp; 0.971</p>
+        <p class="body">sw1&nbsp;&nbsp; -0.009&nbsp;&nbsp; 0.332&nbsp;&nbsp; 0.075&nbsp;&nbsp; 0.935</p>
+        <p class="body">sw2&nbsp;&nbsp; 0.287&nbsp;&nbsp; 1.306&nbsp;&nbsp; 0.136&nbsp;&nbsp; 0.933</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Peak Direction Error Metrics</p>
+        <p class="body">Comp&nbsp;&nbsp; Circ. Corr. Circ. Bias(deg)</p>
+        <p class="body">bulk&nbsp;&nbsp; 0.588&nbsp;&nbsp; -0.558</p>
+        <p class="body">ws&nbsp;&nbsp; 0.977&nbsp;&nbsp; 15.402</p>
+        <p class="body">sw1&nbsp;&nbsp; 0.976&nbsp;&nbsp; 15.965</p>
+        <p class="body">sw2&nbsp;&nbsp; 0.591&nbsp;&nbsp; -0.140</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Mean Direction Error Metrics</p>
+        <p class="body">Comp&nbsp;&nbsp; Circ. Corr. Circ. Bias(deg)</p>
+        <p class="body">bulk&nbsp;&nbsp; 0.544&nbsp;&nbsp; 7.253</p>
+        <p class="body">ws&nbsp;&nbsp; 0.985&nbsp;&nbsp; 9.943</p>
+        <p class="body">sw1&nbsp;&nbsp; 0.991&nbsp;&nbsp; 8.982</p>
+        <p class="body">sw2&nbsp;&nbsp; 0.729&nbsp;&nbsp; 5.919</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The wave height bias can be exported into an excel spreadsheet by selecting Fixed Format -&gt; Wave Height Bias File from the Tables dropdown menu in the DataView Module. An example Wave Height Bias table output is shown below.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Autumn Hindcast Validation</p>
+        <p class="body">Mean Wave Height Bias</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;Frequency (Hz)</p>
+        <p class="body">&nbsp;0.05 0.06 0.06 0.07 0.08 0.08 0.09 0.1 0.11 0.12 0.14 0.15 0.16 0.18 0.2 0.22 0.24 0.27 0.29 0.32</p>
+        <p class="body">&nbsp;0.69</p>
+        <p class="body">&nbsp;0.63</p>
+        <p class="body">&nbsp;0.56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.13451 -0.08565</p>
+        <p class="body">&nbsp;0.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.12301 -0.0955 -0.07909 -0.10153</p>
+        <p class="body">&nbsp;0.43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.08192 -0.07367 -0.07388 -0.08074</p>
+        <p class="body">Wave Height (m) 0.36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.07206 -0.07564 -0.06185 -0.06437 -0.03427 -0.04749 -0.06293</p>
+        <p class="body">&nbsp;0.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.03763 -0.04864 -0.04365 -0.03991 -0.03568 -0.01769 -0.03072 -0.0423</p>
+        <p class="body">&nbsp;0.23&nbsp;&nbsp;&nbsp;&nbsp; -0.04761 -0.0064 -0.0023 -0.01905 -0.04999 -0.0374 -0.02049 -0.01121 -0.00811 -0.01895 -0.00968</p>
+        <p class="body">&nbsp;0.17&nbsp;&nbsp;&nbsp;&nbsp; 0.027903 0.010279 0.014555 0.007366 -0.01502 -0.02731 -0.01601 -0.01036 -0.00966 -0.00605 -0.00435 -0.00183 -0.00038 -0.01592</p>
+        <p class="body">&nbsp;0.1&nbsp;&nbsp;&nbsp; 0.011474 0.031811 0.024822 0.016096 0.005723 0.003414 -0.00661 -0.01081 -0.00777 -0.00632 -0.00541 -0.00289 -0.00245 0.00064 0.000437 -0.00055 0.000546</p>
+        <p class="body">&nbsp;0.03 -0.00326 -0.00338 -0.00321 -0.00267 -0.00182 -0.00114 -0.00075 -0.00036 0.000279 0.000908 0.000783 0.001061 0.000348 0.005085 0.010554 0.010446 0.010986 0.009249 0.005193 0.008535</p>
+        <p class="blue-heading">&nbsp;</p>
+        <p class="blue-heading">References</p>
+        <p class="body">Bowers, J. A., I. D. Morton, and G. I. Mould, 2000: Directional statistics of the wind and waves. Appl. Ocean Res., 22, 13-30</p>
+        <p class="body">Cardone, V. J., R. E. Jensen, D. T. Resio, V. R. Swail, and A. T. Cox, 1996: Evaluation of contemporary ocean wave models in rare extreme events: The &quot;Halloween Storm&quot; of October 1991 and the &quot;Storm of the Century&quot; of March 1993. J. Atmos. Oceanic Technol., 13, 198-230</p>
+        <p class="body">Guillaume, A., 1990: Statistical tests for the comparison of surface gravity wave spectra with application to model validation. J. Atmos. Oceanic Technol., 7, 551-567</p>
+        <p class="body">Hanson, Tolman, Tracy and Scott, J., 2009: Pacific Hindcast Performance of Three Numerical Wave Models. Atmos. Oceanic Technol., 26, 1614-1633</p>
+        <p class="body">Tracy, B. A., 2002: Directional characteristics of the 1990-1999 Wave Information Studies Gulf of Mexico hindcast. Proc. Seventh Int. Workshop on Wave Hindcasting and Forecasting, Meteorological Service of Canada, U.S. Army Engineer Research and Development Center's Coastal and Hydraulics Laboratory, and Fleet Numerical Meteorology and Oceanography Center, 10 pp.</p>
+        <p class="body">&nbsp;</p>
+        <p id="u4242-227">&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>

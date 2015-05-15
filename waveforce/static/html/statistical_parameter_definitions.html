@@ -1,0 +1,85 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u4459">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u4534-141" data-muse-uid="U4534">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U4534" template="definitions---methods.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="body">A variety of statistical parameters are calculated by the software and can be exported for additional use.&nbsp; Here we provide the definitions of these parameters.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">Metadata Fields</p>
+        <p class="subheading">Date and Time</p>
+        <p class="body">A Matlab serial date number is stored for each wave record and corresponding statistical parameter.&nbsp; The serial date number represents the whole and fractional number of days from a fixed, preset date (January 0, 0000). Upon exporting, date and time is converted to a standard string format: yyyy-mm-dd HH:MM:SS.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Typically the data are assumed to be referenced to Greenwich Mean Time (GMT).&nbsp; However the wavedat data structure allows inclusion of a time zone field which specifies the offset from GMT in hours.&nbsp; See Data Formats for additional information.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Location</p>
+        <p class="body">Each data set is referenced to a specific geographic location.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Latitude is saved in decimal degrees (+N/-S)</p>
+        <p class="body">Longitude is saved in decimal degrees (+E/-W)</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Water Depth</p>
+        <p class="body">Each data set is referenced to a specific water depth.</p>
+        <p class="body">Water Depth (m) is saved as a positive number with mean sea level as 0.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Wind Parameters</p>
+        <p class="body">Wind information can either be imported or estimated by the software.&nbsp; Saved wind information includes speed (m/s) and direction (deg from N).</p>
+        <p class="body">Wind data can be stored with reference to a measurement height above the ocean surface, windz (m).&nbsp; Otherwise the reference height is assumed to be 10 m.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Wave Parameters</p>
+        <p class="body">Wave statistics can be computed from the full wave spectrum, wave spectrum partitions, or from model fits to the spectrum (JONSWAP, Lognormal, etc.). In all cases the equations are the same.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Wave Spectrum</p>
+        <p class="body">The Directional Wave Spectrum S(f,) provides the distribution of wave ‘energy’ or variance (m2/(Hz*deg)) as a function of wave frequency f (Hz) and wave direction  (deg from N).</p>
+        <p class="body">Integration of S(f,) over direction yields the Frequency&nbsp; Spectrum</p>
+        <p class="body">E(f)=∫▒S(f,θ)dθ&nbsp;&nbsp;&nbsp; (m2/Hz).</p>
+        <p class="body">Likewise, integration of S(f,) over frequency yields the Direction Spectrum</p>
+        <p class="body">G(θ)=∫▒S(f,θ)df&nbsp;&nbsp;&nbsp; (m2/deg).</p>
+        <p class="body">With the total energy (variance) in the spectral domain given by the zeroth moment</p>
+        <p class="body">e=m_0=∫▒E(f)df&nbsp;&nbsp;&nbsp; (m2).</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Wave Statistics</p>
+        <p class="body">A variety of statistical parameters are computed from the wave spectra, including the Significant Wave Height, approximated by Hmo</p>
+        <p class="body">H_s~H_mo=4√(m_0 )&nbsp; (m);</p>
+        <p class="body">the Peak Wave Period</p>
+        <p class="body">T_p=1/f_p&nbsp;&nbsp; (s),</p>
+        <p class="body">with Peak Wave Frequency fp computed from a 3-point parabolic fit to the Frequency Spectrum peak;</p>
+        <p class="body">the Mean Wave Period (zero-crossing)</p>
+        <p class="body">T_02=√(m_0/m_02 )&nbsp; (s),</p>
+        <p class="body">with the second moment given by</p>
+        <p class="body">m_02=∫▒〖E(f) f^2 df〗&nbsp; .</p>
+        <p class="body">The deep-water Wavelength is calculated from the Mean Wave Period</p>
+        <p class="body">L_02=(gT_02^2)/2π&nbsp;&nbsp; (m),</p>
+        <p class="body">And the deep water Phase Speed is given by</p>
+        <p class="body">C_p=(gT_p)/2π&nbsp; (m/s),</p>
+        <p class="body">with gravitational acceleration g=9.81 m/s2.</p>
+        <p class="body">The Peak Direction (deg from N) is the directional bin with the highest total energy (summed over frequency).</p>
+        <p class="body">Also computed is the Mean Wave Direction</p>
+        <p class="body">D_m=atan2⁡〖[b_1^b,a_1^b ]&nbsp; 180/π〗</p>
+        <p class="body">with bulk Fourier coefficients</p>
+        <p class="body">&nbsp; ,</p>
+        <p class="body">&nbsp;,</p>
+        <p class="body">where</p>
+        <p class="body">a_1 (f)=∫▒〖(S(f,θ))/(E(f))&nbsp; cos⁡θ dθ〗,</p>
+        <p class="body">b_1 (f)=∫▒〖(S(f,θ))/(E(f))&nbsp; sin⁡θ dθ〗;</p>
+        <p class="body">and the Directional Spread</p>
+        <p class="body">&nbsp; ,</p>
+        <p class="body">where</p>
+        <p class="body">&nbsp;.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">References</p>
+        <p class="body">O'Reilly, W. C., T. H. C. Herbers, R. J. Seymour, and R. T. Guza, 1996. A comparison of directional buoy and fixed platform measurements of pacific swell. J. Atmos. Ocean. Tech. 13(1), 231-238.</p>
+        <p class="body">Kuik, A. J., G. P. van Vledder, and L. H. Holthuijsen, 1988.&nbsp; A method for the routine analysis of pitch-and-roll buoy wave data, J. Phys. Oceanogr., 18, 1020–1034.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Additional Information (hyperlinks)</p>
+        <p class="body">Data Formats</p>
+        <p class="body">Direction Conventions</p>
+        <p class="body">Data Export Wizard</p>
+        <p class="body">Spectral Fitting</p>
+        <p class="body">Sea State Analysis</p>
+        <p class="body">Data Evaluation</p>
+        <p class="body">&nbsp;</p>
+        <p id="u4534-139">&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>
+</li>

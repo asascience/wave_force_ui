@@ -1,0 +1,99 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u4230">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u4231-169" data-muse-uid="U4231">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U4231" template="evaluation-module.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="blue-heading">Evaluate Parameter Table</p>
+        <p class="body">The Evaluate Parameter Table is used to set processing parameters for the <span id="u4231-4">Evaluate Module</span>.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The Evaluate Parameters Table is divided into 2 main sections:</p>
+        <p class="body">1. Commands (Left column of buttons)</p>
+        <p class="body">2. Parameters (center and right column of inputs)</p>
+        <p class="body">The features in each of these sections are described below.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span>The Evaluate Parameters Table is divided into 2 main sections:</span></p>
+        <p class="body">1. Commands (Left column of buttons)</p>
+        <p class="body">2. Parameters (center and right column of inputs)</p>
+        <p class="body">The features in each of these sections are described below.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span>The Evaluate Parameters Table is divided into 2 main sections:</span></p>
+        <p class="body">1. Commands (Left column of buttons)</p>
+        <p class="body">2. Parameters (center and right column of inputs)</p>
+        <p class="body">The features in each of these sections are described below.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The <span id="u4231-43">Evaluate Parameters Table</span><span> is divided into 2 main sections:</span></p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u4231-49"><span id="u4231-47">1. </span>Commands (Left column of buttons)</p>
+        <p class="body" id="u4231-52"><span id="u4231-50">2.</span> Parameters (center and right column of inputs)</p>
+        <p class="body" id="u4231-53">&nbsp;</p>
+        <p class="body">The features in each of these sections are described below.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">1.&nbsp; Commands</p>
+        <p class="body">The commands appearing on the left side of the Evaluate Parameters Table control the saving and use of selected parameters.&nbsp; The following commands and options are available:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u4231-64"><span id="u4231-62">Named Settings </span>– Select from a list of pre-existing parameter settings.&nbsp; Parameter values will automatically update.</p>
+        <p class="body" id="u4231-67"><span id="u4231-65">Update</span> – Update the displayed parameters to the current named parameter set.</p>
+        <p class="body" id="u4231-70"><span id="u4231-68">Save New</span> – Save the displayed parameters to a new named parameter set.&nbsp; User will be prompted to provide a name for the new parameter set.</p>
+        <p class="body" id="u4231-73"><span id="u4231-71">Reset </span>– Reset displayed parameters to saved values</p>
+        <p class="body" id="u4231-76"><span id="u4231-74">Delete </span>– Delete the current named parameter set</p>
+        <p class="body" id="u4231-79"><span id="u4231-77">Run</span> – Process the data set using the current named parameter set</p>
+        <p class="body" id="u4231-82"><span id="u4231-80">Cancel </span>– Exit the Evaluate Parameter Table without processing any data</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">2.&nbsp; Parameters</p>
+        <p class="body">The processing parameters allow the user to customize the resulting tables and plots.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Baseline Data</p>
+        <p class="body"><span id="u4231-91">Load Baseline Data Set </span>– Click Browse to navigate to the location of the processed .mat file or NetCDF data file containing the baseline data set.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Evaluate Data</p>
+        <p class="body"><span id="u4231-97">Load Evaluate Data Set</span> – Click Browse to navigate to the location of the processed .mat file or NetCDF data file containing the evaluate data set. The file type of the Baseline and Evaluate data sets must be the same. If NetCDF files are chosen, the user will be asked to choose a filename to save the Evaluate data. TWO files will be created, one for the baseline data and one for evaluate data. They both will contain the user defined filename with “_Baseline.nc” and “_Evaluate.nc” appended to the baseline and evaluate data respectively.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Analysis Options</p>
+        <p class="body">These parameters control the preparation and analysis of the data.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4231-106">Baseline smoothing interval (hrs) </span>– Over this specified duration, the Evaluate Module will perform a weighted running average of the input directional wave spectra in the baseline data.&nbsp; For example, a 4-h smoothing window will smooth all spectra occurring up to 2-h prior and 2-h after each observation time.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4231-110">Baseline subsample interval (hrs) – </span>The Evaluate Module will remove records in the baseline data that fall in-between this interval.&nbsp; For example, if a 3-h data subsample interval is selected for data that is provided hourly, every third record will be saved.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4231-114">Max allowable time difference (hrs) – </span>The Evaluate Module will search through the evaluate data records and find a record in the baseline data that matches closest in time. If the closest record has a time difference greater than the value set here, the record will be disregarded.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Peak Analysis</p>
+        <p class="body"><span id="u4231-120">Apply Wind Speed Threshold?</span> – The user may decide to apply a wind speed threshold to the wind analysis. The user can specify this value as a constant or as a standard deviation multiplier. Any data below this threshold will be disregarded in analysis.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4231-124">Wind Speed Threshold </span>– Select the value of the constant wind speed threshold or the standard deviation multiplier.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4231-128">Apply Wave Height Threshold?</span> – The user may decide to apply a wave height threshold to the wave analysis. The user can specify this value as a constant or as a standard deviation multiplier. Any data below this threshold will be disregarded in analysis.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4231-132">Wave Height Threshold </span>– Select the value of the constant wave height threshold or the standard deviation multiplier.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4231-136">Peak Lag (hrs) </span>– In the Peaks Over Threshold Analysis for wind speed and bulk wave height, this value indicates the minimum time lag in hours between successive events. Wind speed and/or wave height thresholds must be set in order to conduct a Peaks Over Threshold Analysis.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4231-140">Match Lag (hrs) </span>– In the Peaks Over Threshold Analysis for wind speed and bulk wave height, this value indicates the search window duration in hours over which to match peaks found in the baseline data to the modeled evaluate data. Wind speed and/or wave height thresholds must be set in order to conduct a Peaks Over Threshold Analysis.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Wave Systems Options</p>
+        <p class="body">These parameters determine if and how the Wave Systems data is processed.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4231-150">Process Wave Systems?</span> – To skip the wave systems analysis, select NO. Otherwise, wave system components will be analyzed and compared based on the remaining input selections.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4231-154">Number of Swell Groups</span> – The user may select 1 or 2 groups to compare in addition to windsea. If 2 is selected, the user can select how to delineate between the groups.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4231-158">Delineate Swells by </span>– Select the method by which to delineate the swells, wave height or wave period.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u4231-162">Delineating Value(s) </span>– If Wave Period is selected as the method to delineate swells, the user can set the delineating period in seconds. Wave components with periods under this value will fall under swell1 while components with periods larger than this value will fall under swell 2. If Wave Height is selected, the <span id="u4231-164">Wave Systems</span> partitioning method is used to determine swell1 and swell2.</p>
+        <p class="blue-heading">&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+    <div class="clip_frame grpelem" id="u4261">
+        <!-- image -->
+        <!-- m_editable region-id="editable-static-tag-U4261" template="evaluation-module.html" data-type="image" data-ice-options="" --><img class="block" id="u4261_img" src="/static/img/evaluate%20parameters%201.jpg" alt="" width="591" height="371" data-muse-uid="U4261" data-muse-src="/static/img/evaluate%20parameters%201.jpg" />
+        <!-- /m_editable -->
+    </div>
+</div>
