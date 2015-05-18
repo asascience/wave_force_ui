@@ -8,19 +8,19 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Wave Force">
     <meta name="author" content="RPS ASA">
-    <link rel="icon" href="/static/img/favicon.ico">
+    <link rel="icon" href="../static/img/favicon.ico">
     <title>WaveForce Help</title>
-    <script src="/static/lib/jquery/dist/jquery.min.js"></script>
-    <script src="/static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../static/lib/jquery/dist/jquery.min.js"></script>
+    <script src="../static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Bootstrap core CSS -->
 
-    <link href="/static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="/static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/css/site_global.css?4283238856"/>
-    <link rel="stylesheet" type="text/css" href="/static/css/master_a-master.css?4206305167" />
-    <link rel="stylesheet" type="text/css" href="/static/css/getting-started.css?4032190740" id="pagesheet" />
-    <!-- <link href="/static/css/docs.min.css" rel="stylesheet"> -->
+    <link href="../static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/site_global.css?4283238856"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/master_a-master.css?4206305167" />
+    <link rel="stylesheet" type="text/css" href="../static/css/getting-started.css?4032190740" id="pagesheet" />
+    <!-- <link href="static/css/docs.min.css" rel="stylesheet"> -->
 
 </head>
 
@@ -54,7 +54,7 @@
         <div class="row main-row">
             <div class="col-sm-4 col-md-3 sidebar">
                 <nav class="bs-docs-sidebar affix">
-                    <img src="/static/img/waveforce.png" class="sidebar-image">
+                    <img src="../static/img/waveforce.png" class="sidebar-image">
                     <ul id="sidebarToc" class="nav bs-docs-sidenav wave-force-toc">
                     </ul>
                 </nav>
@@ -67,18 +67,15 @@
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="static/lib/jquery/dist/jquery.min.js"></script>
-    <script src="/static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-    $.getJSON("/static/json/toc.json", function(data) {
+    $.getJSON("../static/json/toc.json", function(data) {
         var tocItems = Object.keys(data);
         $.each(tocItems, function(index, item) {
             $("#sidebarToc").append("<li><a href='" + data[item].link + "''>" + data[item].name + "</a></li>")
         });
     });
 
-    $.getJSON("/static/json/getting-started.json", function(data) {
+    $.getJSON("../static/json/getting-started.json", function(data) {
         var panels = Object.keys(data);
         $.each(panels, function(index, panel) {
             var active = false;

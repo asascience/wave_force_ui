@@ -8,21 +8,21 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Wave Force">
     <meta name="author" content="RPS ASA">
-    <link rel="icon" href="/static/img/favicon.ico">
+    <link rel="icon" href="static/img/favicon.ico">
 
     <title>WaveForce Help</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/css/site_global.css?4283238856"/>
-    <link rel="stylesheet" type="text/css" href="/static/css/master_b-master.css?471188496"/>
-    <link rel="stylesheet" type="text/css" href="/static/css/index.css?3930479906" id="pagesheet"/>
+    <link href="static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/index.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="static/css/site_global.css?4283238856"/>
+    <link rel="stylesheet" type="text/css" href="static/css/master_b-master.css?471188496"/>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css?3930479906" id="pagesheet"/> -->
 
   </head>
 
-  <body>
-
+  <!-- <body> -->
+  <body data-root="${rootContext}">
     <nav class="navbar navbar-fixed-top wave-force-nav">
       <div class="container-fluid">
         <div class="navbar-header">          
@@ -52,7 +52,7 @@
     <div class="container-fluid ">
       <div class="row main-row">
         <div class="col-sm-4 col-md-3 sidebar">
-          <img src="/static/img/waveforce.png" class="sidebar-image">                 
+          <img src="static/img/waveforce.png" class="sidebar-image">                 
         </div>
 
 
@@ -68,18 +68,18 @@
             Click to explore our products:
             <div class="row image-row">
               <div class="col-sm-4">
-                <a href="/xwaves/getting_started.html">
-                  <img width="215px" height="200px" src="/static/img/xwaves.png" class="product-image">
+                <a href="xwaves/getting_started.html">
+                  <img width="215px" height="200px" src="static/img/xwaves.png" class="product-image">
                 </a>
               </div>
               <div class="col-sm-4">
                 <a class="not-active" href="#">
-                  <img width="215px" height="200px" src="/static/img/wavector.png" class="product-image">
+                  <img width="215px" height="200px" src="static/img/wavector.png" class="product-image">
                 </a>
               </div>
               <div class="col-sm-4">
                 <a class="not-active" href="#">
-                  <img width="215px" height="200px" src="/static/img/autowaves.png" class="product-image">
+                  <img width="215px" height="200px" src="static/img/autowaves.png" class="product-image">
                 </a>
               </div>
             </div>
@@ -90,8 +90,8 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/static/lib/jquery/dist/jquery.min.js"></script>
-    <script src="/static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="static/lib/jquery/dist/jquery.min.js"></script>
+    <script src="static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
   
   </body>
 

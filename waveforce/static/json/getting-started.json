@@ -1,10 +1,10 @@
 {
 	"XWaves Help" :
-		"/static/html/xwaves_help.html"
+		"../static/html/xwaves_help.html"
 	,"System Requirements" :
-		"/static/html/sys_reqs.html"
+		"../static/html/sys_reqs.html"
 	,"License Activation" :
-		"/static/html/lic_act.html"
+		"../static/html/lic_act.html"
 	,"Program Installation":
-		"/static/html/program_install.html"
+		"../static/html/program_install.html"
 }
