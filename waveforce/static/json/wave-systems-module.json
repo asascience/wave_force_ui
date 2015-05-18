@@ -1,6 +1,6 @@
 {
     "Wave Systems Module" :
-        "/static/html/wave_systems_module.html"
+        "../static/html/wave_systems_module.html"
     ,"Wave Systems Parameters" :
-        "/static/html/wave_systems_parameters.html"
+        "../static/html/wave_systems_parameters.html"
 }

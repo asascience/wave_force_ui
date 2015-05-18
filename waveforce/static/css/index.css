@@ -1,5 +1,5 @@
 body{
-	background-image: url("/static/img/watermark.jpg");
+	background-image: url("../img/watermark.jpg");
 	background-repeat: no-repeat;
 	background-position:70%  20%;
 	background-attachment: fixed;

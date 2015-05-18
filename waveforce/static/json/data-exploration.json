@@ -1,8 +1,8 @@
 {
     "DataView" :
-        "/static/html/dataview.html"
+        "../static/html/dataview.html"
     ,"Exporting Images and Animations" :
-        "/static/html/exporting_images_and_animations.html"
+        "../static/html/exporting_images_and_animations.html"
     ,"Making Plots" :
-        "/static/html/making_plots.html"
+        "../static/html/making_plots.html"
 }

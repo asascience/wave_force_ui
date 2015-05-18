@@ -1,8 +1,8 @@
 {
     "Evaluation Help" :
-        "/static/html/evaluation_help.html"
+        "../static/html/evaluation_help.html"
     ,"Evaluate Parameters Table" :
-        "/static/html/evaluate_parameters_table.html"
+        "../static/html/evaluate_parameters_table.html"
     ,"Quick Compare" :
-        "/static/html/quick_compare.html"
+        "../static/html/quick_compare.html"
 }

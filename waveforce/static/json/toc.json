@@ -1,58 +1,58 @@
 [
 	{
 		"name":"Home",
-		"link":"/"
+		"link":"../index.html"
 	},
 	{
 		"name":"Getting Started",
-		"link":"/xwaves/getting_started.html"
+		"link":"getting_started.html"
 	},
     {
         "name":"Loading Data",
-        "link":"/xwaves/loading_data.html"
+        "link":"loading_data.html"
     },
     {
         "name":"Data Exploration",
-        "link":"/xwaves/data_exploration.html"
+        "link":"data_exploration.html"
     },
     {
         "name":"Data Utilities Module",
-        "link":"/xwaves/data_utilities_module.html"
+        "link":"data_utilities_module.html"
     },
     {
         "name":"Wave Systems Module",
-        "link":"/xwaves/wave_systems_module.html"
+        "link":"wave_systems_module.html"
     },
     {
         "name":"Spectral Fitting Module",
-        "link":"/xwaves/spectral_fitting_module.html"
+        "link":"spectral_fitting_module.html"
     },
     {
         "name":"Sea State Analysis Module",
-        "link":"/xwaves/sea_state_analysis_module.html"
+        "link":"sea_state_analysis_module.html"
     },
     {
         "name":"Swell Map Module",
-        "link":"/xwaves/swell_map_module.html"
+        "link":"swell_map_module.html"
     },
     {
         "name":"Evaluation Module",
-        "link":"/xwaves/evaluation_module.html"
+        "link":"evaluation_module.html"
     },
     {
         "name":"Exporting Data",
-        "link":"/xwaves/exporting_data.html"
+        "link":"exporting_data.html"
     },
     {
         "name":"Definitions and Methods",
-        "link":"/xwaves/definitions_and_methods.html"
+        "link":"definitions_and_methods.html"
     },
     {
         "name":"XWaves Tutorial",
-        "link":"/xwaves/xwaves_tutorial.html"
+        "link":"xwaves_tutorial.html"
     },
     {
         "name":"References",
-        "link":"/xwaves/references.html"
+        "link":"references.html"
     }
 ]
