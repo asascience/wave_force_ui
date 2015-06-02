@@ -54,12 +54,13 @@
         <div class="row main-row">
             <div class="col-sm-4 col-md-3 sidebar">
                 <nav class="bs-docs-sidebar affix">
-                    <img src="../static/img/waveforce.png" class="sidebar-image">
+                    <img src="../static/img/xwaves.png" class="sidebar-image">
                     <ul id="sidebarToc" class="nav bs-docs-sidenav wave-force-toc">
                     </ul>
                 </nav>
             </div>
-            <div class="col-sm-7 main content-page">
+            <div class="col-sm-8 main content-page">
+                <p class="section-heading">Getting Started</p>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 </div>
             </div>
@@ -95,6 +96,7 @@
         var col_class = ""
         if (active) {
             col_html = 'class="collapsed"'
+            col_class = " in"
         }
 
         html = '<div class="panel panel-default">' +

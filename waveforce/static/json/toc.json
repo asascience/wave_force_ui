@@ -1,6 +1,6 @@
 [
 	{
-		"name":"Home",
+		"name":"XWaves Help",
 		"link":"../index.html"
 	},
 	{
@@ -12,8 +12,8 @@
         "link":"loading_data.html"
     },
     {
-        "name":"Data Exploration",
-        "link":"data_exploration.html"
+        "name":"Data View Module",
+        "link":"data_view_module.html"
     },
     {
         "name":"Data Utilities Module",
@@ -42,10 +42,6 @@
     {
         "name":"Exporting Data",
         "link":"exporting_data.html"
-    },
-    {
-        "name":"Definitions and Methods",
-        "link":"definitions_and_methods.html"
     },
     {
         "name":"XWaves Tutorial",

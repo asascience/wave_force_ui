@@ -1,6 +1,10 @@
 {
-    "Wave Systems Module" :
+    "Wave Systems Overview" :
         "../static/html/wave_systems_module.html"
-    ,"Wave Systems Parameters" :
+    ,"Wave Systems Parameters Table" :
         "../static/html/wave_systems_parameters.html"
+    ,"Partition Editor" :
+        "../static/html/partition_editor_help.html"
+    ,"Wave Systems Editor" :
+        "../static/html/wave_systems_editor.html"
 }
