@@ -3,8 +3,8 @@
     <div class="clearfix grpelem" id="u4242-229" data-muse-uid="U4242">
         <!-- content -->
         <!-- m_editable region-id="editable-static-tag-U4242" template="evaluation-module.html" data-type="html" data-ice-options="disableImageResize,none" -->
-        <p class="blue-heading">Evaluate Module</p>
-        <p class="subheading">Evaluate Overview</p>
+        <!-- <p class="blue-heading">Evaluate Module</p>
+        <p class="subheading">Evaluate Overview</p> -->
         <p class="body">&nbsp;</p>
         <p class="body">The <span id="u4242-7">Evaluate Module</span> is designed to allow a robust statistical comparison to be made between two data sets. The user has the option of choosing between two operating modes, a Quick <span id="u4242-9">Compare and Evaluate </span>mode. The Quick Compare mode allows the user to compare two data sets using a set of comparison plots in <span id="u4242-11">DataView</span>. The Evaluate mode is an in-depth analysis between two data sets. Statistical temporal correlation (TC) analyses are performed on wind speed and height, and wave height, period and direction. The Evaluate Module GUI allows the user to select different analysis options such as applying smoothing, subsampling, and wave height and wind speed thresholds to the baseline data set. The integration of Evaluate Module is depicted in the following Figure. Results are displayed in a set of Evaluate plots and tables in <span id="u4242-13">DataView</span>.</p>
         <p id="u4242-16">&nbsp;</p>
@@ -21,26 +21,36 @@
         <p class="body">&nbsp;</p>
         <p class="body">For n values of baseline measurements m and evaluate measurements h the bias (evaluate – baseline)</p>
         <p class="body">&nbsp;</p>
-        <p class="body">b=1/n ∑▒〖h-m;〗</p>
+        <p class="body">\( b=\frac{1}{n} \sum(h-m) \)</p>
+        <p class="body">&nbsp;</p>
         <p class="body">Root-mean-square (RMS) error</p>
         <p class="body">&nbsp;</p>
-        <p class="body">E_RMS=[(∑▒(h-m)^2 )/n]^0.5;</p>
+        <p class="body">\( E{_{rms}}=\left [ \frac{\sum(h-m)^{2}}{n} \right ]^{0.5} \);</p>
+        <p class="body">&nbsp;</p>
         <p class="body">Scatter index</p>
-        <p class="body">SI=σ_d/m</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">\( SI=\frac{\sigma{_{d}}}{m} \)</p>
         <p class="body">&nbsp;</p>
         <p class="body">Where the standard deviation of difference is given by</p>
         <p class="body">&nbsp;</p>
-        <p class="body">σ_d=[(∑_i▒(h_i-m_i-b)^2 )/(n-1)]^0.5</p>
+        <p class="body">\( \sigma{_{d}} = \left [ \frac{\sum_{i}(h_{i}-m_{i}-b)^{2}}{n-1}  \right ]^{0.5} \)</p>
         <p class="body">For directional data, the angular bias is calculated by</p>
         <p class="body">&nbsp;</p>
-        <p class="body">b_a {█(tan^(-1)⁡〖(S/C)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for S&gt;0,C&gt;0〗;@tan^(-1)⁡(S/C)+π&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for C&lt;0; and,@tan^(-1)⁡(S/C)+2π&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; forS&lt;0,C&gt;0)┤</p>
+        <p class="body">\( b{_a}\left\{\begin{matrix}
+                        \tan^{-1}(\frac{S}{C}) & S>0,C>0\\ 
+                        \tan^{-1}(\frac{S}{C})+\pi & C<0; \\ 
+                        \tan^{-1}(\frac{S}{C})+2\pi & S<0,C>0
+                        \end{matrix}\right. \)</p>
         <p class="body">&nbsp;</p>
-        <p class="body">Where S and C are computed from the directional differences Δθ = |θ¬h-θm| by</p>
-        <p class="body">S=∑_(i=1)^n▒sin⁡(∆θ_i ) ,and</p>
-        <p class="body">C=∑_(i=1)^n▒cos⁡(∆θ_i )</p>
+        <p class="body">Where S and C are computed from the directional differences Δθ = |θ<SUB>h</SUB>-θ<SUB>m</SUB>| by</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">\( S = \sum_{i=1}^{n}\sin(\Delta\theta{_{i}}) \) ,and</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">\( C = \sum_{i=1}^{n}\cos(\Delta\theta{_{i}}) \)</p>
+        <p class="body">&nbsp;</p>
         <p class="body">The circular correlation is computed by</p>
         <p class="body">&nbsp;</p>
-        <p class="body">cor=(∑_(i=1)^n▒sin⁡(θ_m-(θ_m ) ̅ )&nbsp;&nbsp; sin⁡(θ_h-(θ_h ) ̅ ))/√(∑_(i=1)^n▒〖[sin⁡(θ_m-(θ_m ) ̅ ) ]^2 ∑_(i=1)^n▒[sin⁡(θ_h-(θ_h ) ̅ ) ]^2 〗)</p>
+        <p class="body">\( cor = \frac{\sum_{i=1}^{n}\sin(\theta{_{m}-\overline{\theta{_{m}}}})\sin(\theta{_{h}}-\overline{\theta{_{h}}})}{\sqrt{\sum_{i=1}^{n}[\sin(\theta{_{m}-\overline{\theta{_{m}}}})]^{2}\sum_{i=1}^{n}[\sin(\theta{_{h}-\overline{\theta{_{h}}}})]^{2}}} \)</p>
         <p class="body">&nbsp;</p>
         <p class="body">&nbsp;</p>
         <p class="body">In addition, wave height is calculated for each frequency bin and sorted into 11 equally spaced wave height bins. The wave heights are calculated by</p>

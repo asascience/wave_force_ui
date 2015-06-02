@@ -1,8 +1,4 @@
 {
-    "Partition Editor" :
-        "../static/html/partition_editor_help.html"
-    ,"Utilities Help" :
+    "Data Utilities Overview" :
         "../static/html/utilities_help.html"
-    ,"Wave Systems Editor" :
-        "../static/html/wave_systems_editor.html"
 }

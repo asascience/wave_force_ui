@@ -34,18 +34,18 @@
         <p class="body">There are 4 options for separating windsea and swell:</p>
         <p class="body">&nbsp;</p>
         <p class="indent" id="u3076-83"><span class="small-left-indent">1.&nbsp; Wave Age 2D</span><span class="small-left-indent" id="u3076-64"> – This is the standard tool for extracting wind seas using a directional wave age criterion.&nbsp; This method</span>&nbsp;&nbsp;&nbsp;
-            <br />&nbsp;&nbsp;&nbsp;&nbsp; <span class="left-indent">classifies peaks as windsea or swells using the user-defined </span><span class="left-indent" id="u3076-69">Windsea Multiplier</span><span class="left-indent">.&nbsp; A wave system is considered windsea if it&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp; is forced by the local wind such that the mean phase speed of the waves CP is less than or equal to the wind speed <br />&nbsp;&nbsp;&nbsp;&nbsp; component in the direction of the waves ( U10 cos ) when multiplied by the </span><span class="left-indent" id="u3076-76">Windsea Multiplier</span><span class="left-indent"> </span><span class="left-indent" id="u3076-78">wsmult</span><span class="left-indent">:<br /><br /></span></p>
-        <p class="body" id="u3076-85"><span class="left-indent">if&nbsp; , then wave system is windsea.</span></p>
+            <br />&nbsp;&nbsp;&nbsp;&nbsp; <span class="left-indent">classifies peaks as windsea or swells using the user-defined </span><span class="left-indent" id="u3076-69">Windsea Multiplier</span><span class="left-indent">.&nbsp; A wave system is considered windsea if it&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp; is forced by the local wind such that the mean phase speed of the waves \(c{_{p}}\) is less than or equal to the wind speed <br />&nbsp;&nbsp;&nbsp;&nbsp; component in the direction of the waves  \(U{_{10}}\cos(\frac{\delta }{2})\) when multiplied by the </span><span class="left-indent" id="u3076-76">Windsea Multiplier</span><span class="left-indent"> </span><span class="left-indent" id="u3076-78">wsmult</span><span class="left-indent">:<br /><br /></span></p>
+        <p class="body" id="u3076-85"><span class="left-indent">if&nbsp; \(c{_{p}}\leq wsmult * U{_{10}}\cos(\frac{\delta }{2})\), then wave system is windsea.</span></p>
         <p class="body" id="u3076-86">&nbsp;</p>
-        <p class="body" id="u3076-88"><span class="left-indent">The factor&nbsp; broadens the windsea search angle to allow for turning winds or coastal effects.&nbsp;&nbsp; All other wave systems are considered swell.</span></p>
+        <p class="body" id="u3076-88"><span class="left-indent">The factor \(\frac{\delta }{2}\) broadens the windsea search angle to allow for turning winds or coastal effects.&nbsp;&nbsp; All other wave systems are considered swell.</span></p>
         <p class="body" id="u3076-89">&nbsp;</p>
         <p class="body" id="u3076-95"><span class="left-indent">Typically, this approach works best on measured data, such as from a buoy or acoustic sonar.&nbsp; Model data tend to be to smooth across frequency bands for the software to find a distinct wind sea peak with this approach (for model data see </span><span class="left-indent" id="u3076-91">Wind Force</span><span class="left-indent"> option below).&nbsp; A </span><span class="left-indent" id="u3076-93">Windsea Multiplier</span><span class="left-indent"> value of 1.5 to 1.7 works well for measured data.&nbsp; The results are best checked by (1) inspection of the wave vector history plot (Wave System module) to evaluate how well the windseas follow the wind; and (2) inspection of the various windsea wave system plot options in Data View for comparing the input spectra with the selected windsea spectra.</span></p>
         <p class="body">&nbsp;</p>
         <p class="body" id="u3076-105"><span id="u3076-97">2.&nbsp; Wave Age 1D </span>– This technique is similar to the Wave Age 2D, except that wave direction is not considered in the
             <br />&nbsp;&nbsp;&nbsp;&nbsp; calculation.&nbsp; A wave system is considered windsea if it is forced by the local wind such that the mean phase speed of the
-            <br />&nbsp;&nbsp;&nbsp;&nbsp; waves&nbsp; is less than or equal to the wind speed ( ) when multiplied by the <span id="u3076-103">Windsea Multiplier wsmult</span>:</p>
+            <br />&nbsp;&nbsp;&nbsp;&nbsp; waves&nbsp; \(c{_{p}}\) is less than or equal to the wind speed ( \(U{_{10}}\)) when multiplied by the <span id="u3076-103">Windsea Multiplier wsmult</span>:</p>
         <p class="body" id="u3076-106">&nbsp;</p>
-        <p class="body" id="u3076-108">if&nbsp; , then wave system is windsea.</p>
+        <p class="body" id="u3076-108">if&nbsp; \(c{_{p}}\leq wsmult * U{_{10}}\), then wave system is windsea.</p>
         <p class="body" id="u3076-109">&nbsp;</p>
         <p class="body" id="u3076-111">All other wave systems are considered swell.&nbsp; This is the default approach for 1D (non-directional) data.&nbsp; A Windsea Multiplier value of 1.5 to 2.0 works best for most measured data.</p>
         <p class="body">&nbsp;</p>
@@ -56,11 +56,11 @@
         <p class="body">&nbsp;</p>
         <p class="body" id="u3076-124">wf = partition windsea energy/ partition total energy</p>
         <p class="body" id="u3076-125">&nbsp;</p>
-        <p class="body">where the windsea energy is computed from the portion of the partition that is forced by the component of the wind in the wave direction, using&nbsp;&nbsp; to compute the wind component as described above.&nbsp; Pure windseas have wf~1 (as in 100% windsea energy) and pure swell has wf~0 (as in 0 % windsea energy).&nbsp; In-between these values the seas are mixed.</p>
+        <p class="body">where the windsea energy is computed from the portion of the partition that is forced by the component of the wind in the wave direction, using \(U{_{10}}\cos(\frac{\delta }{2})\) to compute the wind component as described above.&nbsp; Pure windseas have wf~1 (as in 100% windsea energy) and pure swell has wf~0 (as in 0 % windsea energy).&nbsp; In-between these values the seas are mixed.</p>
         <p class="body">&nbsp;</p>
         <p class="body">When implementing this approach, the user is required to set a value for the <span id="u3076-130">Windforce Threshold </span>(%).&nbsp; This threshold is then used to set each partition as windsea or swell depending on the Wind Force value:</p>
         <p class="body">&nbsp;</p>
-        <p class="body"><span class="Bolded-body-text">&nbsp;&nbsp; Windsea: </span> Wind Force x 100 ≥ Windforce Threshold</p>
+        <p class="body"><span class="Bolded-body-text"> Windsea: </span> Wind Force x 100 ≥ Windforce Threshold</p>
         <p class="body">&nbsp; <span class="Bolded-body-text"> Swell: </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wind Force x 100 &lt; Windforce Threshold</p>
         <p class="body">&nbsp;</p>
         <p class="body">&nbsp;</p>
@@ -71,9 +71,9 @@
             <br />&nbsp;&nbsp;&nbsp;&nbsp; conducted by ECMWF is described in ECMWF, 2009 and a spectral partition (f,θ) is assumed to windsea if the following
             <br />&nbsp;&nbsp;&nbsp;&nbsp; inequality is satisfied.</p>
         <p class="body" id="u3076-159">&nbsp;</p>
-        <p class="body" id="u3076-161">1.2×28(u_*/c)&nbsp; cos⁡〖(θ-∅)&gt;1〗</p>
+        <p class="body" id="u3076-161">\(1.2*28(\frac{u{_*}}{c})\cos⁡(\theta-\phi)>1\)</p>
         <p class="body">&nbsp;</p>
-        <p class="body">Here 𝑢∗ is the friction velocity (ustar), c is the phase speed derived from linear theory for a given peak wave frequency fp, θ is the wave direction, and ϕ is the wind direction.&nbsp; When this option is selected, the user has the option of using friction velocity estimated from the winds (Large and Pond, 1981) or from a data file.&nbsp; In this latter case, in the event friction velocities have not already been previously loaded into wave data file, the user is asked to browse for a friction velocity data file.&nbsp; This file is then opened and the provided friction velocities are interpolated in time to match the wave record time stamps.&nbsp; A new data field ‘ustar’ is added to the wavedat variable.&nbsp; Alternatively, friction velocity data can be loaded into the processed data file within the <span id="u3076-164">Data View</span> module through the Load command in the Options pull-down menu.</p>
+        <p class="body">Here  is the friction velocity (ustar), c is the phase speed derived from linear theory for a given peak wave frequency fp, θ is the wave direction, and ϕ is the wind direction.&nbsp; When this option is selected, the user has the option of using friction velocity estimated from the winds (Large and Pond, 1981) or from a data file.&nbsp; In this latter case, in the event friction velocities have not already been previously loaded into wave data file, the user is asked to browse for a friction velocity data file.&nbsp; This file is then opened and the provided friction velocities are interpolated in time to match the wave record time stamps.&nbsp; A new data field ‘ustar’ is added to the wavedat variable.&nbsp; Alternatively, friction velocity data can be loaded into the processed data file within the <span id="u3076-164">Data View</span> module through the Load command in the Options pull-down menu.</p>
         <p class="body">&nbsp;</p>
         <p class="body" id="u3076-178"><span class="Bolded-body-text">5.&nbsp; None</span> – Use this option if no windsea identification is desired.&nbsp; All partitions are treated equally throughout.&nbsp; The Spectral Fit
             <br />&nbsp;&nbsp;&nbsp;&nbsp; and Sea State Modules will not recognize any windseas in the data – all the wave systems will be treated as swell.&nbsp; Further

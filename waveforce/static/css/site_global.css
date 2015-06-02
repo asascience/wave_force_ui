@@ -160,6 +160,15 @@ a.nontext /* used to override default properties of 'a' tag */
 	padding: 0px;
 }
 
+.section-heading
+{
+	color: #366196;
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 20px;
+}
+
 .intro-text
 {
 	color: #5F5C5C;
