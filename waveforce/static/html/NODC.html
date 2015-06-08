@@ -1,0 +1,233 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u5902">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u5903-448" data-muse-uid="U5903">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U5903" template="datawell.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="subheading">Description:</p>
+        <p>The National Oceanographic Data Center <span id="u5903-4">NODC</span> maintains a database that holds wind, wave, and other marine data collected by the NOAA National Data Buoy Center (<span id="u5903-6">NDBC</span>). The data are collected from NDBC moored buoys and from C-MAN (Coastal-Marine Automated Network) stations located on piers, offshore towers, lighthouses, and beaches. Parameters reported by both buoys and C-MAN stations include air temperature and pressure, wind speed and direction, wind gust, and sea surface temperature. The buoys (and a few C-MAN stations located on offshore towers) also report wave data, usually including wave height, wave period, and wave spectra. Since the late 1980s some buoys have reported directional wave spectra. NODC receives the data from NDBC on a monthly basis, generally 2-3 weeks after the last observation from the given month, and makes them available online.</p>
+        <p>&nbsp;</p>
+        <p>As part of a data modernization effort, the National Data Buoy Center (NDBC) has updated the archival data file format of their Coastal-Marine Automated Network (C-MAN) stations and moored (weather) buoys to netCDF. This update facilitates inclusion of additional parameters, as well as improvements to the metadata. On 26 May 2011, NODC's NOAA Marine Environmental Buoy Database began disseminating NDBC’s archival data in these netCDF files, retroactively to the monthly January 2011 data. Data are available in both <span id="u5903-11">F291</span> and <span id="u5903-13">netCDF</span> formats for January through March 2011. Data prior to January 2011 will remain in the F291 format.</p>
+        <p>&nbsp;</p>
+        <p>XWaves can import NODC data files two ways: from a file saved to local disk (Disk File) or downloaded right from the NODC FTP site (WWW Download). The download option is only available for the F291 data format prior to January 2011. Both types, can be downloaded for free from the <span id="u5903-18">NODC</span> website.</p>
+        <p>&nbsp;</p>
+        <p>• NetCDF File naming convention: NDBC_&lt;WMO ID&gt;_YYYYMM_D&lt;DEPLOYMENT NUMBER&gt;_v&lt;VERSION NUMBER&gt;.nc</p>
+        <p>• WMO ID: 5-character alpha-numeric string, which the World Meteorological Organization assigned, to identify C-MAN stations and moored buoys;</p>
+        <p>• YYYYMM: numeric year and month that NDBC collected the data;</p>
+        <p>• DEPLOYMENT NUMBER: unique number assigned to specific station configuration, sequentially assigned by the NDBC database system</p>
+        <p>(lower number = older configuration and a higher number = a newer configuration);</p>
+        <p>• VERSION NUMBER: two-digit number that NDBC uses to track their version of the data, starting with 00;</p>
+        <p>• .nc: netCDF (version 4) file extension;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="subheading">Example:</p>
+        <p id="u5903-41">NetCDF</p>
+        <p>The NODC netCDF files follow the netCDF <span id="u5903-43">standard</span> and the netCDF CF <span id="u5903-45">metadata conventions</span> as much as possible. See below for a list of variables needed for XWaves processing.</p>
+        <p>&nbsp;</p>
+        <p>F291 Data Format</p>
+        <p>291199612A44014 9612010050363459N0745001W00480-011&nbsp;&nbsp; 10244000046&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NDBC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 080YNNNNNNYNYY</p>
+        <p>291199612B44014 9612010050050+130&nbsp;&nbsp;&nbsp; 1025404001750&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 010062078&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1090&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 108&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 045005</p>
+        <p>291199612I44014 9612010050303250050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 03750050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 04250050</p>
+        <p>291199612I44014 9612010050304750050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 05250050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 05750050</p>
+        <p>291199612I44014 9612010050306250050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 06750050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 072500500072004510401260</p>
+        <p>291199612I44014 96120100503077500500081005107200730&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 082500500084005207400750&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 087500500091006808100800</p>
+        <p>291199612I44014 96120100503092500500087005907800760&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100001000087006008300860&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 110001000086005607000680</p>
+        <p>291199612I44014 96120100503120001000086005908300820&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 130001000073003208700770&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 140001000074002808500780</p>
+        <p>291199612I44014 96120100503150001000076003708800770&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 160001000078003709301030&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 170001000078003608900850</p>
+        <p>291199612I44014 96120100503180001000069001208900880&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 190001000076003209501030&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 200001000076003108700810</p>
+        <p>291199612I44014 96120100503210001000067003911601430&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 220001000070001910501070&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 230001000078005312601390</p>
+        <p>291199612I44014 96120100503240001000072004012501390&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 250001000067004012601540&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 260001000065002813001570</p>
+        <p>291199612I44014 96120100503270001000077005515101640&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 280001000081004414301440&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 290001000078004713801430</p>
+        <p>291199612I44014 96120100503300001000086006915101580&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 310001000083006714901560&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 320001000067002714001720</p>
+        <p>291199612I44014 96120100503330001000081007014401530&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 340001000061005313401660&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 350001000080006213901520</p>
+        <p>291199612I44014 96120100503365002000056004713201670&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 385002000056006714301720&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 405002000058006514201640</p>
+        <p>291199612I44014 96120100503425002000041003309601830&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 445002000038005312101700&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 465002000065002409701200</p>
+        <p>291199612I44014 96120100501485002000067003812701330</p>
+        <p>291199612K44014 96120100500040&nbsp;&nbsp; 50325005000000000003750050000000000042500500000000000475005000000000005250050000000000</p>
+        <p>291199612K44014 96120100500040&nbsp;&nbsp; 50575005000000000006250050000000020067500500000038730725005000000945707750050000014885</p>
+        <p>291199612K44014 96120100500040&nbsp;&nbsp; 50825005000003384908750050000099455092500500001424331000010000011213011000100000063868</p>
+        <p>291199612K44014 96120100500040&nbsp;&nbsp; 51200010000005814813000100000017018140001000000151761500010000001656416000100000014796</p>
+        <p>291199612K44014 96120100500040&nbsp;&nbsp; 51700010000000933618000100000009237190001000000106982000010000001044821000100000004808</p>
+        <p>291199612K44014 96120100500040&nbsp;&nbsp; 52200010000000825123000100000006907240001000000067362500010000000737626000100000005655</p>
+        <p>291199612K44014 96120100500040&nbsp;&nbsp; 52700010000000468928000100000005420290001000000050643000010000000761931000100000008158</p>
+        <p>291199612K44014 96120100500040&nbsp;&nbsp; 53200010000000341633000100000005596340001000000025853500010000000458636500200000002695</p>
+        <p>291199612K44014 96120100500040&nbsp;&nbsp; 53850020000000165940500200000000717425002000000004914450020000000060046500200000000489</p>
+        <p>291199612K44014 96120100500040&nbsp;&nbsp; 148500200000000327</p>
+        <p>291199612L44014 9612010050020000200+00000+0+00000+0+00000+0+00000+0+00000+0+00000+0+00000+0+00000+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
+        <p>291199612L44014 9612010050032500050+00000+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
+        <p>291199612L44014 9612010050037500050+00000+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
+        <p>291199612L44014 9612010050042500050+00000+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
+        <p>291199612L44014 9612010050047500050+13827-3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
+        <p>291199612L44014 9612010050052500050+00000+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
+        <p>291199612L44014 9612010050057500050+00000+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
+        <p>291199612L44014 9612010050062500050+26558-3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
+        <p>291199612L44014 9612010050067500050+15139-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
+        <p>291199612L44014 9612010050072500050+43330-2+47621-4+35893-4-10098-3+40502-3+42852-4-96247-4-18047-4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
+        <p>291199612L44014 9612010050077500050+86298-2+70710-4+28878-4-22172-3+68238-3+79324-4+25946-3+14108-4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
+        <p>291199612L44014 9612010050082500050+24700-1+19080-3+72951-4-56936-3+19856-2-62675-4+59631-3+34020-4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Format:</p>
+        <p>NetCDF Variables</p>
+        <p>time time (seconds since 1970-01-01 00:00:00 UTC (UNIX))</p>
+        <p>nominal_latitude Decimal latitude *Optional</p>
+        <p>nominal_longitude Decimal longitude *Optional</p>
+        <p>wave_wpm frequency vector (sea_surface_wave_frequency (Hz))</p>
+        <p>c11 sea surface wave variance spectral density (m^2/Hz)</p>
+        <p>wind_speed Wind speed (m/s) *Optional</p>
+        <p>wind_speed_qc Flags for good quality wind data *Optional</p>
+        <p>wind_direction Wind from direction (degrees clockwise from North) *Optional</p>
+        <p>wind_direction_qc Flags for good quality wind data *Optional</p>
+        <p>height_of_instrument Height of anemometer *Optional</p>
+        <p>&nbsp;</p>
+        <p>If 2D Wave Spectra</p>
+        <p>alpha1 Mean wave direction at specified frequency</p>
+        <p>alpha2 Principal wave direction at specified frequency</p>
+        <p>r1 First normalized polar coordinate of the Fourier_coefficients</p>
+        <p>r2 Last normalized polar coordinate of the Fourier_coefficients</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>F291 Header Data</p>
+        <p>DESCRIPTIVE HEADER RECORD (RECORD A)</p>
+        <p>PARAMETER STARTING POSITION FIELD LENGTH DESCRIPTION</p>
+        <p>FILE TYPE 1 3 &quot;291&quot; (constant)</p>
+        <p>OBS YEAR/MONTH 4 6 YYYYMM of Observation</p>
+        <p>RECORD TYPE 10 1 Always 'A'</p>
+        <p>STATION 11 6 Six-character unique name of observation point</p>
+        <p>OBSERVED DATE 17 6 YYMMDD (UTC)</p>
+        <p>OBSERVED TIME 23 4 HHMM (UTC) - End of met. data acquisition, rounded to beginning of nearest whole minute</p>
+        <p>LATITUDE 27 7 DDMMSS plus hemisphere 'N' or 'S'</p>
+        <p>LONGITUDE 34 8 DDDMMSS plus hemisphere 'E' or 'W'</p>
+        <p>BOTTOM DEPTH 42 5 XXXXX - Meters to tenths</p>
+        <p>MAGNETIC VARIATION 47 4 XXXX - Whole degrees from true North (signed value)</p>
+        <p>BUOY HEADING 51 3 XXX - Whole degrees from true North</p>
+        <p>SAMPLING RATE (WAVES) 54 4 XXXX - Original measurements per minute to tenths</p>
+        <p>SAMPLING DURATION (WAVES)* 58 4 XXXX - Minutes to hundredths</p>
+        <p>TOTAL INTERVALS (WAVES) 62 3 XXX - Number of frequency intervals</p>
+        <p>CHIEF SCIENTIST 65 20 20-Character field for scientist name</p>
+        <p>INSTITUTION 85 20 20-Character field for data source</p>
+        <p>WIND SAMPLING DURATION 105 3 XXX - Minutes to tenths</p>
+        <p>PRESENCE OF RECORD 'B' 108 1 X - Y=YES; N=NO</p>
+        <p>PRESENCE OF RECORD 'C' 109 1 X - Y=YES; N=NO</p>
+        <p>PRESENCE OF RECORD 'D' 110 1 X - Y=YES; N=NO</p>
+        <p>PRESENCE OF RECORD 'E' 111 1 X - Y=YES; N=NO</p>
+        <p>PRESENCE OF RECORD 'F' 112 1 X - Y=YES; N=NO</p>
+        <p>PRESENCE OF RECORD 'G' 113 1 X - Y=YES; N=NO</p>
+        <p>PRESENCE OF RECORD 'H' 114 1 X - Y=YES; N=NO</p>
+        <p>PRESENCE OF RECORD 'I' 115 1 X - Y=YES; N=NO</p>
+        <p>PRESENCE OF RECORD 'J' 116 1 X - Y=YES; N=NO</p>
+        <p>PRESENCE OF RECORD 'K' 117 1 X - Y=YES; N=NO</p>
+        <p>PRESENCE OF RECORD 'L' 118 1 X - Y=YES; N=NO</p>
+        <p>BLANKS 119 2</p>
+        <p>* If the SAMPLING DURATION (WAVES) field is set to 40 minutes, then the actual sampling duration for all wave calculations varies by frequency range. For 0.02 to 0.0925 Hz, the sampling duration is 40 minutes. For 0.1 to 0.35 Hz, the sampling duration is 20 minutes. And, for 0.365 to 0.485 Hz, the sampling duration is 10 minutes.</p>
+        <p>&nbsp;</p>
+        <p>F291 MET Data</p>
+        <p>ENVIRONMENTAL DATA RECORD (RECORD B)</p>
+        <p>PARAMETER STARTING POSITION FIELD LENGTH DESCRIPTION</p>
+        <p>FILE TYPE 1 3 &quot;291&quot; (constant)</p>
+        <p>OBS YEAR/MONTH 4 6 YYYYMM of Observation</p>
+        <p>RECORD TYPE 10 1 Always 'B'</p>
+        <p>STATION 11 6 Six-character unique name of observation point</p>
+        <p>OBSERVED DATE 17 6 YYMMDD (UTC)</p>
+        <p>OBSERVED TIME 23 4 HHMM (UTC) - End of met. data acquisition, rounded to beginning of nearest whole minute</p>
+        <p>ANEMOMETER HEIGHT 27 3 XXX - Height above water level or ground (meters to tenths)</p>
+        <p>AIR TEMPERATURE 30 4 XXXX - Negative temperatures are preceded by a minus sign adjacent to tempera- ture value Deg C to tenths</p>
+        <p>DEW POINT 34 4 XXXX - Degrees C to tenths</p>
+        <p>BAROMETER 38 5 XXXXX - Reduced to sea level (MB to tenths)</p>
+        <p>WIND SPEED (AVG) 43 4 XXXX - m/sec to hundredths</p>
+        <p>WIND DIRECTION (AVG) 47 4 XXXX - Degrees from true North to tenths</p>
+        <p>WEATHER 51 1 One-character code from NODC code table 0108 (WMO 4501)</p>
+        <p>VISIBILITY 52 3 XXX - Nautical miles to tenths</p>
+        <p>PRECIPITATION 55 4 XXXX - Accumulation in millimeters</p>
+        <p>SOLAR RADIATION (ATMOSPHERIC 59 3 xxx - Langleys/min to hundredths, wave length less than 3.6 microns</p>
+        <p>SOLAR RADIATION (ATMOSPHERIC) 62 3 XXX - Langleys/min to hundredths, wave length from 4.0 to 50 microns</p>
+        <p>SIGNIFICANT WAVE HEIGHT* 65 3 XXX - Corrected for low frequency noise, etc. (meters to tenths)</p>
+        <p>AVERAGE WAVE PERIOD* 68 3 XXX - Seconds to tenths</p>
+        <p>MEAN WAVE DIRECTION 71 3 XXX - Mean direction at the dominant wave period (spectral peak period) in whole degrees clockwise from true North to the direction from which the waves are coming. level; minus sign indicates below MLLW (meters to tenths)</p>
+        <p>BLANKS 78 2</p>
+        <p>TEMPERATURE (SEA SURFACE) 80 4 XXXX - Sea surface - Negative temperatures are preceded by a minus sign adjacent to temperature value-Deg C to hundredths</p>
+        <p>PRACTICAL SALINITY (SEA SURFACE) 84 5 XXXXX - To thousandths</p>
+        <p>CONDUCTIVITY (SEA SURFACE) 89 5 XXXXX - Millisiemens/cm to thousandths</p>
+        <p>DOMINANT WAVE PERIOD* 94 3 XXX - Spectral peak period- Seconds to tenths</p>
+        <p>MAXIMUM WAVE HEIGHT 97 3 XXX - Meters to tenths</p>
+        <p>MAXIMUM WAVE STEEPNESS 100 3 XXX</p>
+        <p>WIND GUST 103 4 XXXX - Meters/sec to hundredths</p>
+        <p>WIND GUST AVERAGING PERIOD 107 2 XX - Seconds</p>
+        <p>WIND GUST 109 4 XXXX - Meters/sec to hundredths</p>
+        <p>WIND GUST AVERAGING PERIOD 113 2 XX - Seconds</p>
+        <p>WIND SPEED (58 MIN AVG) 115 3 XXX - Meters/sec to tenths</p>
+        <p>WIND DIRECTION (58 MIN AVG) 118 3 XXX - Whole degrees</p>
+        <p>* Significant wave height, average wave period, and dominant wave period are set to zero when significant wave height is less than 0.15 meters.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>F291 2D Wave Spectra</p>
+        <p>DIRECTIONAL WAVE PARAMETER DATA RECORD (RECORD I)</p>
+        <p>PARAMETER STARTING POSITION FIELD LENGTH DESCRIPTION</p>
+        <p>FILE TYPE 1 3 Always &quot;291&quot;</p>
+        <p>OBS YEAR/MONTH 4 6 YYYYMM of Observation</p>
+        <p>RECORD TYPE 10 1 Always 'I'</p>
+        <p>STATION 11 6 Six character unique name of observation point</p>
+        <p>OBSERVED DATE 17 6 YYMMDD (UTC)</p>
+        <p>OBSERVED TIME 23 4 HHMM (UTC) - End of met. data acquisition, rounded to beginning of nearest whole minute</p>
+        <p>COUNT 27 1 X - Number of frequencies on this record (1 to 3)</p>
+        <p>FREQUENCY 28 4 XXXX - Center of frequency interval in Hz to the ten- thousandth</p>
+        <p>RESOLUTION 32 4 XXXX - Resolution of interval in Hz to the ten-thousandth</p>
+        <p>R1 36 4 XXXX - Nondimensional. Given to nearest hundredth</p>
+        <p>R2 40 4 XXXX - Nondimensional. Given to nearest hundredth</p>
+        <p>WAVE DIRECTION ALPHA1 44 4 XXXX - Direction in degrees to the tenth</p>
+        <p>WAVE DIRECTION ALPHA2 48 4 XXXX - Direction in degrees to the tenth</p>
+        <p>WAVE ESTIMATE C11 52 6 XXXXXX - Spectral value in m2/Hz to the thousandth</p>
+        <p>FREQUENCY 58 4 XXXX - Center of frequency interval in Hz to the ten- thousandth</p>
+        <p>RESOLUTION 62 4 XXXX - Resolution of interval in Hz to the ten-thousandth</p>
+        <p>R1 66 4 XXXX - Nondimensional. Given to nearest hundredth</p>
+        <p>R2 70 4 XXXX - Nondimensional. Given to nearest hundredth</p>
+        <p>WAVE DIRECTION ALPHA1 74 4 XXXX - Direction in degrees to the tenth</p>
+        <p>WAVE DIRECTION 78 4 XXXX - Direction in degrees to the tenth</p>
+        <p>WAVE C11 ESTIMATE 82 6 XXXXXX - Spectral value in m2/Hz to the thousandth</p>
+        <p>FREQUENCY 88 4 XXXX - Center of frequency interval in Hz to the ten-thousandth</p>
+        <p>RESOLUTION 92 4 XXXX - Resolution of interval in Hz to the ten-thousandth</p>
+        <p>R1 96 4 XXXX - Nondimemsional. Given to nearest hundredth</p>
+        <p>R2 100 4 XXXX - Nondimensional. Given to nearest hundredth</p>
+        <p>WAVE DIRECTION ALPHA1 104 4 XXXX - Direction in degrees to the tenth</p>
+        <p>WAVE DIRECTION ALPHA2 108 4 XXXX - Direction in degrees to the tenth</p>
+        <p>WAVE C11 ESTIMATE 112 6 XXXXXX - Spectral value in m2/Hz to the thousandth</p>
+        <p>BLANKS 118 3</p>
+        <p>NOTE: DIRECTIONAL WAVE SPECTRUM = C11(f)*D(f,A), f=frequency (Hz), A=Azimuth angle measured clockwise from North to the direction wave is from. D(f,A)=(1/PI)*(0.5+R1*COS(A-ALPHA1)+R2*COS(2*(A-ALPHA2))), in which R1 and R2 are dimensionless and ALPHA1 and ALPHA2 are respectively mean and principal wave directions. In terms of Longuet-Higgins Fourier Coefficients R1=(SQRT(a1*a1+b1*b1))/a0, R2=SQRT(a2*a2+b2*b2))/a0, ALPHA1=270.0-ARCTAN(b1,a1), ALPHA2=270.0-(0.5*ARCTAN(b2,a2)+{0. or 180.}), C11(f) is the nondirectional wave spectra data from RECORD C or RECORD K.</p>
+        <p>&nbsp;</p>
+        <p>F291 1D Wave Spectra</p>
+        <p>EXPANDED RESOLUTION NONDIRECTIONAL WAVE SPECTRA DATA RECORD (RECORD K)</p>
+        <p>PARAMETER STARTING POSITION FIELD LENGTH DESCRIPTION</p>
+        <p>FILE TYPE 1 3 &quot;291&quot; (constant)</p>
+        <p>OBS YEAR/MONTH 4 6 YYYYMM of Observation</p>
+        <p>RECORD TYPE 10 1 Always 'K'</p>
+        <p>STATION 11 6 Six-character unique name of observation point</p>
+        <p>OBSERVED DATE 17 6 YYMMDD (UTC)</p>
+        <p>OBSERVED TIME 23 4 HHMM (UTC) - End of met. data acquisition, rounded to beginning of nearest whole minute</p>
+        <p>END OF WAVE DATA ACQUISITION 27 4 HHMM (UTC) - Rounded to beginning of nearest whole minute</p>
+        <p>BLANKS 31 3</p>
+        <p>COUNT 34 1 X - Number of frequencies on this record</p>
+        <p>DATA&nbsp;&nbsp; Up to 5 frequency, resolu- tion, and density fields. Null fields are zero or blank</p>
+        <p>FREQUENCY 35 4 XXXX- Center frequency of interval in Hertz to ten-thousandths</p>
+        <p>RESOLUTION 39 4 XXXX - Interval width in Hertz to ten-thousandths</p>
+        <p>DENSITY 43 9 XXXXXXXXX - Spectral Density, C11, in m2/Hz to hundred-thousandths</p>
+        <p>FREQUENCY 52 4 XXXX - See above</p>
+        <p>RESOLUTION 56 4 XXXX - See above</p>
+        <p>DENSITY 60 9 XXXXXXXXX - See above</p>
+        <p>FREQUENCY 69 4 XXXX - See above</p>
+        <p>RESOLUTION 73 4 XXXX - See above</p>
+        <p>DENSITY 77 9 XXXXXXXXX - See above</p>
+        <p>FREQUENCY 86 4 XXXX - See above</p>
+        <p>RESOLUTION 90 4 XXXX - See above</p>
+        <p>DENSITY 94 9 XXXXXXXXX - See above</p>
+        <p>FREQUENCY 103 4 XXXX - See above</p>
+        <p>RESOLUTION 107 4 XXXX - See above</p>
+        <p>DENSITY 111 9 XXXXXXXXX - See above</p>
+        <p>BLANKS 120 1</p>
+        <p>&nbsp;</p>
+        <p>Additional information is available from the <span id="u5903-442">NODC</span> website.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>
