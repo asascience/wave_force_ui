@@ -1,0 +1,62 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u5930"><!-- group -->
+<div class="clearfix grpelem" id="u5931-92" data-muse-uid="U5931">
+    <!-- content -->
+    <!-- m_editable region-id="editable-static-tag-U5931" template="datawell.html" data-type="html" data-ice-options="disableImageResize,none" -->
+    <p class="subheading">Description</p>
+    <p><span id="u5931-3">Oceanweather Inc. </span>modeled directional wave spectra. Standard Oceanweather spectra files contain a 552 element array of the variance components (NOT spectral densities) for 23 frequencies and 24 directions. This is not always the case, and the Oceanweather formatter can handle files with any number of frequency and direction bins.</p>
+    <p>&nbsp;</p>
+    <p>For example, the Oceanweather formatter can import higher-resolution Storm files that contain 26 frequency and 48 direction bins. In this case, three low frequency bins are added to the standard 23 frequency bins to comprise the high resolution data sets. It should be noted that Storm files are not always higher-resolution; they may also be comprised of the standard 23 frequency and 24 direction bins.</p>
+    <p>&nbsp;</p>
+    <p>In addition, when importing many Storm files at a time, it is not uncommon to find records that share time stamps or are not in chronological order.&nbsp; In the case of overlapping time stamps, the record that contains the highest amount of wave energy is used and any out of order records are sorted.&nbsp; There is also a feature in the <span id="u5931-11">DataView</span> File dropdown menu to Splice Storm Events.&nbsp; This is a feature that will merge the Storm data into a continuous data set. Both datasets must be saved as XWaves files and loaded simultaneously using the <span id="u5931-13">Evaluate Module</span> Quick Compare. The merging procedure is as follows:</p>
+    <p>&nbsp;</p>
+    <ol class="list0 nls-None" id="u5931-27">
+        <li>&nbsp;&nbsp;&nbsp; Choose which of the two loaded data sets is the Storm dataset.</li>
+        <li>&nbsp;&nbsp;&nbsp; If the Storm data set has high resolution data, add three low frequency bins to all of the continuous dataset spectra, filling
+            <br />&nbsp;&nbsp;&nbsp; those bins with the low energy threshold (1 e-6 (m2/(hz*deg)))</li>
+        <li>&nbsp;&nbsp;&nbsp; Merge all of the Storm data that falls within the temporal bounds of the continuous data.</li>
+        <li>&nbsp;&nbsp;&nbsp; Any records that match exactly in time are replaced with the record from the Storm data</li>
+    </ol>
+    <p>&nbsp;</p>
+    <p class="subheading">&nbsp;Example:</p>
+    <p>Num Freqs 23, Num Direcs 24, Num Steps&nbsp;&nbsp;&nbsp; 248, Num Points&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</p>
+    <p>&nbsp;</p>
+    <p>Latitude&nbsp; -7.7500, Longitude&nbsp;&nbsp; 11.6250, Angle&nbsp;&nbsp;&nbsp; 0.0000, Depth 1625.8334m</p>
+    <p>&nbsp;</p>
+    <p>CCYYMM DDHHmm LPoint&nbsp;&nbsp;&nbsp; WD&nbsp;&nbsp;&nbsp;&nbsp; WS&nbsp;&nbsp; ETot&nbsp;&nbsp;&nbsp;&nbsp; TP&nbsp;&nbsp;&nbsp; VMD ETotSe&nbsp;&nbsp; TPSe&nbsp; VMDSe ETotSw&nbsp;&nbsp; TPSw&nbsp; VMDSw&nbsp;&nbsp;&nbsp; Mo1&nbsp;&nbsp;&nbsp; Mo2&nbsp;&nbsp; HSig DomDr AngSpr Inline&nbsp;&nbsp;&nbsp; Tau</p>
+    <p>&nbsp;</p>
+    <p>200305 010000&nbsp; 14957 203.6&nbsp; 4.657&nbsp; 0.129 10.421&nbsp;&nbsp; 30.7&nbsp; 0.011&nbsp; 3.531&nbsp;&nbsp; 28.3&nbsp; 0.119 10.421&nbsp;&nbsp; 30.9&nbsp; 0.114&nbsp; 0.126&nbsp; 1.439&nbsp; 30.8 0.9518 0.9094&nbsp;&nbsp; 0.00</p>
+    <p>&nbsp;</p>
+    <p>freq 0.0390 0.0429 0.0472 0.0520 0.0572 0.0630 0.0693 0.0763 0.0840 0.0924 0.1017 0.1120 0.1233 0.1357 0.1493 0.1643 0.1809 0.1991 0.2191 0.2412 0.2655 0.2922 0.3216 anSpec</p>
+    <p>&nbsp;</p>
+    <p>352.50 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0001 0.0000 0.0006 0.0046 0.0054 0.0054 0.0046 0.0038 0.0027 0.0016 0.0011 0.0008 0.0003 0.0009 0.0321</p>
+    <p>&nbsp;</p>
+    <p>22.50 0.0000 0.0000 0.0000 0.0000 0.0008 0.0005 0.0002 0.0001 0.0012 0.0010 0.0021 0.0004 0.0004 0.0011 0.0019 0.0028 0.0018 0.0015 0.0013 0.0011 0.0008 0.0006 0.0012 0.0208</p>
+    <p>&nbsp;</p>
+    <p>37.50 0.0000 0.0000 0.0000 0.0003 0.0025 0.0044 0.0004 0.0009 0.0029 0.0127 0.0118 0.0030 0.0007 0.0001 0.0001 0.0002 0.0006 0.0007 0.0012 0.0010 0.0008 0.0006 0.0014 0.0462</p>
+    <p>&nbsp;</p>
+    <p>52.50 0.0000 0.0000 0.0000 0.0001 0.0003 0.0013 0.0001 0.0004 0.0019 0.0088 0.0081 0.0005 0.0001 0.0000 0.0000 0.0000 0.0000 0.0000 0.0007 0.0007 0.0006 0.0005 0.0010 0.0253</p>
+    <p>&nbsp;</p>
+    <p>&nbsp; …..</p>
+    <p>&nbsp;</p>
+    <p>&nbsp; …..</p>
+    <p>&nbsp;</p>
+    <p>&nbsp; fSpec 0.0000 0.0000 0.0000 0.0004 0.0037 0.0062 0.0007 0.0015 0.0069 0.0226 0.0222 0.0046 0.0058 0.0067 0.0074 0.0077 0.0061 0.0050 0.0048 0.0044 0.0037 0.0025 0.0065&nbsp; 0.129</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;&nbsp; dens&nbsp;&nbsp; 0.00&nbsp;&nbsp; 0.00&nbsp;&nbsp; 0.00&nbsp;&nbsp; 0.09&nbsp;&nbsp; 0.67&nbsp;&nbsp; 1.03&nbsp;&nbsp; 0.11&nbsp;&nbsp; 0.20&nbsp;&nbsp; 0.85&nbsp;&nbsp; 2.55&nbsp;&nbsp; 2.28&nbsp;&nbsp; 0.43&nbsp;&nbsp; 0.49&nbsp;&nbsp; 0.51&nbsp;&nbsp; 0.51&nbsp;&nbsp; 0.49&nbsp;&nbsp; 0.35&nbsp;&nbsp; 0.26&nbsp;&nbsp; 0.23&nbsp;&nbsp; 0.19&nbsp;&nbsp; 0.15&nbsp;&nbsp; 0.09&nbsp;&nbsp; 0.06</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p class="subheading">Format:</p>
+    <p>The first line of each spectrum gives date, grid point number, latitude, longitude, water depth, wind speed, wind direction (measured from which) and significant wave height. The next line gives the nominal frequencies of each frequency bin. Directional bands are identified at the left. The 552 element array contains the variance components (NOT spectral densities) for 23 frequencies and 24 directions. The 24 directional bins, each 15 degrees wide, are numbered clockwise from north; the first bin, with a nominal direction 7.5 degrees, extends from 0 to 15 degrees.</p>
+    <p>&nbsp;</p>
+    <p>Frequency bins are spaced in geometric progression (to facilitate the computation of interactions); the nominal frequency is the geometric mean of the two ends. The frequency ratio is 0.75**(-1./3.), i.e.</p>
+    <p>&nbsp;</p>
+    <p>1.100642416; this ratio was chosen in preference to the 1.1000 of official WAM to simplify interaction formulas.&nbsp; The first 22 bins are straightforward. The 23rd frequency band is an integrated band comprising what would be bins 23 through 44 (continuing the geometric progression) of a fully discrete bin system. To model the cascade of wave energy from high to low frequencies endorsed by non-linear interactions, interactions are computed involving bins out to 44.</p>
+    <p>&nbsp;</p>
+    <p><span id="u5931-83">anSpec</span> is the variance summed over frequency per direction bin</p>
+    <p>Fspec is the variance summed over direction per frequency</p>
+    <p>Dens is the frequency spectrum represented as density in units of m2Hz</p>
+    <p>&nbsp;</p>
+    <!-- /m_editable -->
+</div>
+</div>

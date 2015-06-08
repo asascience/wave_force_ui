@@ -1,0 +1,39 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u5891">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u5892-57" data-muse-uid="U5892">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U5892" template="datawell.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="body">#YY&nbsp; MM DD hh mm Sep_Freq&nbsp; &lt; spec_1 (freq_1) spec_2 (freq_2) spec_3 (freq_3) ... &gt;</p>
+        <p class="body">2007 03 05 06 30 0.143 0.000 (0.033) 0.000 (0.037) 0.000 (0.043) 0.000 (0.048) ...&gt;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">#YY&nbsp; MM DD hh mm alpha1_1 (freq_1) alpha1_2 (freq_2) alpha1_3 (freq_3) ... &gt;</p>
+        <p class="body">2007 03 05 06 30 999.0 (0.033) 999.0 (0.037) 999.0 (0.043) 999.0 (0.048) ...</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Sep_Freq The Separation Frequency is the frequency that separates wind waves (WWH, WWP, WWD) from swell waves (SWH, SWP,SWD). NDBC inserts the value 9.999 if Sep_Freq is missing.</p>
+        <p class="body">Spectral wave density Energy in (meter*meter)/Hz, for each frequency bin (typically from 0.03 Hz to 0.40 Hz).</p>
+        <p class="body">Spectral wave direction Mean wave direction, in degrees from true North, for each frequency bin. A list of directional stations is available.</p>
+        <p class="body">Directional Wave Spectrum = C11(f) * D(f,A), f=frequency (Hz), A=Azimuth angle measured clockwise from true North to the direction wave is from.</p>
+        <p class="body">D(f,A) = (1/PI)*(0.5+R1*COS(A-ALPHA1)+R2*COS(2*(A-ALPHA2))). R1 and R2 are the first and second normalized polar coordinates of the Fourier coefficients and are nondimensional. ALPHA1 and ALPHA2 are respectively mean and principal wave directions.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u5892-24">In terms of Longuet-Higgins Fourier Coefficients</p>
+        <p class="body">• R1 = (SQRT(a1*a1+b1*b1))/a0</p>
+        <p class="body">• R2 = (SQRT(a2*a2+b2*b2))/a0</p>
+        <p class="body">• ALPHA1 = 270.0-ARCTAN(b1,a1)</p>
+        <p class="body">• ALPHA2 = 270.0-(0.5*ARCTAN(b2,a2)+{0. or 180.})</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u5892-35">Notes:</p>
+        <p class="body">1. The R1 and R2 values in the monthly and yearly historical data files are scaled by 100, a carryover from how the data are
+            <br />&nbsp;&nbsp;&nbsp; transported to the archive centers. The units are hundredths, so the R1 and R2 values in those files should be multiplied by
+            <br />&nbsp;&nbsp;&nbsp; 0.01.</p>
+        <p class="body">2. D(f,A) can take on negative values because of the trigonometric sine and cosine functions. There are several approaches to
+            <br />&nbsp;&nbsp;&nbsp; prevent or deal with the negative values. For more information and discussion of some approaches see: Use of advanced
+            <br />&nbsp;&nbsp;&nbsp; directional wave spectra analysis methods, M. D. Earle, K. E. Steele, and D. W. C. Wang, Ocean Engineering, Volume 26,
+            <br />&nbsp;&nbsp;&nbsp; Issue 12, December 1999, Pages 1421-1434.</p>
+        <p class="body">3. ALPHA2 has ambiguous results in using the arctangent function with the Fourier Coefficients,b 2 ,a 2 . When necessary, NDBC
+            <br />&nbsp;&nbsp;&nbsp; adds 180 degrees to ALPHA2 in order to minimize the difference between ALPHA 1 and ALPHA2.</p>
+        <p class="body">&nbsp;</p>
+        <p>&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>

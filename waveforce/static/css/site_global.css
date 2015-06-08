@@ -169,6 +169,14 @@ a.nontext /* used to override default properties of 'a' tag */
 	padding: 20px;
 }
 
+.section-description
+{
+	/*color: #366196;*/
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 14px;
+}
 .intro-text
 {
 	color: #5F5C5C;

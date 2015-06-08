@@ -24,11 +24,11 @@
         "link":"wave_systems_module.html"
     },
     {
-        "name":"Spectral Fitting Module",
+        "name":"Spectral Fit Module",
         "link":"spectral_fitting_module.html"
     },
     {
-        "name":"Sea State Analysis Module",
+        "name":"Sea State Module",
         "link":"sea_state_analysis_module.html"
     },
     {
@@ -36,11 +36,11 @@
         "link":"swell_map_module.html"
     },
     {
-        "name":"Evaluation Module",
+        "name":"Evaluate Module",
         "link":"evaluation_module.html"
     },
     {
-        "name":"Exporting Data",
+        "name":"Data Export",
         "link":"exporting_data.html"
     },
     {
@@ -48,7 +48,7 @@
         "link":"xwaves_tutorial.html"
     },
     {
-        "name":"References",
+        "name":"Reference",
         "link":"references.html"
     }
 ]
