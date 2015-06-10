@@ -1,8 +1,6 @@
 {
     "Spectral Fit Overview" :
         "../static/html/spectral_fit_help.html"
-    ,"Spectral Fitting with XWaves" :
-        "../static/html/spectral_fitting_with_xwaves.html"
     ,"Spectral Fit Parameters Table" :
         "../static/html/spectral_fit_parameters_table.html"
     ,"Spectral Fit Selection Tool" :

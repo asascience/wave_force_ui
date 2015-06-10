@@ -12,7 +12,7 @@
     <title>WaveForce Help</title>
     <script src="../static/lib/jquery/dist/jquery.min.js"></script>
     <script src="../static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+    <script src='../static/lib/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
     <!-- Bootstrap core CSS -->
     <link href="../static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../static/css/index.css" rel="stylesheet">
@@ -51,13 +51,13 @@
         <div class="row main-row">
             <div class="col-sm-4 col-md-3 sidebar">
                 <nav class="bs-docs-sidebar affix">
-                    <img src="../static/img/xwaves.png" class="sidebar-image">
+                    <img src="../static/img/xwaves.png" width='175' height='153' class="sidebar-image">
                     <ul id="sidebarToc" class="nav bs-docs-sidenav nav-sidebar wave-force-toc">
                     </ul>
                 </nav>
             </div>
             <div class="col-sm-7 main content-page">
-                <p class="section-heading">Wave System Module</p>
+                <p class="section-heading">Wave Systems Module</p>
                 <p class="section-description">Perform a wave partitioning analysis to identify the wind sea and swell wave systems</p>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 </div>
@@ -67,6 +67,12 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <script>
+    
+    // $(document).ready(function() {
+    //   var anchor = window.location.hash;
+    //   $(anchor).collapse('in');
+    // });
+    
     $.getJSON("../static/json/toc.json", function(data) {
         var tocItems = Object.keys(data);
         $.each(tocItems, function(index, item) {
@@ -89,6 +95,9 @@
             $('#content_panel_' + index).load(data[panel]);
 
         });
+
+        var anchor = window.location.hash;
+        $(anchor).collapse('in');
 
     });
 
@@ -115,7 +124,24 @@
             '</div>'
         return html;
 
-    }
+    };
+
+    // Scroll the accordion to the top if needed
+    $('#accordion').on('shown.bs.collapse', function () {
+        var selected = $(this);
+        var collapseh = $(".collapse.in").height();
+        var top = $(window).scrollTop();
+
+        var clickedHeader = $(this).find('.panel > .collapse.in').closest('.panel').find('.panel-heading');
+        var offset = clickedHeader.offset();
+        if(offset) {
+            var topOfHeader = offset.top;
+            if(topOfHeader < top) {
+                $('html,body').animate({ scrollTop: topOfHeader-50}, 100, 'swing');
+            }
+        }
+    });
+
     </script>
 </body>
 

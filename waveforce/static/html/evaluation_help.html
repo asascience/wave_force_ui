@@ -14,7 +14,7 @@
         <p class="blue-heading">Using the Evaluate Module</p>
         <p class="body">To open the Evaluate Module parameters, select Evaluate from the Module pull-down menu. The Evaluate Parameters Table opens to allow the user to specify how the data are to be processed.&nbsp; Here the user can select the baseline and evaluate data sets and specify the many different analysis options.</p>
         <p class="body">&nbsp;</p>
-        <p class="body">Processing commences once the user selects RUN on the Evaluate Parameters Table.&nbsp; Both the baseline and evaluate data sets will be loaded.&nbsp; The baseline data is smoothed and subsampled as specified by the user. The baseline data frequency and direction bins are interpolated to match that of the evaluate data set and the time stamps are matched closest in time. A temporal correlation analysis is performed on wind data (if available), wave data, and wave systems data (if specified by the user). If Wave Systems analysis was selected and the baseline data has not been processed with the Wave Systems Module, the user will be directed to the Wave Systems Parameters Table to set up wave systems processing. When Evaluate processing is finished a special Evaluate layout page in Data View opens to provide the user access to all Evaluate Module products.&nbsp; Each of these products is described below.</p>
+        <p class="body">Processing commences once the user selects RUN on the <a href="?dummy=$4#collapse1">Evaluate Parameters Table</a>.&nbsp; Both the baseline and evaluate data sets will be loaded.&nbsp; The baseline data is smoothed and subsampled as specified by the user. The baseline data frequency and direction bins are interpolated to match that of the evaluate data set and the time stamps are matched closest in time. A temporal correlation analysis is performed on wind data (if available), wave data, and wave systems data (if specified by the user). If Wave Systems analysis was selected and the baseline data has not been processed with the <a href="../xwaves/wave_systems_module.html#collapse0">Wave Systems Module</a>, the user will be directed to the <a href="../xwaves/wave_systems_module.html#collapse1">Wave Systems Parameters Table</a> to set up wave systems processing. When Evaluate processing is finished a special Evaluate layout page in <a href="../xwaves/data_view_module.html#collapse0">Data View</a> opens to provide the user access to all Evaluate Module products.&nbsp; Each of these products is described below.</p>
         <p class="body">&nbsp;</p>
         <p class="blue-heading">Error Analysis</p>
         <p class="body">The error metrics used to quantify the temporal correlation comparisons are as follows:</p>
@@ -33,16 +33,15 @@
         <p class="body">&nbsp;</p>
         <p class="body">Where the standard deviation of difference is given by</p>
         <p class="body">&nbsp;</p>
-        <p class="body">\( \sigma{_{d}} = \left [ \frac{\sum_{i}(h_{i}-m_{i}-b)^{2}}{n-1}  \right ]^{0.5} \)</p>
+        <p class="body">\( \sigma{_{d}} = \left [ \frac{\sum_{i}(h_{i}-m_{i}-b)^{2}}{n-1} \right ]^{0.5} \)</p>
         <p class="body">For directional data, the angular bias is calculated by</p>
         <p class="body">&nbsp;</p>
-        <p class="body">\( b{_a}\left\{\begin{matrix}
-                        \tan^{-1}(\frac{S}{C}) & S>0,C>0\\ 
-                        \tan^{-1}(\frac{S}{C})+\pi & C<0; \\ 
-                        \tan^{-1}(\frac{S}{C})+2\pi & S<0,C>0
-                        \end{matrix}\right. \)</p>
+        <p class="body">\( b{_a}\left\{\begin{matrix} \tan^{-1}(\frac{S}{C}) & S>0,C>0\\ \tan^{-1}(\frac{S}{C})+\pi & C
+            <0; \\ \tan^{-1}(\frac{S}{C})+2\pi & S<0,C>0 \end{matrix}\right. \)</p>
         <p class="body">&nbsp;</p>
-        <p class="body">Where S and C are computed from the directional differences Δθ = |θ<SUB>h</SUB>-θ<SUB>m</SUB>| by</p>
+        <p class="body">Where S and C are computed from the directional differences Δθ = |θ
+            <SUB>h</SUB>-θ
+            <SUB>m</SUB>| by</p>
         <p class="body">&nbsp;</p>
         <p class="body">\( S = \sum_{i=1}^{n}\sin(\Delta\theta{_{i}}) \) ,and</p>
         <p class="body">&nbsp;</p>
@@ -60,12 +59,12 @@
         <p class="body">The wave height bias is then calculated for each bin that contains more than 5 observations in time.</p>
         <p class="body">&nbsp;</p>
         <p class="blue-heading">Evaluate Plots</p>
-        <p class="body">Evaluate plots are displayed in a special Data View layout page.&nbsp; This page is toggled on and off through the Evaluate command in the Data View Layout pull-down menu.&nbsp; See the Plot Library for a list of available plots.</p>
+        <p class="body">Evaluate plots are displayed in a special <a href="../xwaves/data_view_module.html#collapse0">Data View</a> layout page.&nbsp; This page is toggled on and off through the Evaluate command in the Data View Layout pull-down menu.&nbsp; See the <a href="../xwaves/data_view_module.html#collapse2">Plot Library</a> for a list of available plots.</p>
         <p class="body">&nbsp;</p>
         <p class="blue-heading">Export Data Menu Commands</p>
-        <p class="body">The user can export a text file containing the error metric tables by selecting Fixed Format -&gt; Evaluate Error Metrics from the Tables dropdown menu in the DataView Module. The data can be exported as a Microsoft Excel file or ASCII text file.</p>
+        <p class="body">The user can export a text file containing the error metric tables by selecting Fixed Format -&gt; Evaluate Error Metrics from the Tables dropdown menu in the <a href="../xwaves/data_view_module.html#collapse0">DataView Module</a>. The data can be exported as a Microsoft Excel file or ASCII text file.</p>
         <p class="body">An example Error Metric table output is shown below. This analysis was performed on wind data and two swell groups of Wave Systems.</p>
-        <p class="body">Evaluate Module Error Metrics for Waverider_Sep and Duck3mwr_SWAN</p>
+        <!-- <p class="body">Evaluate Module Error Metrics for Waverider_Sep and Duck3mwr_SWAN</p>
         <p class="body">&nbsp;</p>
         <p class="body">Wind Speed Error Metrics</p>
         <p class="body">Comp&nbsp;&nbsp; Bias(m/s)&nbsp;&nbsp; RMS(m/s)&nbsp;&nbsp; SI&nbsp;&nbsp;&nbsp; R^2</p>
@@ -110,8 +109,345 @@
         <p class="body">sw1&nbsp;&nbsp; 0.991&nbsp;&nbsp; 8.982</p>
         <p class="body">sw2&nbsp;&nbsp; 0.729&nbsp;&nbsp; 5.919</p>
         <p class="body">&nbsp;</p>
-        <p class="body">&nbsp;</p>
-        <p class="body">The wave height bias can be exported into an excel spreadsheet by selecting Fixed Format -&gt; Wave Height Bias File from the Tables dropdown menu in the DataView Module. An example Wave Height Bias table output is shown below.</p>
+        <p class="body">&nbsp;</p> -->
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Evaluate
+Module Error Metrics for <span class=SpellE>Waverider_Sep</span> and Duck3mwr_SWAN
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Wind
+Speed Error Metrics<o:p></o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
+style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span><span class=GramE>Bias(</span>m/s) <span style='mso-tab-count:1'> </span><span style='mso-spacerun:yes'> </span>RMS(m/s) <span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span>SI <span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span><span style='mso-tab-count:1'>     </span>R^2
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span class=GramE><span style='font-family:"Courier New"'>wind</span></span>
+            </span>
+            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
+style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.530 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>3.755 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.432 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.891
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Wind
+Direction Error Metrics<o:p></o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
+style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>Circ. Corr. Circ. <span class=GramE>Bias(</span><span class=SpellE>deg</span>)
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span class=GramE><span style='font-family:"Courier New"'>wind</span></span>
+            </span>
+            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
+style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.828 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>7.975
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Wave
+Height Error Metrics<o:p></o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
+style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span><span class=GramE>Bias(</span>m) <span style='mso-tab-count:1'>   </span><span style='mso-spacerun:yes'> </span>RMS(m) <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>SI <span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span><span style='mso-tab-count:1'>     </span>R^2
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span class=GramE><span style='font-family:"Courier New"'>bulk</span></span>
+            </span>
+            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
+style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.012 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.444 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.175 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.977
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span class=SpellE><span class=GramE><span
+style='font-family:"Courier New"'>ws</span></span>
+            </span>
+            </span>
+            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
+style='font-family:"Courier New"'> <span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'> </span>0.125 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.428 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.141 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.990
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw1 <span
+style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>-0.012 <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.293 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.210 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.929
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw2 <span
+style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>-0.022 <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.413 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.196 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.979
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Peak
+Period Error Metrics<o:p></o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
+style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>Bias(s) <span style='mso-tab-count:1'>   </span><span style='mso-spacerun:yes'> </span>RMS(s) <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>SI <span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span><span style='mso-tab-count:1'>     </span>R^2
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span class=GramE><span style='font-family:"Courier New"'>bulk</span></span>
+            </span>
+            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
+style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>-0.196 <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>2.513 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.189 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.724
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span class=SpellE><span class=GramE><span
+style='font-family:"Courier New"'>ws</span></span>
+            </span>
+            </span>
+            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
+style='font-family:"Courier New"'> <span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'> </span>0.203 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.634 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.071 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.991
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw1 <span
+style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.184 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.525 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.081 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.941
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw2 <span
+style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.137 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>2.373 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.185 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.799
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Mean
+Period Error Metrics<o:p></o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
+style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>Bias(s) <span style='mso-tab-count:1'>   </span><span style='mso-spacerun:yes'> </span>RMS(s) <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>SI <span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span>R^2
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span class=GramE><span>bulk</span></span>
+            </span>
+            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
+style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.005 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>1.121 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.160 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.530
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span class=SpellE><span class=GramE><span
+style='font-family:"Courier New"'>ws</span></span>
+            </span>
+            </span>
+            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
+style='font-family:"Courier New"'> <span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'> </span>0.587 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>1.209 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.197 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.971
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw1 <span
+style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>-0.009 <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.332 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.075 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.935
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw2 <span
+style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.287 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>1.306 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.136 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.933
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Peak
+Direction Error Metrics<o:p></o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
+style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>Circ. Corr. Circ. <span class=GramE>Bias(</span><span class=SpellE>deg</span>)
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span class=GramE><span style='font-family:"Courier New"'>bulk</span></span>
+            </span>
+            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
+style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.588 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>-0.558
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span class=SpellE><span class=GramE><span
+style='font-family:"Courier New"'>ws</span></span>
+            </span>
+            </span>
+            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
+style='font-family:"Courier New"'> <span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'> </span>0.977 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>15.402
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw1 <span
+style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.976 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>15.965
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw2 <span
+style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.591 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>-0.140
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Mean Direction
+Error Metrics<o:p></o:p></span></span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
+style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>Circ. Corr. Circ. <span class=GramE>Bias(</span><span class=SpellE>deg</span>)
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span class=GramE><span style='font-family:"Courier New"'>bulk</span></span>
+            </span>
+            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
+style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.544 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>7.253
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span class=SpellE><span class=GramE><span
+style='font-family:"Courier New"'>ws</span></span>
+            </span>
+            </span>
+            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
+style='font-family:"Courier New"'> <span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'> </span>0.985 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>9.943
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw1 <span
+style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.991 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>8.982
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
+style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw2 <span
+style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.729 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>5.919
+            <o:p></o:p>
+            </span>
+            </span>
+            </span>
+        </p>
+        <p class="body">The wave height bias can be exported into an excel spreadsheet by selecting Fixed Format -&gt; Wave Height Bias File from the Tables dropdown menu in the <a href="../xwaves/data_view_module.html#collapse0">Data View Module</a>. An example Wave Height Bias table output is shown below.</p>
         <p class="body">&nbsp;</p>
         <p class="body">Autumn Hindcast Validation</p>
         <p class="body">Mean Wave Height Bias</p>

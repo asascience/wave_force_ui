@@ -50,7 +50,7 @@
         <div class="row main-row">
             <div class="col-sm-4 col-md-3 sidebar">
                 <nav class="bs-docs-sidebar affix">
-                    <img src="../static/img/wavector.png" class="sidebar-image">
+                    <img src="../static/img/wavector.png" width='175' height='153' class="sidebar-image">
                     <ul id="sidebarToc" class="nav bs-docs-sidenav wave-force-toc">
                     </ul>
                 </nav>
@@ -66,6 +66,12 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <script>
+
+    $(document).ready(function() {
+      var anchor = window.location.hash;
+      $(anchor).collapse('in');
+    });
+    
     $.getJSON("../static/json/wv_toc.json", function(data) {
         var tocItems = Object.keys(data);
         $.each(tocItems, function(index, item) {

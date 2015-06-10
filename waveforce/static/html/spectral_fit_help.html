@@ -17,17 +17,17 @@
             <li class="body">User-selected export of partition statistics and fit parameters</li>
         </ul>
         <p class="body">&nbsp;</p>
-        <p class="body"><span id="u3272-26">Spectral Fit</span> operates on the wave spectral partitions computed by the <span id="u3272-26">Wave Systems Module</span>. Processing options for Spectral Fit are set in the <span id="u3272-30">Spectral Fit Parameters Table</span>, which opens upon selecting Spectral Fit from the Module pull-down menu.&nbsp; Spectral Fit results can be fine-tuned using the <span id="u3272-32">Spectral Fit Selection Tool</span>.</p>
+        <p class="body"><span id="u3272-26">Spectral Fit</span> operates on the wave spectral partitions computed by the <a href="../xwaves/wave_systems_module.html#collapse0">Wave Systems Module</a>. Processing options for Spectral Fit are set in the <a href="?dummy=$4#collapse1">Spectral Fit Parameters Table</a>, which opens upon selecting Spectral Fit from the Module pull-down menu.&nbsp; Spectral Fit results can be fine-tuned using the <a href="?dummy=$4#collapse2">Spectral Fit Selection Tool</a>.</p>
         <p class="body">&nbsp;</p>
-        <p class="body">The<span id="u3272-26"> Data View Module</span> includes several features to support the display and export of Spectral Fit results.&nbsp; A Spectral Fit Plot Library allows the comparison of fit results to original data.&nbsp; A Data Export Utility allows the user to design a custom table of fit results to export.</p>
+        <p class="body">The <a href="../xwaves/data_view_module.html#collapse0">Data View Module</a> includes several features to support the display and export of Spectral Fit results.&nbsp; A Spectral Fit Plot Library allows the comparison of fit results to original data.&nbsp; A Data Export Utility allows the user to design a custom table of fit results to export.</p>
         <p class="body">&nbsp;</p>
         <p class="body">The <span id="u3272-26">Spectral Fit Module</span> computes a variety of 1D (non-directional) and 2D (Directional) fit parameters for the spectral partitions computed by the <span id="u3272-44">Wave Systems Module</span>.&nbsp; The user can select the type of fits applied to both wind sea and swell partitions.&nbsp; Furthermore, Spectral Fit will linearly combine these fits to compute a composite fit for the full (parent) spectrum.&nbsp; A variety of display options allow the user to compare fit results to actual data.</p>
         <p class="body">&nbsp;</p>
         <p class="subheading">Launching the Spectral Fit Module</p>
-        <p class="body"><span id="u3272-26">Spectral Fit</span> is launched by selecting the Spectral Fit command on the Module pull-down menu.&nbsp; The <span id="u3272-52">Wave Systems Module</span> must be run before spectral fitting can performed.&nbsp; The <span id="u3272-54">Spectral Fit Parameters Table</span> is then used to set processing options.</p>
+        <p class="body"><span id="u3272-26">Spectral Fit</span> is launched by selecting the Spectral Fit command on the Module pull-down menu.&nbsp; The <a href="../xwaves/wave_systems_module.html#collapse0">Wave Systems Module</a> must be run before spectral fitting can performed.&nbsp; The <a href="?dummy=$4#collapse1">Spectral Fit Parameters Table</a> is then used to set processing options.</p>
         <p class="body">&nbsp;</p>
         <p class="subheading">1D Spectrum Fitting</p>
-        <p class="body">Once the user selects Run in the <span id="u3272-61">Spectral Fit Parameters Table</span>, a sequence of fitting operations is performed.&nbsp; The first step is the computation of variance density (1D) spectrum fits.&nbsp; An efficient multivariate nonlinear optimization approach (Lagarias et al., 1998) is employed to optimize model fits to partitioned spectra.&nbsp; The following 1D fits are computed for each wave partition:</p>
+        <p class="body">Once the user selects Run in the <a href="?dummy=$4#collapse1">Spectral Fit Parameters Table</a>, a sequence of fitting operations is performed.&nbsp; The first step is the computation of variance density (1D) spectrum fits.&nbsp; An efficient multivariate nonlinear optimization approach (Lagarias et al., 1998) is employed to optimize model fits to partitioned spectra.&nbsp; The following 1D fits are computed for each wave partition:</p>
         <ul class="list0 nls-None" id="u3272-67">
             <li class="body"><span id="u3272-92">JONSWAP</span>- Least squares fit of a JONSWAP variance density spectrum.&nbsp; There are two options here:</li>
         </ul>
@@ -50,18 +50,18 @@
         <p class="body" id="u3272-94"><span id="u3272-92">Cos^2n</span> – A least squares fit of a cos<SUP>2n</SUP>(&theta;) distribution to the wave directions.&nbsp; Here the resulting value of n is saved as a directional fit parameter.</p>
         <p class="body">&nbsp;</p>
         <p class="subheading">Composite Fits</p>
-        <p class="body">Once all of the individual partition 1D and 2D fits are generated, a set of composite fit results are computed based on the user-selected fit options in the <span id="u3272-107">Spectral Fit Parameters Table</span>.&nbsp; Composite fits are generated from a linear summation of the individual 1D and 2D partition fits for each record.</p>
+        <p class="body">Once all of the individual partition 1D and 2D fits are generated, a set of composite fit results are computed based on the user-selected fit options in the <a href="?dummy=$4#collapse1">Spectral Fit Parameters Table</a>.&nbsp; Composite fits are generated from a linear summation of the individual 1D and 2D partition fits for each record.</p>
         <p class="body">&nbsp;</p>
-        <p class="body">After the composite fits are computed the spectral fit plot page opens up in <span id="u3272-112">Data View</span>.&nbsp; Available plot types are listed in the <span id="u3272-114">Plot Library</span>.</p>
+        <p class="body">After the composite fits are computed the spectral fit plot page opens up in <a href="../xwaves/data_view_module.html#collapse0">Data View</a>.&nbsp; Available plot types are listed in the <a href="../xwaves/data_view_module.html#collapse2">Plot Library</a>.</p>
         <p class="body">&nbsp;</p>
         <p class="subheading">Fit Selection Tool</p>
-        <p class="body">Once Spectral Fit data processing is complete, the interactive <span id="u3272-121">Spectral Fit Selection Tool</span> can be used to modify the fits applied to each wave system.&nbsp; A variety of fit performance data and plots are included, as well as tools to modify the computation of Sigma A and Sigma B in advanced JONSWAP fits.</p>
+        <p class="body">Once Spectral Fit data processing is complete, the interactive <a href="?dummy=$4#collapse2">Spectral Fit Selection Tool</a> can be used to modify the fits applied to each wave system.&nbsp; A variety of fit performance data and plots are included, as well as tools to modify the computation of Sigma A and Sigma B in advanced JONSWAP fits.</p>
         <p class="body">&nbsp;</p>
         <p class="subheading">Fit Data Export</p>
         <p class="body">The Data Export Utility is used to save Spectral Fit data fields to external ASCII-, EXCEL- and MATLAB-formatted data files.&nbsp; The user can select specific data fields to write to these files.</p>
         <p class="body">&nbsp;</p>
         <p class="subheading">Additional Help</p>
-        <p class="body">An overview of spectral fitting appears in the tutorial Spectral Fitting.</p>
+        <p class="body">An overview of spectral fitting appears in the tutorial <a href="../xwaves/references.html#collapse5">Spectral Fitting</a>.</p>
         <p class="body">&nbsp;</p>
         <p class="subheading">References</p>
         <p class="body">Lagarias, J.C., A. Reeds, M.H. Wright and P.E. Wright, 1998.&nbsp; Convergence properties of the Nelder-Mead Simplex Method in low dimensions, SIAM Journal of Optimization, 9(1), 112-147.</p>

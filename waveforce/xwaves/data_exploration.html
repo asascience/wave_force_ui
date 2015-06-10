@@ -64,6 +64,12 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <script>
+
+    // $(document).ready(function() {
+    //   var anchor = window.location.hash;
+    //   $(anchor).collapse('in');
+    // });
+
     $.getJSON("../static/json/toc.json", function(data) {
         var tocItems = Object.keys(data);
         $.each(tocItems, function(index, item) {
@@ -86,6 +92,9 @@
             $('#content_panel_' + index).load(data[panel]);
 
         });
+
+        var anchor = window.location.hash;
+        $(anchor).collapse('in');
 
     });
 
@@ -113,6 +122,23 @@
         return html;
 
     }
+
+    // Scroll the accordion to the top if needed
+    $('#accordion').on('shown.bs.collapse', function () {
+        var selected = $(this);
+        var collapseh = $(".collapse.in").height();
+        var top = $(window).scrollTop();
+
+        var clickedHeader = $(this).find('.panel > .collapse.in').closest('.panel').find('.panel-heading');
+        var offset = clickedHeader.offset();
+        if(offset) {
+            var topOfHeader = offset.top;
+            if(topOfHeader < top) {
+                $('html,body').animate({ scrollTop: topOfHeader-50}, 100, 'swing');
+            }
+        }
+    });
+
     </script>
 </body>
 
