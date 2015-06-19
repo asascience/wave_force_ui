@@ -67,10 +67,10 @@
     ================================================== -->
     <script>
     
-    // $(document).ready(function() {
-    //   var anchor = window.location.hash;
-    //   $(anchor).collapse('in');
-    // });
+    // Define some globals to help guide the links
+    var XWAVES = true;
+    var AUTOWAVES = false;
+    var WAVECTOR = false;
     
     $.getJSON("../static/json/toc.json", function(data) {
         var tocItems = Object.keys(data);

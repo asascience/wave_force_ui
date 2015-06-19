@@ -68,10 +68,15 @@
     ================================================== -->
     <script>
 
-    $(document).ready(function() {
-      var anchor = window.location.hash;
-      $(anchor).collapse('in');
-    });
+    // Define some globals to help guide the links
+    var XWAVES = false;
+    var AUTOWAVES = false;
+    var WAVECTOR = true;
+
+    // $(document).ready(function() {
+    //   var anchor = window.location.hash;
+    //   $(anchor).collapse('in');
+    // });
     
     $.getJSON("../static/json/wv_toc.json", function(data) {
         var tocItems = Object.keys(data);

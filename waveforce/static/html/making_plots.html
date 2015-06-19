@@ -1,54 +1,206 @@
-<div class="clearfix grpelem" id="u2955-85" data-muse-uid="U2955">
-    <!-- content -->
-    <!-- m_editable region-id="editable-static-tag-U2955" template="data-exploration.html" data-type="html" data-ice-options="disableImageResize,none" -->
-    <p class="blue-heading">Overview</p>
-    <p class="body"><span><span class="actAsDiv normal_text" id="u2956"><!-- content --><span class="actAsDiv clip_frame" id="u2957"><!-- image --><img class="block" id="u2957_img" src="../static/img/wave%20system.jpg" alt="" width="431" height="338" data-muse-uid="U2957" data-muse-src="../static/img/wave%20system.jpg" /></span></span>
-        </span>The Wave Systems Editor allows the user to make manual adjustments to the Wave Systems in a given record. The wave systems are generated automatically from the Wave Systems module based on the parameters set in the Wave Systems Parameter Table. The user can combine or separate wave systems as desired but the following restrictions apply:</p>
-    <p class="body">1. The wind sea system cannot be combined or
-        <br />&nbsp;&nbsp;&nbsp; separated.</p>
-    <p class="body">2. Wave Systems that overlap in time cannot be
-        <br />&nbsp;&nbsp;&nbsp; combined.</p>
-    <p class="body">&nbsp;</p>
-    <p class="blue-heading">Launching the Wave Systems Editor</p>
-    <p class="body">Data must first be loaded (see Start Up) and processed using Wave Systems.&nbsp; The Wave Systems Editor can be launched by selecting the Wave Systems Utilities; an extension of Data Utilities found in the Module pull-down menu.&nbsp; Because the Wave Systems Editor will make changes to the data in memory, a Save Data window appears and provides the opportunity to save user data before proceeding.</p>
-    <p class="body">&nbsp;</p>
-    <p class="body">Once launched, a Wave Systems Significant Wave Height plot and a text box with all the available wave systems will appear in the interactive Wave Systems Utilities window. From this window, the user can select which Wave Systems to combine or separate. Each wave system is labeled and color coded for convenience.</p>
-    <p class="body">&nbsp;</p>
-    <p class="blue-heading">Commands</p>
-    <p class="subheading">Separate</p>
-    <p class="body">To separate a wave system, select the desired wave system from the text box and click the Separate button. A new window will appear with a list of all the records containing this wave system. Select one of the records in the list to determine when to separate the wave system.</p>
-    <p class="body">&nbsp;</p>
-    <p class="subheading">Combine</p>
-    <p class="body">To combine a wave system, select any two wave systems from the text box and press the Combine button. Select more than one system by holding the Ctrl button while clicking. Only two wave systems can be combined at a time. Wave systems that overlap in time cannot be combined. If the gap between selected wave systems is greater than 6 hours, a warning will appear and ask the user if they would like to continue.</p>
-    <p class="body">&nbsp;</p>
-    <p class="subheading">Convert to Wind Sea</p>
-    <p class="body">The user also has the capability to select an existing swell system and convert it to wind sea. Select the desired wave system to convert and press the Convert button.</p>
-    <p class="body">&nbsp;</p>
-    <p class="subheading">Undo Last</p>
-    <p class="body">To undo the last change (combine or separate), press the Undo Last button. This will only undo the last change. Subsequent calls to this command will have no effect.</p>
-    <p class="body">&nbsp;</p>
-    <p class="subheading">Undo All</p>
-    <p class="body">To undo all of the changes made while in the Wave Systems Editor, press the Undo All button. This will revert back to the original wave systems.</p>
-    <p class="body">&nbsp;</p>
-    <p class="subheading">Next</p>
-    <p class="body">The Next button moves the cursor on the wave systems plot to the next record. This can help the user visualize how many systems are present in each record.</p>
-    <p class="body">&nbsp;</p>
-    <p class="subheading">Previous</p>
-    <p class="body">The Previous button moves the cursor to the previous record.</p>
-    <p class="body">&nbsp;</p>
-    <p class="subheading">Record List Selector</p>
-    <p class="body">Jump to any record by choosing from the list of records in the drop down menu. Records are sorted by date and time.</p>
-    <p class="body">&nbsp;</p>
-    <p class="subheading">Zoom</p>
-    <p class="body">To zoom in on a wave system, right click inside the plot axes and select Zoom. Zoom in by positioning the mouse cursor to the desired plot center and either press the mouse button or rotate the mouse scroll wheel upward. Clicking and dragging within the plot axes draws a rubber band box. When you release the mouse button, the axes zoom in to the region enclosed by the rubber band box. To return the zoom back to the original settings, double click anywhere in the plot axes or right click within the plot and select Reset.</p>
-    <p class="body">&nbsp;</p>
-    <p class="subheading">Pan</p>
-    <p class="body">To pan the view of the plot, right click inside the plot axes and select Pan. To return to the original plot, double click anywhere in the plot axes or right click within the plot and select Reset.</p>
-    <p class="body">&nbsp;</p>
-    <p class="subheading">Update</p>
-    <p class="body">Once finished with the Wave Systems Editor, press the Update button to update the wave systems and return to DataView or Wave Systems.</p>
-    <p class="body">&nbsp;</p>
-    <p class="subheading">Cancel</p>
-    <p class="body">Press Cancel to discard all changes and return to DataView or Wave Systems.</p>
-    <!-- /m_editable -->
+<div class="AccordionPanelContent disn clearfix colelem" id="u2947">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u2948-258" data-muse-uid="U2948">
+        <p class="body">The XWaves <a href="../xwaves/data_view_module.html#collapse0">Data View Module</a> offers a variety of plot libraries to aid in the interpretation and analysis of user wave data. As data processing proceeds new plot types become available to the user. A summary of the various libraries and plot types available with each processing step appears below.</p>
+        <p>&nbsp;</p>
+        <p class="body"><span id="u3081">​</span><span><span class="actAsInlineDiv normal_text" id="u3106"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3100"><img class="block" id="u2980_img" src="../static/img/input_plot.jpg" alt="" width="250" height="120" data-muse-uid="U2980" data-muse-src="../static/img/input_plot.jpg" /></span></span></span></p>
+        <p>&nbsp;</p>
+        <p class="blue-heading">Input Data Plot Library</p>
+        <p class="body">The basic wind and wave data plots for non-processed (Start Up) data sets appear in this library. </p><p>&nbsp;</p>
+        <p class="subheading">Information Plots</p><p>&nbsp;</p>
+        <p class="body">• Data Summary</p><p>&nbsp;</p>
+        <p class="subheading">Time Series Plots</p><p>&nbsp;</p>
+        <p class="body">• Wind Speed</p>
+        <p class="body">• Wind Direction</p>
+        <p class="body">• Wind Vectors</p>
+        <p class="body">• Significant Wave Height</p>
+        <p class="body">• Peak Period</p>
+        <p class="body">• Mean Period</p>
+        <p class="body">• Peak Direction</p>
+        <p class="body">• Spectrograph</p>
+        <p class="body">• Friction Velocity</p><p>&nbsp;</p>
+        <p class="subheading">Wave Spectrum Plots</p><p>&nbsp;</p>
+        <p class="body">• Frequency Spectrum (1D)</p>
+        <p class="body">• Direction Spectrum (1D)</p>
+        <p class="body">• Contour 2D Spectrum</p>
+        <p class="body">• Polar 2D Spectrum</p>
+        <p class="body">• Cartesian 2D Spectrum</p><p>&nbsp;</p>
+
+        <p class="body"><span id="u3081">​</span><span><span class="actAsInlineDiv normal_text" id="u3106"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3100"><img class="block" id="u2980_img" src="../static/img/wavesystems_plot.jpg" alt="" width="250" height="120" data-muse-uid="U2980" data-muse-src="../static/img/wavesystems_plot.jpg" /></span></span></span></p><p>&nbsp;</p>
+
+        <p class="blue-heading">Wave System Data Plot Library</p> <p class="body">These plots highlight the results of the wave partitioning analysis performed by the <a href="../xwaves/wave_systems_module.html#collapse0">Wave Systems Module</a>. </p><p>&nbsp;</p>
+        <p class="subheading">Information Plots</p><p>&nbsp;</p>
+        <p class="body">• System Summary</p><p>&nbsp;</p>
+        <p class="subheading">Time Series Plots</p><p>&nbsp;</p>
+        <p class="body">• System Wave Heights</p>
+        <p class="body">• System Wave Periods</p>
+        <p class="body">• System Wave Directions</p>
+        <p class="body">• Wave Vector History</p><p>&nbsp;</p>
+        <p class="subheading">Wave Spectrum Plots</p><p>&nbsp;</p>
+        <p class="body">• Windsea Domain</p>
+        <p class="body">• Windsea 1D</p>
+        <p class="body">• Wave System 1D</p>
+        <p class="body">• Wave System 2D</p>
+        <p class="body">• Wave System Compass</p>
+        <p class="body">• Wave System Contour</p>
+        <p class="body">• Partition Segments</p><p>&nbsp;</p>
+
+        <p class="body"><span id="u3081">​</span><span><span class="actAsInlineDiv normal_text" id="u3106"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3100"><img class="block" id="u2980_img" src="../static/img/climatology_plot.jpg" alt="" width="250" height="120" data-muse-uid="U2980" data-muse-src="../static/img/climatology_plot.jpg" /></span></span></span></p><p>&nbsp;</p>
+
+        <p class="blue-heading">Climatology Plot Library </p> <p class="body">These plots show the climatology based on the entire data set. System (s) plots are only available for data processed with the <a href="../xwaves/wave_systems_module.html#collapse0">Wave Systems Module</a>.</p><p>&nbsp;</p>
+        <p class="subheading">Information Plots</p><p>&nbsp;</p>
+        <p class="body">• Climatology Table</p>
+        <p class="body">• System Climatology Table (s)</p><p>&nbsp;</p>
+        <p class="subheading">Rose Plots</p><p>&nbsp;</p>
+        <p class="body">• Wind Rose</p>
+        <p class="body">• Wave Height Rose</p>
+        <p class="body">• Windsea Height Rose (s)</p>
+        <p class="body">• Swell Height Rose (s)</p><p>&nbsp;</p>
+        <p class="subheading">Scatter Plots</p><p>&nbsp;</p>
+        <p class="body">• Height Period Scatter</p>
+        <p class="body">• Period Direction Scatter</p>
+        <p class="body">• Height Direction Scatter</p>
+        <p class="body">• Height Period Direction Scatter</p>
+        <p class="body">• System Height Period Scatter (s)</p>
+        <p class="body">• System Period Direction Scatter (s)</p>
+        <p class="body">• System Height Direction Scatter (s)</p>
+        <p class="body">• System 3D Scatter (s)</p><p>&nbsp;</p>
+        <p class="subheading">Histogram Plots</p><p>&nbsp;</p>
+        <p class="body">• Wind Speed Histogram</p>
+        <p class="body">• Wind Direction Histogram</p>
+        <p class="body">• Wave Height Histogram</p>
+        <p class="body">• Wave Period Histogram</p>
+        <p class="body">• Wave Direction Histogram</p>
+        <p class="body">• System Wave Height Histogram (s)</p>
+        <p class="body">• System Wave Period Histogram (s)</p>
+        <p class="body">• System Wave Direction Histogram (s)</p><p>&nbsp;</p>
+
+        <p class="body"><span id="u3081">​</span><span><span class="actAsInlineDiv normal_text" id="u3106"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3100"><img class="block" id="u2980_img" src="../static/img/evaluate_plot.jpg" alt="" width="250" height="120" data-muse-uid="U2980" data-muse-src="../static/img/evaluate_plot.jpg" /></span></span></span></p><p>&nbsp;</p>
+
+        <p class="blue-heading">Evaluate Plot Library </p> <p class="body">These plots are for comparing two data sets. System (s) plots are only available for data processed with <a href="../xwaves/wave_systems_module.html#collapse0">Wave Systems Module</a>. The Evaluate Time Series Residuals Plots, Evaluate Scatter Plots, Evaluate Contour Plots, and Evaluate Error Table are not available when processed by the Quick Compare method. See the <a href="../xwaves/evaluate_module.html#collapse0">Evaluate Module</a> help for more details.</p><p>&nbsp;</p>
+        <p class="subheading">Information Comparison Plots</p><p>&nbsp;</p>
+        <p class="body">• Data Comparison</p><p>&nbsp;</p>
+        <p class="subheading">Time Series Comparison Plots</p><p>&nbsp;</p>
+        <p class="body">• Wind Speed</p>
+        <p class="body">• Wind Direction</p>
+        <p class="body">• Significant Wave Height</p>
+        <p class="body">• Peak Period</p>
+        <p class="body">• Mean Period</p>
+        <p class="body">• Peak Direction</p>
+        <p class="body">• Mean Direction</p>
+        <p class="body">• System Height Comparison (s)</p>
+        <p class="body">• System Period Comparison (s)</p>
+        <p class="body">• Wave Height Bias</p><p>&nbsp;</p>
+        <p class="subheading">Wave Spectrum Comparison Plots</p><p>&nbsp;</p>
+        <p class="body">• Frequency Spectrum </p>
+        <p class="body">• Direction Spectrum </p>
+        <p class="body">• Windsea 1D Comparison (s)</p>
+        <p class="body">• Wave System 1D Comparison (s)</p><p>&nbsp;</p>
+        <p class="subheading">Evaluate Time Series Residuals Plots</p><p>&nbsp;</p>
+        <p class="body">• Wind Speed</p>
+        <p class="body">• Wind Direction</p>
+        <p class="body">• Significant Wave Height</p>
+        <p class="body">• Significant Wave Height (s)</p>
+        <p class="body">• Peak Period</p>
+        <p class="body">• Peak Period (s)</p>
+        <p class="body">• Mean Period</p>
+        <p class="body">• Mean Period (s)</p>
+        <p class="body">• Peak Direction</p>
+        <p class="body">• Peak Direction (s)</p>
+        <p class="body">• Mean Direction</p>
+        <p class="body">• Mean Direction (s)</p><p>&nbsp;</p>
+        <p class="subheading">Evaluate Scatter Plots</p><p>&nbsp;</p>
+        <p class="body">• Wind Speed</p>
+        <p class="body">• Wind Direction</p>
+        <p class="body">• Significant Wave Height</p>
+        <p class="body">• Significant Wave Height (s)</p>
+        <p class="body">• Peak Period</p>
+        <p class="body">• Peak Period (s)</p>
+        <p class="body">• Mean Period</p>
+        <p class="body">• Mean Period (s)</p>
+        <p class="body">• Peak Direction</p>
+        <p class="body">• Peak Direction (s)</p>
+        <p class="body">• Mean Direction</p>
+        <p class="body">• Mean Direction (s)</p><p>&nbsp;</p>
+        <p class="subheading">Evaluate Contour Plots</p><p>&nbsp;</p>
+        <p class="body">• Wind Speed</p>
+        <p class="body">• Wind Direction</p>
+        <p class="body">• Significant Wave Height</p>
+        <p class="body">• Peak Period</p>
+        <p class="body">• Mean Period</p>
+        <p class="body">• Peak Direction</p>
+        <p class="body">• Mean Direction</p><p>&nbsp;</p>
+        <p class="subheading">Evaluate Error Table</p><p>&nbsp;</p>
+        <p class="body">• Wind Speed</p>
+        <p class="body">• Wind Direction</p>
+        <p class="body">• Significant Wave Height</p>
+        <p class="body">• Peak Period</p>
+        <p class="body">• Mean Period</p>
+        <p class="body">• Peak Direction</p>
+        <p class="body">• Mean Direction </p><p>&nbsp;</p>
+        <p class="subheading">Evaluate Quantile-Quantile Plots</p><p>&nbsp;</p>
+        <p class="body">• Wind Speed</p>
+        <p class="body">• Significant Wave Height</p><p>&nbsp;</p>
+
+        <p class="body"><span id="u3081">​</span><span><span class="actAsInlineDiv normal_text" id="u3106"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3100"><img class="block" id="u2980_img" src="../static/img/specfit_plot.jpg" alt="" width="250" height="120" data-muse-uid="U2980" data-muse-src="../static/img/specfit_plot.jpg" /></span></span></span></p><p>&nbsp;</p>
+
+        <p class="blue-heading">Spectral Fit Plot Library </p> <p class="body">These plots are for comparing a data set with corresponding <a href="../xwaves/spectral_fitting_module.html#collapse0">Spectral Fit</a> results. </p><p>&nbsp;</p>
+        <p class="subheading">Spectral Fit Error Plots</p><p>&nbsp;</p>
+        <p class="body">• Composite Height Scatter</p>
+        <p class="body">• System Height Scatter</p>
+        <p class="body">• Composite Period Scatter</p>
+        <p class="body">• System Period Scatter</p>
+        <p class="body">• System Height Error Bar</p>
+        <p class="body">• System Period Error Bar</p>
+        <p class="body">• Fit Performance Table</p><p>&nbsp;</p>
+        <p class="subheading">Spectral Fit Spectrum Plots</p><p>&nbsp;</p>
+        <p class="body">• Composite 1D Fit</p>
+        <p class="body">• Wave System 1D Fits</p>
+        <p class="body">• Composite Directional Fit</p>
+        <p class="body">• Wave System Directional Fits</p>
+        <p class="body">• Composite Directional Distribution</p>
+        <p class="body">• Observed Directional Distribution</p><p>&nbsp;</p>
+        <p class="subheading">Spectral Fit Series Plots</p><p>&nbsp;</p>
+        <p class="body">• Composite Height Series</p>
+        <p class="body">• System Height Series</p>
+        <p class="body">• Composite Period Series</p>
+        <p class="body">• System Period Series</p>
+        <p class="body">• Stacked Spectrum (Fit Tool only)</p><p>&nbsp;</p>
+
+        <p class="body"><span id="u3081">​</span><span><span class="actAsInlineDiv normal_text" id="u3106"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3100"><img class="block" id="u2980_img" src="../static/img/seastate_plot.jpg" alt="" width="250" height="120" data-muse-uid="U2980" data-muse-src="../static/img/seastate_plot.jpg" /></span></span></span></p><p>&nbsp;</p>
+
+        <p class="blue-heading">Sea State Plot Library </p> <p class="body">plots highlight the results of the sea history and extremal analysis performed by the <a href="../xwaves/sea_state_analysis_module.html#collapse0">Sea State Module</a></p><p>&nbsp;</p>
+        <p class="subheading">Peak Plots</p><p>&nbsp;</p>
+        <p class="body">• Wave Height PoT</p>
+        <p class="body">• Wave Height Annual Maximum</p>
+        <p class="body">• Wind Speed PoT</p>
+        <p class="body">• Wind Speed Annual Maximum</p><p>&nbsp;</p>
+        <p class="subheading">Wave Height Recurrence Tables</p><p>&nbsp;</p>
+        <p class="body">• Generalized Pareto Distribution (GPD)</p>
+        <p class="body">• Generalized Extreme Value (GEV)</p>
+        <p class="body">• Gumbel</p>
+        <p class="body">• Weibull</p><p>&nbsp;</p>
+        <p class="subheading">Wind Speed Recurrence Tables</p><p>&nbsp;</p>
+        <p class="body">• Generalized Pareto Distribution (GPD)</p>
+        <p class="body">• Generalized Extreme Value (GEV)</p>
+        <p class="body">• Gumbel</p>
+        <p class="body">• Weibull</p><p>&nbsp;</p>
+        <p class="subheading">Wave Height Recurrence Plots</p><p>&nbsp;</p>
+        <p class="body">• Generalized Pareto Distribution (GPD)</p>
+        <p class="body">• Generalized Extreme Value (GEV)</p>
+        <p class="body">• Gumbel</p>
+        <p class="body">• Weibull</p>
+        <p class="body">• All (GEV, Gumbel, and Weibull)</p><p>&nbsp;</p>
+        <p class="subheading">Wind Speed Recurrence Plots</p><p>&nbsp;</p>
+        <p class="body">• Generalized Pareto Distribution (GPD)</p>
+        <p class="body">• Generalized Extreme Value (GEV)</p>
+        <p class="body">• Gumbel</p>
+        <p class="body">• Weibull</p>
+        <p class="body">• All (GEV, Gumbel, and Weibull)</p><p>&nbsp;</p>
+        <p class="subheading">Hs-Tp Scatter Plot</p><p>&nbsp;</p>
+        <p class="body">• Bulk</p>
+        <p class="body">• Windsea</p>
+        <p class="body">• Swell1</p>
+        <p class="body">• Swell2</p>
+    </div>
 </div>

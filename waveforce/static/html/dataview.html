@@ -1,55 +1,66 @@
+<script>
+var subdir = 'xwaves';
+if (XWAVES){
+    subdir = 'xwaves';
+}else if(WAVECTOR){
+    subdir = 'wavector';
+}else if(AUTOWAVES){
+    subdir = 'autowaves';
+}
+</script>
+
 <div class="AccordionPanelContent disn clearfix colelem" id="u2947">
     <!-- group -->
     <div class="clearfix grpelem" id="u2948-258" data-muse-uid="U2948">
         <!-- content -->
         <!-- m_editable region-id="editable-static-tag-U2948" template="data-exploration.html" data-type="html" data-ice-options="disableImageResize,none" -->
-        <p class="blue-heading"><span><span class="actAsDiv normal_text" id="u2986"><!-- content --><span class="actAsDiv clip_frame" id="u2980"><!-- image --><img class="block" id="u2980_img" src="../static/img/data%20view1.jpg" alt="" width="569" height="320" data-muse-uid="U2980" data-muse-src="../static/img/data%20view1.jpg" /></span></span>
-            </span></p>
+        <p class="body"><span id="u3081">​</span><span><span class="actAsInlineDiv normal_text" id="u3106"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3100"><!-- image --><img id="u3100_img" src="../static/img/data%20view1.jpg" alt="" width="530" height="297" data-muse-uid="U3100" data-muse-src="../static/img/data%20view1.jpg" /></span></span>
+            </span><span></span></p>
+        <p class="body">&nbsp;</p>
         <p class="body">Data View is a versatile data plotting and exploration tool for visualizing raw imported and processed data.&nbsp; Features include 10 different page layout options with 1 to 6 plots per page and several different <a href="?dummy=$4#collapse2">Plot Libraries</a> to select from.&nbsp; As your data analysis proceeds, the number of display options in <span id="u2948-7">Data View</span> increases.&nbsp; Image and movie-file export capability is included.</p>
         <p class="body">&nbsp;</p>
         <p class="body">As described below, <span id="u2948-12">Data View</span> features are accessible through a variety of interactive plot features, toolbar commands, and pull-down menu commands.</p>
         <p class="body">&nbsp;</p>
-        <p class="subheading">
-            <br />Data View Interactive Plot Features</p>
+        <p class="blue-heading">Data View Interactive Plot Features</p>
         <p class="body"><span id="u2948-19">Plot Menu</span> – Right-Click on a plot title to access the menu for that axes.&nbsp; All the available plots for the current data are available here as well as a variety of display options (described below).</p>
         <p class="body">Note: As data processing proceeds, additional plot options will become available.&nbsp; See <a href="?dummy=$4#collapse2">Plot Libraries</a> for a list of available plots.</p>
         <p class="body"><span id="u2948-26">Record Scrolling </span>– The scroll bar at the bottom of the <span id="u2948-28">Data View</span> window allows the user to scroll forward and back through the data records.&nbsp; A dashed vertical red line will appear in all time-series plot to identify the time of the currently active record.</p>
         <p class="body"><span id="u2948-31">Record List </span>– Right clicking anywhere in <span id="u2948-33">Data View</span> will bring up a menu of plot commands that includes “View Record List”.&nbsp; This opens a <span id="u2948-35">Record List </span>window that provides additional user controls for exploring data.&nbsp; Specific controls for the Record List include:</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-body-text" id="u2948-41"><span class="Bolded-body-text">Up Arrow:</span> View Next Record</p>
-        <p class="blue-body-text" id="u2948-44"><span class="Bolded-body-text">Right Arrow: </span>Same as Up Arrow</p>
-        <p class="blue-body-text" id="u2948-47"><span class="Bolded-body-text">Down Arrow: </span>View Previous Record</p>
-        <p class="blue-body-text" id="u2948-50"><span class="Bolded-body-text">Left Arrow: </span>Same as Down Arrow</p>
-        <p class="blue-body-text" id="u2948-53"><span class="Bolded-body-text">Page Up: </span>View Next Record Section if Time Axis is Zoomed in</p>
-        <p class="blue-body-text" id="u2948-56"><span class="Bolded-body-text">Page Down: </span>View Previous Section if Time Axis is Zoomed in</p>
-        <p class="blue-body-text" id="u2948-59"><span class="Bolded-body-text">Home: </span>View First Record</p>
-        <p class="blue-body-text" id="u2948-62"><span id="u2948-60">End: </span>View Last Record</p>
-        <p class="blue-body-text" id="u2948-65"><span id="u2948-63">Insert: </span>Open Record List</p>
-        <p class="blue-body-text" id="u2948-68"><span id="u2948-66">Backspace: </span>Close Record List</p>
-        <p class="blue-body-text" id="u2948-71"><span id="u2948-69">1 - 9 : </span>Change Plot Layout to #1-9</p>
-        <p class="blue-body-text" id="u2948-74"><span id="u2948-72">0: </span>Change Plot Layout to #10</p>
+        <p class="body"><span>Up Arrow:</span> View Next Record</p>
+        <p class="body"><span>Right Arrow: </span>Same as Up Arrow</p>
+        <p class="body"><span>Down Arrow: </span>View Previous Record</p>
+        <p class="body"><span>Left Arrow: </span>Same as Down Arrow</p>
+        <p class="body"><span>Page Up: </span>View Next Record Section if Time Axis is Zoomed in</p>
+        <p class="body"><span>Page Down: </span>View Previous Section if Time Axis is Zoomed in</p>
+        <p class="body"><span>Home: </span>View First Record</p>
+        <p class="body"><span>End: </span>View Last Record</p>
+        <p class="body"><span>Insert: </span>Open Record List</p>
+        <p class="body"><span>Backspace: </span>Close Record List</p>
+        <p class="body"><span>1 - 9 : </span>Change Plot Layout to #1-9</p>
+        <p class="body"><span>0: </span>Change Plot Layout to #10</p>
         <p class="body">&nbsp;</p>
-        <p class="body" id="u2948-77">View button – Time series plots zoom into display only selected records.</p>
-        <p class="body" id="u2948-79">View All button – Time series plots display all records</p>
+        <p class="body"><i>View</i> button – Time series plots zoom into display only selected records.</p>
+        <p class="body"><i>View All</i> button – Time series plots display all records</p>
         <p class="body">&nbsp;</p>
         <p class="body"><span id="u2948-81">Select Record Using Time Series Plot</span> – See Time Axis Mouse Control in the Options pull-down menu below.</p>
         <p class="body"><span id="u2948-84">Rotate 3D Plots Using Mouse </span>– Left Click the left or right side of a 3D plot to rotate clockwise or counter clockwise,&nbsp; Shift + Left Click (or Right + Left Click) the top or bottom of a 3D plot to rotate up or down.</p>
         <p class="body">&nbsp;</p>
-        <p class="subheading">Data View Toolbar Commands</p>
+        <p class="blue-heading">Data View Toolbar Commands</p>
         <p class="body">A toolbar across the top of the plot page has the following click-tools.&nbsp; Simply click on each toolbar icon to activate the command.</p>
         <p class="body">&nbsp;</p>
         <p class="body">&nbsp;<span><span class="actAsInlineDiv normal_text" id="u2999"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u2994"><!-- image --><img id="u2994_img" src="../static/img/data%20view2.gif" alt="" width="322" height="481" data-muse-uid="U2994" data-muse-src="../static/img/data%20view2.gif" /></span></span>
             </span><span></span></p>
         <p class="caption">Data View Toolbar Icons</p>
         <p class="blue-heading">&nbsp;</p>
-        <p class="subheading">Data View Pull-Down Menu Commands</p>
+        <p class="blue-heading">Data View Pull-Down Menu Commands</p>
         <p class="body"><span id="u2948-102">File Menu </span>– for loading and saving data, plots and movies</p>
         <ul class="list0 nls-None" id="u2948-125">
             <li class="body">Load Raw Data – Select available data source to read and format unprocessed wave spectra files.</li>
             <li class="body">Open Processed File – Select and load processed data files from previous sessions.</li>
             <li class="body">Save As – Save current loaded data file with a new filename</li>
             <li class="body">Save – Save current data with existing filename</li>
-            <li class="body">Splice Strom Events – Merge <a href="../xwaves/data_formats.html#collapse4">Oceanweather </a>Storm events into current loaded data set. Storm events must be already processed and loaded as a second dataset using the <a href="../xwaves/evaluation_module.html#collapse2">Quick Compare</a> feature.</li>
+            <li class="body">Splice Strom Events – Merge <a href="../xwaves/data_formats.html#collapse4" onclick="location.href=../+subdir+/data_formats.html#collapse4">Oceanweather </a>Storm events into current loaded data set. Storm events must be already processed and loaded as a second dataset using the <a href="../xwaves/evaluation_module.html#collapse2">Quick Compare</a> feature.</li>
             <li class="body">Copy – Copy an image of the current window to the clipboard</li>
             <li class="body">Export – Save an image file, MATLAB figure file, movie file, or statistics file to disk</li>
             <li class="body">Page Setup, Print Preview, Print – Standard printing dialogue boxes</li>
@@ -80,7 +91,7 @@
             <li class="body">Color Scheme – Set background and text colors for all windows and plots</li>
         </ul>
         <p class="body">&nbsp;</p>
-        <p class="subheading">Layout</p>
+        <p class="blue-heading">Layout</p>
         <ul class="list0 nls-None" id="u2948-161">
             <li class="Bullets1" id="u2948-158">Templates – Display Plot Layout Templates</li>
             <li class="body">Default Plots – Pre-defined plot layouts, including the following options:</li>
@@ -107,7 +118,7 @@
         <p class="body">&nbsp;</p>
         <p class="body">• Saved Layouts- User-defined page layouts.&nbsp; Save custom page layouts by name and recall them through this menu command.</p>
         <p class="body">&nbsp;</p>
-        <p class="subheading">Options</p>
+        <p class="blue-heading">Options</p>
         <ul class="list0 nls-None" id="u2948-209">
             <li class="Bullets1" id="u2948-208">Time Axis Mouse Control – Toggles the ability to select records to display using the mouse on time series plots.&nbsp; A vertical reference bar is displayed.</li>
         </ul>
@@ -132,16 +143,16 @@
             <li class="Bullets1" id="u2948-230">Load Friction Velocity – for importing friction velocity (ustar) from a Matlab data file.&nbsp; Imported friction velocities are automatically interpolated in time to match the wave record time stamps. See Data Formats for file format requirements.</li>
         </ul>
         <ul class="list0 nls-None" id="u2948-234">
-        <li class="Bullets1" id="u2948-233">Fit Selection Tool – for opening the <a href="../xwaves/spectral_fitting_module.html#collapse3">Spectral Fit Selection Tool</a> (Spectral Fit data only)</li>
+        <li class="Bullets1" id="u2948-233">Fit Selection Tool – for opening the <a href="../xwaves/spectral_fitting_module.html#collapse2">Spectral Fit Selection Tool</a> (Spectral Fit data only)</li>
         </ul>
         <p class="body">&nbsp;</p>
-        <p class="subheading">Help</p>
+        <p class="blue-heading">Help</p>
         <ul class="list0 nls-None" id="u2948-242">
             <li class="body">About – Display Copyright and License information</li>
             <li class="body">Help Contents – Display Help Page</li>
         </ul>
         <p class="body">&nbsp;</p>
-        <p class="subheading">Module Toolbar Commands</p>
+        <p class="blue-heading">Module Toolbar Commands</p>
         <p class="body">In addition to the Module drop down menu, each module can be quickly accessed by clicking the corresponding toolbar icon.</p>
         <p class="body">&nbsp;</p>
         <p class="body">&nbsp;<span><span class="actAsInlineDiv normal_text" id="u3020"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3014"><!-- image --><img id="u3014_img" src="../static/img/data%20view3.jpg" alt="" width="249" height="368" data-muse-uid="U3014" data-muse-src="../static/img/data%20view3.jpg" /></span></span>

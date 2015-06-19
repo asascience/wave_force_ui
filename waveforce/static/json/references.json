@@ -10,7 +10,7 @@
     ,"Data Manipulations" :
         "../static/html/data_manipulations.html"
     ,"A Primer on Wave Spectral Partitioning" :
-        "../static/html/spectral_fitting.html"
+        "../static/html/partitioning_primer.html"
     ,"Spectral Fitting" :
         "../static/html/spectral_fitting.html"
     ,"NetCDF Interface" :

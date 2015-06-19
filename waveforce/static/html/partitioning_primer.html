@@ -1,0 +1,130 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u2947">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u2948-258" data-muse-uid="U2948">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U2948" template="data-exploration.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="body"> Wave spectral partitioning provides an efficient approach to characterize energy levels of individual wind-sea and swell wave components in directional wave spectra. Here a ‘wave component’ is defined as a specific wind-sea or swell that can be attributed to a region of enhanced energy in the directional wave spectrum. The time evolution of a series of related wave components forms a ‘wave system’ that can be traced to a specific generation region on the ocean surface. Wave spectral partitioning methods have been applied in a variety of investigations, including the comparison of wave fields from the Labrador Sea Extreme Waves Experiment (Beal 1989), the validation of WAve Model WAM performance against ERS-1 SAR spectra (Hasselmann et al. 1994), the assimilation of wave observations into the WAM model (Voorrips et al. 1997), the analysis of wind sea growth and dissipation in the open ocean (Hanson and Phillips 1999), a study of swell evolution across the Pacific (Hanson and Phillips 2001), and an analysis of nearshore wave climatology (Scott et al. 2002). </p>
+        <p id='u2262-5'>&nbsp;</p>
+        <p class="body"> Originally proposed by Gerling (1992), wave partitioning allows the identification and grouping of component wave systems from spatially and temporally distributed observations of directional wave spectra. A primary limitation to the Gerling approach is that only those portions of the spectrum that rise above a constant threshold are used to determine the features of particular wave component. Hasselmann et al. (1994) improved on this method by dividing the spectrum into subset domains based on an inverted catchment area approach, thus using the entire spectral region of each peak to compute wave component parameters. Hanson (1996) and Hanson and Phillips (2001) made further improvements to the technique by adding clustering routines to track the evolution of individual wave components and dispersion calculations to estimate the source time and location of resulting wave systems. Work has continued on the development of these techniques since the publication of Hanson and Phillips (2001), hereinafter referred to as HP01, to the point that we now have a fully automated, GUI-driven system employing modern image processing technology for performing a wide range of wave system analyses on time-evolving series of directional wave spectra. </p>
+        <p id='u2262-5'>&nbsp;</p>
+        <p class="body"> For completeness, we summarize the methods here and provide detail on the improvements that have been made since HP01. </p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">Wave Component Identification</p>
+        <p class="body">The first step of spectral partitioning is to isolate spectral regions S(f,&theta;) associated with individual energy peaks. This was accomplished by HP01 with a time-consuming recursive algorithm that assigned each spectrum value to a path of steepest ascent associated with a local peak. All paths leading to the same peak were assigned to a distinct spectral partition. This step has been improved with efficient image processing routines that were designed for making watershed delineations in topographic imagery (Soille 1999, Vincent and Soille 1991). Treating the spectrum as an inverse topographic domain, an 8-point connected smoothing transform removes fine-scale noise in the spectrum. A watershed delineation transform then identifies the boundaries forming the minima between remaining spectral peaks. Spectral regions surrounded by such boundaries become individual partitions. This change in basic methodology has reduced by an order of magnitude the time required to process each record, with essentially no change in output results.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">Wave Component Identification</p>
+        <p class="body">
+            Once the initial partitions are identified, a variety of component statistics are computed to aid with further processing. These include the 1D energy spectrum </p>
+        <p class="body">&nbsp;</p>
+        <p class="body" align="center">\( E(f)=\int S(f,\theta)d \theta \)&nbsp;;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">the total energy in the 2D spectral domain </p>
+        <p class="body">&nbsp;</p>
+        <p class="body" align="center">\( e=\int \int S(f,\theta)d \theta df \)&nbsp;;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">the significant wave height, approximated by <i>H<SUB>mo</SUB></i></p>
+        <p class="body">&nbsp;</p>
+        <p class="body" align="center">\( H_s\sim H_{mo}=4\sqrt{e} \)&nbsp;;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">and the peak wave period
+            <p class="body">&nbsp;</p>
+            <p class="body" align="center">\( T_p = \frac{1}{f_p} \) &nbsp;;</p>
+            <p class="body">&nbsp;</p>
+            <p class="body">with the peak wave frequency f
+                <SUB>p</SUB> computed from a 3-point parabolic fit to the 1D spectral peak. Also computed is the vector mean wave direction </p>
+            <p class="body">&nbsp;</p>
+            <p class="body" align="center">\( \overline{\theta} = \tan^{-1}(\frac{\overline{\sin \theta}}{\overline{\cos \theta}}) \) &nbsp;;</p>
+            <p class="body">&nbsp;</p>
+            <p class="body">where </p>
+            <p class="body">&nbsp;</p>
+            <p class="body" align="center">\( \overline{\sin\theta} = \frac{\int\int{S(f,\theta)\sin \theta} \partial \theta \partial f}{e}\) &nbsp;</p>
+            <p class="body" align="center">\( \overline{\cos\theta} = \frac{\int\int{S(f,\theta)\cos \theta} \partial \theta \partial f}{e}\) &nbsp;;</p>
+            <p class="body">&nbsp;</p>
+            <p class="body">and the directional spread (O’Rielly et al. 1996)</p>
+            <p class="body">&nbsp;</p>
+            <p class="body" align="center">\( s_p = [2(1-m_1)]^{\frac{1}{2}} \) ,</p>
+            <p class="body">&nbsp;</p>
+            <p class="body">where</p>
+            <p class="body">&nbsp;</p>
+            <p class="body" align="center">\( m_1 = [(a_1^b)^2 + (b_1^b)^2]^{\frac{1}{2}} \).</p>
+            <p class="body">&nbsp;</p>
+            <p class="body">&nbsp;</p>
+            <p class="body">with bulk Fourier coefficients</p>
+            <p class="body">&nbsp;</p>
+            <p class="body" align="center">\( a_1^b = \frac{1}{e}\int_{f1}^{f2}a_1(f)E(f)df \) ,</p>
+            <p class="body" align="center">\( b_1^b = \frac{1}{e}\int_{f1}^{f2}b_1(f)E(f)df \) .</p>
+            <p class="body">&nbsp;</p>
+            <p class="body">Both full spectrum and spectral component statistics are computed using the above relationships. Integration domains are implied to be over all frequency bins and from 0 to 2&pi; in direction. For computing statistics of a spectral component, all spectral values not falling within the partition domain are set to zero.</p>
+            <p class="body">&nbsp;</p>
+            <p class="blue-heading">Wind-sea and swell combinations</p>
+            <p class="body">The resulting wave components are sorted into wind-sea or swell. To be classified as wind-sea, a spectral peak must be forced by a component of the existing wind. A wave-age criterion is used to identify and combine the 2D wind-sea partitions. All remaining peaks are labeled as swell. Adjacent 2D swell peaks that are contiguous in frequency can be part of the same swell system and are combined under certain conditions. Two tests are made to determine if adjacent swell peaks belong to the same wave system. A swell angle threshold test requires the mean directions of adjacent peaks be separated by less than a threshold angle. A threshold value of 30 deg yielded optimum results with the Pacific Ocean data and provided a comfortable margin outside the stated +/-10-deg accuracy of the buoy directions. A second test compares the f, &theta; spectral distance between peaks in relation to their individual spectral spreads. Peaks are combined if the spread of either peak is large compared to the distance between the two peaks. Wave component statistics are updated after each combination is made.</p>
+            <p class="body">&nbsp;</p>
+            <p class="blue-heading">Minimum Wave Height Threshold and Storage of Results</p>
+            <p class="body">As a final step in producing consistent results with minimal noise, any wind-sea or swell component that falls below a significant wave height threshold of 0.1 m is removed from analysis and labeled as miscellaneous energy.</p>
+            <p class="body">&nbsp;</p>
+            <p class="body">The partitioning results are stored in a wave component template T(f,&theta;) that has the same degrees of freedom and cut-off frequency as the input spectrum. Matrix values contained in the template can be one of the following:</p><p class="body">&nbsp;</p>
+            <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 style='margin-left:.5in;border-collapse:collapse;border:none;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:
+ none'>
+            <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+                <td align='center' width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal><b>Matrix Value</b></p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal><b>Represents</b></p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:1'>
+                <td align="center" width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>0</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Wind Sea</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:2'>
+                <td align="center" width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>1..n</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Swell System ID</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:2'>
+                <td align="center" width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>-1</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Miscellaneous Energy</p>
+                </td>
+            </tr>
+            </table>
+            <p class="body">&nbsp;</p>
+            <p class="body">An example of a partitioned buoy spectrum containing a wind-sea and three swell components appears in Fig 1.</p>  
+            <p class="body">&nbsp;</p>
+            <p class="blue-heading">Swell Tracking</p>
+            <p class="body">Once a time series of directional wave spectra has been partitioned, a clustering algorithm is used to link common wave components together through time. This results in the generation of wave systems, which are statistically represented by time-evolving series of Hs (approximated by H<SUB>mo</SUB>), T<SUB>p</SUB>, and attributes associated with each wave component. A convenient display of these features is in the form of the wave vector history plot shown in Fig 2a. At any given time, the wave field is composed of multiple wave components that are members of a distinct evolving wave system. For example, the wave vectors at the dashed vertical line in Fig 2a correspond to the wave components identified in Fig. 1. The wave vector history shows how these particular components evolve through time. Wind-seas (black arrows) are driven by local winds. The swell events are more persistent, with systems from the North and South Pacific both typically lasting about 6 days. It is interesting to note that the two most energetic wave height events during this two-week period (Fig. 2b) are a result of the superposition of locally increased wind-seas with energetic swells from three different origins.</p>
+            <span><span class="actAsDiv normal_text" id="u2986"><!-- content --><span class="actAsDiv clip_frame" id="u2980"><!-- image --><img class="block" id="u2980_img" src="../static/img/partition1.gif" alt="" width="450" height="320" data-muse-uid="U2980" data-muse-src="../static/img/partition1.gif" /></span></span>
+            <p class="body">Note: Energy levels logarithmically scaled to the peak value</p><p class="body">&nbsp;</p>
+            <p class="body">Fig. 1. Example partition results for buoy station 51028 2D spectrum on 9 November 2000 (0700 GMT). White lines denote the boundaries of each wave component as represented in the partition template T(f,&theta;). Note that this record contains a wind sea (0), North Pacific swell (1), South Pacific Swell (2), and a more locally generated easterly swell (3).
+            <p class="body">&nbsp;</p>
+            
+            <span><span class="actAsDiv normal_text" id="u2986"><!-- content --><span class="actAsDiv clip_frame" id="u2980"><!-- image --><img class="block" id="u2980_img" src="../static/img/partition2.jpg" alt="" width="569" height="320" data-muse-uid="U2980" data-muse-src="../static/img/partition2.jpg" /></span></span>
+            <p class="body">Fig. 2. Example results from Spectral Partitioning Module showing persistent wave system evolution during November 2000 at NDBC Station 51028. a. Wave vector history. Wave vectors represent the height (length), peak frequency (origin), and direction of travel (azimuth) of evolving wave systems (color-coded). For clarity, only wave systems persisting 10-h or longer are displayed. b. Full-spectrum significant wave height.</p>
+            <p class="body">&nbsp;</p>
+            <p class="blue-heading">References</p>
+            <p class="body">&nbsp;</p>
+			<p class="body">Beal, R. C., Ed, 1989:  <i>Directional Ocean Wave Spectra</i>. The Johns Hopkins University Press, Baltimore, MD, 218 pp.</p>
+			<p class="body">Gerling, T. W., 1992:  Partitioning sequences and arrays of directional ocean wave spectra into component wave systems.  <i>J. Atmos. Oceanic Technol.</i>, 9, 444-458.</p>
+			<p class="body">Hanson, J. L., 1996:  Wind sea growth and swell evolution in the Gulf of Alaska. Ph.D. Dissertation, the Johns Hopkins University, 151 pp.</p>
+			<p class="body">Hanson, J. L., and O. M. Phillips, 2001:  Automated analysis of ocean surface directional wave spectra.  <i>J. Atmos. Oceanic. Technol.</i>, 18, 277-293.</p>
+			<p class="body">Hanson, J. L., and O. M. Phillips, 1999:  Wind sea growth and dissipation in the open ocean.  <i>J. Phys. Oceanogr, 29, 1633-1648.</i></p>
+			<p class="body">Hasselmann, S., K. Hasselmann, and C. Bruning, 1994: Extraction of wave spectra from SAR image spectra.  <i>Dynamics and Modelling of Ocean Waves</i>, G.J. Komen et al., Eds., Cambridge University Press, 391-401.</p>
+			<p class="body">O’Reilly, W.C., T.H.C. Herbers, R.J. Seymour and R. T. Guza, 1996: A comparison of directional buoy and fixed platform measurements of Pacific Swell. <i>J. Atmos. Oceanic. Technol.</i>, 13 (1), 231-238.</p>
+			<p class="body">Scott, D., D. Resio and C. Pantoja, 2002:  Swell propagation and nearshore wave climate.  <i>7th International Workshop on Wave Hindcasting and Forecasting</i>, Meteorological Service of Canada, 13-24.  </p>
+			<p class="body">Soille, P., 1999:  Morphological Image Analysis: Principles and Applications. Springer-Verlag, 170-171.</p>
+			<p class="body">Vincent, L., and P. Soille, 1991:  Watersheds in digital spaces: An efficient algorithm based on immersion simulations. <i>IEEE Transactions of Pattern Analysis and Machine Intelligence</i>, 13(6), 583-598. </p>
+			<p class="body">Voorrips, A. C., V. K. Makin and S. Hasselmann, 1997:  Assimilation of wave spectra from pitch-and-roll buoys in a North Sea wave model. <i>J. Geophys. Res.</i> 102, 5829-5849.</p>
+
+    </div>
+</div>
