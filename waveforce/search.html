@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Wave Force">
+    <meta name="author" content="RPS ASA">
+    <link rel="icon" href="static/img/favicon.ico">
+
+    <title>WaveForce Help - Search</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+  </head>
+
+ <body>
+    <nav class="navbar navbar-fixed-top wave-force-nav">
+      <div class="container-fluid">
+        <div class="navbar-header">          
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a class="wave-force-nav-link" href="http://www.waveforcetechnologies.com">Home</a></li>
+            <li><a class="wave-force-nav-link" href="http://www.waveforcetechnologies.com/software.html">Software</a></li>
+            <li><a class="wave-force-nav-link" href="http://www.waveforcetechnologies.com/projects.html">Products</a></li>
+            <li><a class="wave-force-nav-link" href="http://www.waveforcetechnologies.com/rtdata.html">Real-time Data</a></li>
+            <li><a class="wave-force-nav-link" href="http://www.waveforcetechnologies.com/documentation.html">Documentation</a></li>
+            <li><a class="wave-force-nav-link" href="http://www.waveforcetechnologies.com/contactus.html">Contact us</a></li>          
+          </ul>          
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="wrapper">
+        <div class="row" style="margin-top:100px">          
+          <div class="col-lg-6" style="margin-left:200px">
+            <div class="input-group">
+              <input id="searchTextBox" type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button id="searchBtnGo" class="btn btn-default" type="button">Go!</button>
+              </span>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-lg-6" style="margin-left:200px;margin-top:50px">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Search Results
+                        <i id="searchSpinner" class="fa fa-spinner fa-pulse"></i> 
+                        <span id="searchResultsNum" class="badge pull-right">4</span>
+                    </h3>
+                  </div>
+                  <div id="searchResults" class="panel-body">
+                    <!-- search content goes here -->                    
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="static/lib/jquery/dist/jquery.min.js"></script>
+    <script src="static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="static/lib/lunr.js/lunr.js"></script>
+
+    <script>        
+
+        var index = lunr(function () {
+            this.field('title', {boost: 10})        
+            this.field('href')
+            this.ref('id')
+          })
+
+        var store = {};
+        
+        $.getJSON( "/static/json/search_terms.json", function( data ) {
+            var st = (data.searchTerms)
+            var idxCount=0;
+            $.each(st, function( i, value ) {
+                createIdx(index,store,idxCount,value.title,value.href)
+                idxCount+=1;
+
+            });
+            searchDocs(index,store);
+        });
+        
+
+        //enter key
+        $('#searchTextBox').keypress(function(e) {
+            if(e.which == 13) {
+                searchDocs(index,store);
+            }
+        });
+
+        if (window.location.search.indexOf("?s") > -1){
+            var search = window.location.search;
+            search = search.split("?")[1].split('s=')[1];
+            console.log(search);
+            $('#searchTextBox').val(search)
+           
+        }
+
+        $( "#searchBtnGo" ).on( "click", function() {          
+          searchDocs(index,store);
+        });        
+
+        function createIdx(index,store,idxCount,title,href){
+            
+            index.add({
+                id: idxCount,
+                title: title,
+                href: href
+            })
+
+            store[idxCount.toFixed(0)] = {title: title, href:href};
+        }
+
+        function createSearchResult(resultItem){
+            console.log(resultItem);
+            html = '<div class="panel panel-default">'
+            html+='  <div class="panel-body">'            
+            html+='    <small>'+resultItem['title']+'</small>'
+            html+='    <a href="'+resultItem['href']+'">'+resultItem['href']+'</a>'
+            html+='  </div>'
+            html+='</div>'
+            $('#searchResults').append(html)
+        }
+
+        function searchDocs(index,store) {
+            $('#searchSpinner').show();
+            $('#searchResults').empty();
+
+            var query = $('#searchTextBox').val()            
+
+            var results = index.search(query)
+            if (results.length > 0){                
+                $('#searchResultsNum').text(results.length)
+                $.each(results, function( i, value ) {
+                  createSearchResult(store[value.ref]);
+                });
+            }else{
+                $('#searchResultsNum').text(results.length)
+                $('#searchResults').append("<h4>Nothing Found...</h4>")
+            }
+
+
+            $('#searchSpinner').hide();
+
+        }
+
+
+
+    </script>
+
+  </body>
+</html>
