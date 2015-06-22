@@ -61,7 +61,7 @@
             </div>
             <div class="col-sm-8 main content-page">
                 <p class="section-heading">Getting Started</p>
-                <p class="section-description"> How to install and activate XWaves</p>
+                <p class="section-description"> How to install and activate Wavector</p>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 </div>
             </div>
@@ -83,7 +83,7 @@
         });
     });
 
-    $.getJSON("../static/json/getting-started.json", function(data) {
+    $.getJSON("../static/json/wv_getting-started.json", function(data) {
         var panels = Object.keys(data);
         $.each(panels, function(index, panel) {
             var active = false;

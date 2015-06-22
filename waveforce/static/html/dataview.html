@@ -9,6 +9,17 @@ if (XWAVES){
 }
 </script>
 
+<script>
+var subdir = 'xwaves';
+if (XWAVES){
+    subdir = 'xwaves';
+}else if(WAVECTOR){
+    subdir = 'wavector';
+}else if(AUTOWAVES){
+    subdir = 'autowaves';
+}
+</script>
+
 <div class="AccordionPanelContent disn clearfix colelem" id="u2947">
     <!-- group -->
     <div class="clearfix grpelem" id="u2948-258" data-muse-uid="U2948">
@@ -60,7 +71,7 @@ if (XWAVES){
             <li class="body">Open Processed File – Select and load processed data files from previous sessions.</li>
             <li class="body">Save As – Save current loaded data file with a new filename</li>
             <li class="body">Save – Save current data with existing filename</li>
-            <li class="body">Splice Strom Events – Merge <a href="../xwaves/data_formats.html#collapse4" onclick="location.href=../+subdir+/data_formats.html#collapse4">Oceanweather </a>Storm events into current loaded data set. Storm events must be already processed and loaded as a second dataset using the <a href="../xwaves/evaluation_module.html#collapse2">Quick Compare</a> feature.</li>
+            <li class="body">Splice Strom Events – Merge <a href="#" onclick="RedirectURL('/data_formats.html#collapse4');return false;">Oceanweather </a>Storm events into current loaded data set. Storm events must be already processed and loaded as a second dataset using the <a href="../xwaves/evaluation_module.html#collapse2">Quick Compare</a> feature.</li>
             <li class="body">Copy – Copy an image of the current window to the clipboard</li>
             <li class="body">Export – Save an image file, MATLAB figure file, movie file, or statistics file to disk</li>
             <li class="body">Page Setup, Print Preview, Print – Standard printing dialogue boxes</li>
@@ -163,3 +174,11 @@ if (XWAVES){
         <!-- /m_editable -->
     </div>
 </div>
+
+<script>
+function RedirectURL(suffix)
+{
+    console.log(subdir)
+    window.location= "../"+subdir+suffix
+}
+</script>

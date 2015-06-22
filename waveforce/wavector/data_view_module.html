@@ -82,7 +82,7 @@
         });
     });
 
-    $.getJSON("../static/json/data-exploration.json", function(data) {
+    $.getJSON("../static/json/wv_data-exploration.json", function(data) {
         var panels = Object.keys(data);
         $.each(panels, function(index, panel) {
             console.log(data[panel]);

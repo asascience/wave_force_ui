@@ -1,9 +1,20 @@
+<script>
+var subdir = 'xwaves';
+if (XWAVES){
+    subdir = 'xwaves';
+}else if(WAVECTOR){
+    subdir = 'wavector';
+}else if(AUTOWAVES){
+    subdir = 'autowaves';
+}
+</script>
+
 <div class="AccordionPanelContent disn clearfix colelem" id="u2292">
     <!-- group -->
     <div class="clearfix grpelem" id="u2370-101" data-muse-uid="U2370">
         <!-- content -->
         <!-- m_editable region-id="editable-static-tag-U2370" template="getting-started.html" data-type="html" data-ice-options="disableImageResize,none" -->
-        <p class="body"> Once installed, XWaves is launched by typing ‘xwaves’ at the Matlab command prompt.  It is not necessary to have the xwaves folder set as the current Matlab folder. </p>
+       <!--  <p class="body"> Once installed, XWaves is launched by typing ‘xwaves’ at the Matlab command prompt.  It is not necessary to have the xwaves folder set as the current Matlab folder. </p> -->
         <p class="body">&nbsp;</p>
         <p class="body">The Start-Up Screen is your portal for loading wave data into <span id="u2370-2">XWaves </span>and accessing program features.</p>
         <p class="body">&nbsp;</p>
@@ -12,7 +23,7 @@
         <p class="body">Data are selected for import into<span id="u2370-14"> XWaves </span>through the File pull-down menu.&nbsp; Once a particular data set is selected, XWaves will read in the data and launch the <a href="../xwaves/data_view_module.html#collapse0">Data View</a> module.&nbsp; The menu commands available from the Start Up screen are described below</p>
         <p class="body">&nbsp;</p>
         <p class="blue-heading">Start-Up Screen Menu Commands</p>
-        <p class="body"><span id="u2370-22">File Menu </span>– for loading raw or processed wave spectra files</p>
+        <p class="body"><span class="subheading">File Menu </span>– for loading raw or processed wave spectra files</p>
         <ul class="list0 nls-None" id="u2370-48">
             <li class="body"><span id="u2370-25">Load Raw Data</span> – Select available data source to read and format unprocessed wave spectra files. Provides links to all available input file formats.&nbsp; Some formats also allow reading in a separate wind file.&nbsp; Once a data type is selected, an <a href="../xwaves/loading_data.html#collapse0">Import Parameters Table</a> is displayed.&nbsp; This is where specific attributes of the data, if not previously saved, need to be entered into the import parameters database.</li>
             <li class="body"><span id="u2370-30">Open </span><span id="u2370-31">XWaves</span><span id="u2370-32"> File</span> – Select and load processed data files from previous XWaves sessions.&nbsp; These are MATLAB binary files with a *.mat file extension.&nbsp; An automated file checker ensures that all the required data fields are in place and warns the user about any missing data fields.</li>

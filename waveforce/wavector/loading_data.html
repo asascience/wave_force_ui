@@ -78,7 +78,7 @@
             $("#sidebarToc").append("<li><a href='" + data[item].link + "''>" + data[item].name + "</a></li>")
         });
     });
-    $.getJSON("../static/json/loading-data.json", function(data) {
+    $.getJSON("../static/json/wv_loading-data.json", function(data) {
         var panels = Object.keys(data);
         $.each(panels, function(index, panel) {
             console.log(data[panel]);
