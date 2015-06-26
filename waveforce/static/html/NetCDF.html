@@ -14,15 +14,124 @@ if (XWAVES){
     <div class="clearfix grpelem" id="u5940-49" data-muse-uid="U5940">
         <!-- content -->
         <!-- m_editable region-id="editable-static-tag-U5940" template="datawell.html" data-type="html" data-ice-options="disableImageResize,none" -->
-        <p class="subheading">Description:</p>
+        <p class="blue-heading">Description:</p>
         <p>XWaves includes an interface to read netCDF (Network Common Data Form) file containing wave spectra data.</p>
         <p>&nbsp;</p>
-        <p class="subheading">Example</p>
-        <p>The netCDF files follow the netCDF standard. See below for a list of variables needed for XWaves processing.</p>
+        <p class="blue-heading">Example</p>
+        <p>The netCDF files follow the netCDF <a href="http://www.unidata.ucar.edu/software/netcdf/">standard</a>. See below for a list of variables needed for XWaves processing.</p>
         <p>&nbsp;</p>
-        <p class="subheading">Format</p>
+        <p class="blue-heading">Format</p>
         <p>Variables&nbsp; include:</p>
-        <p>Name Data set name</p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=215 valign=top style='width:161.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Name</p>
+  </td>
+  <td width=516 valign=top style='width:387.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Data set name</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=215 valign=top style='width:161.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Serial Dates</p>
+  </td>
+  <td width=516 valign=top style='width:387.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='color:black'>Observation
+  Date and Time as MATLAB Serial Date Number</span><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=215 valign=top style='width:161.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Station Longitude</p>
+  </td>
+  <td width=516 valign=top style='width:387.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Longitude (decimal degrees)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=215 valign=top style='width:161.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Station Latitude</p>
+  </td>
+  <td width=516 valign=top style='width:387.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Latitude (decimal degrees)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=215 valign=top style='width:161.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Station Water Depth</p>
+  </td>
+  <td width=516 valign=top style='width:387.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Water depth (m)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=215 valign=top style='width:161.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Frequencies</p>
+  </td>
+  <td width=516 valign=top style='width:387.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Frequency bins (Hz)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=215 valign=top style='width:161.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Sectors</p>
+  </td>
+  <td width=516 valign=top style='width:387.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Direction bins (degrees)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=215 valign=top style='width:161.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>2D Directional Spectrum</p>
+  </td>
+  <td width=516 valign=top style='width:387.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='color:black'>Directional
+  Wave Spectra (m</span><sup style='orphans: auto;text-align:start;widows: auto;
+  -webkit-text-stroke-width: 0px;word-spacing:0px'>2</sup><span
+  style='orphans: auto;text-align:start;widows: auto;-webkit-text-stroke-width: 0px;
+  float:none;word-spacing:0px'>/(<span class=SpellE>hz</span> x <span
+  class=SpellE>deg</span>)</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=215 valign=top style='width:161.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Wind Direction</p>
+  </td>
+  <td width=516 valign=top style='width:387.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='color:black'>Wind
+  Direction (<span class=SpellE>Deg</span> From North)</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=215 valign=top style='width:161.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Wind Speed</p>
+  </td>
+  <td width=516 valign=top style='width:387.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='color:black'>Wind
+  Speed (m/s)</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=215 valign=top style='width:161.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Wind Data Type</p>
+  </td>
+  <td width=516 valign=top style='width:387.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+  <td width=215 valign=top style='width:161.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Frequency Band Widths</p>
+  </td>
+  <td width=516 valign=top style='width:387.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='color:black'>Array
+  of Frequency Bin Differentials (Frequencies(n+1) – Frequencies(n))</span></span></p>
+  </td>
+ </tr>
+</table>
+        <!-- <p>Name Data set name</p>
         <p>Serial Dates Observation Date and Time as MATLAB Serial Date Number</p>
         <p>Station Longitude Longitude (decimal degrees)</p>
         <p>Station Latitude Latitude (decimal degrees)</p>
@@ -33,11 +142,11 @@ if (XWAVES){
         <p>Wind Direction Wind Direction (Deg From North)</p>
         <p>Wind Speed Wind Speed (m/s)</p>
         <p>Wind Data Type</p>
-        <p>Frequency Band Widths Array of Frequency Bin Differentials (Frequencies(n+1) – Frequencies(n))</p>
+        <p>Frequency Band Wi -->dths Array of Frequency Bin Differentials (Frequencies(n+1) – Frequencies(n))</p>
         <p>&nbsp;</p>
         <p>The variable names do not have to match those above. XWaves has a user interface to allow the user to match the appropriate variables in the netCDF file to necessary variables above.</p>
         <p>&nbsp;</p>
-        <p>Additional information on the netCDF format is available from <span id="u5940-44">UCAR</span>.</p>
+        <p>Additional information on the netCDF format is available from <a href="http://www.unidata.ucar.edu/software/netcdf/">UCAR</a>.</p>
         <p>&nbsp;</p>
         <!-- /m_editable -->
     </div>

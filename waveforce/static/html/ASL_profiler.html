@@ -14,49 +14,296 @@ if (XWAVES){
     <div class="clearfix grpelem" id="u5920-101" data-muse-uid="U5920">
         <!-- content -->
         <!-- m_editable region-id="editable-static-tag-U5920" template="datawell.html" data-type="html" data-ice-options="disableImageResize,none" -->
-        <p class="subheading">Description:</p>
+        <p class="blue-heading">Description:</p>
         <p>The Wave Profiler allows the user to measure non-directional wave parameters continuously for long periods of time with high temporal and spatial resolution in deeper water from the safety of an underwater mooring.&nbsp; The instrument is particularly useful for clients who need to measure long-period waves (such as rogue waves or infra-gravity waves), waves in wash and in wakes, and non-linear waves. Data is output in 2 ASCII text files: a file containing the raw spectra time series (.dat), and a header file containing metadata and frequency bins. The files must have the same name but different file extensions. For processing multiple files there must be a corresponding .hdr file for each raw data file and the files must contain the same frequency bins.</p>
         <p>&nbsp;</p>
-        <p class="subheading">Example</p>
-        <p id="u5920-9">Header File (.hdr)</p>
-        <p>$file_name LV1_201301_p01_wave_final_specval.dat</p>
-        <p>$file_type ascii</p>
-        <p>$start_date 2013 1 13 14 59 59.998 UTC</p>
-        <p>$sample_interval -9999.000</p>
-        <p>$instrument_name</p>
-        <p>$instrument_type</p>
-        <p>$experiment</p>
-        <p>$site</p>
-        <p>$channels 196 time s float | Numgoodrec counts float | freq1 s^2/Hz float | freq2 s^2/Hz float …|…freq194 s^2/Hz float</p>
-        <p>LV1_201301_p01_wave_final.dat to LV1_201301_p01_wave_final_specval using runautospec.m</p>
-        <p>Frequency cut-offs of 0.05 Hz to 1Hz when calculating Hs.</p>
-        <p>Window type of han and length of 10.</p>
-        <p>&nbsp;List of frequencies which are output in the spectral results...</p>
-        <p>&nbsp;0.051514</p>
-        <p>&nbsp;0.056396</p>
-        <p>&nbsp;0.061279</p>
-        <p>&nbsp;0.066162</p>
-        <p>&nbsp;0.071045</p>
-        <p>&nbsp;0.075928</p>
-        <p>&nbsp;0.080811</p>
-        <p>&nbsp;0.085693</p>
-        <p>…</p>
+        <p class="blue-heading">Example</p>
+        <p class="subheading">Header File (.hdr)</p>
+        <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ none;mso-border-insidev:none'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=959 valign=top style='width:719.6pt;border:solid windowtext 1.0pt;
+  border-bottom:none;mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>$<span class=SpellE>file_name</span>
+  LV1_201301_p01_wave_final_specval.dat</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>$<span class=SpellE>file_type</span> ascii</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>$<span class=SpellE>start_date</span> 2013 1 13 14 59
+  59.998 UTC</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>$<span class=SpellE>sample_interval</span> -9999.000<span
+  style='mso-spacerun:yes'>  </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:381.2pt'>$<span class=SpellE>instrument_name</span>
+  </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>$<span class=SpellE>instrument_type</span> </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>$experiment </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>$site </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>$channels 196 time s float | <span class=SpellE>Numgoodrec</span>
+  counts float | freq1 s^2/Hz float | freq2 s^2/Hz float …|…freq194 s^2/Hz
+  float </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>LV1_201301_p01_wave_final.dat to
+  LV1_201301_p01_wave_final_specval using <span class=SpellE>runautospec.m</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Frequency cut-offs of 0.05 Hz to 1Hz when calculating Hs.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Window type of <span class=SpellE>han</span> and length of
+  10.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-spacerun:yes'> </span>List of frequencies
+  which are output in the spectral results...</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-spacerun:yes'> </span>0.051514</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-spacerun:yes'> </span>0.056396</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-spacerun:yes'> </span>0.061279</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-spacerun:yes'> </span>0.066162</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-spacerun:yes'> </span>0.071045</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-spacerun:yes'> </span>0.075928</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td width=959 valign=top style='width:719.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-spacerun:yes'> </span>0.080811</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;mso-yfti-lastrow:yes'>
+  <td width=959 valign=top style='width:719.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-spacerun:yes'> </span>0.085693</p>
+  <p class=MsoNormal>…</p>
+  </td>
+ </tr>
+</table>
         <p>&nbsp;</p>
         <p class="subheading">Raw spectra (.dat)</p>
-        <p>1.655981e+005 4096&nbsp;&nbsp; 0.0021&nbsp;&nbsp; 0.0016&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0027&nbsp;&nbsp; 0.0038&nbsp;&nbsp; 0.0018&nbsp;&nbsp; 0.0020&nbsp;&nbsp;&nbsp; …</p>
-        <p>1.691980e+005 4096&nbsp;&nbsp; 0.0018&nbsp;&nbsp; 0.0026&nbsp;&nbsp; 0.0020&nbsp;&nbsp; 0.0020&nbsp;&nbsp; 0.0017&nbsp;&nbsp; 0.0028&nbsp;&nbsp;&nbsp; …</p>
-        <p>1.727980e+005 4096&nbsp;&nbsp; 0.0023&nbsp;&nbsp; 0.0023&nbsp;&nbsp; 0.0037&nbsp;&nbsp; 0.0022&nbsp;&nbsp; 0.0026&nbsp;&nbsp; 0.0030&nbsp;&nbsp;&nbsp; …</p>
-        <p>…</p>
+       <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ none;mso-border-insidev:none'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=785 valign=top style='width:589.1pt;border:solid windowtext 1.0pt;
+  border-bottom:none;mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.655981e+005<span style='mso-tab-count:1'>           </span>4096<span
+  style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> 
+  </span>0.0021<span style='mso-tab-count:1'>           </span><span
+  style='mso-spacerun:yes'>  </span>0.0016<span
+  style='mso-spacerun:yes'>           </span>0.0027<span style='mso-tab-count:
+  1'> </span><span style='mso-spacerun:yes'>  </span>0.0038<span
+  style='mso-tab-count:1'>           </span><span style='mso-spacerun:yes'> 
+  </span>0.0018<span style='mso-tab-count:1'>           </span><span
+  style='mso-spacerun:yes'>  </span>0.0020<span style='mso-spacerun:yes'>   
+  </span>…</p>
+  <p class=MsoNormal>1.691980e+005<span style='mso-tab-count:1'>           </span>4096<span
+  style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> 
+  </span>0.0018<span style='mso-tab-count:1'>           </span><span
+  style='mso-spacerun:yes'>  </span>0.0026<span style='mso-tab-count:1'>           </span><span
+  style='mso-spacerun:yes'>  </span>0.0020<span style='mso-tab-count:1'>           </span><span
+  style='mso-spacerun:yes'>  </span>0.0020<span style='mso-tab-count:1'>           </span><span
+  style='mso-spacerun:yes'>  </span>0.0017<span style='mso-tab-count:1'>           </span><span
+  style='mso-spacerun:yes'>  </span>0.0028<span style='mso-spacerun:yes'>   
+  </span>…</p>
+  <p class=MsoNormal>1.727980e+005<span style='mso-tab-count:1'>           </span>4096<span
+  style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> 
+  </span>0.0023<span style='mso-tab-count:1'>           </span><span
+  style='mso-spacerun:yes'>  </span>0.0023<span style='mso-tab-count:1'>           </span><span
+  style='mso-spacerun:yes'>  </span>0.0037<span style='mso-tab-count:1'>           </span><span
+  style='mso-spacerun:yes'>  </span>0.0022<span style='mso-tab-count:1'>           </span><span
+  style='mso-spacerun:yes'>  </span>0.0026<span style='mso-tab-count:1'>           </span><span
+  style='mso-spacerun:yes'>  </span>0.0030<span style='mso-spacerun:yes'>   
+  </span>…</p>
+  <p class=MsoNormal>…</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width=785 valign=top style='width:589.1pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+</table>
         <p>&nbsp;</p>
-        <p class="subheading">Format</p>
-        <p>Header file</p>
+        <p class="blue-heading">Format</p>
+        <p><i>Header file</i></p>
         <p>There are 13 lines of header data:</p>
-        <p>$file_name Name of data file</p>
-        <p>$file_type File type (ascii)</p>
-        <p>$start_date Date and time of startup in UTC (YYYY MM DD HH MM SS.SSS)</p>
-        <p>… …</p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=113 valign=top style='width:85.1pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='mso-bidi-font-style:italic'>$<span class=SpellE>file_name</span><o:p></o:p></span></p>
+  </td>
+  <td width=492 valign=top style='width:369.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='mso-bidi-font-style:italic'>Name of data file<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=113 valign=top style='width:85.1pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='mso-bidi-font-style:italic'>$<span class=SpellE>file_type</span><o:p></o:p></span></p>
+  </td>
+  <td width=492 valign=top style='width:369.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='mso-bidi-font-style:italic'>File type (ascii)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=113 valign=top style='width:85.1pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='mso-bidi-font-style:italic'>$<span class=SpellE>start_date</span><o:p></o:p></span></p>
+  </td>
+  <td width=492 valign=top style='width:369.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='mso-bidi-font-style:italic'>Date and time of startup in UTC (YYYY MM
+  DD HH MM SS.SSS)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td width=113 valign=top style='width:85.1pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='mso-bidi-font-style:italic'>…<o:p></o:p></span></p>
+  </td>
+  <td width=492 valign=top style='width:369.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='mso-bidi-font-style:italic'>…<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
         <p>&nbsp;</p>
-        <p id="u5920-82">Data file</p>
+        <p><i>Data file</i></p>
         <p>The data file consists of the 1 dimensional wave spectra, one line per time record with the following columns:</p>
         <p>Time_offset_from_start_date(s) burst_period(s) S(fn) … S(fnfreq)</p>
         <p>&nbsp;</p>
@@ -65,7 +312,7 @@ if (XWAVES){
         <p>The time column is the time in seconds after the start date ($start_date 2013 1 13 14 59 59.998 UTC). The time refers to when the wave bursts (4096 s) begin. Thus, half of the burst period is added to the start time to prevent an artificial phase shift.</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
-        <p>Additional information is available from <span id="u5920-96">ASL</span>.</p>
+        <p>Additional information is available from <a href="http://www.aslenv.com/wave-profiler.html">ASL</a>.</p>
         <p>&nbsp;</p>
         <!-- /m_editable -->
     </div>

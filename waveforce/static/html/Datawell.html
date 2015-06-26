@@ -9,28 +9,485 @@ if (XWAVES){
 }
 </script>
 
-<div class="AccordionPanelContent disn clearfix colelem" id="u2947"> clearfix colelem" id="u5943">
+<div class="AccordionPanelContent disn clearfix colelem" id="u2947">
     <!-- group -->
     <div class="clearfix grpelem" id="u5944-29" data-muse-uid="U5944">
         <!-- content -->
         <!-- m_editable region-id="editable-static-tag-U5944" template="datawell.html" data-type="html" data-ice-options="disableImageResize,none" -->
-        <p class="subheading">Description</p>
-        <p class="body">The Nortek *.wft data files are ascii-formatted data exported from the Nortek STORM software. Storm is Nortek's graphical, wave and current profile data processing software. It accepts raw data files from the Nortek series of Aquadopp Profilers and the AWAC.&nbsp;&nbsp; The *.wft file export option was created by Nortek specifically for WaveForce Technologies software products.&nbsp; There can be multiple records per file.</p>
+        <p class="blue-heading">Description</p>
+        <p class="body">Standard directional wave spectrum files (*.spt) output from the Datawell MkII Waverider buoys.  These ASCII-formatted files contain a single spectrum per file.  Date and time information is obtained from the filename, for example 09231400.SPT (<i>MMDDhhmm.spt</i>).  The software can read other date/time combinations in Datawell .spt filenames;  for example <i>YYYY_DD_MM_hh_mm.spt</i> would also be allowed.</p>
         <p class="body">&nbsp;</p>
-        <p class="subheading">Example</p>
-        <p class="body">MM DD YYYY hh mm ss&nbsp; Hm0&nbsp;&nbsp; H3&nbsp;&nbsp;&nbsp; H10&nbsp;&nbsp; Hmax&nbsp; Tm02 Tp&nbsp;&nbsp;&nbsp;&nbsp; Tz&nbsp;&nbsp; DirTp&nbsp; SpdTp Mdir&nbsp;&nbsp; UI&nbsp;&nbsp; Mpres&nbsp;&nbsp; No&nbsp;&nbsp; Bad CurS&nbsp; CurD&nbsp; Err</p>
-        <p class="body">&nbsp;</p>
-        <p class="body">11 30 2004 14 03 01&nbsp; 0.77&nbsp; 0.67&nbsp; 0.85&nbsp; 1.10&nbsp; 7.34 17.80&nbsp; 6.32 250.52 33.45 258.48 0.97 25.10&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp; 0.04&nbsp; 90.4&nbsp;&nbsp; 0</p>
-        <p class="body">&nbsp;</p>
-        <p class="body">0.0200000 0.0300000 0.0400000 0.0500000 0.0600000 0.0700000 0.0800000 0.0900000 0.1000000 0.1100000 0.1200000 0.1300000 0.1400000 0.1500000 0.1600000 0.1700000 0.1800000 0.1900000 0.2000000 0.2100000 0.2200000 0.2300000 0.2400000 0.2500000 0.2600000 0.2700000 0.2800000 0.2900000 0.3000000 0.3100000 0.3200000 0.3300000 0.3400000 0.3500000 0.3600000 0.3700000 0.3800000 0.3900000 0.4000000 0.4100000 0.4200000 0.4300000 0.4400000 0.4500000 0.4600000 0.4700000 0.4800000 0.4900000</p>
-        <p class="body">&nbsp;</p>
-        <p class="body">0.0054120 0.0051665 0.0235813 0.8049904 0.9116125 0.1106512 0.1101343 0.1129017 0.1700744 0.1672241 0.1526930 0.1724446 0.1652312 0.1246843 0.0824502 0.0615051 0.0475629 0.0556017 0.0500350 0.0453308 0.0359926 0.0315541 0.0318916 0.0217978 0.0196284 0.0210900 0.0148044 0.0083514 0.0111428 0.0089196 0.0068247 0.0074141 0.0076064 0.0047595 0.0056707 0.0075009 0.0058166 0.0049838 0.0053885 0.0060899 0.0072492 0.0065055 0.0064796 0.0104969 0.0113796 0.0087054 0.0086307 0.0058769</p>
-        <p class="body">&nbsp;</p>
-        <p class="body">04812162024283236404448525660646872768084889296100104108112116120124128132136140144148152156160164168172176180184188192196200204208212216220224228232236240244248252256260264268272276280284288292296300304308312316320324328332336340344348352356</p>
-        <p class="body">&nbsp;</p>
-        <p class="subheading">Format</p>
-        <p class="body">Additional information available from Nortek AS.</p>
-        <p class="subheading">&nbsp;</p>
+        <p class="blue-heading">Example</p>
+        
+
+        <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ none;mso-border-insidev:none'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=287 valign=top style='width:215.6pt;border:solid windowtext 1.0pt;
+  border-bottom:none;mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>1</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>71.000</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>2.857</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>2.1271E-1</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>24.95</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>2.95</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>1</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.63000</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.68500</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>-0.55375</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>37.969°</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>73.037°</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.0250,
+  1.4088E-3, 96, 80, 0.35, 1.42</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.0300,
+  3.5707E-3, 35, 62, -1.21, 1.75</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.0350,
+  3.0733E-3, 65, 68, 0.03, 2.14</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>…</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.0850,
+  1.9695E-3, 98, 51, -2.73, 3.40</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.0900,
+  2.9234E-3, 104, 44, 0.70, 6.06</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.0950,
+  1.8090E-3, 115, 53, -1.73, 4.03</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.1000,
+  2.4664E-3, 117, 44, 0.27, 5.46</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.1100,
+  1.6951E-3, 114, 63, -3.81, 2.87</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.1200,
+  6.4093E-3, 145, 64, 3.37, 2.47</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.1300,
+  3.9360E-2, 198, 58, 0.33, 1.55</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.1400,
+  1.1648E-1, 291, 34, -3.77, 9.22</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>…</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.5400,
+  1.0753E-1, 122, 47, -0.40, 1.71</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:26'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.5500,
+  1.8177E-1, 122, 38, 0.03, 2.71</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:27'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.5600,
+  2.1225E-1, 131, 38, -0.90, 3.36</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:28'>
+  <td width=287 valign=top style='width:215.6pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>0.5700,
+  1.5961E-1, 121, 43, -0.20, 2.50</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:29;mso-yfti-lastrow:yes'>
+  <td width=287 valign=top style='width:215.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt'>
+  <p class=Default><span style='font-family:"Times New Roman","serif"'>0.5800,
+  1.4661E-1, 114, 45, 0.34, 2.34<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+<p class="blue-heading">&nbsp;</p>`
+        <p class="blue-heading">Format</p>
+        <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><i>File
+Header (12 parameters)<o:p></o:p></i></p>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  class=SpellE>tn</span></p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='mso-spacerun:yes'> </span>transmission index (1 to 8)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  class=SpellE>Hs</span></p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>significant
+  wave height [cm]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  class=SpellE>Tz</span></p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>zero-<span
+  class=SpellE>upcross</span> period [s]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  class=SpellE>Smax</span></p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>maximum
+  of the <span class=SpellE>psd</span> S(f) [m^2/Hz]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  class=SpellE>Tref</span></p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>reference
+  temperature [°C, centigrade]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  class=SpellE>Tsea</span></p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Sea
+  surface temperature [°C, centigrade]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Bat</p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Battery
+  status (0 = empty to 7 = full)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Av</p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>offset
+  of the vertical accelerometer</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Ax</p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>offset
+  of the x-accelerometer</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Ay</p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>offset
+  of the y-accelerometer</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Default><span class=SpellE><span style='font-family:"Times New Roman","serif"'>Ori</span></span><span
+  style='font-family:"Times New Roman","serif"'><o:p></o:p></span></p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Default><span style='font-family:"Times New Roman","serif"'>buoy
+  orientation [°]<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  class=SpellE>Incli</span></p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>magnetic
+  inclination [°]</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><i><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><i>Spectrum
+data (64 x 6 <span class=GramE>array</span>)<o:p></o:p></i></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=GramE>f</span>, S(f) / <span class=SpellE>Smax</span>, <span
+class=SpellE>Dir</span>(f), <span class=SpellE>Spr</span>(f), Skew(f), Kurt(f)</p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><o:p>&nbsp;</o:p></p>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>f</p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>wave
+  frequency [Hz]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>S(f)
+  / <span class=SpellE>Smax</span></p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>relative
+  <span class=SpellE>psd</span> (power spectral density) [-]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  class=SpellE>Dir</span>(f)</p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>wave
+  direction [°]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  class=SpellE>Spr</span>(f)</p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>directional
+  spread [°]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Skew(f)</p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  class=SpellE>skewness</span> of the directional distribution [-]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Default><span style='font-family:"Times New Roman","serif"'>Kurt(f)<o:p></o:p></span></p>
+  </td>
+  <td width=342 valign=top style='width:256.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Default><span style='font-family:"Times New Roman","serif"'>kurtosis
+  of the directional distribution [-]<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+        <p class="blue-heading">&nbsp;</p>
+        <p class="body">Additional information is available from Datawell on their </span><a
+href="http://www.datawell.nl/Portals/0/Documents/TechnicalNotes/datawell_technicalnote_fileformats_2013-03-14.pdf">Data
+Format Specifications</a> page.</p>
+        <p class="blue-heading">&nbsp;</p>
         <!-- /m_editable -->
     </div>
 </div>
+
+
+

@@ -75,408 +75,481 @@ if (XWAVES){
         <p class="blue-heading">Export Data Menu Commands</p>
         <p class="body">The user can export a text file containing the error metric tables by selecting Fixed Format -&gt; Evaluate Error Metrics from the Tables dropdown menu in the <a href="../xwaves/data_view_module.html#collapse0">DataView Module</a>. The data can be exported as a Microsoft Excel file or ASCII text file.</p>
         <p class="body">An example Error Metric table output is shown below. This analysis was performed on wind data and two swell groups of Wave Systems.</p>
-        <!-- <p class="body">Evaluate Module Error Metrics for Waverider_Sep and Duck3mwr_SWAN</p>
+        <p class="body">Evaluate Module Error Metrics for Waverider_Sep and Duck3mwr_SWAN</p>
         <p class="body">&nbsp;</p>
-        <p class="body">Wind Speed Error Metrics</p>
-        <p class="body">Comp&nbsp;&nbsp; Bias(m/s)&nbsp;&nbsp; RMS(m/s)&nbsp;&nbsp; SI&nbsp;&nbsp;&nbsp; R^2</p>
-        <p class="body">wind&nbsp;&nbsp; 0.530&nbsp;&nbsp; 3.755&nbsp;&nbsp; 0.432&nbsp;&nbsp; 0.891</p>
+        
+        <p class="body"><b>Wind Speed Error Metrics</b></p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+         style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+         0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+         <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>Component</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> Bias(m)</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  RMS(m)</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  SI</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  R^2</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>wind</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.530</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 3.755</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.432</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.891</p>
+          </td>
+         </tr>
+        </table>
+        
         <p class="body">&nbsp;</p>
-        <p class="body">Wind Direction Error Metrics</p>
-        <p class="body">Comp&nbsp;&nbsp; Circ. Corr. Circ. Bias(deg)</p>
-        <p class="body">wind&nbsp;&nbsp; 0.828&nbsp;&nbsp; 7.975</p>
+        <p class="body"><b>Wind Direction Error Metrics</b></p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+         style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+         0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+         <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>Component</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  Circ. Corr.</p>
+          </td>
+          <td width=100 valign=top style='width:100pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> Circ. Bias(deg)</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>wind</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.828</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 7.975</p>
+          </td>
+         </tr>
+        </table>
+
         <p class="body">&nbsp;</p>
-        <p class="body">Wave Height Error Metrics</p>
-        <p class="body">Comp&nbsp;&nbsp; Bias(m)&nbsp;&nbsp; RMS(m)&nbsp;&nbsp; SI&nbsp;&nbsp;&nbsp; R^2</p>
-        <p class="body">bulk&nbsp;&nbsp; 0.012&nbsp;&nbsp; 0.444&nbsp;&nbsp; 0.175&nbsp;&nbsp; 0.977</p>
-        <p class="body">ws&nbsp;&nbsp; 0.125&nbsp;&nbsp; 0.428&nbsp;&nbsp; 0.141&nbsp;&nbsp; 0.990</p>
-        <p class="body">sw1&nbsp;&nbsp; -0.012&nbsp;&nbsp; 0.293&nbsp;&nbsp; 0.210&nbsp;&nbsp; 0.929</p>
-        <p class="body">sw2&nbsp;&nbsp; -0.022&nbsp;&nbsp; 0.413&nbsp;&nbsp; 0.196&nbsp;&nbsp; 0.979</p>
+        <p class="body"><b>Wave Height Error Metrics</b></p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+         style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+         0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+         <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>Component</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> Bias(m)</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  RMS(m)</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  SI</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  R^2</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>bulk</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.012</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 0.444</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.175</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.977</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>ws</p>
+          </td> 
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.125</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 0.428</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.141</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.990</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>sw1</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  -0.012 </p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 0.293</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.210</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.929</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>sw2</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  -0.022</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 0.413</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.196</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.979</p>
+          </td>
+         </tr>
+        </table>
+
         <p class="body">&nbsp;</p>
-        <p class="body">Peak Period Error Metrics</p>
-        <p class="body">Comp&nbsp;&nbsp; Bias(s)&nbsp;&nbsp; RMS(s)&nbsp;&nbsp; SI&nbsp;&nbsp;&nbsp; R^2</p>
-        <p class="body">bulk&nbsp;&nbsp; -0.196&nbsp;&nbsp; 2.513&nbsp;&nbsp; 0.189&nbsp;&nbsp; 0.724</p>
-        <p class="body">ws&nbsp;&nbsp; 0.203&nbsp;&nbsp; 0.634&nbsp;&nbsp; 0.071&nbsp;&nbsp; 0.991</p>
-        <p class="body">sw1&nbsp;&nbsp; 0.184&nbsp;&nbsp; 0.525&nbsp;&nbsp; 0.081&nbsp;&nbsp; 0.941</p>
-        <p class="body">sw2&nbsp;&nbsp; 0.137&nbsp;&nbsp; 2.373&nbsp;&nbsp; 0.185&nbsp;&nbsp; 0.799</p>
+        <p class="body"><b>Peak Period Error Metrics</b></p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+         style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+         0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+         <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>Component</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> Bias(m)</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  RMS(m)</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  SI</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  R^2</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>bulk</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> -0.196</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 2.513</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.189</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.724</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>ws</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.203</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 0.634</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 0.071</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.991</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>sw1</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.184</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 0.525</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.081</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.941</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>sw2</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.137</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 2.373</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.185</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.799</p>
+          </td>
+         </tr>
+        </table>
+
         <p class="body">&nbsp;</p>
-        <p class="body">Mean Period Error Metrics</p>
-        <p class="body">Comp&nbsp;&nbsp; Bias(s)&nbsp;&nbsp; RMS(s)&nbsp;&nbsp; SI&nbsp;&nbsp; R^2</p>
-        <p class="body">bulk&nbsp;&nbsp; 0.005&nbsp;&nbsp; 1.121&nbsp;&nbsp; 0.160&nbsp;&nbsp; 0.530</p>
-        <p class="body">ws&nbsp;&nbsp; 0.587&nbsp;&nbsp; 1.209&nbsp;&nbsp; 0.197&nbsp;&nbsp; 0.971</p>
-        <p class="body">sw1&nbsp;&nbsp; -0.009&nbsp;&nbsp; 0.332&nbsp;&nbsp; 0.075&nbsp;&nbsp; 0.935</p>
-        <p class="body">sw2&nbsp;&nbsp; 0.287&nbsp;&nbsp; 1.306&nbsp;&nbsp; 0.136&nbsp;&nbsp; 0.933</p>
+        <p class="body"><b>Mean Period Error Metrics</b></p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+         style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+         0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+         <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>Component</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> Bias(m)</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  RMS(m)</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  SI</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  R^2</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>bulk</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 0.005</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 1.121</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.160</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.530</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>ws</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 0.587</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 1.209</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 0.197</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.971</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>sw1</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> -0.009</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 0.332</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 0.075</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.935</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>sw2</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.287</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 1.306</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.136</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.933</p>
+          </td>
+         </tr>
+        </table>
         <p class="body">&nbsp;</p>
-        <p class="body">Peak Direction Error Metrics</p>
-        <p class="body">Comp&nbsp;&nbsp; Circ. Corr. Circ. Bias(deg)</p>
-        <p class="body">bulk&nbsp;&nbsp; 0.588&nbsp;&nbsp; -0.558</p>
-        <p class="body">ws&nbsp;&nbsp; 0.977&nbsp;&nbsp; 15.402</p>
-        <p class="body">sw1&nbsp;&nbsp; 0.976&nbsp;&nbsp; 15.965</p>
-        <p class="body">sw2&nbsp;&nbsp; 0.591&nbsp;&nbsp; -0.140</p>
+        <p class="body"><b>Peak Direction Error Metrics</b></p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+         style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+         0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+         <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>Component</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  Circ. Corr.</p>
+          </td>
+          <td width=100 valign=top style='width:100pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> Circ. Bias(deg)</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>bulk</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.588</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> -0.588</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>ws</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.977</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 15.402</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>sw1</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.976</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 15.965</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>sw2</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.591</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> -0.140</p>
+          </td>
+         </tr>
+        </table>
         <p class="body">&nbsp;</p>
-        <p class="body">Mean Direction Error Metrics</p>
-        <p class="body">Comp&nbsp;&nbsp; Circ. Corr. Circ. Bias(deg)</p>
-        <p class="body">bulk&nbsp;&nbsp; 0.544&nbsp;&nbsp; 7.253</p>
-        <p class="body">ws&nbsp;&nbsp; 0.985&nbsp;&nbsp; 9.943</p>
-        <p class="body">sw1&nbsp;&nbsp; 0.991&nbsp;&nbsp; 8.982</p>
-        <p class="body">sw2&nbsp;&nbsp; 0.729&nbsp;&nbsp; 5.919</p>
-        <p class="body">&nbsp;</p>
-        <p class="body">&nbsp;</p> -->
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Evaluate
-Module Error Metrics for <span class=SpellE>Waverider_Sep</span> and Duck3mwr_SWAN
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Wind
-Speed Error Metrics<o:p></o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
-style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span><span class=GramE>Bias(</span>m/s) <span style='mso-tab-count:1'> </span><span style='mso-spacerun:yes'> </span>RMS(m/s) <span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span>SI <span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span><span style='mso-tab-count:1'>     </span>R^2
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span class=GramE><span style='font-family:"Courier New"'>wind</span></span>
-            </span>
-            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
-style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.530 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>3.755 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.432 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.891
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Wind
-Direction Error Metrics<o:p></o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
-style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>Circ. Corr. Circ. <span class=GramE>Bias(</span><span class=SpellE>deg</span>)
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span class=GramE><span style='font-family:"Courier New"'>wind</span></span>
-            </span>
-            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
-style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.828 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>7.975
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Wave
-Height Error Metrics<o:p></o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
-style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span><span class=GramE>Bias(</span>m) <span style='mso-tab-count:1'>   </span><span style='mso-spacerun:yes'> </span>RMS(m) <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>SI <span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span><span style='mso-tab-count:1'>     </span>R^2
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span class=GramE><span style='font-family:"Courier New"'>bulk</span></span>
-            </span>
-            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
-style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.012 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.444 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.175 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.977
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span class=SpellE><span class=GramE><span
-style='font-family:"Courier New"'>ws</span></span>
-            </span>
-            </span>
-            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
-style='font-family:"Courier New"'> <span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'> </span>0.125 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.428 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.141 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.990
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw1 <span
-style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>-0.012 <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.293 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.210 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.929
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw2 <span
-style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>-0.022 <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.413 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.196 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.979
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Peak
-Period Error Metrics<o:p></o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
-style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>Bias(s) <span style='mso-tab-count:1'>   </span><span style='mso-spacerun:yes'> </span>RMS(s) <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>SI <span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span><span style='mso-tab-count:1'>     </span>R^2
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span class=GramE><span style='font-family:"Courier New"'>bulk</span></span>
-            </span>
-            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
-style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>-0.196 <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>2.513 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.189 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.724
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span class=SpellE><span class=GramE><span
-style='font-family:"Courier New"'>ws</span></span>
-            </span>
-            </span>
-            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
-style='font-family:"Courier New"'> <span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'> </span>0.203 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.634 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.071 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.991
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw1 <span
-style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.184 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.525 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.081 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.941
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw2 <span
-style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.137 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>2.373 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.185 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.799
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Mean
-Period Error Metrics<o:p></o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
-style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>Bias(s) <span style='mso-tab-count:1'>   </span><span style='mso-spacerun:yes'> </span>RMS(s) <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>SI <span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span>R^2
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span class=GramE><span>bulk</span></span>
-            </span>
-            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
-style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.005 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>1.121 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.160 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.530
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span class=SpellE><span class=GramE><span
-style='font-family:"Courier New"'>ws</span></span>
-            </span>
-            </span>
-            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
-style='font-family:"Courier New"'> <span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'> </span>0.587 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>1.209 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.197 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.971
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw1 <span
-style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>-0.009 <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.332 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.075 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.935
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw2 <span
-style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.287 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>1.306 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.136 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.933
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Peak
-Direction Error Metrics<o:p></o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
-style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>Circ. Corr. Circ. <span class=GramE>Bias(</span><span class=SpellE>deg</span>)
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span class=GramE><span style='font-family:"Courier New"'>bulk</span></span>
-            </span>
-            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
-style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.588 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>-0.558
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span class=SpellE><span class=GramE><span
-style='font-family:"Courier New"'>ws</span></span>
-            </span>
-            </span>
-            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
-style='font-family:"Courier New"'> <span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'> </span>0.977 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>15.402
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw1 <span
-style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.976 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>15.965
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw2 <span
-style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.591 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>-0.140
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Mean Direction
-Error Metrics<o:p></o:p></span></span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>Comp <span
-style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>Circ. Corr. Circ. <span class=GramE>Bias(</span><span class=SpellE>deg</span>)
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span class=GramE><span style='font-family:"Courier New"'>bulk</span></span>
-            </span>
-            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
-style='font-family:"Courier New"'> <span style='mso-tab-count:1'>    </span><span style='mso-spacerun:yes'> </span>0.544 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>7.253
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span class=SpellE><span class=GramE><span
-style='font-family:"Courier New"'>ws</span></span>
-            </span>
-            </span>
-            </span><span style='mso-bookmark:OLE_LINK5'><span style='mso-bookmark:OLE_LINK4'><span
-style='font-family:"Courier New"'> <span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'> </span>0.985 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>9.943
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw1 <span
-style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.991 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>8.982
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class=MsoPlainText><span style='mso-bookmark:OLE_LINK5'><span
-style='mso-bookmark:OLE_LINK4'><span style='font-family:"Courier New"'>sw2 <span
-style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>0.729 <span style='mso-tab-count:1'>     </span><span style='mso-spacerun:yes'> </span>5.919
-            <o:p></o:p>
-            </span>
-            </span>
-            </span>
-        </p>
-        <p class="body">The wave height bias can be exported into an excel spreadsheet by selecting Fixed Format -&gt; Wave Height Bias File from the Tables dropdown menu in the <a href="../xwaves/data_view_module.html#collapse0">Data View Module</a>. An example Wave Height Bias table output is shown below.</p>
-        <p class="body">&nbsp;</p>
-        <p class="body">Autumn Hindcast Validation</p>
-        <p class="body">Mean Wave Height Bias</p>
+        <p class="body"><b>Mean Direction Error Metrics</b></p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+         style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+         0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+         <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>Component</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  Circ. Corr.</p>
+          </td>
+          <td width=100 valign=top style='width:100pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> Circ. Bias(deg)</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>bulk</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.544</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 7.253</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>ws</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.985</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 9.943</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>sw1</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.991</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 8.982</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>sw2</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>  0.729</p>
+          </td>
+          <td width=80 valign=top style='width:80pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal> 5.919</p>
+          </td>
+         </tr>
+        </table>
         <p class="body">&nbsp;</p>
         <p class="body">&nbsp;</p>
-        <p class="body">&nbsp;Frequency (Hz)</p>
-        <p class="body">&nbsp;0.05 0.06 0.06 0.07 0.08 0.08 0.09 0.1 0.11 0.12 0.14 0.15 0.16 0.18 0.2 0.22 0.24 0.27 0.29 0.32</p>
-        <p class="body">&nbsp;0.69</p>
-        <p class="body">&nbsp;0.63</p>
-        <p class="body">&nbsp;0.56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.13451 -0.08565</p>
-        <p class="body">&nbsp;0.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.12301 -0.0955 -0.07909 -0.10153</p>
-        <p class="body">&nbsp;0.43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.08192 -0.07367 -0.07388 -0.08074</p>
-        <p class="body">Wave Height (m) 0.36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.07206 -0.07564 -0.06185 -0.06437 -0.03427 -0.04749 -0.06293</p>
-        <p class="body">&nbsp;0.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.03763 -0.04864 -0.04365 -0.03991 -0.03568 -0.01769 -0.03072 -0.0423</p>
-        <p class="body">&nbsp;0.23&nbsp;&nbsp;&nbsp;&nbsp; -0.04761 -0.0064 -0.0023 -0.01905 -0.04999 -0.0374 -0.02049 -0.01121 -0.00811 -0.01895 -0.00968</p>
-        <p class="body">&nbsp;0.17&nbsp;&nbsp;&nbsp;&nbsp; 0.027903 0.010279 0.014555 0.007366 -0.01502 -0.02731 -0.01601 -0.01036 -0.00966 -0.00605 -0.00435 -0.00183 -0.00038 -0.01592</p>
-        <p class="body">&nbsp;0.1&nbsp;&nbsp;&nbsp; 0.011474 0.031811 0.024822 0.016096 0.005723 0.003414 -0.00661 -0.01081 -0.00777 -0.00632 -0.00541 -0.00289 -0.00245 0.00064 0.000437 -0.00055 0.000546</p>
-        <p class="body">&nbsp;0.03 -0.00326 -0.00338 -0.00321 -0.00267 -0.00182 -0.00114 -0.00075 -0.00036 0.000279 0.000908 0.000783 0.001061 0.000348 0.005085 0.010554 0.010446 0.010986 0.009249 0.005193 0.008535</p>
+       
+        <p class="blue-heading">&nbsp;</p>
+        <p class="body">The wave height bias can be exported into an excel spreadsheet by selecting Fixed Format -&gt; Wave Height Bias File from the Tables dropdown menu in the <a href="../xwaves/data_view_module.html#collapse0">Data View Module</a>. The total bias values are tabulated for each frequency bin and wave height bin</p>
+
         <p class="blue-heading">&nbsp;</p>
         <p class="blue-heading">References</p>
         <p class="body">Bowers, J. A., I. D. Morton, and G. I. Mould, 2000: Directional statistics of the wind and waves. Appl. Ocean Res., 22, 13-30</p>
