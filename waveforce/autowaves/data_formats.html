@@ -75,27 +75,95 @@
       $(anchor).collapse('in');
     });
     
-    $.getJSON("../static/json/aw_toc.json", function(data) {
-        var tocItems = Object.keys(data);
-        $.each(tocItems, function(index, item) {
-            $("#sidebarToc").append("<li><a href='" + data[item].link + "''>" + data[item].name + "</a></li>")
-        });
+    var toc = [
+        {
+            "name":"Getting Started",
+            "link":"getting_started.html"
+        },
+        {
+            "name":"Loading Data",
+            "link":"loading_data.html"
+        },
+        {
+            "name":"Wave Systems Module",
+            "link":"wave_systems_module.html"
+        },
+        {
+            "name":"Spectral Fit Module",
+            "link":"spectral_fitting_module.html"
+        },
+        {
+            "name":"Sea State Module",
+            "link":"sea_state_analysis_module.html"
+        },
+        {
+            "name":"Data Export",
+            "link":"exporting_data.html"
+        },
+        {
+            "name":"Reference",
+            "link":"references.html"
+        }
+    ];
+    var tocItems = Object.keys(toc);
+    $.each(tocItems, function(index, item) {
+        $("#sidebarToc").append("<li><a href='" + toc[item].link + "''>" + toc[item].name + "</a></li>")
     });
 
-    $.getJSON("../static/json/data-formats.json", function(data) {
-        var panels = Object.keys(data);
-        $.each(panels, function(index, panel) {
-            var active = false;
-            if (index == 0) {
-                active = true
-            }
-            $('#accordion').append(generateListItem(panel, data[panel], active, index))
+    var data = {
+        "NORTEK WFT Data From STORM" :
+            "../static/html/Nortek.html"
+        ,"Datawell Waverider SPT Data" :
+            "../static/html/Datawell.html"
+        ,"Coastal Data Information Program (CDIP) Data" :
+            "../static/html/CDIP.html"
+        ,"TRIAXYS DIRSPEC Data" :
+            "../static/html/Triaxys.html"
+        ,"Oceanweather Inc. Hindcast Data" :
+            "../static/html/Oceanweather.html"
+        ,"WAMOS FTM Data" :
+            "../static/html/Wamos.html"
+        ,"Wavescan Spectra Files" :
+            "../static/html/Wavescan_spectra.html"
+        ,"Wavescan Time Series Files" :
+            "../static/html/Wavescan_ts.html"
+        ,"Rowe Technologies Time Series Files" :
+            "../static/html/RoweTechnologies.html"
+        ,"WAVEWATCH III Model Spectra Files" :
+            "../static/html/WaveWatchIII.html"
+        ,"SWAN Model Spectra Files" :
+            "../static/html/SWAN.html"
+        ,"ASL Wave Profiler Data" :
+            "../static/html/ASL_profiler.html"
+        ,"Generic 2D" :
+            "../static/html/Generic1D.html"
+        ,"Generic 1D" :
+            "../static/html/Generic1D.html"
+        ,"Generic ASCII" :
+            "../static/html/GenericASCII.html"
+        ,"NDBC Real-Time Data (Disk File and WWW Download)" :
+            "../static/html/NDBC.html"
+        ,"NODC Historical Data (Disk File and WWW Download)" :
+            "../static/html/NODC.html"
+        ,"NetCDF-Formatted Data" :
+            "../static/html/NetCDF.html"
+    };
 
-            $('#content_panel_' + index).load(data[panel]);
+    var panels = Object.keys(data);
+    $.each(panels, function(index, panel) {
 
-        });
+        var active = false;
+        if (index == 0) {
+            active = true
+        }
+        $('#accordion').append(generateListItem(panel, data[panel], active, index))
+
+        $('#content_panel_' + index).load(data[panel]);
 
     });
+
+    var anchor = window.location.hash;
+    $(anchor).collapse('in');
 
     function generateListItem(name, content, active, index) {
         var col_html = ""

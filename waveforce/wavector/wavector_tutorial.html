@@ -10,6 +10,7 @@
     <meta name="author" content="RPS ASA">
     <link rel="icon" href="../static/img/favicon.ico">
     <title>WaveForce Help</title>
+    <script src='../static/lib/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
     <script src="../static/lib/jquery/dist/jquery.min.js"></script>
     <script src="../static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Bootstrap core CSS -->
@@ -17,7 +18,7 @@
     <link href="../static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../static/css/site_global.css?4283238856"/>
     <link rel="stylesheet" type="text/css" href="../static/css/master_a-master.css?4206305167"/>
-    <link rel="stylesheet" type="text/css" href="../static/css/data-exploration.css?3971896516" id="pagesheet"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/xwaves-tutorial.css?3939668849" id="pagesheet"/>
 </head>
 
 <body>
@@ -50,12 +51,14 @@
         <div class="row main-row">
             <div class="col-sm-4 col-md-3 sidebar">
                 <nav class="bs-docs-sidebar affix">
-                    <img src="../static/img/waveforce.png" class="sidebar-image">
+                    <img src="../static/img/wavector.png" width='175' height='153' class="sidebar-image">
                     <ul id="sidebarToc" class="nav bs-docs-sidenav nav-sidebar wave-force-toc">
                     </ul>
                 </nav>
             </div>
             <div class="col-sm-7 main content-page">
+                <p class="section-heading">Tutorials</p>
+                <p class="section-description">A guided exploration of Wavector capabilities and features</p>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 </div>
             </div>
@@ -65,38 +68,70 @@
     ================================================== -->
     <script>
 
-    // Define some globals to help guide the links
-    var XWAVES = true;
-    var AUTOWAVES = false;
-    var WAVECTOR = false;
-
-    $.getJSON("../static/json/toc.json", function(data) {
-        var tocItems = Object.keys(data);
-        $.each(tocItems, function(index, item) {
-            $("#sidebarToc").append("<li><a href='" + data[item].link + "''>" + data[item].name + "</a></li>")
-        });
+    $(document).ready(function() {
+      var anchor = window.location.hash;
+      $(anchor).collapse('in');
+    });
+    
+    var toc = [
+        {
+            "name":"Getting Started",
+            "link":"getting_started.html"
+        },
+        {
+            "name":"Loading Data",
+            "link":"loading_data.html"
+        },
+        {
+            "name":"Data View Module",
+            "link":"data_view_module.html"
+        },
+        {
+            "name":"Data Utilities Module",
+            "link":"data_utilities_module.html"
+        },
+        {
+            "name":"Wave Systems Module",
+            "link":"wave_systems_module.html"
+        },
+        {
+            "name":"Data Export",
+            "link":"exporting_data.html"
+        },
+        {
+            "name":"Wavector Tutorial",
+            "link":"wavector_tutorial.html"
+        },
+        {
+            "name":"Reference",
+            "link":"references.html"
+        }
+    ]
+    var tocItems = Object.keys(toc);
+    $.each(tocItems, function(index, item) {
+        $("#sidebarToc").append("<li><a href='" + toc[item].link + "''>" + toc[item].name + "</a></li>")
     });
 
-    $.getJSON("../static/json/data-exploration.json", function(data) {
-        var panels = Object.keys(data);
-        $.each(panels, function(index, panel) {
-            console.log(data[panel]);
+    var data = {
+        "Analyzing Data with XWaves" :
+            "../static/html/analyzing_data_with_xwaves.html"
+    };
 
+    var panels = Object.keys(data);
+    $.each(panels, function(index, panel) {
 
-            var active = false;
-            if (index == 0) {
-                active = true
-            }
-            $('#accordion').append(generateListItem(panel, data[panel], active, index))
+        var active = false;
+        if (index == 0) {
+            active = true
+        }
+        $('#accordion').append(generateListItem(panel, data[panel], active, index))
 
-            $('#content_panel_' + index).load(data[panel]);
-
-        });
-
-        var anchor = window.location.hash;
-        $(anchor).collapse('in');
+        $('#content_panel_' + index).load(data[panel]);
 
     });
+
+    var anchor = window.location.hash;
+    $(anchor).collapse('in');
 
     function generateListItem(name, content, active, index) {
         var col_html = ""
@@ -122,23 +157,6 @@
         return html;
 
     }
-
-    // Scroll the accordion to the top if needed
-    $('#accordion').on('shown.bs.collapse', function () {
-        var selected = $(this);
-        var collapseh = $(".collapse.in").height();
-        var top = $(window).scrollTop();
-
-        var clickedHeader = $(this).find('.panel > .collapse.in').closest('.panel').find('.panel-heading');
-        var offset = clickedHeader.offset();
-        if(offset) {
-            var topOfHeader = offset.top;
-            if(topOfHeader < top) {
-                $('html,body').animate({ scrollTop: topOfHeader-50}, 100, 'swing');
-            }
-        }
-    });
-
     </script>
 </body>
 

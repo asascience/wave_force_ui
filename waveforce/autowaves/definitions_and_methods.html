@@ -71,31 +71,67 @@
       $(anchor).collapse('in');
     });
     
-    $.getJSON("../static/json/aw_toc.json", function(data) {
-        var tocItems = Object.keys(data);
-        $.each(tocItems, function(index, item) {
-            $("#sidebarToc").append("<li><a href='" + data[item].link + "''>" + data[item].name + "</a></li>")
-        });
+    var toc = [
+        {
+            "name":"Getting Started",
+            "link":"getting_started.html"
+        },
+        {
+            "name":"Loading Data",
+            "link":"loading_data.html"
+        },
+        {
+            "name":"Wave Systems Module",
+            "link":"wave_systems_module.html"
+        },
+        {
+            "name":"Spectral Fit Module",
+            "link":"spectral_fitting_module.html"
+        },
+        {
+            "name":"Sea State Module",
+            "link":"sea_state_analysis_module.html"
+        },
+        {
+            "name":"Data Export",
+            "link":"exporting_data.html"
+        },
+        {
+            "name":"Reference",
+            "link":"references.html"
+        }
+    ];
+    
+    var tocItems = Object.keys(toc);
+    $.each(tocItems, function(index, item) {
+        $("#sidebarToc").append("<li><a href='" + toc[item].link + "''>" + toc[item].name + "</a></li>")
     });
 
 
-    $.getJSON("../static/json/definitions-and-methods.json", function(data) {
-        var panels = Object.keys(data);
-        $.each(panels, function(index, panel) {
-            console.log(data[panel]);
+   var data = {
+        "Data Manipulations" :
+            "../static/html/data_manipulations.html"
+        ,"Spectral Fitting" :
+            "../static/html/spectral_fitting.html"
+        ,"Statistical Parameter Definitions" :
+            "../static/html/statistical_parameter_definitions.html"
+    };
 
+    var panels = Object.keys(data);
+    $.each(panels, function(index, panel) {
 
-            var active = false;
-            if (index == 0) {
-                active = true
-            }
-            $('#accordion').append(generateListItem(panel, data[panel], active, index))
+        var active = false;
+        if (index == 0) {
+            active = true
+        }
+        $('#accordion').append(generateListItem(panel, data[panel], active, index))
 
-            $('#content_panel_' + index).load(data[panel]);
-
-        });
+        $('#content_panel_' + index).load(data[panel]);
 
     });
+
+    var anchor = window.location.hash;
+    $(anchor).collapse('in');
 
     function generateListItem(name, content, active, index) {
         var col_html = ""

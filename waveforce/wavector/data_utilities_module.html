@@ -72,30 +72,66 @@
       $(anchor).collapse('in');
     });
     
-    $.getJSON("../static/json/wv_toc.json", function(data) {
-        var tocItems = Object.keys(data);
-        $.each(tocItems, function(index, item) {
-            $("#sidebarToc").append("<li><a href='" + data[item].link + "''>" + data[item].name + "</a></li>")
-        });
+    var toc = [
+        {
+            "name":"Getting Started",
+            "link":"getting_started.html"
+        },
+        {
+            "name":"Loading Data",
+            "link":"loading_data.html"
+        },
+        {
+            "name":"Data View Module",
+            "link":"data_view_module.html"
+        },
+        {
+            "name":"Data Utilities Module",
+            "link":"data_utilities_module.html"
+        },
+        {
+            "name":"Wave Systems Module",
+            "link":"wave_systems_module.html"
+        },
+        {
+            "name":"Data Export",
+            "link":"exporting_data.html"
+        },
+        {
+            "name":"Wavector Tutorial",
+            "link":"wavector_tutorial.html"
+        },
+        {
+            "name":"Reference",
+            "link":"references.html"
+        }
+    ];
+    
+    var tocItems = Object.keys(toc);
+    $.each(tocItems, function(index, item) {
+        $("#sidebarToc").append("<li><a href='" + toc[item].link + "''>" + toc[item].name + "</a></li>")
     });
 
-    $.getJSON("../static/json/data-utilities-module.json", function(data) {
-        var panels = Object.keys(data);
-        $.each(panels, function(index, panel) {
-            console.log(data[panel]);
+    var data = {
+        "Data Utilities Overview" :
+            "../static/html/utilities_help.html"
+    };
 
+    var panels = Object.keys(data);
+    $.each(panels, function(index, panel) {
 
-            var active = false;
-            if (index == 0) {
-                active = true
-            }
-            $('#accordion').append(generateListItem(panel, data[panel], active, index))
+        var active = false;
+        if (index == 0) {
+            active = true
+        }
+        $('#accordion').append(generateListItem(panel, data[panel], active, index))
 
-            $('#content_panel_' + index).load(data[panel]);
-
-        });
+        $('#content_panel_' + index).load(data[panel]);
 
     });
+
+    var anchor = window.location.hash;
+    $(anchor).collapse('in');
 
     function generateListItem(name, content, active, index) {
         var col_html = ""
