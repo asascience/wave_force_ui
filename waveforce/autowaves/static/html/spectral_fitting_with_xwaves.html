@@ -1,0 +1,321 @@
+<script>
+var subdir = 'xwaves';
+if (XWAVES){
+    subdir = 'xwaves';
+}else if(WAVECTOR){
+    subdir = 'wavector';
+}else if(AUTOWAVES){
+    subdir = 'autowaves';
+}
+</script>
+
+<div class="AccordionPanelContent disn clearfix colelem" id="u3210">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u3211-556" data-muse-uid="U3211">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U3211" template="spectral-fitting-module.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="blue-heading">1.&nbsp; Introduction</p>
+        <p class="body">The goal of the&nbsp; <span id="u3211-43">Spectral Fit Module </span>is to compute a variety of 1D fit and 2D fit parameters suitable for engineering design applications.&nbsp; Specific features include:</p>
+        <ul class="list0 nls-None" id="u3211-21">
+            <li class="body">JONSWAP, Gaussian, Lognormal and Ochi-Hubble 1D partition fits</li>
+            <li class="body">Windsea, swell, and Cos<SUP>2n</SUP> directional distributions</li>
+            <li class="body">Composite full-spectrum fit parameters</li>
+            <li class="body">Interactive Fit Selection Window</li>
+            <li class="body">User-guided display of fit results</li>
+            <li class="body">User-selected export of partition statistics and fit parameters</li>
+            <li class="body">Interactive html-based Help utility</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body">This document describes the various system features of the <span id="u3211-24">Spectral Fit Module</span>.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">2.&nbsp; System Overview</p>
+        <p class="body">The <span id="u3211-43">Spectral Fit Module</span> has many features and capabilities.&nbsp; Integration of the <span id="u3211-33">Spectral Fit Module</span> into the software package is depicted in Figure <span id="u3211-35">1.</span> <span id="u3211-37">Spectral Fit</span> is designed to operate on the wave spectral partitions computed by the <span id="u3211-43">Wave Systems Module</span>.&nbsp; <span id="u3211-43">Spectral Fit i</span>ncludes routines for computing 1D energy-frequency fits, 2D directional distributions and composite full-spectrum fit parameters. To optimize selection of the best-fits for each wave system, an interactive Fit Selection Tool allows the user to identify the best fit type to apply to each windsea or swell wave system.</p>
+        <p class="body" id="u3211-44">&nbsp;</p>
+        <p class="body" id="u3211-50">As with all of the modules, <span id="u3211-43">Spectral Fit </span>operates on information stored in the wavedat data structure.&nbsp; Furthermore all fit parameters and statistics are saved back into the <span id="u3211-43">wavedat </span>data structure.</p>
+        <p class="body" id="u3211-51">&nbsp;</p>
+        <p class="body" id="u3211-57">The <span id="u3211-43">Data View Module</span> includes features to support the display and export of Spectral Fit results.&nbsp; A <span id="u3211-43">Spectral Fit</span> Plot Library allows the comparison of fit results to original data.&nbsp; A set of composite plots present the full-spectrum sum of the selected partition fits for each record.&nbsp; Finally, a Data Export Utility allows the user to design a custom table of fit results to export.</p>
+        <p class="body" id="u3211-58">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3211-60">​</span><span><span class="actAsInlineDiv normal_text" id="u3323"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3317"><!-- image --><img id="u3317_img" src="../static/img/spectral%20fit2.jpg" alt="" width="526" height="393" data-muse-uid="U3317" data-muse-src="../static/img/spectral%20fit2.jpg" /></span></span>
+            </span><span></span></p>
+        <p class="Definitions" id="u3211-65">Figure 1. Spectral Fit Module Integration</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">A typical <span id="u3211-43">Spectral Fit </span>Module processing session might go as follows:</p>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None">
+            <li class="body">Load raw or processed data</li>
+            <li class="body">Inspect data in Data View module</li>
+            <li class="body">Run data Utilities module to format data as desired</li>
+            <li class="body">Run Wave Systems module to compute wave partitions and form wave systems</li>
+            <li class="body">Inspect results in Data View module</li>
+            <li class="body">Run Spectral Fit module to generate 1D and 2D fits</li>
+            <li class="body">Inspect and fine tune results using the Fit Selection Tool</li>
+            <li class="body">View final results in Data View module</li>
+            <li class="body">Export selected data fields using the Data Export Utility</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body">Additional optional processing steps might include:</p>
+        <p class="body">&nbsp;</p>
+        <ul class="list0 nls-None" id="u3211-101">
+            <li class="body">Run Sea State module</li>
+            <li class="body">Inspect results in Data View module</li>
+            <li class="body">Export selected data fields using the Data Export Utility</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">3.&nbsp; System Features</p>
+        <p class="subheading">3.1 Spectral Fit Module</p>
+        <p class="body">The Spectral Fit Module has four primary components: (1) Spectral Fit Parameters Table, (2) 1D fitting, (3) directional and composite fits, and (4) interactive Fit Selection Tool.&nbsp; The results are stored in the wavedat data structure.&nbsp; Each of these functions is described below.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Spectral Fit Parameters Table</p>
+        <p class="body">Upon selecting Spectral Fit from the Module pull-down menu, the first window to open is the Spectral Fit Parameters Table.&nbsp; As depicted in Figure 2, this window allows the user to select which fits to use for windsea and swell in the composite fit computation.&nbsp; Furthermore the user has the option of turning on two Fit Conservation options:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3211-115">Wave Height Conservation</span><span id="u3211-116"> </span>– The fitted wave heights are replaced with the input data wave heights</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3211-120">Wave Period Conservation</span> – If the fitted peak wave periods fall outside a user-specified tolerance, they are replaced with the input data wave periods</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">For JONSWAP 1D fits, the user selects either Default or Advanced fitting methods (see below).</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Several plots are available to view the fit-type results on selected records.&nbsp; As with other parameters tables, named parameter settings can be saved for future use.&nbsp; Furthermore the selections made in the Spectral Fit Parameters Table can later be refined using the Fit Selection Tool (see below).</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">1D Spectrum Fitting</p>
+        <p class="body">Once the user selects Run in the Spectral Fit Parameters Table, a sequence of fitting operations is performed.&nbsp; The first step is the computation of variance density (1D) spectrum fits.&nbsp; The following 1D fits are computed for each wave partition:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">JONSWAP- Least squares fit of a JONSWAP variance density spectrum.&nbsp; The following 2 options are available:</p>
+        <ul class="list0 nls-None" id="u3211-141">
+            <li class="body">Default – Uses a modified form of JONSWAP that is based on significant wave height (Hs), peak period (Tp), and peak enhancement factor (Gamma, γ).&nbsp; Sigma A and Sigma B are held constant at 0.07 and 0.09, respectively.&nbsp; Alpha is then computed independently based on Hs, Tp and γ.</li>
+            <li class="body">Advanced JONSWAP – A traditional JONSWAP fit of Alpha, peak period, and gamma.&nbsp; Peak period is based on a 3-point parabolic fit to the spectral peak.&nbsp; Sigma A and Sigma B are initially held constant at 0.07 and 0.09, respectively.&nbsp; Several post-processing options for Sigma A and Sigma B are available in the Spectral Fit Selection Tool.</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3211-143">Gaussian</span> – Least squares fit to a Gaussian variance density spectrum.&nbsp; The significant wave height (Hs), peak period (Tp), and standard deviation of the Gaussian (σ) are computed.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3211-147">Lognormal </span>– Least squares fit to a variation of the Gaussian spectral form, allowing for some asymmetry in shape.&nbsp; The significant wave height (Hs), peak period (Tp), and standard deviation of the Gaussian (σ) are computed.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3211-151">Ochi-Hubble </span>- Least squares fit to the Ochi-Hubble spectral form for a single peak.&nbsp; The significant wave height (Hs), peak period (Tp), and spectral shape parameter (λ) are computed.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The results from all of these fit computations are stored in the wavedat data structure.&nbsp; Details on this data structure are provided later in this document.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;<span><span class="actAsInlineDiv normal_text" id="u3337"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3331"><!-- image --><img id="u3331_img" src="../static/img/spectral%20fit%203.jpg" alt="" width="708" height="430" data-muse-uid="U3331" data-muse-src="../static/img/spectral%20fit%203.jpg" /></span></span>
+            </span><span></span></p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3211-165">Figure 2.&nbsp; Spectral Fit Parameters Table</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Directional Distributions</p>
+        <p class="body">Once all of the 1D fits are completed, the user-selected directional distributions for wind sea and swell are computed.&nbsp; Directional distributions provide mean direction and spread values that are based on standard model forms.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The following directional distributions are available:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Ewans Swell – Based on supplied Tp and peak direction (p) computes a wrapped normal directional distribution Q (f,) for swell (Ewans, 2001).</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Ewans Windsea - Based on supplied Tp and peak direction (p) computes a symmetric double Gaussian directional distribution Q(f,) for wind sea (Ewans, 1998)</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Cos^2n – a least squares fit of a cos2n() distribution to the wave directions.&nbsp; Here the resulting value of n is saved as a directional fit parameter.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Composite Fits</p>
+        <p class="body">Once all of the individual partition 1D and 2D fits are generated, a set of composite fit results are computed based on the user-selected fit options in the Spectral Fit Parameters Table.&nbsp; Composite fits are generated from a linear summation of the individual 1D and 2D partition fits for each record.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">After the composite fits are computed the spectral fit plot page opens up in Data View.&nbsp; Specific spectral fit features in Data View are described in a later section.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Fit Selection Tool</p>
+        <p class="body">Once Spectral Fit data processing is complete, the interactive Fit Selection Tool can be used to fine tune the composite fit results.&nbsp; A variety of fit performance data and plots are included, as well as tools to modify the fit types applied to individual wave systems.&nbsp; A screen shot of the Fit Selection Tool window appears in Figure 3.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The Fit Selection Tool has four main features:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3211-203"><span id="u3211-201">1. Wave System Fits</span> – Search through the various wave systems in the data set.&nbsp; A system selection menu allows the user to select between all Systems, Windsea, Windsea Segments, All Swells, or a specific system number (System 1, System 2, System 3, etc).&nbsp; The system numbers correspond to the temporally-tracked systems generated by the Wave Systems Module.&nbsp; Specific wind sea segments can be selected by either (1) typing in the desired start and stop times, or (2) use the mouse to left-click and drag across a segment of the System Height Series plot and then right-click and choose the Set Windsea Segment command.&nbsp; The plots automatically update to show the selected data.&nbsp; The user can change the type of fits applied to each wave system and view the results.&nbsp; As described above, 1D Fit selections include JONSWAP, Gaussian and Lognormal.&nbsp; Directional distribution selections include Ewans Windsea, Ewans Swell, and Cos^2n.</p>
+        <p class="body" id="u3211-204">&nbsp;</p>
+        <p class="body" id="u3211-207"><span id="u3211-205">2. Advanced JONSWAP Options</span> – The Advanced JONSWAP options are available for data that have been processed using the Advanced JONSWAP fit option in the Spectral Fit Parameters Table. Right-clicking on the Advanced JONSWAP Options tab will provide access to the advanced fit commands shown in Figure 4.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">This window allows the user to select from the following sigma processing options (pull-down menu):</p>
+        <ul class="list0 nls-None" id="u3211-217">
+            <li class="body"><span id="u3211-211">Default </span>– Sigma A and Sigma B are held constant at 0.07 and 0.09, respectively. The JONSWAP fits are then recomputed using these values.</li>
+            <li class="body"><span id="u3211-214">Fitted</span> – Sigma A and Sigma B are fitted along with alpha, peak period, and gamma.</li>
+        </ul>
+        <ul class="list0 nls-None" id="u3211-224">
+            <li class="body"><span id="u3211-218">User-specified</span> – Sigma A and Sigma B input boxes allow the user to specify the values to use.&nbsp; The JONSWAP fits are then recomputed using these values.</li>
+            <li class="body"><span id="u3211-221">Fetch Estimated</span> – Sigma A and Sigma B are estimated from the input (or computed) wind speed, direction and estimated fetch.&nbsp; The user is prompted to provide a fetch file that includes a set of directions (from) and fetches (km).&nbsp; The format of the ascii fetch file is as follows:</li>
+        </ul>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3211-228">% File with estimated fetches</p>
+        <p class="body" id="u3211-230">%</p>
+        <p class="body" id="u3211-232">%&nbsp; Direction from&nbsp;&nbsp;&nbsp; Estimated</p>
+        <p class="body" id="u3211-234">% which wind comes&nbsp;&nbsp; Fetch(km)</p>
+        <p class="body" id="u3211-236">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60.</p>
+        <p class="body" id="u3211-238">&nbsp;&nbsp;&nbsp;&nbsp; 45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 180.</p>
+        <p class="body" id="u3211-240">&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 200.</p>
+        <p class="body" id="u3211-242">&nbsp;&nbsp;&nbsp; 135&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 800.</p>
+        <p class="body" id="u3211-244">&nbsp;&nbsp;&nbsp; 180&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1000.</p>
+        <p class="body" id="u3211-246">&nbsp;&nbsp;&nbsp; 225&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1200.</p>
+        <p class="body" id="u3211-248">&nbsp;&nbsp;&nbsp; 270&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80.</p>
+        <p class="body" id="u3211-250">&nbsp;&nbsp;&nbsp; 315&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60.</p>
+        <p class="body" id="u3211-252">&nbsp;&nbsp;&nbsp; 360&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3211-255">The actual fetch used for each record is interpolated from the input values based on the corresponding wind direction.&nbsp; The Sigma A and Sigma B computations are based on Lewes and Allos (1990).&nbsp; The non-dimensional fetch =gx/u2 is computed, where u is the 10-m elevation wind speed.&nbsp; Equations 11, 13 and 14 from Lewes and Allos (1990) are then applied for the computation of Sigma A and Sigma B. The JONSWAP fits are then recomputed using these estimated values.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Selecting Compute will re-compute all JONSWAP fits using the selected options.&nbsp; Selecting Exit will return control back to the Wave System Fits window.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3211-262"><span id="u3211-260">3. Fit Plots </span>–The plot window in the upper right section of the Fit Selection Tool includes scatter plots to compare wave height and period fit results for the selected wave system (or all wave systems).&nbsp; The scatter plots include a quantification of the RMS error and bias of the fit parameters.&nbsp; Also included is a JONSWAP Parameters table the lists the computed fit parameters for each wave system for which a JONSWAP Fit has been selected.</p>
+        <p class="body" id="u3211-263">&nbsp;</p>
+        <p class="body" id="u3211-266"><span id="u3211-264">4. Wide format plots </span>– The lower plot window is used to view the following additional fit performance displays:</p>
+        <p class="body" id="u3211-267">&nbsp;</p>
+        <p class="body" id="u3211-269">• System Height and Period Series - time series comparisons of fit parameters with input data</p>
+        <p class="body" id="u3211-271">• Stacked Spectra – The unique stacked spectra display allows the user to scroll through all the 1D spectra fit comparisons for a selected wave system, with up to 4 records shown at a time.</p>
+        <p class="body" id="u3211-273">• System Height and Period Error Bars – Displays the RMS height and period fit errors for all wave systems at a glance</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3211-277">​</span><span><span class="actAsInlineDiv normal_text" id="u3976"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3970"><!-- image --><img id="u3970_img" src="../static/img/spectral%20fit%203b.jpg" alt="" width="710" height="462" data-muse-uid="U3970" data-muse-src="../static/img/spectral%20fit%203b.jpg" /></span></span>
+            </span><span></span></p>
+        <p class="body" id="u3211-282">Figure 3.&nbsp; Spectral Fit Selection Tool</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body"><span id="u3211-286">​</span><span><span class="actAsInlineDiv normal_text" id="u3989"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3983"><!-- image --><img id="u3983_img" src="../static/img/spectral%20fit%204.jpg" alt="" width="613" height="296" data-muse-uid="U3983" data-muse-src="../static/img/spectral%20fit%204.jpg" /></span></span>
+            </span><span></span></p>
+        <p class="body" id="u3211-291">Figure 4.&nbsp; Advanced JONSWAP Options selection window</p>
+        <p class="body" id="u3211-292">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Data Structure</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">All processed data are saved to a MATLAB data structure named wavedat.&nbsp; Results from the Spectral Fit Module are saved in two different wavedat data fields.&nbsp; Raw fit data from the various 1D and 2D fits are saved to a wavedat.fit data structure, which has the following data fields:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">fit1D{n} fit2D{n}</p>
+        <p class="body">n 1D Fit Type n 2D Fit Type</p>
+        <p class="body">1 JONSWAP or JONSWAP-ADV 1 Ewans Swell</p>
+        <p class="body">2 Gaussian 2 Ewans Windsea</p>
+        <p class="body">3 Lognormal 3 Cos^2n</p>
+        <p class="body">4 Ochi-Hubble</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The JONSWAP-ADV fit type specifies that the standard JONSWAP equation was used to perform the fit and that all 5 fit parameters (alpha, peak period, gamma, Sigma A and Sigma B can be fit).&nbsp; The data fields in fit1D and fit2D include all of the parameters necessary to reproduce the actual fits, such as <span id="u3211-316">alpha,</span> <span id="u3211-318">hs, tp, gamma, Sigma A, Sigma B, and sigma</span> (standard deviation of the Gaussian) for the 1D fits and directional distribution parameters for the 2D fits.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Composite fit results, based on the user-selected fit types from the Spectral Fit Parameters Table and/or the Spectral Fit Selection Tool, are saved to the <span id="u3211-323">wavedat.sfit </span>data structure.&nbsp; The contents of <span id="u3211-325">wavedat.sfit</span> are listed below.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Non-directional <span id="u3211-330">wavedat.sfit </span>data fields:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">.time Date number of partition</p>
+        <p class="body">.fittype 1D type; jonswap, gaussian, or lognormal</p>
+        <p class="body">.par Wave partition number</p>
+        <p class="body">.grp Wave system (group) number</p>
+        <p class="body">.alpha JONSWAP alpha parameter</p>
+        <p class="body">.gammaJON JONSWAP gamma parameter</p>
+        <p class="body">.sigmaA JONSWAP sigma-A parameter</p>
+        <p class="body">.sigmaB JONSWAP sigma-B parameter</p>
+        <p class="body">.sigma Std Deviation of Gaussian (Gaussian and Lognormal fits)</p>
+        <p class="body">.hsif Partition fitted significant wave height (m)</p>
+        <p class="body">.lambda Ochi-Hubble Spectral Shape Parameter</p>
+        <p class="body">.tzif Partition fitted zero-crossing period (s)</p>
+        <p class="body">.tpif Partition fitted peak period (s)</p>
+        <p class="body">.Lzif Partition fitted wavelength (m) (deep water calculation)</p>
+        <p class="body">.tzf Full spectrum fitted zero-crossing period (s)</p>
+        <p class="body">.hsf Full spectrum fitted significant wave height (m)</p>
+        <p class="body">.tpf Full spectrum fitted peak period (s)</p>
+        <p class="body">.Lzf Full spectrum fitted wavelength (m) (deep water calculation)</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Additional <span id="u3211-372">wavedat.sfit </span>fields for directional fits include</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">.fittype2d Ewans_ws, Ewans_sw, or cos2n</p>
+        <p class="body">.dmif Partition mean direction (deg)</p>
+        <p class="body">.dpif Partition peak direction (deg)</p>
+        <p class="body">.spif Partition directional spread</p>
+        <p class="body">.ncos Cos^2n spread parameter (n)</p>
+        <p class="body">.dmf Full spectrum mean direction (deg)</p>
+        <p class="body">.dpf Full spectrum peak direction (deg)</p>
+        <p class="body">.spf Full spectrum directional spread</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The directional fields are omitted for non-directional data.&nbsp; The format for these fields is identical to the partition data in wavedat.out.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">3.2 Data View Module</p>
+        <p class="subheading">Spectral Fit Plot Library</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The Spectral Fit Plot Library includes several display options to compare input and fitted data.&nbsp; These include scatter plots of wave height and period for wind seas, swells and composite (full) spectra.&nbsp; The fit RMS Error and Bias is displayed on each scatter plot.&nbsp; An example appears in the upper right sector of Figure 2. In addition, RMS error bar chart plots will allow a quick glance of the errors computed for each wave system.&nbsp; Furthermore wave height and period fit error tables provide RMS error statistics from a least squares analysis of each partition fit.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Data Export Utility</p>
+        <p class="body">A Data Export Utility facilitates enhanced user control of saving data fields to external ASCII, EXCEL and MATLAB formatted data files.&nbsp; The table export GUI allows the user to select specific data fields to write to this file.&nbsp; As with other parameter tables, the user can save named templates for future use.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The available fields are described in Tables 1-3.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3211-415">Table 1.&nbsp; No Processing Export Data Fields</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Field&nbsp; Description</p>
+        <p class="body">Date&nbsp;&nbsp;&nbsp;&nbsp; Format: YYYYMMDDHH</p>
+        <p class="body">WS#&nbsp;&nbsp;&nbsp;&nbsp; Wind speed (m/s)</p>
+        <p class="body">WD# Wind Direction (deg from true north)</p>
+        <p class="body">Hs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Significant wave height (m) of total spectrum</p>
+        <p class="body">Tp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Peak period (s) of total spectrum</p>
+        <p class="body">T01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mean (zero-crossing) period (s) of total spectrum</p>
+        <p class="body">L01&nbsp;&nbsp;&nbsp;&nbsp; Wave length (m) of total spectrum calculated from T01</p>
+        <p class="body">Cp&nbsp;&nbsp;&nbsp; Phase speed (m/s) of total spectrum calculated from Tp</p>
+        <p class="body">Dp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Peak direction (deg from true north) of total spectrum</p>
+        <p class="body">Dm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mean direction (deg from true north) of total spectrum</p>
+        <p class="body">Sp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Spectral spread (deg) of total spectrum</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3211-444">Table 2.&nbsp; Wave Systems Export Data Fields</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Field Description</p>
+        <p class="body">par&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Partition identifier (0= windsea, 1-n = swells)</p>
+        <p class="body">sys System group identifier (0= windsea, 1-n = swells groups)</p>
+        <p class="body">Hsi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Significant wave height (m) of system</p>
+        <p class="body">Tpi&nbsp;&nbsp;&nbsp;&nbsp; Peak period (s) of system</p>
+        <p class="body">T01i&nbsp;&nbsp;&nbsp;&nbsp; Mean (zero-crossing) period (s) of system</p>
+        <p class="body">L01i&nbsp;&nbsp;&nbsp;&nbsp; Wave length (m) of system calculated from T01i</p>
+        <p class="body">Cpi&nbsp;&nbsp; Phase speed (m/s) of system calculated from Tpi</p>
+        <p class="body">Dpi&nbsp;&nbsp;&nbsp;&nbsp; Peak direction (deg from true north) of system</p>
+        <p class="body">Dmi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mean direction (deg from true north) of system</p>
+        <p class="body">Spi&nbsp;&nbsp;&nbsp;&nbsp; Spectral spread (deg) of system</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3211-471">Table 3.&nbsp; Spectral Fit Export Data Fields</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Field Description</p>
+        <p class="body">Hsf&nbsp;&nbsp;&nbsp;&nbsp; Significant wave height (m) of total fitted spectrum</p>
+        <p class="body">Tpf&nbsp;&nbsp;&nbsp;&nbsp; Peak period (s) of total fitted spectrum</p>
+        <p class="body">T01f&nbsp;&nbsp;&nbsp; Mean (zero-crossing) period (s) of total fitted spectrum</p>
+        <p class="body">L01f&nbsp;&nbsp;&nbsp;&nbsp; Wave length (m) of total fitted spectrum calculated from T01f</p>
+        <p class="body">Cpf&nbsp; Phase speed (m/s) of total fitted spectrum calculated from Tpf</p>
+        <p class="body">Dpf&nbsp;&nbsp;&nbsp;&nbsp; Peak direction (deg from true north) of total fitted spectrum</p>
+        <p class="body">Dmf&nbsp;&nbsp;&nbsp;&nbsp; Mean direction (deg from/true north) of total fitted spectrum</p>
+        <p class="body">Spf&nbsp;&nbsp;&nbsp;&nbsp; Spectral spread (deg) of total fitted spectrum</p>
+        <p class="body">Type1D 1D Spectrum Fit Type (string)</p>
+        <p class="body">Type2D 2D Spectrum Fit Type (string)</p>
+        <p class="body">Hsif&nbsp;&nbsp;&nbsp; Significant wave height (m) of fitted system</p>
+        <p class="body">Tpif&nbsp;&nbsp;&nbsp; Peak period (s) of fitted system</p>
+        <p class="body">T01if Mean (zero-crossing) period (s) of fitted system</p>
+        <p class="body">L01if&nbsp;&nbsp; Wave length (m) of fitted system calculated from T01if</p>
+        <p class="body">Cpif&nbsp;&nbsp; Phase speed (m/s) of fitted system calculated from Tpif</p>
+        <p class="body">Dpif&nbsp;&nbsp;&nbsp; Peak direction (deg from true north) of fitted system</p>
+        <p class="body">Dmif&nbsp;&nbsp;&nbsp; Mean direction (deg from true north) of fitted system</p>
+        <p class="body">Spif&nbsp;&nbsp;&nbsp; Spectral spread (deg) of fitted system</p>
+        <p class="body">Alpha JONSWAP alpha parameter</p>
+        <p class="body">Gam&nbsp;&nbsp;&nbsp;&nbsp; JONSWAP Gamma parameter</p>
+        <p class="body">SigA JOSNWAP Sigma-A parameter</p>
+        <p class="body">SigB JOSNWAP Sigma-B parameter</p>
+        <p class="body">Sig Sigma of the fitted system</p>
+        <p class="body">Lambda Ochi-Hubble shape parameter</p>
+        <p class="body">ncos n of fitted system (from cos^2n fit)</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">#Note:&nbsp; Wind data are only included if available in wavedat</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">&nbsp;</p>
+        <p class="blue-heading">4.&nbsp; References</p>
+        <p class="body">Ewans, K. C., 1998.&nbsp; Observations of the Directional Spectrum of Fetch-Limited Waves, J. Phys. Oceanog., v.28, pp.495-512.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Ewans, K. C., Directional Spreading in Ocean Swell, WAVES 2001.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">5.&nbsp; Contact Information</p>
+        <p class="body">Please direct all inquiries regarding this document to:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u3211-545">WaveForce Technologies LLC</p>
+        <p class="body">Email:&nbsp; <a class="nonblock" href="mailto:waveforcesupport@rpsgroup.com" target="_blank">waveforcesupport@rpsgroup.com</a></p>
+        <p class="body"><a class="nonblock" href="http://www.WaveForceTechnologies.com" target="_blank">www.WaveForceTechnologies.com</a></p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>
