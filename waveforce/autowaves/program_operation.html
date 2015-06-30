@@ -10,6 +10,7 @@
     <meta name="author" content="RPS ASA">
     <link rel="icon" href="../static/img/favicon.ico">
     <title>WaveForce Help</title>
+    <script src='../static/lib/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
     <script src="../static/lib/jquery/dist/jquery.min.js"></script>
     <script src="../static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Bootstrap core CSS -->
@@ -17,7 +18,7 @@
     <link href="../static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../static/css/site_global.css?4283238856"/>
     <link rel="stylesheet" type="text/css" href="../static/css/master_a-master.css?4206305167"/>
-    <link rel="stylesheet" type="text/css" href="../static/css/sea-state-analysis-module.css?3998993038" id="pagesheet"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/spectral-fitting-module.css?499381312" id="pagesheet"/>
 </head>
 
 <body>
@@ -56,8 +57,8 @@
                 </nav>
             </div>
             <div class="col-sm-7 main content-page">
-                <p class="autowaves-section-heading">Sea State Module</p>
-                <p class="section-description">Generate sea state and extremal inputs to Metocean engineering and design studies</p>
+                <p class="autowaves-section-heading">Program Operation</p>
+                <p class="section-description">Various program operation modes</p>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 </div>
             </div>
@@ -120,11 +121,9 @@
         $("#sidebarToc").append("<li><a href='" + toc[item].link + "''>" + toc[item].name + "</a></li>")
     });
 
-     var data = {
-        "Sea State Overview" :
-            "static/html/sea_state_help.html"
-        ,"Sea State Parameters Table" :
-            "static/html/sea_state_parameters_table.html"
+    var data = {
+        "Program Operation" :
+            "static/html/autowaves_program_operation.html"
     };
 
     var panels = Object.keys(data);

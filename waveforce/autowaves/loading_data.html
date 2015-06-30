@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top wave-force-nav">
+    <nav class="navbar navbar-default navbar-fixed-top wave-force-nav hidden">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -50,7 +50,7 @@
         <div class="row main-row">
             <div class="col-sm-4 col-md-3 sidebar">
                 <nav class="bs-docs-sidebar affix">
-                    <img src="../static/img/autowaves.png" width='175' height='153' class="sidebar-image">
+                    <img src="../static/img/xwaves.png" width='175' height='153' class="sidebar-image">
                     <ul id="sidebarToc" class="nav bs-docs-sidenav wave-force-toc">
                     </ul>
                 </nav>
@@ -66,16 +66,19 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <script>
-
-    $(document).ready(function() {
-      var anchor = window.location.hash;
-      $(anchor).collapse('in');
-    });
     
     var toc = [
         {
             "name":"Getting Started",
             "link":"getting_started.html"
+        },
+        {
+            "name":"Program Set Up",
+            "link":"program_setup.html"
+        },
+        {
+            "name":"Program Operation",
+            "link":"program_operation.html"
         },
         {
             "name":"Loading Data",
@@ -98,6 +101,10 @@
             "link":"exporting_data.html"
         },
         {
+            "name":"AutoWaves Tutorials",
+            "link":"autowaves_tutorial.html"
+        },
+        {
             "name":"Reference",
             "link":"references.html"
         }
@@ -107,7 +114,8 @@
     $.each(tocItems, function(index, item) {
         $("#sidebarToc").append("<li><a href='" + toc[item].link + "''>" + toc[item].name + "</a></li>")
     });
-     var data = {
+
+    var data = {
         "Importing Data" :
             "static/html/import_data.html"
         ,"Working with NetCDF Files" :

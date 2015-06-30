@@ -46,6 +46,47 @@ body{
    cursor: default;
 }
 
+
+.wavector-toc{
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	width: 250px !important;
+}
+
+.wavector-toc li{
+	background-color:#8f6dc0;
+}
+
+.wavector-toc li a{	
+	color:white ;
+}
+
+.wavector-toc>li>a:focus, .wavector-toc>li>a:hover{
+	color: black;
+}
+
+.autowaves-toc{
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	width: 250px !important;
+}
+
+.autowaves-toc li{
+	background-color:#007a78;
+}
+
+.autowaves-toc li a{	
+	color:white ;
+}
+
+.autowaves-toc>li>a:focus, .autowaves-toc>li>a:hover{
+	color: black;
+}
+
+
+
 .wave-force-toc{
 	border-color: black;
 	border-style: solid;
@@ -60,7 +101,6 @@ body{
 .wave-force-toc li a{	
 	color:white ;
 }
-
 
 .wave-force-toc>li>a:focus, .wave-force-toc>li>a:hover{
 	color: black;

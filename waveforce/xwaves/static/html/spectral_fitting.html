@@ -8,6 +8,7 @@
         <p class="body">&nbsp;</p>
         <p class="blue-heading">1. Introduction</p>
         <p class="body">The goal of the&nbsp; <span id="u4399-5">Spectral Fit Module </span>is to compute a variety of 1D fit and 2D fit parameters suitable for engineering design applications.&nbsp; Specific features include:</p>
+        <p class="body">&nbsp;</p>
         <ul class="list0 nls-None" id="u4399-22">
             <li class="Bullets1" id="u4399-9">JONSWAP, Gaussian, Lognormal and Ochi-Hubble 1D partition fits</li>
             <li class="Bullets1" id="u4399-11">Windsea, swell, and Cos^2n directional distributions</li>
@@ -25,7 +26,7 @@
         <p class="body">&nbsp;</p>
         <p class="body">As with all of the modules, <span id="u4399-44">Spectral Fit</span> operates on information stored in the <span id="u4399-46">wavedat </span>data structure. Furthermore all fit parameters and statistics are saved back into the <span id="u4399-48">wavedat </span>data structure.</p>
         <p class="body">&nbsp;</p>
-        <p class="body">The <span id="u4399-53">Data View Module i</span>ncludes features to support the display and export of <span id="u4399-55">Spectral Fit</span> results.&nbsp; A <span id="u4399-57">Spectral Fit Plot Library</span> allows the comparison of fit results to original data.&nbsp; A set of composite plots present the full-spectrum sum of the selected partition fits for each record.&nbsp; Finally, a <span id="u4399-59">Data Export Utility</span> allows the user to design a custom table of fit results to export.</p>
+        <p class="body">The <a href="data_view_module.html#collapse0">Data View Module</a> includes features to support the display and export of <span id="u4399-55">Spectral Fit</span> results.&nbsp; A <span id="u4399-57">Spectral Fit Plot Library</span> allows the comparison of fit results to original data.&nbsp; A set of composite plots present the full-spectrum sum of the selected partition fits for each record.&nbsp; Finally, a <span id="u4399-59">Data Export Utility</span> allows the user to design a custom table of fit results to export.</p>
         <p class="body">&nbsp;</p>
         <p class="caption"><span id="u4399-63">​</span><span><span class="actAsInlineDiv normal_text" id="u4487"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u4481"><!-- image --><img id="u4481_img" src="../static/img/def-methods1b.jpg" alt="" width="576" height="431" data-muse-uid="U4481" data-muse-src="../static/img/def-methods1b.jpg" /></span></span>
             </span>
@@ -35,56 +36,56 @@
         <p class="body">A typical Spectral Fit Module processing session might go as follows:</p>
         <ul class="list0 nls-None" id="u4399-103">
             <li class="Bullets1" id="u4399-73">Load raw or processed data</li>
-            <li class="Bullets1" id="u4399-77">Inspect data in <span id="u4399-75">Data View</span> module</li>
-            <li class="Bullets1" id="u4399-81">Run data <span id="u4399-79">Utilities </span>module to format data as desired</li>
-            <li class="Bullets1" id="u4399-83">Run Wave Systems module to compute wave partitions and form wave systems</li>
-            <li class="Bullets1" id="u4399-87">Inspect results in <span id="u4399-85">Data View</span> module</li>
-            <li class="Bullets1" id="u4399-93">Run <span id="u4399-89">Spectral Fit </span><span id="u4399-90">module</span><span id="u4399-91"> </span>to generate 1D and 2D fits</li>
-            <li class="Bullets1" id="u4399-96">Inspect and fine tune results using the <span id="u4399-95">Fit Selection Tool</span></li>
-            <li class="Bullets1" id="u4399-100">View final results in <span id="u4399-98">Data View</span> module</li>
-            <li class="Bullets1" id="u4399-102">Export selected data fields using the Data Export Utility</li>
+            <li class="Bullets1" id="u4399-77">Inspect data in <a href="data_view_module.html#collapse0">Data View Module</a></li>
+            <li class="Bullets1" id="u4399-81">Run data <a href="data_utilities_module.html#collapse0">Utilities Module</a> to format data as desired</li>
+            <li class="Bullets1" id="u4399-83">Run <a href="wave_systems_module.html#collapse0">Wave Systems Module</a> to compute wave partitions and form wave systems</li>
+            <li class="Bullets1" id="u4399-87">Inspect results in <a href="data_view_module.html#collapse0">Data View Module</a></li>
+            <li class="Bullets1" id="u4399-93">Run <a href="spectral_fitting_module.html#collapse0">Spectral Fit Module</a><span id="u4399-91"> </span>to generate 1D and 2D fits</li>
+            <li class="Bullets1" id="u4399-96">Inspect and fine tune results using the <a href="spectral_fitting_module.html#collapse2">Fit Selection Tool</a></li>
+            <li class="Bullets1" id="u4399-100">View final results in <a href="data_view_module.html#collapse0">Data View Module</a></li>
+            <li class="Bullets1" id="u4399-102">Export selected data fields using the <a href="exporting_data.html#collapse0">Data Export Utility</a></li>
         </ul>
         <p class="body">&nbsp;</p>
         <p class="body">Additional optional processing steps might include:</p>
         <ul class="list0 nls-None" id="u4399-118">
-            <li class="body">Run <span id="u4399-108">Sea State </span>module</li>
-            <li class="body">Inspect results in <span id="u4399-112">Data View</span> module</li>
-            <li class="body">Export selected data fields using the <span id="u4399-116">Data Export Utility</span></li>
+            <li class="body">Run <a href="sea_state_analysis_module.html#collapse0">Sea State Module</a></li>
+            <li class="body">Inspect results in <a href="data_view_module.html#collapse0">Data View Module</a></li>
+            <li class="body">Export selected data fields using the <a href="exporting_data.html#collapse0">Data Export Utility</a></li>
         </ul>
         <p class="body">&nbsp;</p>
         <p class="blue-heading">3. System Features</p>
         <p class="subheading">3.1 Spectral Fit Module</p>
         <p class="body">The <span id="u4399-125">Spectral Fit </span>Module has four primary components: (1) <span id="u4399-127">Spectral Fit Parameters Table</span>, (2) 1D fitting, (3) directional and composite fits, and (4) interactive <span id="u4399-129">Fit Selection Tool</span>.&nbsp; The results are stored in the <span id="u4399-131">wavedat</span> data structure.&nbsp; Each of these functions is described below.</p>
         <p class="body">&nbsp;</p>
-        <p class="subheading">Spectral Fit Parameters Table</p>
+        <p class="Bolded-body-text">Spectral Fit Parameters Table</p>
         <p class="body">Upon selecting <span id="u4399-138">Spectral Fit</span> from the <span id="u4399-140">Module</span> pull-down menu, the first window to open is the <span id="u4399-142">Spectral Fit Parameters Table</span>.&nbsp; As depicted in Figure 2, this window allows the user to select which fits to use for windsea and swell in the composite fit computation.&nbsp; Furthermore the user has the option of turning on two Fit Conservation options:</p>
         <p class="body">&nbsp;</p>
-        <p class="body" id="u4399-148"><span class="Bolded-body-text">Wave Height Conservation</span> – The fitted wave heights are replaced with the input data wave heights</p>
+        <p class="body" id="u4399-148"><i>Wave Height Conservation</i> – The fitted wave heights are replaced with the input data wave heights</p>
         <p class="body" id="u4399-149">&nbsp;</p>
-        <p class="body" id="u4399-152"><span class="Bolded-body-text">Wave Period Conservation</span> – If the fitted peak wave periods fall outside a user-specified tolerance, they are replaced with the input data wave periods</p>
+        <p class="body" id="u4399-152"><i>Wave Period Conservation</i> – If the fitted peak wave periods fall outside a user-specified tolerance, they are replaced with the input data wave periods</p>
         <p class="body">&nbsp;</p>
         <p class="body">For JONSWAP 1D fits, the user selects either <span id="u4399-155">Default </span>or <span id="u4399-157">Advanced</span> fitting methods (see below).</p>
         <p class="body">&nbsp;</p>
         <p class="body">Several plots are available to view the fit-type results on selected records.&nbsp; As with other parameters tables, named parameter settings can be saved for future use.&nbsp; Furthermore the selections made in the Spectral Fit Parameters Table can later be refined using the Fit Selection Tool (see below).</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">1D Spectrum Fitting</p>
+        <p class="Bolded-body-text">1D Spectrum Fitting</p>
         <p class="body">Once the user selects <span id="u4399-167">Run</span> in the <span id="u4399-169">Spectral Fit Parameters Table</span>, a sequence of fitting operations is performed.&nbsp; The first step is the computation of variance density (1D) spectrum fits.&nbsp; The following 1D fits are computed for each wave partition:</p>
         <p class="body">&nbsp;</p>
         <p class="body"><span id="u4399-173">JONSWAP</span>- Least squares fit of a JONSWAP variance density spectrum.&nbsp; The following 2 options are available:</p>
         <p class="body">&nbsp;</p>
         <ul class="list0 nls-None" id="u4399-180">
-            <li class="Bullets1" id="u4399-179"><span id="u4399-177">Default </span>– Uses a modified form of JONSWAP that is based on significant wave height (Hs), peak period (Tp), and peak enhancement factor (Gamma, γ).&nbsp; Sigma A and Sigma B are held constant at 0.07 and 0.09, respectively.&nbsp; Alpha is then computed independently based on Hs, Tp and γ.</li>
+            <li class="Bullets1" id="u4399-179"><i>Default </i>– Uses a modified form of JONSWAP that is based on significant wave height (Hs), peak period (Tp), and peak enhancement factor (Gamma, γ).&nbsp; Sigma A and Sigma B are held constant at 0.07 and 0.09, respectively.&nbsp; Alpha is then computed independently based on Hs, Tp and γ.</li>
         </ul>
         <p class="Bullets1" id="u4399-181">&nbsp;</p>
         <ul class="list0 nls-None" id="u4399-185">
-            <li class="Bullets1" id="u4399-184"><span id="u4399-182">Advanced JONSWAP</span> – A traditional JONSWAP fit of Alpha, peak period, and gamma.&nbsp; Peak period is based on a 3-point parabolic fit to the spectral peak.&nbsp; Sigma A and Sigma B are initially held constant at 0.07 and 0.09, respectively.&nbsp; Several post-processing options for Sigma A and Sigma B are available in the Spectral Fit Selection Tool.</li>
+            <li class="Bullets1" id="u4399-184"><i>Advanced JONSWAP</i> – A traditional JONSWAP fit of Alpha, peak period, and gamma.&nbsp; Peak period is based on a 3-point parabolic fit to the spectral peak.&nbsp; Sigma A and Sigma B are initially held constant at 0.07 and 0.09, respectively.&nbsp; Several post-processing options for Sigma A and Sigma B are available in the Spectral Fit Selection Tool.</li>
         </ul>
         <p class="body" id="u4399-186">&nbsp;</p>
-        <p class="body" id="u4399-189"><span id="u4399-187">Gaussian </span>– Least squares fit to a Gaussian variance density spectrum.&nbsp; The significant wave height (Hs), peak period (Tp), and standard deviation of the Gaussian (σ) are computed.</p>
+        <p class="body" id="u4399-189"><i>Gaussian </i>– Least squares fit to a Gaussian variance density spectrum.&nbsp; The significant wave height (Hs), peak period (Tp), and standard deviation of the Gaussian (σ) are computed.</p>
         <p class="body" id="u4399-190">&nbsp;</p>
-        <p class="body" id="u4399-193"><span id="u4399-191">Lognormal </span>– Least squares fit to a variation of the Gaussian spectral form, allowing for some asymmetry in shape.&nbsp; The significant wave height (Hs), peak period (Tp), and standard deviation of the Gaussian (σ) are computed.</p>
+        <p class="body" id="u4399-193"><i>Lognormal </i>– Least squares fit to a variation of the Gaussian spectral form, allowing for some asymmetry in shape.&nbsp; The significant wave height (Hs), peak period (Tp), and standard deviation of the Gaussian (σ) are computed.</p>
         <p class="body" id="u4399-194">&nbsp;</p>
-        <p class="body" id="u4399-197"><span id="u4399-195">Ochi-Hubble </span>- Least squares fit to the Ochi-Hubble spectral form for a single peak.&nbsp; The significant wave height (Hs), peak period (Tp), and spectral shape parameter (λ) are computed.</p>
+        <p class="body" id="u4399-197"><i>Ochi-Hubble </i>- Least squares fit to the Ochi-Hubble spectral form for a single peak.&nbsp; The significant wave height (Hs), peak period (Tp), and spectral shape parameter (λ) are computed.</p>
         <p class="body" id="u4399-198">&nbsp;</p>
         <p class="body"><span id="u4399-199">​</span><span><span class="actAsInlineDiv normal_text" id="u4500"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u4494"><!-- image --><img id="u4494_img" src="../static/img/def-methods2.jpg" alt="" width="751" height="456" data-muse-uid="U4494" data-muse-src="../static/img/def-methods2.jpg" /></span></span>
             </span>
@@ -92,23 +93,23 @@
         <p class="caption">Figure 2.&nbsp; Spectral Fit Parameters Table</p>
         <p class="body" id="u4399-205">&nbsp;</p>
         <p class="body" id="u4399-206">&nbsp;</p>
-        <p class="blue-heading">Directional Distributions</p>
+        <p class="Bolded-body-text">Directional Distributions</p>
         <p class="body">Once all of the 1D fits are completed, the user-selected directional distributions for wind sea and swell are computed.&nbsp; Directional distributions provide mean direction and spread values that are based on standard model forms.</p>
         <p class="body">&nbsp;</p>
         <p class="body">The following directional distributions are available:</p>
         <p class="body">&nbsp;</p>
-        <p class="body" id="u4399-217"><span id="u4399-215">Ewans Swell </span>– Based on supplied Tp and peak direction (p) computes a wrapped normal directional distribution Q (f,) for swell (Ewans, 2001).</p>
+        <p class="body" id="u4399-217"><i>Ewans Swell </i>– Based on supplied Tp and peak direction (&theta;p) computes a wrapped normal directional distribution Q (f,&theta;) for swell (Ewans, 2001).</p>
         <p class="body" id="u4399-218">&nbsp;</p>
-        <p class="body" id="u4399-221"><span id="u4399-219">Ewans Windsea</span> - Based on supplied Tp and peak direction (p) computes a symmetric double Gaussian directional distribution Q(f,) for wind sea (Ewans, 1998)</p>
+        <p class="body" id="u4399-221"><i>Ewans Windsea</i> - Based on supplied Tp and peak direction (&theta;p) computes a symmetric double Gaussian directional distribution Q(f,&theta;) for wind sea (Ewans, 1998)</p>
         <p class="body">&nbsp;</p>
-        <p class="body" id="u4399-225"><span id="u4399-223">Cos^2n</span> – a least squares fit of a cos2n() distribution to the wave directions.&nbsp; Here the resulting value of n is saved as a directional fit parameter.</p>
+        <p class="body" id="u4399-225"><i>Cos^2n</i> – a least squares fit of a cos^2n(&theta;) distribution to the wave directions.&nbsp; Here the resulting value of n is saved as a directional fit parameter.</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">Composite Fits</p>
+        <p class="Bolded-body-text">Composite Fits</p>
         <p class="body">Once all of the individual partition 1D and 2D fits are generated, a set of composite fit results are computed based on the user-selected fit options in the <span id="u4399-230">Spectral Fit Parameters Table</span>. Composite fits are generated from a linear summation of the individual 1D and 2D partition fits for each record.</p>
         <p class="body">&nbsp;</p>
         <p class="body">After the composite fits are computed the spectral fit plot page opens up in Data View. Specific spectral fit features in <span id="u4399-235">Data View</span> are described in a later section.</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">Fit Selection Tool</p>
+        <p class="Bolded-body-text">Fit Selection Tool</p>
         <p class="body">Once <span id="u4399-242">Spectral Fit</span> data processing is complete, the interactive Fit Selection Tool can be used to fine tune the composite fit results.&nbsp; A variety of fit performance data and plots are included, as well as tools to modify the fit types applied to individual wave systems.&nbsp; A screen shot of the Fit Selection Tool window appears in Figure 3.</p>
         <p class="body">&nbsp;</p>
         <p class="body">The Fit Selection Tool has four main features:</p>
@@ -127,28 +128,100 @@
         <p class="body" id="u4399-287">&nbsp;</p>
         <p class="body" id="u4399-289">This window allows the user to select from the following sigma processing options (pull-down menu):</p>
         <ul class="list0 nls-None" id="u4399-302">
-            <li class="body" id="u4399-292"><span id="u4399-290">Default </span>– Sigma A and Sigma B are held constant at 0.07 and 0.09, respectively. The JONSWAP fits are then recomputed using these values.</li>
-            <li class="body" id="u4399-295"><span id="u4399-293">Fitted</span> – Sigma A and Sigma B are fitted along with alpha, peak period, and gamma.</li>
-            <li class="body" id="u4399-298"><span id="u4399-296">User-specified</span> – Sigma A and Sigma B input boxes allow the user to specify the values to use.&nbsp; The JONSWAP fits are then recomputed using these values.</li>
-            <li class="body" id="u4399-301"><span id="u4399-299">Fetch Estimated</span> – Sigma A and Sigma B are estimated from the input (or computed) wind speed, direction and estimated fetch.&nbsp; The user is prompted to provide a fetch file that includes a set of directions (from) and fetches (km).&nbsp; The format of the ascii fetch file is as follows:</li>
+            <li class="body" id="u4399-292"><i>Default </i>– Sigma A and Sigma B are held constant at 0.07 and 0.09, respectively. The JONSWAP fits are then recomputed using these values.</li>
+            <li class="body" id="u4399-295"><i>Fitted</i> – Sigma A and Sigma B are fitted along with alpha, peak period, and gamma.</li>
+            <li class="body" id="u4399-298"><i>User-specified</i> – Sigma A and Sigma B input boxes allow the user to specify the values to use.&nbsp; The JONSWAP fits are then recomputed using these values.</li>
+            <li class="body" id="u4399-301"><i>Fetch Estimated</i> – Sigma A and Sigma B are estimated from the input (or computed) wind speed, direction and estimated fetch.&nbsp; The user is prompted to provide a fetch file that includes a set of directions (from) and fetches (km).&nbsp; The format of the ascii fetch file is as follows:</li>
         </ul>
         <p class="body" id="u4399-303">&nbsp;</p>
-        <p class="body" id="u4399-305">% File with estimated fetches</p>
-        <p class="body" id="u4399-307">%</p>
-        <p class="body" id="u4399-309">%&nbsp; Direction from&nbsp;&nbsp;&nbsp; Estimated</p>
-        <p class="body" id="u4399-311">% which wind comes&nbsp;&nbsp; Fetch(km)</p>
-        <p class="body" id="u4399-313">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60.</p>
-        <p class="body" id="u4399-315">&nbsp;&nbsp;&nbsp;&nbsp; 45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 180.</p>
-        <p class="body" id="u4399-317">&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 200.</p>
-        <p class="body" id="u4399-319">&nbsp;&nbsp;&nbsp; 135&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 800.</p>
-        <p class="body" id="u4399-321">&nbsp;&nbsp;&nbsp; 180&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1000.</p>
-        <p class="body" id="u4399-323">&nbsp;&nbsp;&nbsp; 225&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1200.</p>
-        <p class="body" id="u4399-325">&nbsp;&nbsp;&nbsp; 270&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80.</p>
-        <p class="body" id="u4399-327">&nbsp;&nbsp;&nbsp; 315&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60.</p>
-        <p class="body" id="u4399-329">&nbsp;&nbsp;&nbsp; 360&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60.</p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+         style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+         0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+         <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+          <td width=150 valign=top style='width:100.6pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>Direction from </p><p class=MsoNormal>which wind blows</p>
+          </td>
+          <td width=468 valign=top style='width:351.0pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>Estimated</p> <p class=MsoNormal>Fetch (km)</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=150 valign=top style='width:100.6pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>0</p>
+          </td>
+          <td width=468 valign=top style='width:351.0pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>60</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:2'>
+          <td width=150 valign=top style='width:100.6pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>45</p>
+          </td>
+          <td width=468 valign=top style='width:351.0pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>180</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:3'>
+          <td width=150 valign=top style='width:100.6pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>90</p>
+          </td>
+          <td width=468 valign=top style='width:351.0pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>200</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=150 valign=top style='width:100.6pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>135</p>
+          </td>
+          <td width=468 valign=top style='width:351.0pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>800</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:2'>
+          <td width=150 valign=top style='width:100.6pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>180</p>
+          </td>
+          <td width=468 valign=top style='width:351.0pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>1000</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:3'>
+          <td width=150 valign=top style='width:100.6pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>225</p>
+          </td>
+          <td width=468 valign=top style='width:351.0pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>1200</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:1'>
+          <td width=150 valign=top style='width:100.6pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>270</p>
+          </td>
+          <td width=468 valign=top style='width:351.0pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>80</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:2'>
+          <td width=150 valign=top style='width:100.6pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>315</p>
+          </td>
+          <td width=468 valign=top style='width:351.0pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>60</p>
+          </td>
+         </tr>
+         <tr style='mso-yfti-irow:3'>
+          <td width=150 valign=top style='width:100.6pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>360</p>
+          </td>
+          <td width=468 valign=top style='width:351.0pt;padding:0in 5.4pt 0in 5.4pt'>
+          <p class=MsoNormal>60</p>
+          </td>
+         </tr>
+
+        </table>
         <p class="body" id="u4399-330">&nbsp;</p>
         <p class="body" id="u4399-331">&nbsp;</p>
-        <p class="body" id="u4399-333">The actual fetch used for each record is interpolated from the input values based on the corresponding wind direction.&nbsp; The Sigma A and Sigma B computations are based on Lewes and Allos (1990).&nbsp; The non-dimensional fetch =gx/u2 is computed, where u is the 10-m elevation wind speed.&nbsp; Equations 11, 13 and 14 from Lewes and Allos (1990) are then applied for the computation of Sigma A and Sigma B. The JONSWAP fits are then recomputed using these estimated values.</p>
+        <p class="body" id="u4399-333">The actual fetch used for each record is interpolated from the input values based on the corresponding wind direction.&nbsp; The Sigma A and Sigma B computations are based on Lewes and Allos (1990).&nbsp; The non-dimensional fetch <i>&zeta;=gx/u<SUP>2</SUP></i> is computed, where u is the 10-m elevation wind speed.&nbsp; Equations 11, 13 and 14 from Lewes and Allos (1990) are then applied for the computation of Sigma A and Sigma B. The JONSWAP fits are then recomputed using these estimated values.</p>
         <p class="body" id="u4399-334">&nbsp;</p>
         <p class="body" id="u4399-342">Selecting <span id="u4399-336">Compute</span> will re-compute all JONSWAP fits using the selected options. Selecting <span id="u4399-338">Exit</span> will return control back to the <span id="u4399-340">Wave System Fits</span> window.</p>
         <p class="body" id="u4399-343">&nbsp;</p>
@@ -175,15 +248,167 @@
             </span><span></span></p>
         <p class="caption">Figure 4.&nbsp; Advanced JONSWAP Options selection window</p>
         <p class="body">&nbsp;</p>
-        <p class="subheading">Data Structure</p>
+        <p class="Bolded-body-text">Data Structure</p>
         <p class="Bullets1" id="u4399-388">All processed data are saved to a MATLAB data structure named wavedat.&nbsp; Results from the <span id="u4399-384">Spectral Fit Module</span> are saved in two different <span id="u4399-386">wavedat </span>data fields.&nbsp; Raw fit data from the various 1D and 2D fits are saved to a wavedat.fit data structure, which has the following data fields:</p>
         <p class="Bullets1" id="u4399-389">&nbsp;</p>
-        <p class="Bullets1" id="u4399-391">fit1D{n} fit2D{n}</p>
-        <p class="Bullets1" id="u4399-393">n 1D Fit Type n 2D Fit Type</p>
-        <p class="Bullets1" id="u4399-395">1 JONSWAP or JONSWAP-ADV 1 Ewans Swell</p>
-        <p class="Bullets1" id="u4399-397">2 Gaussian 2 Ewans Windsea</p>
-        <p class="Bullets1" id="u4399-399">3 Lognormal 3 Cos^2n</p>
-        <p class="Bullets1" id="u4399-401">4 Ochi-Hubble</p>
+        <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td colspan=2 valign=top style='border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+  normal'><span style='mso-bidi-font-size:12.0pt'>fit1D{n}<o:p></o:p></span></b></p>
+  </td>
+  <td colspan=2 valign=top style='border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+  normal'><span style='mso-bidi-font-size:12.0pt'>fit2D{n}<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>n<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>1D Fit Type<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>n<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>2D Fit Type<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>1<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>JONSWAP or JONSWAP-ADV<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>1<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>Ewans Swell<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>2<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>Gaussian<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>2<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>Ewans Windsea<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>Lognormal<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>Cos^2n<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>4<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+  12.0pt'>Ochi-Hubble<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'></td>
+ </tr>
+</table>
+
         <p class="Bullets1" id="u4399-402">&nbsp;</p>
         <p class="Bullets1" id="u4399-410">The JONSWAP-ADV fit type specifies that the standard JONSWAP equation was used to perform the fit and that all 5 fit parameters (alpha, peak period, gamma, Sigma A and Sigma B can be fit).&nbsp; The data fields in <span id="u4399-404">fit1D</span> and <span id="u4399-406">fit2D</span> include all of the parameters necessary to reproduce the actual fits, such as <span id="u4399-408">alpha, hs, tp, gamma, Sigma A, Sigma B, and sigma </span>(standard deviation of the Gaussian) for the 1D fits and directional distribution parameters for the 2D fits.</p>
         <p class="Bullets1" id="u4399-411">&nbsp;</p>
@@ -191,109 +416,1132 @@
         <p class="Bullets1" id="u4399-418">&nbsp;</p>
         <p class="Bullets1" id="u4399-422">Non-directional <span id="u4399-420">wavedat.sfit</span> data fields:</p>
         <p class="Bullets1" id="u4399-423">&nbsp;</p>
-        <p class="Bullets1" id="u4399-425">.time Date number of partition</p>
-        <p class="Bullets1" id="u4399-427">.fittype 1D type; jonswap, gaussian, or lognormal</p>
-        <p class="Bullets1" id="u4399-429">.par Wave partition number</p>
-        <p class="Bullets1" id="u4399-431">.grp Wave system (group) number</p>
-        <p class="Bullets1" id="u4399-433">.alpha JONSWAP alpha parameter</p>
-        <p class="Bullets1" id="u4399-435">.gammaJON JONSWAP gamma parameter</p>
-        <p class="Bullets1" id="u4399-437">.sigmaA JONSWAP sigma-A parameter</p>
-        <p class="Bullets1" id="u4399-439">.sigmaB JONSWAP sigma-B parameter</p>
-        <p class="Bullets1" id="u4399-441">.sigma Std Deviation of Gaussian (Gaussian and Lognormal fits)</p>
-        <p class="Bullets1" id="u4399-443">.hsif Partition fitted significant wave height (m)</p>
-        <p class="Bullets1" id="u4399-445">.lambda Ochi-Hubble Spectral Shape Parameter</p>
-        <p class="Bullets1" id="u4399-447">.tzif Partition fitted zero-crossing period (s)</p>
-        <p class="Bullets1" id="u4399-449">.tpif Partition fitted peak period (s)</p>
-        <p class="Bullets1" id="u4399-451">.Lzif Partition fitted wavelength (m) (deep water calculation)</p>
-        <p class="Bullets1" id="u4399-453">.tzf Full spectrum fitted zero-crossing period (s)</p>
-        <p class="Bullets1" id="u4399-455">.hsf Full spectrum fitted significant wave height (m)</p>
-        <p class="Bullets1" id="u4399-457">.tpf Full spectrum fitted peak period (s)</p>
-        <p class="Bullets1" id="u4399-459">.Lzf Full spectrum fitted wavelength (m) (deep water calculation)</p>
+        <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:10.3pt'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.3pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.time<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.3pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Date number of
+  partition<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:10.3pt'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.3pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.fittype<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.3pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>1D type; jonswap,
+  gaussian, or lognormal <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.par<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Wave partition
+  number<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.grp<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Wave system
+  (group) number<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.alpha<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>JONSWAP alpha
+  parameter<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.gammaJON<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>JONSWAP gamma
+  parameter<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.sigmaA<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>JONSWAP sigma-A
+  parameter<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.sigmaB<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>JONSWAP sigma-B
+  parameter<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.sigma<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Std Deviation of Gaussian
+  (Gaussian and Lognormal fits)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.hsif<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Partition fitted
+  significant wave height (m)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.lambda<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Ochi-Hubble
+  Spectral Shape Parameter <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.tzif<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Partition fitted
+  zero-crossing period (s)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.tpif<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Partition fitted
+  peak period (s)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.Lzif<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Partition fitted
+  wavelength (m) (deep water calculation)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.tzf<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Full spectrum
+  fitted zero-crossing period (s)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.hsf<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Full spectrum
+  fitted significant wave height (m)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.tpf<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Full spectrum
+  fitted peak period (s)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.Lzf<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Full spectrum fitted
+  wavelength (m) (deep water calculation)<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
         <p class="Bullets1" id="u4399-460">&nbsp;</p>
         <p class="Bullets1" id="u4399-462">Additional wavedat.sfit fields for directional fits include</p>
         <p class="Bullets1" id="u4399-463">&nbsp;</p>
-        <p class="Bullets1" id="u4399-465">.fittype2d Ewans_ws, Ewans_sw, or cos2n</p>
-        <p class="Bullets1" id="u4399-467">.dmif Partition mean direction (deg)</p>
-        <p class="Bullets1" id="u4399-469">.dpif Partition peak direction (deg)</p>
-        <p class="Bullets1" id="u4399-471">.spif Partition directional spread</p>
-        <p class="Bullets1" id="u4399-473">.ncos Cos^2n spread parameter (n)</p>
-        <p class="Bullets1" id="u4399-475">.dmf Full spectrum mean direction (deg)</p>
-        <p class="Bullets1" id="u4399-477">.dpf Full spectrum peak direction (deg)</p>
-        <p class="Bullets1" id="u4399-479">.spf Full spectrum directional spread</p>
+        <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.fittype2d<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Ewans_ws,
+  Ewans_sw, or cos2n<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.dmif<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Partition mean
+  direction (deg)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.dpif<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Partition peak
+  direction (deg)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.spif<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Partition
+  directional spread<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.ncos<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Cos^2n spread
+  parameter (n)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.dmf<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Full spectrum mean
+  direction (deg)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.dpf<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Full spectrum peak
+  direction (deg)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>.spf<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Full spectrum
+  directional spread<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
         <p class="Bullets1" id="u4399-480">&nbsp;</p>
         <p class="Bullets1" id="u4399-481">&nbsp;</p>
         <p class="Bullets1" id="u4399-483">The directional fields are omitted for non-directional data.&nbsp; The format for these fields is identical to the partition data in wavedat.out.</p>
         <p class="Bullets1" id="u4399-484">&nbsp;</p>
         <p class="Bullets1" id="u4399-485">&nbsp;</p>
         <p class="subheading">3.2 Data View Module</p>
-        <p class="Bullets1" id="u4399-489">Spectral Fit Plot Library</p>
+        <p class="Bolded-body-text">Spectral Fit Plot Library</p>
         <p class="Bullets1" id="u4399-490">&nbsp;</p>
         <p class="Bullets1" id="u4399-492">The Spectral Fit Plot Library includes several display options to compare input and fitted data.&nbsp; These include scatter plots of wave height and period for wind seas, swells and composite (full) spectra.&nbsp; The fit RMS Error and Bias is displayed on each scatter plot.&nbsp; An example appears in the upper right sector of Figure 2. In addition, RMS error bar chart plots will allow a quick glance of the errors computed for each wave system.&nbsp; Furthermore wave height and period fit error tables provide RMS error statistics from a least squares analysis of each partition fit.</p>
         <p class="Bullets1" id="u4399-493">&nbsp;</p>
-        <p class="subheading">Data Export Utility</p>
+        <p class="Bolded-body-text">Data Export Utility</p>
         <p class="Bullets1" id="u4399-497">A Data Export Utility facilitates enhanced user control of saving data fields to external ASCII, EXCEL and MATLAB formatted data files.&nbsp; The table export GUI allows the user to select specific data fields to write to this file.&nbsp; As with other parameter tables, the user can save named templates for future use.</p>
         <p class="Bullets1" id="u4399-498">&nbsp;</p>
         <p class="Bullets1" id="u4399-500">The available fields are described in Tables 1-3.</p>
         <p class="Bullets1" id="u4399-501">&nbsp;</p>
-        <p class="Bullets1" id="u4399-503">Table 1.&nbsp; No Processing Export Data Fields</p>
+        <p class="caption">Table 1.&nbsp; No Processing Export Data Fields</p>
         <p class="Bullets1" id="u4399-504">&nbsp;</p>
-        <p class="Bullets1" id="u4399-506">Field&nbsp; Description</p>
-        <p class="Bullets1" id="u4399-508">Date&nbsp;&nbsp;&nbsp;&nbsp; Format: YYYYMMDDHH</p>
-        <p class="Bullets1" id="u4399-510">WS#&nbsp;&nbsp;&nbsp;&nbsp; Wind speed (m/s)</p>
-        <p class="Bullets1" id="u4399-512">WD# Wind Direction (deg from true north)</p>
-        <p class="Bullets1" id="u4399-514">Hs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Significant wave height (m) of total spectrum</p>
-        <p class="Bullets1" id="u4399-516">Tp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Peak period (s) of total spectrum</p>
-        <p class="Bullets1" id="u4399-518">T01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mean (zero-crossing) period (s) of total spectrum</p>
-        <p class="Bullets1" id="u4399-520">L01&nbsp;&nbsp;&nbsp;&nbsp; Wave length (m) of total spectrum calculated from T01</p>
-        <p class="Bullets1" id="u4399-522">Cp&nbsp;&nbsp;&nbsp; Phase speed (m/s) of total spectrum calculated from Tp</p>
-        <p class="Bullets1" id="u4399-524">Dp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Peak direction (deg from true north) of total spectrum</p>
-        <p class="Bullets1" id="u4399-526">Dm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mean direction (deg from true north) of total spectrum</p>
-        <p class="Bullets1" id="u4399-528">Sp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Spectral spread (deg) of total spectrum</p>
+        <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b
+  style='mso-bidi-font-weight:normal'>Field <o:p></o:p></b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b
+  style='mso-bidi-font-weight:normal'>Description<o:p></o:p></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Date<span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Format:
+  YYYYMMDDHH</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>WS<sup>#</sup><span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Wind
+  speed (m/s)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>WD<sup>#</sup></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Wind
+  Direction (deg from true north)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Hs<span
+  style='mso-spacerun:yes'>     </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Significant
+  wave height (m) of total spectrum</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Tp<span
+  style='mso-spacerun:yes'>     </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Peak
+  period (s) of total spectrum</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>T01<span
+  style='mso-spacerun:yes'>    </span><span style='mso-tab-count:1'>  </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Mean
+  (zero-crossing) period (s) of total spectrum</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>L01<span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Wave
+  length (m) of total spectrum calculated from T01</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Cp<span style='mso-spacerun:yes'>   </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Phase speed (m/s) of total spectrum calculated from Tp</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Dp<span
+  style='mso-spacerun:yes'>     </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Peak
+  direction (deg from true north) of total spectrum</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Dm<span
+  style='mso-spacerun:yes'>    </span><span style='mso-spacerun:yes'> </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Mean
+  direction (deg from true north) of total spectrum</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Sp<span
+  style='mso-spacerun:yes'>     </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Spectral
+  spread (deg) of total spectrum</p>
+  </td>
+ </tr>
+</table>
+
         <p class="Bullets1" id="u4399-529">&nbsp;</p>
         <p class="Bullets1" id="u4399-530">&nbsp;</p>
-        <p class="Bullets1" id="u4399-532">Table 2.&nbsp; Wave Systems Export Data Fields</p>
+        <p class="caption">Table 2.&nbsp; Wave Systems Export Data Fields</p>
         <p class="Bullets1" id="u4399-533">&nbsp;</p>
-        <p class="Bullets1" id="u4399-535">Field Description</p>
-        <p class="Bullets1" id="u4399-537">par&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Partition identifier (0= windsea, 1-n = swells)</p>
-        <p class="Bullets1" id="u4399-539">sys System group identifier (0= windsea, 1-n = swells groups)</p>
-        <p class="Bullets1" id="u4399-541">Hsi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Significant wave height (m) of system</p>
-        <p class="Bullets1" id="u4399-543">Tpi&nbsp;&nbsp;&nbsp;&nbsp; Peak period (s) of system</p>
-        <p class="Bullets1" id="u4399-545">T01i&nbsp;&nbsp;&nbsp;&nbsp; Mean (zero-crossing) period (s) of system</p>
-        <p class="Bullets1" id="u4399-547">L01i&nbsp;&nbsp;&nbsp;&nbsp; Wave length (m) of system calculated from T01i</p>
-        <p class="Bullets1" id="u4399-549">Cpi&nbsp;&nbsp; Phase speed (m/s) of system calculated from Tpi</p>
-        <p class="Bullets1" id="u4399-551">Dpi&nbsp;&nbsp;&nbsp;&nbsp; Peak direction (deg from true north) of system</p>
-        <p class="Bullets1" id="u4399-553">Dmi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mean direction (deg from true north) of system</p>
-        <p class="Bullets1" id="u4399-555">Spi&nbsp;&nbsp;&nbsp;&nbsp; Spectral spread (deg) of system</p>
+        <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b
+  style='mso-bidi-font-weight:normal'>Field<o:p></o:p></b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b
+  style='mso-bidi-font-weight:normal'>Description<o:p></o:p></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>par<span
+  style='mso-spacerun:yes'>     </span><span style='mso-tab-count:1'>  </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Partition
+  identifier (0= windsea, 1-n = swells)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>sys</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>System
+  group identifier (0= windsea, 1-n = swells groups)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Hsi<span
+  style='mso-spacerun:yes'>     </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Significant
+  wave height (m) of system </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Tpi<span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Peak
+  period (s) of system </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>T01i<span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Mean
+  (zero-crossing) period (s) of system </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>L01i<span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Wave
+  length (m) of system calculated from T01i</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Cpi<span
+  style='mso-spacerun:yes'>  </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Phase
+  speed (m/s) of system calculated from Tpi</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Dpi<span style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Peak direction (deg from true north) of system</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Dmi<span
+  style='mso-spacerun:yes'>     </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Mean
+  direction (deg from true north) of system</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Spi<span style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Spectral spread (deg) of system</p>
+  </td>
+ </tr>
+</table>
+
         <p class="Bullets1" id="u4399-556">&nbsp;</p>
         <p class="Bullets1" id="u4399-557">&nbsp;</p>
-        <p class="Bullets1" id="u4399-559">Table 3.&nbsp; Spectral Fit Export Data Fields</p>
+        <p class="caption">Table 3.&nbsp; Spectral Fit Export Data Fields</p>
         <p class="Bullets1" id="u4399-560">&nbsp;</p>
-        <p class="Bullets1" id="u4399-562">Field Description</p>
-        <p class="Bullets1" id="u4399-564">Hsf&nbsp;&nbsp;&nbsp;&nbsp; Significant wave height (m) of total fitted spectrum</p>
-        <p class="Bullets1" id="u4399-566">Tpf&nbsp;&nbsp;&nbsp;&nbsp; Peak period (s) of total fitted spectrum</p>
-        <p class="Bullets1" id="u4399-568">T01f&nbsp;&nbsp;&nbsp; Mean (zero-crossing) period (s) of total fitted spectrum</p>
-        <p class="Bullets1" id="u4399-570">L01f&nbsp;&nbsp;&nbsp;&nbsp; Wave length (m) of total fitted spectrum calculated from T01f</p>
-        <p class="Bullets1" id="u4399-572">Cpf&nbsp; Phase speed (m/s) of total fitted spectrum calculated from Tpf</p>
-        <p class="Bullets1" id="u4399-574">Dpf&nbsp;&nbsp;&nbsp;&nbsp; Peak direction (deg from true north) of total fitted spectrum</p>
-        <p class="Bullets1" id="u4399-576">Dmf&nbsp;&nbsp;&nbsp;&nbsp; Mean direction (deg from/true north) of total fitted spectrum</p>
-        <p class="Bullets1" id="u4399-578">Spf&nbsp;&nbsp;&nbsp;&nbsp; Spectral spread (deg) of total fitted spectrum</p>
-        <p class="Bullets1" id="u4399-580">Type1D 1D Spectrum Fit Type (string)</p>
-        <p class="Bullets1" id="u4399-582">Type2D 2D Spectrum Fit Type (string)</p>
-        <p class="Bullets1" id="u4399-584">Hsif&nbsp;&nbsp;&nbsp; Significant wave height (m) of fitted system</p>
-        <p class="Bullets1" id="u4399-586">Tpif&nbsp;&nbsp;&nbsp; Peak period (s) of fitted system</p>
-        <p class="Bullets1" id="u4399-588">T01if Mean (zero-crossing) period (s) of fitted system</p>
-        <p class="Bullets1" id="u4399-590">L01if&nbsp;&nbsp; Wave length (m) of fitted system calculated from T01if</p>
-        <p class="Bullets1" id="u4399-592">Cpif&nbsp;&nbsp; Phase speed (m/s) of fitted system calculated from Tpif</p>
-        <p class="Bullets1" id="u4399-594">Dpif&nbsp;&nbsp;&nbsp; Peak direction (deg from true north) of fitted system</p>
-        <p class="Bullets1" id="u4399-596">Dmif&nbsp;&nbsp;&nbsp; Mean direction (deg from true north) of fitted system</p>
-        <p class="Bullets1" id="u4399-598">Spif&nbsp;&nbsp;&nbsp; Spectral spread (deg) of fitted system</p>
-        <p class="Bullets1" id="u4399-600">Alpha JONSWAP alpha parameter</p>
-        <p class="Bullets1" id="u4399-602">Gam&nbsp;&nbsp;&nbsp;&nbsp; JONSWAP Gamma parameter</p>
-        <p class="Bullets1" id="u4399-604">SigA JOSNWAP Sigma-A parameter</p>
-        <p class="Bullets1" id="u4399-606">SigB JOSNWAP Sigma-B parameter</p>
-        <p class="Bullets1" id="u4399-608">Sig Sigma of the fitted system</p>
-        <p class="Bullets1" id="u4399-610">Lambda Ochi-Hubble shape parameter</p>
-        <p class="Bullets1" id="u4399-612">ncos n of fitted system (from cos^2n fit)</p>
+        <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b
+  style='mso-bidi-font-weight:normal'>Field<o:p></o:p></b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b
+  style='mso-bidi-font-weight:normal'>Description<o:p></o:p></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Hsf<span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Significant
+  wave height (m) of total fitted spectrum</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Tpf<span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Peak
+  period (s) of total fitted spectrum</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>T01f<span
+  style='mso-spacerun:yes'>   </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Mean
+  (zero-crossing) period (s) of total fitted spectrum</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>L01f<span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Wave
+  length (m) of total fitted spectrum calculated from T01f</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Cpf </p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Phase speed (m/s) of total fitted spectrum calculated from
+  Tpf</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Dpf<span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Peak
+  direction (deg from true north) of total fitted spectrum</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Dmf<span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Mean
+  direction (deg from/true north) of total fitted spectrum</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Spf<span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Spectral
+  spread (deg) of total fitted spectrum</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Type1D</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>1D
+  Spectrum Fit Type (string)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Type2D</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>2D
+  Spectrum Fit Type (string)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Hsif<span
+  style='mso-spacerun:yes'>   </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Significant
+  wave height (m) of fitted system </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Tpif<span style='mso-spacerun:yes'>   </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Peak period (s) of fitted system</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>T01if</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Mean (zero-crossing) period (s) of fitted system</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>L01if<span
+  style='mso-spacerun:yes'>  </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Wave
+  length (m) of fitted system calculated from T01if</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Cpif<span
+  style='mso-spacerun:yes'>  </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Phase
+  speed (m/s) of fitted system calculated from Tpif</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Dpif<span
+  style='mso-spacerun:yes'>   </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Peak
+  direction (deg from true north) of fitted system </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Dmif<span
+  style='mso-spacerun:yes'>   </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Mean
+  direction (deg from true north) of fitted system </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Spif<span
+  style='mso-spacerun:yes'>   </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Spectral
+  spread (deg) of fitted system </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Alpha</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>JONSWAP
+  alpha parameter</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Gam<span
+  style='mso-spacerun:yes'>    </span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>JONSWAP
+  Gamma parameter</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>SigA</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>JOSNWAP
+  Sigma-A parameter</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>SigB</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>JOSNWAP
+  Sigma-B parameter</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Sig</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Sigma
+  of the fitted system</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Lambda</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Ochi-Hubble
+  shape parameter</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>ncos</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>n
+  of fitted system (from cos^2n fit)</p>
+  </td>
+ </tr>
+</table>
+
         <p class="Bullets1" id="u4399-613">&nbsp;</p>
         <p class="Bullets1" id="u4399-615">#Note:&nbsp; Wind data are only included if available in wavedat</p>
         <p class="Bullets1" id="u4399-616">&nbsp;</p>

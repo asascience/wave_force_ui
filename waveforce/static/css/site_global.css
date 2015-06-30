@@ -152,6 +152,26 @@ a.nontext /* used to override default properties of 'a' tag */
 	padding: 0px;
 }
 
+.green-heading
+{
+	color: #007a78;
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 29px;
+	padding: 0px;
+}
+
+.purple-heading
+{
+	color: #8f6dc0;
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 29px;
+	padding: 0px;
+}
+
 .main-heading
 {
 	color: #84878A;
@@ -164,6 +184,24 @@ a.nontext /* used to override default properties of 'a' tag */
 .section-heading
 {
 	color: #366196;
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 20px;
+}
+
+.autowaves-section-heading
+{
+	color: #007a78;
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 20px;
+}
+
+.wavector-section-heading
+{
+	color: #8f6dc0;
 	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
 	font-size: 30px;
 	font-weight: bold;

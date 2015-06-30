@@ -1,0 +1,60 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u4354">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u4355-560" data-muse-uid="U4355">
+
+PROGRAM OPERATION
+Data import, processing, generation of output products are automatic when AutoWaves is launched.  If waitbars are set to ‘on’ in the parameters file, they will be displayed to inform the user of program progress.  When processing is complete, output products are automatically written to the filename and location specified in the parameters file.
+For troubleshooting you can launch AutoWaves from a command prompt (Run Option 4).  Any generated error messages will be written to the command prompt window.
+
+LOADING WIND AND WAVE DATA
+AutoWaves provides a complete sea state analysis of observed or modeled sea conditions.  Wave data are obtained from directional wave sensors such as a buoy, radar or acoustic measurement device; from numerical wave models such as WaveWatch III or SWAN, or from climatological data bases such as from Oceanweather.  Furthermore, the delineation of sea and swell is optimized if wind speed and direction data are also provided as inputs.  A summary of the available input formats are described below.
+
+Wave Data Formats
+
+There are many different technologies for measuring and modeling waves and unfortunately no widely adopted standards for the storage and reporting of directional wave data.  Hence AutoWaves has been adapted to read in directional wave data from a diverse set of input formats.  A summary listing of these input formats is provided in Table 1.
+
+Sample files for each of these input data formats are available upon request from WaveForce Technologies.  Please note that NetCDF dataypes are not yet supported by stand-alone versions of AutoWaves.  
+
+Wind Data Formats
+
+For those wave data formats that do not include wind data (See Table 1), an optional wind data file can be loaded.  The use of wind data is not required; however the performance of the wave partitioning algorithm can be improved when winds are provided.  At present the wind data are provided in a binary Matlab (*.mat) file.  The mat-file contains an 8-column matrix named wind with the following columns:
+
+1.	Year (YYYY)
+2.	Month (MM)
+3.	Day (DD)
+4.	Hour (hh)
+5.	Minute (mm)
+6.	Second (ss)
+7.	Wind Direction (deg true from N)
+8.	10-m Wind speed (m/s)
+The wind observation times are not required to match up with the wave observation times, as AutoWaves will vector interpolate the wind data to the wave data observation times.  Example wind files are available from WaveForce Technologies.
+
+
+
+
+Table 1.  AutoWaves Input Wave Data Formats
+
+Name	Format	General Description
+Datawell	*.spt text files	Spectral energy, direction, spread, skewness and kurtosis
+CDIP	*.txt files	Spectral energy, spread, and Fourier coefficients (a1, b1, a2, b2)
+WAMOS	*.FTM text files	Spectral matrix of energy as a function of frequency and direction.  Wind speed and direction time series are optional
+Wavescan	*.txt text files	Spectral energy, spread, and Fourier coefficients (a1, b1, a2, b2)
+WavescanTS	*.txt text files	Raw Wavescan heave, pitch and roll time series files
+Triaxys	*.DIRSPEC text files	Spectral matrix of normalized energy as a function of frequency and direction
+Nortek	*.wft text files	Spectral matrix of normalized energy as a function of frequency and direction
+NDBC 45-day	*.txt text files	National Data Buoy Center wind, spectral energy, spread, and Fourier coefficients (α1, r1, α2, r2)
+NODC	*.txt text files	National Ocean Data Center wind and wave spectra data files
+Oceanweather	*.asc text files	Spectral matrix of normalized energy as a function of frequency and direction; wind speed and direction time series
+WaveWatchIII	*.spc text files	Spectral matrix of energy as a function of frequency and direction; wind speed and direction time series
+SWAN	*.txt text files	Spectral matrix of energy as a function of frequency and direction; wind speed and direction time series in a separate file
+Generic	*.mat files	Wind and wave spectra data in generic Matlab files
+Generic ASCII	*.txt files	Spectral energy, spread, and Fourier coefficients (a1, b1, a2, b2) in a generic text file (similar to CDIP)
+
+AUTOMATIC AND WINDOWS SERVICE UPDATE MODES
+For real-time operations with WavescanTS data formats, AutoWaves allows the selection of either Automatic or Windows Service update modes.  Note that only one of these modes should be selected in the run_parameters.txt file.
+If the Automatic Update Mode is selected, AutoWaves will launch automatically on a user-defined time interval (h).  The computer clock is used to log the time interval.  
+If the Windows Service Mode is selected, The Windows Scheduler should be set up to launch the AutoWaves application at desired intervals.  
+In both of these update modes, AutoWaves will save data files in monthly batches.  The previous feature of generating monthly folders has been disabled.
+
+    </div>
+</div>

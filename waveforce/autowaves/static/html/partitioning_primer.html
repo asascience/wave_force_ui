@@ -11,10 +11,10 @@
         <p id='u2262-5'>&nbsp;</p>
         <p class="body"> For completeness, we summarize the methods here and provide detail on the improvements that have been made since HP01. </p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">Wave Component Identification</p>
+        <p class="green-heading">Wave Component Identification</p>
         <p class="body">The first step of spectral partitioning is to isolate spectral regions S(f,&theta;) associated with individual energy peaks. This was accomplished by HP01 with a time-consuming recursive algorithm that assigned each spectrum value to a path of steepest ascent associated with a local peak. All paths leading to the same peak were assigned to a distinct spectral partition. This step has been improved with efficient image processing routines that were designed for making watershed delineations in topographic imagery (Soille 1999, Vincent and Soille 1991). Treating the spectrum as an inverse topographic domain, an 8-point connected smoothing transform removes fine-scale noise in the spectrum. A watershed delineation transform then identifies the boundaries forming the minima between remaining spectral peaks. Spectral regions surrounded by such boundaries become individual partitions. This change in basic methodology has reduced by an order of magnitude the time required to process each record, with essentially no change in output results.</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">Wave Component Identification</p>
+        <p class="green-heading">Wave Component Identification</p>
         <p class="body">
             Once the initial partitions are identified, a variety of component statistics are computed to aid with further processing. These include the 1D energy spectrum </p>
         <p class="body">&nbsp;</p>
@@ -58,10 +58,10 @@
             <p class="body">&nbsp;</p>
             <p class="body">Both full spectrum and spectral component statistics are computed using the above relationships. Integration domains are implied to be over all frequency bins and from 0 to 2&pi; in direction. For computing statistics of a spectral component, all spectral values not falling within the partition domain are set to zero.</p>
             <p class="body">&nbsp;</p>
-            <p class="blue-heading">Wind-sea and swell combinations</p>
+            <p class="green-heading">Wind-sea and swell combinations</p>
             <p class="body">The resulting wave components are sorted into wind-sea or swell. To be classified as wind-sea, a spectral peak must be forced by a component of the existing wind. A wave-age criterion is used to identify and combine the 2D wind-sea partitions. All remaining peaks are labeled as swell. Adjacent 2D swell peaks that are contiguous in frequency can be part of the same swell system and are combined under certain conditions. Two tests are made to determine if adjacent swell peaks belong to the same wave system. A swell angle threshold test requires the mean directions of adjacent peaks be separated by less than a threshold angle. A threshold value of 30 deg yielded optimum results with the Pacific Ocean data and provided a comfortable margin outside the stated +/-10-deg accuracy of the buoy directions. A second test compares the f, &theta; spectral distance between peaks in relation to their individual spectral spreads. Peaks are combined if the spread of either peak is large compared to the distance between the two peaks. Wave component statistics are updated after each combination is made.</p>
             <p class="body">&nbsp;</p>
-            <p class="blue-heading">Minimum Wave Height Threshold and Storage of Results</p>
+            <p class="green-heading">Minimum Wave Height Threshold and Storage of Results</p>
             <p class="body">As a final step in producing consistent results with minimal noise, any wind-sea or swell component that falls below a significant wave height threshold of 0.1 m is removed from analysis and labeled as miscellaneous energy.</p>
             <p class="body">&nbsp;</p>
             <p class="body">The partitioning results are stored in a wave component template T(f,&theta;) that has the same degrees of freedom and cut-off frequency as the input spectrum. Matrix values contained in the template can be one of the following:</p><p class="body">&nbsp;</p>
@@ -104,7 +104,7 @@
             <p class="body">&nbsp;</p>
             <p class="body">An example of a partitioned buoy spectrum containing a wind-sea and three swell components appears in Fig 1.</p>  
             <p class="body">&nbsp;</p>
-            <p class="blue-heading">Swell Tracking</p>
+            <p class="green-heading">Swell Tracking</p>
             <p class="body">Once a time series of directional wave spectra has been partitioned, a clustering algorithm is used to link common wave components together through time. This results in the generation of wave systems, which are statistically represented by time-evolving series of Hs (approximated by H<SUB>mo</SUB>), T<SUB>p</SUB>, and attributes associated with each wave component. A convenient display of these features is in the form of the wave vector history plot shown in Fig 2a. At any given time, the wave field is composed of multiple wave components that are members of a distinct evolving wave system. For example, the wave vectors at the dashed vertical line in Fig 2a correspond to the wave components identified in Fig. 1. The wave vector history shows how these particular components evolve through time. Wind-seas (black arrows) are driven by local winds. The swell events are more persistent, with systems from the North and South Pacific both typically lasting about 6 days. It is interesting to note that the two most energetic wave height events during this two-week period (Fig. 2b) are a result of the superposition of locally increased wind-seas with energetic swells from three different origins.</p>
             <span><span class="actAsDiv normal_text" id="u2986"><!-- content --><span class="actAsDiv clip_frame" id="u2980"><!-- image --><img class="block" id="u2980_img" src="../static/img/partition1.gif" alt="" width="450" height="320" data-muse-uid="U2980" data-muse-src="../static/img/partition1.gif" /></span></span>
             <p class="body">Note: Energy levels logarithmically scaled to the peak value</p><p class="body">&nbsp;</p>
@@ -114,7 +114,7 @@
             <span><span class="actAsDiv normal_text" id="u2986"><!-- content --><span class="actAsDiv clip_frame" id="u2980"><!-- image --><img class="block" id="u2980_img" src="../static/img/partition2.jpg" alt="" width="569" height="320" data-muse-uid="U2980" data-muse-src="../static/img/partition2.jpg" /></span></span>
             <p class="body">Fig. 2. Example results from Spectral Partitioning Module showing persistent wave system evolution during November 2000 at NDBC Station 51028. a. Wave vector history. Wave vectors represent the height (length), peak frequency (origin), and direction of travel (azimuth) of evolving wave systems (color-coded). For clarity, only wave systems persisting 10-h or longer are displayed. b. Full-spectrum significant wave height.</p>
             <p class="body">&nbsp;</p>
-            <p class="blue-heading">References</p>
+            <p class="green-heading">References</p>
             <p class="body">&nbsp;</p>
 			<p class="body">Beal, R. C., Ed, 1989:  <i>Directional Ocean Wave Spectra</i>. The Johns Hopkins University Press, Baltimore, MD, 218 pp.</p>
 			<p class="body">Gerling, T. W., 1992:  Partitioning sequences and arrays of directional ocean wave spectra into component wave systems.  <i>J. Atmos. Oceanic Technol.</i>, 9, 444-458.</p>

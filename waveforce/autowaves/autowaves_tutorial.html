@@ -17,7 +17,7 @@
     <link href="../static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../static/css/site_global.css?4283238856"/>
     <link rel="stylesheet" type="text/css" href="../static/css/master_a-master.css?4206305167"/>
-    <link rel="stylesheet" type="text/css" href="../static/css/sea-state-analysis-module.css?3998993038" id="pagesheet"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/loading-data.css?4176903654" id="pagesheet"/>
 </head>
 
 <body>
@@ -51,13 +51,13 @@
             <div class="col-sm-4 col-md-3 sidebar">
                 <nav class="bs-docs-sidebar affix">
                     <img src="../static/img/autowaves.png" width='175' height='153' class="sidebar-image">
-                    <ul id="sidebarToc" class="nav bs-docs-sidenav nav-sidebar autowaves-toc">
+                    <ul id="sidebarToc" class="nav bs-docs-sidenav autowaves-toc">
                     </ul>
                 </nav>
             </div>
             <div class="col-sm-7 main content-page">
-                <p class="autowaves-section-heading">Sea State Module</p>
-                <p class="section-description">Generate sea state and extremal inputs to Metocean engineering and design studies</p>
+                <p class="autowaves-section-heading">Tutorials</p>
+                <p class="section-description">Import data from wave sensors, models and internet archives </p>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 </div>
             </div>
@@ -119,12 +119,11 @@
     $.each(tocItems, function(index, item) {
         $("#sidebarToc").append("<li><a href='" + toc[item].link + "''>" + toc[item].name + "</a></li>")
     });
-
      var data = {
-        "Sea State Overview" :
-            "static/html/sea_state_help.html"
-        ,"Sea State Parameters Table" :
-            "static/html/sea_state_parameters_table.html"
+        "Importing Data" :
+            "static/html/import_data.html"
+        ,"Working with NetCDF Files" :
+            "static/html/working_with_netcdf.html"
     };
 
     var panels = Object.keys(data);
