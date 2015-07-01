@@ -7,10 +7,10 @@
         <!-- m_editable region-id="editable-static-tag-U2418" template="loading-data.html" data-type="html" data-ice-options="disableImageResize,none" -->
         <p class="body">XWaves operates on non-directional or directional wave spectra in a variety of data formats.  Wind speed and direction data can also be read in for some data types.  Special formatters are included for reading data from selected commercial wave sensors, numerical wave models, and internet data archives.  Furthermore Generic MATLAB and text file formats allow the user to convert wave spectrum data from any source into a useable form.  Custom data formatters are available upon request.</p>
         <p class="body">&nbsp;</p>
-        <p class="green-heading">Import Raw Data</p>
+        <p class="blue-heading">Import Raw Data</p>
         <p class="body">From the File dropdown menu, mouse over Load Raw Data to see all of the available <a href="references.html#collapse0">data types</a>. Select the appropriate data type and a Verify Parameters window will appear with the default settings for that data type. Click on Modify to create your own settings in the <span id="u2418-6">Import Parameters Table</span>.</p>
         <p class="body">&nbsp;</p>
-        <p class="green-heading">Import Parameters Table</p>
+        <p class="blue-heading">Import Parameters Table</p>
         <p class="body">The <span id="u2418-15">Import Parameters Table</span> is used to select and prepare raw data for loading.&nbsp; The user can select the files to load, specify to use measured or estimated winds, apply data smoothing or sub-setting, etc.&nbsp; The specific contents of the table vary depending on what data type are selected to load.&nbsp; For example, loading <a href="data_formats.html#collapse1">Datawell Waverider *.SPT</a> files requires the user to identify the latitude, longitude and water depth at the observation station, whereas this information is included in the <a href="data_formats.html#collapse2">Coastal Data Information Program (CDIP)</a> raw data and not a required user input.&nbsp; The selected settings are saved to a named parameter set, and can be retrieved at any time.</p>
         <p class="body">&nbsp;</p>
         <p class="body">The various user inputs to the <span id="u2418-24">Import Parameters Table</span> are described below. Not all of these will be available for each data type.</p>
@@ -67,7 +67,7 @@
         <p class="subheading">Data SubSample Interval (h)</p>
         <p class="body">Select the desired interval in hours for record sub-sampling.&nbsp; Records that fall in-between this interval will be removed.&nbsp; For example, if a 3-h <span id="u2418-154">Data SubSamplet</span> Interval is selected for data that is provided hourly, every third record will be saved.&nbsp; Set the <span id="u2418-156">Data SubSample</span> <span id="u2418-158">Interval</span> to 0 to save every record.</p>
         <p class="body">&nbsp;</p>
-        <p class="green-heading">Wind Data Processing</p>
+        <p class="blue-heading">Wind Data Processing</p>
         <p class="body">The <span id="u2418-165">Wave Systems</span> routines require wind information to separate windsea from swell wave components.&nbsp; If winds are not provided, the 10-m wind speed (U10) and direction (if 2D data) will be estimated based on the shape of the input wave spectra.&nbsp; If wind data are provided by the user, the following two wind data processing options are available through a separate Wind Processing Options window that appears after the Import Parameters Table:</p>
         <p class="body">&nbsp;</p>
         <p class="subheading">Estimate Winds in Data Gaps </p> <p class="body"> Enter Yes to estimate winds in large gaps in the input wind data file.&nbsp; The user will be prompted to specify the maximum gap duration (h) for interpolating winds. Wind information in data gaps larger that this will be estimated.</p>
@@ -76,7 +76,7 @@
         <p class="body">&nbsp;</p>
         <p id="u2418-177">&nbsp;</p>
 
-        <p class="green-heading">Import Processed Data</p>
+        <p class="blue-heading">Import Processed Data</p>
         <p class="body">Processed data files are files that have been previously saved from XWaves.  These can be reloaded  using  the <span id="u2418-6">Open XWaves File</span> command in the <span id="u2418-6">File</span> dropdown menu.  The selected file is automatically loaded  into the Data View module. </p>
 
         <!-- /m_editable -->
