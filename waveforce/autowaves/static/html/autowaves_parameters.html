@@ -1,0 +1,1150 @@
+<div class="AccordionPanelContent disn clearfix colelem" id="u4354">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u4355-560" data-muse-uid="U4355">
+        <p class="body">AutoWaves program options are specified in the Parameters Text File.  This typically has the filename run_parameters.txt, however the user can select any filename desired (with a .txt extension). The critical contents of this file are reproduced below.  Descriptions follow each set of options (in red).  Normally there will be no need for the user to open or edit the text parameters file, as these functions are now controlled by the set-up utility.</p>
+<p>&nbsp;</p>
+<p class="awparams">% AutoWaves Parameters File</p>
+<p class="awparams">% Last modified: 2013 September 16 11:08</p>
+<p>&nbsp;</p>
+<p class="awparams">% AutoWaves Setup:</p>
+<p>&nbsp;</p>
+<p class="awparams">% Data Type</p>
+<p class="awparams">parameters.auto.datatype = 'WavescanTS';</p>
+<p>&nbsp;</p>
+<p class="body">The Data Type specifies the input data being read into AutoWaves.  The options appear in Table A1.  See <a href="loading_data.html#collapse0">Loading Data</a> for additional detail on importing data.</p>
+
+<p>&nbsp;</p>
+        <p class="caption">Table A1. Available import data types</p><p>&nbsp;</p>
+        <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Datatype<o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Description<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>'NetCDF'<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span class=SpellE><span style='font-size:12.0pt;
+  font-family:"Times New Roman","serif"'>NetCDF</span></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman","serif"'>-formatted
+  data file (*.<span class=SpellE>nc</span>)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'AutoWaves
+  Data File'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>AutoWaves
+  data file (*.mat)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'Datawell'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Datawell
+  Waverider file (*.spt)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'CDIP'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>CDIP
+  Data File (*.txt)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'<span
+  class=SpellE>Triaxys</span>'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span class=SpellE><span style='font-size:12.0pt;
+  font-family:"Times New Roman","serif"'>Triaxys</span></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman","serif"'> buoy file
+  (*.DIRSPEC)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'Oceanweather'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Oceanweather
+  Hindcast file (*.asc)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'NDBC
+  45day'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>NDBC
+  spectral files (*.txt)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'NDBC
+  45day Download'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>NDBC
+  spectral files (*.txt)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'NODC'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>NODC
+  spectral files (*.NODC)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'NODC
+  Download'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>NODC
+  spectral files (*.NODC)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'Nortek'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>NORTEK
+  STORM files (*.wft)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'Wavescan'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Wavescan
+  spectral file ((*.txt)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'WavescanTS'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Wavescan
+  time series file<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'<span
+  class=SpellE>WaveWatchIII</span>'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>WAVEWATCHIII
+  model file (*.spc)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'SWAN'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>SWAN
+  model files (*.txt)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'esp2D'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>ROWE
+  Technologies file<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'WAMOS'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>WAMOS
+  spectral file (*.FTM)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'Generic
+  ASCII'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Generic
+  ASCII data file<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'Generic
+  1D'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Generic
+  1D spectra files (*.mat)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>'Generic
+  2D'</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Generic
+  2D spectra files (*.mat)<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+<p>&nbsp;</p>
+        <p class="awparams">% Save Data to .mat Flag, Enable=1, Disable=0</p>
+<p class="awparams">parameters.auto.SaveDataToEnable = 0;</p>
+<p>&nbsp;</p>
+<p class="body">Select to save an AutoWaves data file (*.mat) of processed data</p>
+<p>&nbsp;</p>
+<p class="awparams">% Path and filename for *.mat data file:</p>
+<p class="awparams">parameters.auto.SaveDataTo = 'C:\Users\Documents\AutoWaves_Projects\data_test.mat';</p>
+<p>&nbsp;</p>
+<p class="body">If saving an AutoWaves data file (*.mat), specify target path and filename</p>
+
+<p>&nbsp;</p>
+<p class="awparams">% Path to raw data</p>
+<p class="awparams">parameters.reformat.dirpath = 'C:\Users\AutoWaves_Projects\Wavescan\';</p>
+<p>&nbsp;</p>
+<p class="body">Specify path to raw input data</p>
+
+<p>&nbsp;</p>
+<p class="awparams">% Filename extension for raw data</p>
+<p class="awparams">parameters.reformat.fileext = '.txt';</p>
+<p>&nbsp;</p>
+<p class="body">Specify filename extension for raw data</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Path and filename of input wind data (if used):</p>
+<p class="awparams">parameters.reformat.winddirpath = 'C:\Users\Documents\AutoWaves_Projects\winds.mat';</p>
+<p>&nbsp;</p>
+<p class="body">Specify filename and path to wind input file (if used)</p>
+<p>&nbsp;</p>
+<p class="awparams">% Select 0 for no plots, 1 to save plots</p>
+<p class="awparams">parameters.auto.PlotEnable = 0;</p>
+<p>&nbsp;</p>
+<p class="body">Select if plots are to be saved or not (select plot types further below)</p>
+<p>&nbsp;</p>
+<p class="awparams">% Path to directory to save plots:</p>
+<p class="awparams">parameters.auto.PlotFolder = 'C:\Users\AutoWaves_Projects\Wavescan\plots\';</p>
+<p>&nbsp;</p>
+<p class="body">If plots are being saved, specify folder to save them to</p>
+<p>&nbsp;</p>
+<p class="awparams">% Path and filename for export wizard output:</p>
+<p class="awparams">parameters.auto.SaveExportWizardTo = 'C:\Users\AutoWaves_Projects\Wavescan\results\test.txt';</p>
+<p>&nbsp;</p>
+<p class="body">If export wizard data are being saved, specify filename and folder  to save them to</p>
+ <p>&nbsp;</p>
+<p class="awparams">% Spectral Coefficient Text File Output Flag, Enable=1, Disable=0</p>
+<p class="awparams">parameters.auto.SaveSpecCoeffToEnable = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Select if spectral coefficient text files are to be saved or not </p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Folder Path for Spectral Coefficient Text File</p>
+<p class="awparams">parameters.auto.SaveSpecCoeffTo = 'C:\Users\AutoWaves_Projects\Wavescan\results\data.txt';</p>
+<p>&nbsp;</p>
+<p class="body">If spectral coefficient text files are being saved, specify filename and folder to save them to</p>
+
+<p>&nbsp;</p>
+<p class="awparams">% BlueFat Table File Output Flag, Enable=1, Disable=0</p>
+<p class="awparams">parameters.auto.ExportBlueFat = 0;</p>
+<p>&nbsp;</p>
+<p class="body">Select if BlueFat table file is to be saved or not </p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Path and filename for BlueFat Table Output File:</p>
+<p class="awparams">parameters.auto.SaveBlueFatFile = ' ';</p>
+<p>&nbsp;</p>
+<p class="body">If BlueFat table is being saved, specify filename and folder to save them to</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Path to Vessel Heading file for BlueFat table</p>
+<p class="awparams">parameters.auto.VesselHeadingPath = ' ';</p>
+<p>&nbsp;</p>
+ <p class="body">If BlueFat table is being saved, specify filename and path to vessel heading data</p>
+<p>&nbsp;</p>
+<p class="awparams">% Hs Recurrence Table File Output Flag, Enable=1, Disable=0</p>
+<p class="awparams">parameters.auto.ExportHsRecurrence = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Select to turn off (0) or on (1) export of Hs Recurrence Interval Table</p>
+
+<p>&nbsp;</p>
+<p class="awparams">% Path to Hs Recurrence Table</p>
+<p class="awparams">parameters.auto.SaveHsRecurrenceFile = 'C:\Users\u4hcfjlh\Desktop\XWaves 5 dev stuff\Wavescan Test\Plots\WaveHtTable.xls';</p>
+<p>&nbsp;</p>
+<p class="body">Specify filename and path to Hs Recurrence Interval Table (if used)</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Wind Speed Recurrence Table File Output Flag, Enable=1, Disable=0</p>
+<p class="awparams">parameters.auto.ExportWsRecurrence = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Select to turn off (0) or on (1) export of Wind Speed Recurrence Interval Table</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Path to Wind Speed Recurrence Table</p>
+<p class="awparams">parameters.auto.SaveWsRecurrenceFile = 'C:\Users\u4hcfjlh\Desktop\XWaves 5 dev stuff\Wavescan Test\Plots\WindSpeedTable.xls';</p>
+<p>&nbsp;</p>
+<p class="body">Specify filename and path to Wind Speed Recurrence Interval Table (if used)</p>
+<p>&nbsp;</p>
+<p class="awparams">% Set to 0 to turn off waitbars or 1 to turn them on</p>
+<p class="awparams">parameters.auto.display_waitbars = 0;</p>
+<p>&nbsp;</p>
+<p class="body">Select to turn waitbars on or off (allows you to view processing progress) </p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Log File Options.  Set to 0 to log all actions or 1 to only log error messages</p>
+<p class="awparams">parameters.auto.ErrorLogOption = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Select to specify desired log file contents </p>
+
+<p>&nbsp;</p>
+<p class="awparams">% AutoWaves Advanced Control Settings:</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.auto.name = ‘Datawell Parameters';</p>
+<p>&nbsp;</p>
+<p class="body">Enter a user-provided name for this parameters set</p>
+<p>&nbsp;</p>
+<p class="awparams">% Internal Software Setting, set to 1</p>
+<p class="awparams">parameters.auto.useset = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Leave useset set at 1</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.auto.AutoWavesDataFile = [];</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+<p class="awparams">% Single Record Spectral Coefficient Text File, Set to 1 for single record per File, Set to 0 for all records in one file.</p>
+<p class="awparams">parameters.auto.SingleRecordSpecCoeffEnable = 1;</p>
+<p>&nbsp;</p>
+
+<p class="body">If exporting spectral coefficient text files, specify file output format</p>
+<p class="awparams">% Automatic Update Option.  Set to 0 for no updates, 1 for automatic update:</p>
+<p class="awparams">parameters.auto.AutoUpdateEnable = 0;</p>
+<p>&nbsp;</p>
+<p class="body">Turn on the AutoWaves auto-update feature, using an internal timer</p>
+<p>&nbsp;</p>
+<p class="awparams">% Automatic update interval (h):</p>
+<p class="awparams">parameters.auto.AutoUpdateInterval = 0.02;</p>
+<p>&nbsp;</p>
+<p class="body">If using the AutoWaves auto-update feature, specify the update interval in hours</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Set to 0 for no append, 1 to append to existing data file:</p>
+<p class="awparams">parameters.auto.AutoUpdateAppend = 1;</p>
+<p>&nbsp;</p>
+<p class="body">If using the AutoWaves auto-update feature, specify if the output should be appended to the previous data file</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Windows Service Update Option.  Set to 1 to activate, 0 to inactivate:</p>
+<p class="awparams">parameters.auto.AutoUpdateService = 0;</p>
+<p>&nbsp;</p>
+<p class="body">Turn on the AutoWaves windows service update feature.  For this you will need to set up a windows scheduler to call AutoWaves at specified intervals.  Note that this feature only activated for Wavescan_TS data types.</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Raw Data Reformat Parameters:</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.auto.rfmt_num = 1;</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.name = 'WavescanTS Default';</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.obsyr = 2014;</p>
+<p>&nbsp;</p>
+<p class="body">Enter the year of observation (some data types require this)</p>
+<p>&nbsp;</p>
+<p class="awparams">% Decimal latitude of observation:</p>
+<p class="awparams">parameters.reformat.lat = 35;</p>
+<p>&nbsp;</p>
+<p class="body">Enter the latitude of observation (some data types require this)</p>
+<p>&nbsp;</p>
+<p class="awparams">% Decimal longitude of observation</p>
+<p class="awparams">parameters.reformat.lon = -20;</p>
+<p>&nbsp;</p>
+<p class="body">Enter the longitude of observation (some data types require this)</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.magcorr = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Activates magnetic correction of wave directions based on buoy location (only used by Datawell formatter)</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.timecorr = 0;</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.method = 1;</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.paramset = 0;</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.allfiles = 1;</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.onlyfiles = [1  53];</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Internal Software Setting, set to 1</p>
+<p class="awparams">parameters.reformat.useset = 1;</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.ewind = 1;</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+
+<p>&nbsp;</p>
+<p class="awparams">% Water depth (m) at observation location:</p>
+<p class="awparams">parameters.reformat.depth = 1000;</p>
+<p>&nbsp;</p>
+<p class="body">Enter the water depth at observation location (optional)</p>
+<p>&nbsp;</p>
+<p class="awparams">% Data smoothing window (h)</p>
+<p class="awparams">parameters.reformat.smooth = 0;</p>
+<p>&nbsp;</p>
+<p class="body">Enter the desired wave data smoothing interval (hours).  Set to 0 for no smoothing.  We typically set this to ‘3’ for measured data and ‘0’ for model data.</p>
+<p>&nbsp;</p>
+<p class="awparams">% Data subset interval (h)</p>
+<p class="awparams">parameters.reformat.subset = 0;</p>
+<p>&nbsp;</p>
+<p class="body">Enter the desired wave data subset interval (hours).  Set to 0 to keep all data.</p>
+<p>&nbsp;</p>
+<p class="awparams">% Number of output angle bins:</p>
+<p class="awparams">parameters.reformat.abins = 36;</p>
+<p>&nbsp;</p>
+<p class="body">Allows user to set the number of directional bins.  Bin width will be 360/abins.</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.datatype = 'WavescanTS';</p>
+<p>&nbsp;</p>
+<p class="body">The Data Type specifies the input data being read into AutoWaves.  The options are listed in Table A1.</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.datatypeuseset = 1;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.records = [1  2];</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.NDBCIdNum = 1;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Number of days to download from NDBC:</p>
+<p class="awparams">parameters.reformat.wwwnumdays = [];</p>
+<p class="body">For NDBC 45-day download, specify number of days desired in output file</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.NODCDate = [];</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.egap = 0;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Wind observation height (m) (if winds are provided):</p>
+<p class="awparams">parameters.reformat.windz = 10;</p>
+<p class="body">Specify the height of the wind observations (if known).  Otherwise, set to 10m</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.reformat.wind_data_num = 1;</p>
+<p class="body">No user input required</p>
+
+<p>&nbsp;</p>
+
+<p class="awparams">% CustomFileFormat is used to identify which characters within a filename are used for the following fields:</p>
+<p class="body">The following fields are for setting up custom Datawell file names (input data).  For Datawell data AutoWaves extracts the date and time from the file name.</p>
+<p>&nbsp;</p>
+<p class="awparams">% Buoy Data Name</p>
+<p class="awparams">parameters.reformat.CustomFileFormat{1} = [18  19  20];</p>
+ <p>&nbsp;</p>
+<p class="awparams">% Year [ y y y y ]</p>
+<p class="awparams">parameters.reformat.CustomFileFormat{2} = [1  2  3  4];</p>
+ <p>&nbsp;</p>
+<p class="awparams">% Month [ m m ]</p>
+<p class="awparams">parameters.reformat.CustomFileFormat{3} = [6  7];</p>
+ <p>&nbsp;</p>
+<p class="awparams">% Day [ d d ]</p>
+<p class="awparams">parameters.reformat.CustomFileFormat{4} = [9  10];</p>
+ <p>&nbsp;</p>
+<p class="awparams">% Hour [ H H ]</p>
+<p class="awparams">parameters.reformat.CustomFileFormat{5} = [12  13];</p>
+ <p>&nbsp;</p>
+<p class="awparams">% Minute [ M M ]</p>
+<p class="awparams">parameters.reformat.CustomFileFormat{6} = [15  16];</p>
+<p>&nbsp;</p>
+<p class="awparams">%  </p>
+<p class="awparams">parameters.auto.param_netCDF = [];</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+
+<p class="awparams">% Wave System Parameters:</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.auto.trk_num = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Set to -1 to deactivate Wave System processing.  See <a href="wave_systems_module.html#collapse0">Wave Systems Module</a> for additional detail.</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.tracking.name = '3 Components';</p>
+<p>&nbsp;</p>
+<p class="body">User provided name for tracking parameters</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.tracking.wsmult = 1.7;</p>
+<p>&nbsp;</p>
+<p class="body">Select the wave age multiplier for wind sea identification;</p> default value = 1.7</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.tracking.swellmin = 0.4;</p>
+ <p>&nbsp;</p>
+<p class="body">Set the minimum wave height (m) for a given partition</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.tracking.fa = 0.9;</p>
+ <p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.tracking.maxpar = 3;</p>
+<p>&nbsp;</p>
+<p class="body">Set the maximum number of partitions in each wave record</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.tracking.gap = 3;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+ 
+<p class="awparams">% 
+<p class="awparams">parameters.tracking.smallest = 5;</p>
+<p class="body">No user input required
+<p>&nbsp;</p>
+ 
+<p class="awparams">% </p>
+<p class="awparams">parameters.tracking.sa = 1;</p>
+<p class="body">No user input required</p>
+
+ <p>&nbsp;</p>
+<p class="awparams">% Internal Software Setting, set to 1</p>
+<p class="awparams">parameters.tracking.useset = 1;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+ 
+<p class="awparams">% </p>
+<p class="awparams">parameters.tracking.fac = 0.028;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+ 
+<p class="awparams">% </p>
+<p class="awparams">parameters.tracking.trend = 7;</p>
+<p>&nbsp;</p>
+<p class="body">Set the trend analysis window duration (hours)</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.tracking.windsea = 'extract2D';</p>
+<p>&nbsp;</p>
+<p class="body">Select the windsea identification method.  Available options appear in Table A2.</p>
+<p>&nbsp;</p>
+<p class="caption">Table A2. Windsea identification methods</p>
+<p>&nbsp;</p>
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b
+  style='mso-bidi-font-weight:normal'>Name<o:p></o:p></b></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b
+  style='mso-bidi-font-weight:normal'>Description<o:p></o:p></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>extract2d</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  class=SpellE>Directonal</span> wave age method</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>extract1d</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Non-directional
+  wave age method</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>ustar2d</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Directional
+  u-star wave age method</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  class=SpellE>waveforce</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>Wind
+  force method (best for model data)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>none</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>No
+  windsea identification</p>
+  </td>
+ </tr>
+</table>
+
+<p>&nbsp;</p>
+
+ 
+<p class="awparams">% </p>
+<p class="awparams">parameters.tracking.conserve = 'No';</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+ 
+<p class="awparams">% </p>
+<p class="awparams">parameters.tracking.forcemin = 50;</p>
+<p>&nbsp;</p>
+<p class="body">Wind force parameter, for use with waveforce method of windsea extraction.</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Spectral Fit Parameters:</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.auto.sfit_num = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Set to -1 to skip Spectral Fit processing.  See <a href="spectral_fitting_module.html#collapse0">Spectral Fit Module</a> for additional detail.</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.specfit.name = 'JONSWAP';</p>
+<p>&nbsp;</p>
+<p class="body">User-provided name for spectral fit parameters.</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.specfit.wsfit = 'JONSWAP';</p>
+<p>&nbsp;</p>
+<p class="body">Select method for wind sea fitting.  Available options include ‘JONSWAP’, GAUSSIAN’, LOGNORMAL’, and ‘OCHI-HUBBLE’.</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.specfit.sfit = 'JONSWAP';</p>
+<p>&nbsp;</p>
+<p class="body">Select method for swell fitting.  Available options include ‘JONSWAP’, GAUSSIAN’, LOGNORMAL’, and ‘OCHI-HUBBLE’.</p>
+ <p>&nbsp;</p>
+<p class="awparams">% Internal Software Setting, set to 1</p>
+<p class="awparams">parameters.specfit.useset = 1;</p>
+ <p class="body">No user input required</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.specfit.wsfit2D = 'COS2N';</p>
+<p>&nbsp;</p>
+<p class="body">Select method for wind sea directional fitting.  Available options include ‘COS2N’, EWANS WINDSEA’, and ‘EWANS SWELL’.</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.specfit.sfit2D = 'COS2N';</p>
+<p>&nbsp;</p>
+<p class="body">Select method for swell directional fitting.  Available options include ‘COS2N’, EWANS WINDSEA’, and ‘EWANS SWELL’.</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.specfit.econserve = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Turn energy conservation on (1) or off (0) for spectral fitting</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.specfit.tconserve = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Turn wave peak period conservation on (1) or off (0) for spectral fitting</p>
+<p>&nbsp;</p>
+ <p class="awparams">% </p>
+<p class="awparams">parameters.specfit.tolerance = 0.25;</p>
+ <p>&nbsp;</p>
+<p class="body">If wave peak period conservation is selected, specify the wave period tolerance for applying conservation (s).  In other words, if the fitted period varies by more than the tolerance with the observed period, then use the observed period.</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.specfit.jfit = 1;</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+<p class="awparams">% Sea State Parameters:</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.auto.sstate_num = 1;</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.name = '8sector';</p>
+<p>&nbsp;</p>
+<p class="body">User-provided name of parameter set (optional)</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.interval = 0;</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.ws = 1;</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.smax = 3;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.sdat = 'data';</p>
+<p>&nbsp;</p>
+<p class="body">Select scatter table data to use, ‘data’ or ‘fit’.  Selecting ‘fit’ will force all seastate computations to use spectral fit results.</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% 
+<p class="awparams">parameters.seastate.snorm = 'total';</p>
+<p>&nbsp;</p>
+<p class="body">Select scatter table normalization to apply, ‘total’, ‘none’, or component</p>
+<p>&nbsp;</p>
+<p class="body">total – Scatter Tables provide occurrence percentages relative to all components present</p>
+<p class="body">none – Scatter Tables provide the number of observations </p>
+<p class="body">component – Scatter Tables provide occurrence percentages relative to individual wave components (Windsea, swell1, etc.). A maximum of 3 wave systems are output.  </p>
+
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.hs_inc = 0.25;</p>
+<p>&nbsp;</p>
+<p class="body">Select scatter table wave height bin increment (m) </p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.tp_inc = 0.25;</p>
+<p>&nbsp;</p>
+<p class="body">Select scatter table wave period bin increment (s) </p>
+<p>&nbsp;</p>
+
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.nsect = 8;</p>
+<p>&nbsp;</p>
+<p class="body">Select number of directional sectors for scatter table computation </p>
+<p>&nbsp;</p>
+
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.sectors = [0   45   90  135  180  225  270  315];</p>
+<p>&nbsp;</p>
+<p class="body">Specify center of each directional sector for scatter table computation.  Should be same number of sectors as specified above.</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.width = [45  45  45  45  45  45  45  45];</p>
+<p>&nbsp;</p>
+<p class="body">Specify width of each directional sector for scatter table computation.  Should be same number of sectors as specified above.</p>
+<p>&nbsp;</p>
+<p class="awparams">% Internal Software Setting, set to 1</p>
+<p class="awparams">parameters.seastate.useset = 1;</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.vesselpath = [];</p>
+<p>&nbsp;</p>
+<p class="awparams">% No user input required</p>
+<p>&nbsp;</p>
+<p class="awparams">parameters.seastate.waveper = 'tp';</p>
+<p>&nbsp;</p>
+<p class="body">Specify period to use for scatter table computations,  ‘tp’ or ‘tz’ (peak or zero-crossing)</p>
+
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.wavedirs = 'north';</p>
+<p>&nbsp;</p>
+<p class="body">No user input required</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.wsthreshtype = 'const';</p>
+<p>&nbsp;</p>
+<p class="body">Specify Peaks over Threshold (PoT) wind speed threshold type, ‘const’ or ‘std’ for constant or standard deviation multiplier</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.wsthresh = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Specify Peaks over Threshold (PoT) wind speed threshold (based on type selected above)</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.hsthreshtype = 'std';</p>
+<p>&nbsp;</p>
+<p class="body">Specify Peaks over Threshold (PoT) wave height threshold type, ‘const’ or ‘std’ for constant or standard deviation multiplier</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% 
+<p class="awparams">parameters.seastate.hsthresh = 1;</p>
+<p class="body">Specify Peaks over Threshold (PoT) wave height threshold (based on type selected above)</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.seastate.plag = 72;</p>
+<p>&nbsp;</p>
+<p class="body">Specify peak lag (hr) for eliminating redundant peaks from the same storm. In the Peaks Over Threshold Analysis for wind speed and bulk wave height, this value indicates the minimum time lag in hours between successive events .</p>
+<p>&nbsp;</p>
+<p class="awparams">% Set to 1 to compute confidence bounds. Warning: computational time greatly increased</p>
+<p class="awparams">parameters.seastate.compute_error = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Select to turn on (1) or off (0) computation of extremal analysis confidence bounds</p>
+<p>&nbsp;</p>
+<p class="awparams">% Plot Export Settings</p>
+<p>&nbsp;</p>
+<p class="awparams">% Format of export plots (.bmp, .jpg, .pdf, .png, .tif, .emf, or .fig) :</p>
+<p class="awparams">parameters.auto.PlotFormat = '.png';</p>
+<p>&nbsp;</p>
+<p class="body">If saving plots, select the desired output format</p>
+<p>&nbsp;</p>
+<p class="awparams">% Plot Selections.  Set to 0 to disable plot, 1 to enable plot</p>
+<p class="awparams">% Note that plot numbers are not consecutive</p>
+<p class="awparams">% Plot selections only valid if parameters.auto.PlotEnable = 1</p>
+<p>&nbsp;</p>
+<p class="body">If saving plots, select the desired plots to save below (set PlotSelection value to 1)</p>
+<p>&nbsp;</p>
+
+<p class="awparams">% Input Data Plots</p>
+<p>&nbsp;</p>
+<p class="awparams">% #1 Data Summary</p>
+<p class="awparams">parameters.auto.PlotSelection(1) = 0;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #2 Wind Speed</p>
+<p class="awparams">parameters.auto.PlotSelection(2) = 0;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #3 Wind Direction</p>
+<p class="awparams">parameters.auto.PlotSelection(3) = 0;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #4 Significant Wave Height</p>
+<p class="awparams">parameters.auto.PlotSelection(4) = 1;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #5 Peak Period</p>
+<p class="awparams">parameters.auto.PlotSelection(5) = 0;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #38 Mean Period</p>
+<p class="awparams">parameters.auto.PlotSelection(38) = 0;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #39 Friction Velocity</p>
+<p class="awparams">parameters.auto.PlotSelection(39) = 0;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #6 Peak Direction</p>
+<p class="awparams">parameters.auto.PlotSelection(6) = 0;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #7 Spectrograph</p>
+<p class="awparams">parameters.auto.PlotSelection(7) = 0;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #8 Frequency Spectrum</p>
+<p class="awparams">parameters.auto.PlotSelection(8) = 0;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #9 Direction Spectrum</p>
+<p class="awparams">parameters.auto.PlotSelection(9) = 0;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #10 Contour 2D Spectrum</p>
+<p class="awparams">parameters.auto.PlotSelection(10) = 0;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #11 Polar 2D Spectrum</p>
+<p class="awparams">parameters.auto.PlotSelection(11) = 0;</p>
+<p>&nbsp;</p>
+<p class="awparams">% #12 Cartesian 2D Spectrum</p>
+<p class="awparams">parameters.auto.PlotSelection(12) = 0;</p>
+<p>&nbsp;</p>
+<p class="body">And so forth for the rest of the plot types…</p>
+
+<p>&nbsp;</p>
+<p class="awparams">% NDBC Station Selection</p>
+<p>&nbsp;</p>
+<p class="awparams">% Select 1 to enable www downloading from NDBC stations, 0 to disable</p>
+<p class="awparams">parameters.auto.StationsEnable = 0;</p>
+<p>&nbsp;</p>
+<p class="body">Select if you are downoloading data from NDBC stations</p>
+<p>&nbsp;</p>
+<p class="awparams">% Path to directory to save station data:</p>
+<p class="awparams">parameters.auto.StationFolder = 'Enter Folder Name or Browse';</p>
+<p>&nbsp;</p>
+<p class="body">If downloading NDBC data, select where to save the data</p>
+<p>&nbsp;</p>
+<p class="awparams">% Export Wizard Parameters</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.auto.ewiz_num = 1;</p>
+<p>&nbsp;</p>
+<p class="body">Set to -1 if not exporting data using the wizard.  See <a href="exporting_data.html#collapse0">Exporting Data</a> for additional detail.</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.name = 'Default';</p>
+<p>&nbsp;</p>
+<p class="body">User-selected parameter set name</p>
+<p>&nbsp;</p>
+ 
+<p class="awparams">% Internal Software Setting, set to 1</p>
+<p class="awparams">parameters.export.useset = 1;</p>
+ <p>&nbsp;</p>
+<p class="body">No change required</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.smax = 3;</p>
+<p>&nbsp;</p>
+<p class="body">Select the number of wave systems to export data for</p>
+<p>&nbsp;</p>
+ 
+<p class="awparams">% Text data export format (CSV, EXCEL, MAT-file, or ASCII):</p>
+<p class="awparams">parameters.export.format = 'CSV';</p>
+<p>&nbsp;</p>
+<p class="body">Select the export data format</p>
+<p>&nbsp;</p>
+<p class="awparams">% The following fields turn data elements off (0) or on (1) in output</p>
+<p>&nbsp;</p>
+<p class="body">Select data to export.  For each of the following turn fields off (0) or on (1).</p>
+<p>&nbsp;</p>
+<p class="awparams">parameters.export.header.filename = 1;</p>
+<p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.header.metadata = 0;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.header.proc_hist = 0;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.header.field_desc = 0;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.header.fieldnames = 1;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.datafields.date = 1;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.datafields.ws = 0;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.datafields.wd = 0;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.datafields.ustar = 0;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.datafields.hs = 0;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.datafields.tp = 0;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.datafields.t01 = 0;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.datafields.l01 = 0;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.datafields.cp = 0;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.datafields.dp = 0;</p>
+ <p>&nbsp;</p>
+<p class="awparams">% </p>
+<p class="awparams">parameters.export.datafields.dm = 0;</p>
+ <p>&nbsp;</p>
+<p class="body">And so forth for the rest of the export data fields…</p>
+<p>&nbsp;</p>
+    </div>
+</div>

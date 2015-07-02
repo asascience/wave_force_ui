@@ -1,0 +1,84 @@
+
+<div class="AccordionPanelContent disn clearfix colelem" id="u4354">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u4355-560" data-muse-uid="U4355">
+
+<p class="body">The AutoWaves Initialization Table is used to set up batch processing sequences for XWaves.  The user can customize an automated analysis session and save the settings to a named parameter set for future use.  The Initialization Table launched by selecting Modify from the AutoWaves splash screen.</p>
+ <p class="body">&nbsp;</p>
+<p class="body"><span id="u3081">​</span><span><span class="actAsInlineDiv normal_text" id="u3106"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u3100"><!-- image --><img id="u3100_img" src="../static/img/autowaves_init.png" alt="" width="530" height="297" data-muse-uid="U3100" data-muse-src="../static/img/autowaves_init.png" /></span></span>
+            </span><span></span></p>
+<p class="body">&nbsp;</p>
+
+<p class="body">The various user inputs to the Initialization Table are described below.  </p>
+<p class="body">&nbsp;</p>
+<p class="green-heading">Input Data</p>
+<p class="subheading">Parameter Set Name</p>
+<p class="body">This option allows the user to select a named set of initialization parameters.  If changes are made in the Initialization Table, the user is requested to provide a new name for the parameter set when either the Save or Start buttons are activated.</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Data Type</p>
+<p class="body">Enter the type of data to read into XWaves.  Options are XWaves (wavedat), NetCDF, and Raw data types (Datawell
+, Oceanweather, SWAN, WaveWatch, etc…).  This tells AutoWaves which data formatters to use when reading in wave spectra.  </p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Automated Update, and Interval</p>
+<p class="body">Click the Automated Update check box to have XWaves automatically check for data file updates.  Specify the time Interval (hours) between data analysis runs. </p>
+<p class="body">&nbsp;</p>
+<p class="subheading">XWaves Data File</p>
+<p class="body">Browse to select the XWaves data file to load and process.  This is only active when XWaves data file type has been selected in the above.</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">NetCDF Data File</p>
+<p class="body">Browse to select the NetCDF data file to load and process.  This is only active when NetCDF data file type has been selected in the above.  Upon selecting a NetCDF file to load, a NetCDF Settings table opens to allow the user to verify proper field selection.</p>
+<p class="body">&nbsp;</p>
+<p class="green-heading">Data Processing</p>
+<p class="subheading">Import</p>
+<p class="body">Specifies the name of the import parameter set to use.  Click Modify to open the Import Parameters Table for viewing or changing import parameter settings, including the name and location of the data files to process.  This feature is only active for raw data types (Datawell, Oceanweather, SWAN, WaveWatch, etc…).</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Wave Systems</p>
+<p class="body">Select this module to compute wave components and track wave systems through time.  Text box specifies the name of the wave systems parameter set to use.  Click Modify to open the Wave Systems Parameters Table for viewing or changing wave systems parameter settings.  Note that this is a modified version of the Wave Systems Parameters Table, without interactive plots.</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Spectral Fit</p>
+<p class="body">Select this module to compute spectral fits to the wave systems data.  Text box specifies the name of the spectral fit parameter set to use.  Click Modify to open the Spectral Fit Parameters Table for viewing or changing spectral fit parameter settings.  Note that this is a modified version of the Spectral Fit Parameters Table, without interactive plots.</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Sea State</p>
+<p class="body">Select this module to compute probability and extreme statistics for use as Metocean design criteria in engineering studies.  Text box specifies the name of the sea state parameter set to use.  Click Modify to open the Sea State Parameters Table for viewing or changing sea state parameter settings.  Note that this is a modified version of the Sea State Parameters Table, without interactive plots.</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Display Waitbars</p>
+<p class="body">Use this option to turn the data processing Waitbars on or off.  The Waitbars will display during processing if the checkbox is checked.</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Error Log Option</p>
+<p class="body">Use this option to control the AutoWaves event/error log.  Only errors will be logged if the checkbox is checked.</p>
+<p class="body">&nbsp;</p>
+<p class="green-heading">Output Files</p>
+<p class="subheading">Save Data To (*.mat)</p>
+<p class="body">Click the check box to save a Matlab (*.mat) formatted processed data file that can be read back into XWaves.  Select the path and filename for the processed data file. </p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Save Data Options</p>
+<p class="body">Select from available output file options, single continuous file, individual files, or monthly files. Not all options are available for every data type. If individual files are selected, the output file naming convention will be  <input file name>_<suffix>. The suffix is unique to the type of output file. For example the suffix for Export Wizard output is EW.</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Save Plots</p>
+<p class="body">Click the check box to save plots from each AutoWaves run.  The number of selected plots is displayed.  Click Modify to open the plot selection window.</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Export Wizard</p>
+<p class="body">Select this option to save processing results in custom ASCII, Matlab or EXCEL formatted files.  Text box specifies the name of the Export Wizard parameter set to use.  Click Modify to open the Export Wizard Table for viewing or changing data export options.  Click Browse to specify the location to save your Export Wizard data file.</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Save Spectral Coeff. To</p>
+<p class="body">Click the check box to save a Spectral Coefficient file.  Select the path and filename for the file. </p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Save BlueFat Table To</p>
+<p class="body">Click the check box to save a BlueFat Sea State History file. This produces a text file with sea state statistics from wave systems and spectral fit processing. Select the path and filename for the file export. Also browse to select the location of the Ship Heading File. This file is needed to output the BlueFat Table. </p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Save Wave Height Recurrence Table To</p>
+	<p class="body">If Sea State processing is selected, check this box to export a wave height recurrence table. Select the path and filename for the file export.</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">Save Wind Speed Recurrence Table To</p>
+	<p class="body">If Sea State processing is selected, check this box to export a wind speed recurrence table. Select the path and filename for the file export.</p>
+<p class="body">&nbsp;</p>
+
+<p class="green-heading">Activation Buttons</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">EXPORT</p>
+<p class="body">Select EXPORT to save Initialization Parameters and generate and save a text parameters file (run_parameters.txt).  You will be asked to pick filenames and locations for the export file.  See AutoWaves Help for additional information about using this file.</p>
+<p class="body">&nbsp;</p>
+<p class="subheading">EXIT</p>
+<p class="body">Select EXIT to leave the Initialization Table without saving any changes.</p>
+ </div>
+</div>

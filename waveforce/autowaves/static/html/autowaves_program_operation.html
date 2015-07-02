@@ -2,7 +2,36 @@
     <!-- group -->
     <div class="clearfix grpelem" id="u4355-560" data-muse-uid="U4355">
 
-
+    	<p class="body">The run_parameters text file provides the required data filenames and processing instructions to AutoWaves.  Included are parameters to specify data preparation (smoothing, sub-sampling), selected analyses, output graphical displays and output data files. There is no required naming convention on this text file and the user may have multiple versions for different applications. See <a href="references.html#collapse1">Parameter Field Description</a> for a detailed line-by-line description of the text parameters file contents.  <a href="loading_data.html#collapse0">Loading Data</a> includes information on importing data.  <a href="wave_systems_module.html#collapse1">Wave Systems Module</a> provides detail on selecting Wave Systems analysis parameters.  <a href="spectral_fitting_module.html#collapse1">Spectral Fit Module</a> provides detail on Spectral Fit parameters.  <a href="sea_state_analysis_module.html#collapse1">Sea State Module</a> provides detail on Sea State parameters and <a href="exporting_data.html#collapse0">Data Export</a> describes Export Wizard parameters. Furthermore, details on loading specific wind and wave data types are provided below (see <a href="program_operation.html#collapse1">Program Operation</a>).  </p><p class="body">&nbsp;</p>
+		<p class="body">Once a text parameters file has been created, program set up is finished and the command prompt window can be closed by the user by selecting the Exit button.</p>
+		<p class="body">&nbsp;</p>
+		<p class="green-heading">Launching AutoWaves</p>
+		<p class="body">Once set-up has been run, AutoWaves is launched like any other application on your computer.  There are three basic run options.  Each of these is described below.</p>
+		<p class="body">&nbsp;</p>
+		<p class="subheading">Run Option 1 – Clicking Run from the Splash Screen</p>
+		<p class="body">&nbsp;</p>
+		<p class="body">The autowaves.exe program can be launched by selecting Run on the Splash Screen.  The most recently selected or exported run_parameters text file will be used to provide data processing options.</p>
+		<p class="body">&nbsp;</p>
+		<p class="subheading">Run Option 2 – Windows Service Mode</p>
+		<p class="body">&nbsp;</p>
+		<p class="body">If the Windows Service Mode was selected during program set-up, the built-in Microsoft Windows scheduler is used.  The user must set up the Windows scheduler utility to select program run times and frequency. See the help guides for the particular Windows version that you are using.</p>
+		<p class="body">&nbsp;</p>
+		<p class="subheading">Run Option 3 – Called by another program</p>
+		<p class="body">&nbsp;</p>
+		<p class="body">The autowaves.exe program can be called by a third-party program running in the background.  If called without any additional inputs, the most recently selected run_parameters text file will be used. The program can also be called with a specific input to the desired run_parameters text file:</p>
+		<p class="body">&nbsp;</p>
+		<p class="body" align="center">autowaves “parameters_file”,</p>
+		<p class="body">&nbsp;</p>
+		<p class="body">where “parameters file” provides the complete path and filename of the desired parameters file. This mode is useful for applications that will use more than one parameters file.  </p>
+		<p class="body">&nbsp;</p>
+		<p class="subheading">Run Option 4 – Command Prompt</p>
+		<p class="body">&nbsp;</p>
+		<p class="body">AutoWaves can be directly launched from the command line with, or without the parameter file name as an input argument.  To run in this mode you must open a command prompt.  In Windows this is typically accomplished from the Start menu.  Once you have the command prompt available, set your current directory to the directory where autowaves.exe is located.  To run the program, enter the command:</p>
+		<p class="body">&nbsp;</p>
+		<p class="body" align="center">autowaves “parameters_file”</p>
+		<p class="body">&nbsp;</p>
+		<p class="body">where  “parameters_file” is the complete path and filename of the desired run_parameters file.</p>
+		<p class="body">&nbsp;</p>
 		<p class="body">Data import, processing, generation of output products are automatic when AutoWaves is launched.  If waitbars are set to ‘on’ in the parameters file, they will be displayed to inform the user of program progress.  When processing is complete, output products are automatically written to the filename and location specified in the parameters file.
 		For troubleshooting you can launch AutoWaves from a command prompt (Run Option 4).  Any generated error messages will be written to the command prompt window.</p>
 		<p class="body">&nbsp;</p>

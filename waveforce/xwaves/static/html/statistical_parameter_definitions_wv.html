@@ -1,0 +1,89 @@
+ 
+
+<div class="AccordionPanelContent disn clearfix colelem" id="u4459">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u4534-141" data-muse-uid="U4534">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U4534" template="definitions---methods.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="body">A variety of statistical parameters are calculated by the software and can be exported for additional use.&nbsp; Here we provide the definitions of these parameters.</p>
+        <p class="body">&nbsp;</p>
+        <p class="blue-heading">Metadata Fields</p>
+        <p class="subheading">Date and Time</p>
+        <p class="body">A Matlab serial date number is stored for each wave record and corresponding statistical parameter.&nbsp; The serial date number represents the whole and fractional number of days from a fixed, preset date (January 0, 0000). Upon exporting, date and time is converted to a standard string format: yyyy-mm-dd HH:MM:SS.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Typically the data are assumed to be referenced to Greenwich Mean Time (GMT).&nbsp; However the wavedat data structure allows inclusion of a time zone field which specifies the offset from GMT in hours.&nbsp; See Data Formats for additional information.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Location</p>
+        <p class="body">Each data set is referenced to a specific geographic location.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Latitude is saved in decimal degrees (+N/-S)</p>
+        <p class="body">Longitude is saved in decimal degrees (+E/-W)</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Water Depth</p>
+        <p class="body">Each data set is referenced to a specific water depth.</p>
+        <p class="body">Water Depth (m) is saved as a positive number with mean sea level as 0.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Wind Parameters</p>
+        <p class="body">Wind information can either be imported or estimated by the software.&nbsp; Saved wind information includes speed (m/s) and direction (deg from N).</p>
+        <p class="body">Wind data can be stored with reference to a measurement height above the ocean surface, windz (m).&nbsp; Otherwise the reference height is assumed to be 10 m.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Wave Parameters</p>
+        <p class="body">Wave statistics can be computed from the full wave spectrum, wave spectrum partitions, or from model fits to the spectrum (JONSWAP, Lognormal, etc.). In all cases the equations are the same.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Wave Spectrum</p>
+        <p class="body">The <i>Directional Wave Spectrum S(f,&theta;) </i>provides the distribution of wave ‘energy’ or variance (m<SUP>2</SUP>/(Hz*deg)) as a function of wave frequency <i>f</i> (Hz) and wave direction <i>&theta;</i> (<i>deg</i> from <i>N</i>).</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Integration of <i>S(f,&theta;)</i> over direction yields the <i>Frequency Spectrum</i></p>
+        <p class="body">&nbsp;</p>
+        <p class="body">\( E(f)=\int S(f,\theta)d \theta \)&nbsp; (m<SUP>2</SUP>/Hz).</p><p class="body">&nbsp;</p>
+        <p class="body">Likewise, integration of <i>S(f,&theta;)</i> over frequency yields the <i>Direction Spectrum</i></p><p class="body">&nbsp;</p>
+        <p class="body">\( G(\theta)=\int S(f,\theta)d f \) &nbsp;(m<SUP>2</SUP>/deg).</p><p class="body">&nbsp;</p>
+        <p class="body">With the total energy (variance) in the spectral domain given by the zeroth moment</p><p class="body">&nbsp;</p>
+        <p class="body">\( e = m_0=\int E(f)df \)&nbsp; (m<SUP>2</SUP>).</p><p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Wave Statistics</p>
+        <p class="body">A variety of statistical parameters are computed from the wave spectra, including the <i>Significant Wave Height</i>, approximated by <i>H<SUB>mo</SUB></i></p><p class="body">&nbsp;</p>
+        <p class="body">\( H\sim H_{mo}=4\sqrt{m_0} \)&nbsp;(m);</p><p class="body">&nbsp;</p>
+        <p class="body">the Peak Wave Period</p><p class="body">&nbsp;</p>
+        <p class="body">\( T_p = \frac{1}{f_p} \) &nbsp;(s),</p><p class="body">&nbsp;</p>
+        <p class="body">with <i>Peak Wave Frequency fp</i> computed from a 3-point parabolic fit to the <i>Frequency Spectrum</i> peak;</p>
+        <p class="body">the <i>Mean Wave Period</i> (zero-crossing)</p><p class="body">&nbsp;</p>
+        <p class="body">\( T_{02} = \sqrt{\frac{m_0}{m_{02}}} \)&nbsp;(s),</p><p class="body">&nbsp;</p>
+        <p class="body">with the second moment given by</p><p class="body">&nbsp;</p>
+        <p class="body">\( m_{02} = \int{E(f)f^2}df \)  </p><p class="body">&nbsp;</p>
+        <p class="body">The deep-water <i>Wavelength</i> is calculated from the <i>Mean Wave Period</i></p><p class="body">&nbsp;</p>
+        <p class="body">\( L_{02} = \frac{gT^2_{02}}{2\pi} \) &nbsp;(m),</p><p class="body">&nbsp;</p>
+        <p class="body">And the deep water <i>Phase Speed</i> is given by</p><p class="body">&nbsp;</p>
+        <p class="body">\( C_{p} = \frac{gT_{p}}{2\pi} \) &nbsp;(m/s),</p><p class="body">&nbsp;</p>
+        <p class="body">with gravitational acceleration <i>g=9.81 m/s<SUP>2</SUP></i>.</p>
+        <p class="body">The <i>Peak Direction</i> (deg from N) is the directional bin with the highest total energy (summed over frequency).</p><p class="body">&nbsp;</p>
+        <p class="body">Also computed is the <i>Mean Wave Direction</i></p><p class="body">&nbsp;</p>
+        <p class="body">\( D_m = atan2[b_1^b, a_1^b]\frac{180}{\pi} \)</p><p class="body">&nbsp;</p>
+        <p class="body">with bulk Fourier coefficients</p><p class="body">&nbsp;</p>
+        <p class="body">\( a_1^b = \frac{1}{e}\int_{f1}^{f2}a_1(f)E(f)df \) ,
+        <p class="body">\( b_1^b = \frac{1}{e}\int_{f1}^{f2}b_1(f)E(f)df \) ;,</p><p class="body">&nbsp;</p>
+        <p class="body">where</p><p class="body">&nbsp;</p>
+        <p class="body">\( a_1(f) = \int{\frac{S(f,\theta)}{E(f)}}\cos\theta d\theta \) ,</p>
+        <p class="body">\( b_1(f) = \int{\frac{S(f,\theta)}{E(f)}}\sin\theta d\theta \) ,</p><p class="body">&nbsp;</p>
+        <p class="body">and the <i>Directional Spread</i></p><p class="body">&nbsp;</p>
+        <p class="body">\( s_p = [2(1-m_1)]^{\frac{1}{2}} \) ,</p><p class="body">&nbsp;</p>
+        <p class="body">where</p><p class="body">&nbsp;</p>
+        <p class="body">\( m_1 = [(a_1^b)^2 + (b_1^b)^2]^{\frac{1}{2}} \).</p><p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">References</p>
+        <p class="body">O'Reilly, W. C., T. H. C. Herbers, R. J. Seymour, and R. T. Guza, 1996. A comparison of directional buoy and fixed platform measurements of pacific swell. J. Atmos. Ocean. Tech. 13(1), 231-238.</p>
+        <p class="body">Kuik, A. J., G. P. van Vledder, and L. H. Holthuijsen, 1988.&nbsp; A method for the routine analysis of pitch-and-roll buoy wave data, J. Phys. Oceanogr., 18, 1020–1034.</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Additional Information</p>
+        <p class="body"><a href="?dummy=$4#collapse0">Data Formats</a></p>
+        <p class="body"><a href="?dummy=$4#collapse3">Direction Conventions</a></p>
+        <p class="body"><a href="exporting_data.html#collapse0">Data Export Wizard</a></p>
+<!--         <p class="body"><a href="spectral_fitting_module.html#collapse0">Spectral Fitting</a></p>
+        <p class="body"><a href="sea_state_analysis_module.html#collapse0">Sea State Analysis</a></p> -->
+        <!-- <p class="body"><a href="evaluation_module.html#collapse0">Data Evaluation</a></p> -->
+        <p class="body">&nbsp;</p>
+        <p id="u4534-139">&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>
+</li>

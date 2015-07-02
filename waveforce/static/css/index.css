@@ -139,6 +139,12 @@ body{
 	background-color: #FFFFFF;
 }
 
+.awparams
+{
+	font-family: "Courier New";
+	/*font-style: italic*/
+}
+
 #page
 {
 	z-index: 1;
@@ -680,6 +686,7 @@ body
 	padding-top: 36px;
 	padding-bottom: 36px;
 	height: 100%; /* needed for container min-height */
+	/*overflow-x: hidden;*/
 }
 
 #page .verticalspacer

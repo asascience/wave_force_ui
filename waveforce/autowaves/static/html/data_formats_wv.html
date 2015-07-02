@@ -1,0 +1,489 @@
+ 
+
+<div class="AccordionPanelContent disn clearfix colelem" id="u4354">
+    <!-- group -->
+    <div class="clearfix grpelem" id="u4355-560" data-muse-uid="U4355">
+        <!-- content -->
+        <!-- m_editable region-id="editable-static-tag-U4355" template="reference.html" data-type="html" data-ice-options="disableImageResize,none" -->
+        <p class="body">There are a variety of data types that can be loaded.&nbsp; The specific data types are described below.&nbsp; See the tutorial on <a href="?dummy=$4#collapse3">Direction Conventions</a> for information of how wind and wave directions are stored and displayed.</p>
+        <p class="body">&nbsp;</p>
+        <p class="purple-heading">1. Raw Wind and Wave Data</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Raw data are the original wind and wave data files that are loaded.&nbsp; Raw wave spectrum data come in many forms and are typically produced by instrument- or model-specific applications.&nbsp; These data can be in ASCII or binary format and include various pieces of header information for identifying observation parameters such as time, location, water depth, etc.&nbsp; Raw wind data are stored in a MATLAB&trade; *.<span id="u4355-8">mat </span>file.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Specific data types supported are listed below.&nbsp; Click on individual data types for specific data format detail.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body" id="u4355-17">• <a href="data_formats.html#collapse0"> NORTEK WFT data from STORM</a></p>
+        <p class="body" id="u4355-20">• <a href="data_formats.html#collapse1">Datawell Waverider&nbsp; SPT data</a></p>
+        <p class="body" id="u4355-23">• <a href="data_formats.html#collapse2">Coastal Data Information Program (CDIP) data</a></p>
+        <p class="body" id="u4355-26">• <a href="data_formats.html#collapse3">Triaxys DIRSPEC data</a></p>
+        <p class="body" id="u4355-29">• <a href="data_formats.html#collapse4">Oceanweather Inc. hindcast data</a></p>
+        <p class="body" id="u4355-32">• <a href="data_formats.html#collapse5">WAMOS FTM data</a></p>
+        <p class="body" id="u4355-35">• <a href="data_formats.html#collapse6">Wavescan spectra files</a></p>
+        <p class="body" id="u4355-38">• <a href="data_formats.html#collapse7">Wavescan time series files</a></p>
+        <p class="body" id="u4355-41">• <a href="data_formats.html#collapse8">Rowe Technologies time series files</a></p>
+        <p class="body" id="u4355-43">• <a href="data_formats.html#collapse9">WAVEWATCH III model spectra files</a></p>
+        <p class="body" id="u4355-46">• <a href="data_formats.html#collapse10">SWAN model spectra files</a></p>
+        <p class="body" id="u4355-49">• <a href="data_formats.html#collapse11">ASL Wave Profiler data</a></p>
+        <p class="body" id="u4355-52">• <a href="data_formats.html#collapse12">Generic 2D</a></p>
+        <p class="body" id="u4355-55">• <a href="data_formats.html#collapse13">Generic 1D</a></p>
+        <p class="body" id="u4355-58">• <a href="data_formats.html#collapse14">Generic ASCII</a></p>
+        <p class="body" id="u4355-61">• <a href="data_formats.html#collapse15">NDBC real-time data (Disk file and WWW download)</a></p>
+        <p class="body" id="u4355-64">• <a href="data_formats.html#collapse16">NODC Historical data (Disk file and WWW download)</a></p>
+        <p class="body" id="u4355-67">• <a href="data_formats.html#collapse17">NetCDF-formatted data</a></p>
+        <p class="body">&nbsp;</p>
+        <p class="body">When available, wind data can also be loaded to improve the analysis of the wave data.&nbsp; There are two types of MATLAB (*.mat) wind files that can be loaded.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">For wind speed and direction data, a matrix named ‘wind’ has the following data columns:</p>
+        <p class="body" id="u4355-76">1. Year (YYYY)</p>
+        <p class="body" id="u4355-79">2. Month (MM)</p>
+        <p class="body" id="u4355-82">3. Day (DD)</p>
+        <p class="body" id="u4355-85">4. Hour (hhhh)</p>
+        <p class="body" id="u4355-88">5. Minute (mm)</p>
+        <p class="body" id="u4355-91">6. Second (ss)</p>
+        <p class="body" id="u4355-94">7. Wind direction (deg from North)</p>
+        <p class="body" id="u4355-97">8. Wind speed (m/s)</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">In the above wind file, the column containing Second (ss) data is optional.&nbsp; Thus this file can have 7 or 8 columns of data.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">The second type of wind data than can be loaded is Friction Velocity (u*).&nbsp; This is also a MATLAB file with the name ‘wind’.&nbsp; However in this case the data are in a structure:</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;wind.time – row vector of datenum times for the observations</p>
+        <p class="body">&nbsp;wind.ustar – row vector of friction velocity (m/s) values</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">It is anticipated that the above 2 wind file types will be merged in the future.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">Custom data formatters are available by request from WaveForce Technologies</p>
+        <p class="body">&nbsp;</p>
+        <p class="purple-heading">2. Processed Data</p>
+        <p class="body">Processed data are stored in special output structure called <span id="u4355-119">wavedat.</span>&nbsp; Each processing module adds specific fields into this structure.&nbsp; A summary of the <span id="u4355-121">wavedat</span> fields associated with each processing step is given below.</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Loaded Wave Data</p>
+        <p class="body">Loading wave data in <a href="getting_started.html#collapse3">Start Up</a> creates a new wavedat structure with the following fields:</p>
+        <p class="body">&nbsp;</p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 style='margin-left:.5in;border-collapse:collapse;border:none;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:
+ none'>
+            <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>file: (string)</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Processing History</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:1'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>name: (string)</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Data Set Name</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:2'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>size: (double)</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Number of Records</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:3'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>time: [1x <i style='mso-bidi-font-style:normal'>size</i> double]
+                    </p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Observation Date and Time as MATLAB Serial Date Number</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:4'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>espt: {1x <i style='mso-bidi-font-style:normal'>size</i> cell}
+                    </p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Directional Wave Spectra (m<sup>2</sup>/(hz x deg)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:5'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>dwAvv: {1x <i style='mso-bidi-font-style:normal'>size</i> cell}
+                    </p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>1D Energy-Frequency Spectra</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:6'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>df: [1x nfreq double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Array of Frequency Bin Differentials (dwfhz(n+1) – dwfhz(n))
+                    </p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:7'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>da: (double)</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Angle Bin Width (deg)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:8'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>dwfhz: [1x nfreq double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Array of Frequency Bins (Hz)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:9'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>dwdeg: [1x nang double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Array of Angle Bins (deg)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:10'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>hs: [1x <i style='mso-bidi-font-style:normal'>size</i> double]
+                    </p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Significant Wave Height (m)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:11'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>fp: [1x <i style='mso-bidi-font-style:normal'>size</i> double]
+                    </p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Peak Frequency (Hz)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:12'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>tz: [1x <i style='mso-bidi-font-style:normal'>size</i> double]
+                    </p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Zero Crossing Period (s)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:13'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>dm: [1x <i style='mso-bidi-font-style:normal'>size</i> double]
+                    </p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Mean Wave Direction (Deg From North)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:14'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>thetap: [1x <i style='mso-bidi-font-style:normal'>size</i> double]
+                    </p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Peak Wave Direction (Deg From North)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:15'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>sp: [1x <i style='mso-bidi-font-style:normal'>size</i> double]
+                    </p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Directional Spread (deg)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:16'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>winddir: [1x <i style='mso-bidi-font-style:normal'>size</i> double]
+                    </p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Wind Direction (Deg From North)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:17'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>windspeed: [1x <i style='mso-bidi-font-style:normal'>size</i> double]
+                    </p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Wind Speed (m/s)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:18'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>ustar: [1x<i style='mso-bidi-font-style:normal'> size</i> double]
+                    </p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Friction Velocity (m/s) – this field is optional</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:19'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>type: '2D' or ‘1D’,</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Specifies Directional or Non-Directional Data</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:20'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>lat: (double)</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Latitude (decimal degrees +N/-S)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:21'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>lon: (double)</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Longitude (decimal degrees +E/-W)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:22'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>depth: (double)</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Water Depth (m)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:23'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>param_rfmt: [1x1 struct]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Reformat Parameters used to Load Data Set</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:24;mso-yfti-lastrow:yes'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>RecordsList {<i style='mso-bidi-font-style:normal'>size </i>x 1 cell}</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Date and Time String for each Record</p>
+                </td>
+            </tr>
+        </table>
+        <!-- <p class="body">file: (string) Processing History</p>
+        <p class="body">name: (string) Data Set Name</p>
+        <p class="body">size: (double) Number of Records</p>
+        <p class="body">time: [1x size double] Observation Date and Time as MATLAB Serial Date Number</p>
+        <p class="body">espt: {1x size cell} Directional Wave Spectra (m2/(hz x deg)</p>
+        <p class="body">dwAvv: {1x size cell} 1D Energy-Frequency Spectra</p>
+        <p class="body">df: [1x nfreq double] Array of Frequency Bin Differentials (dwfhz(n+1) – dwfhz(n))</p>
+        <p class="body">da: (double) Angle Bin Width (deg)</p>
+        <p class="body">dwfhz: [1x nfreq double] Array of Frequency Bins (Hz)</p>
+        <p class="body">dwdeg: [1x nang double] Array of Angle Bins (deg)</p>
+        <p class="body">hs: [1x size double] Significant Wave Height (m)</p>
+        <p class="body">fp: [1x size double] Peak Frequency (Hz)</p>
+        <p class="body">tz: [1x size double] Zero Crossing Period (s)</p>
+        <p class="body">dm: [1x size double] Mean Wave Direction (Deg From North)</p>
+        <p class="body">thetap: [1x size double] Peak Wave Direction (Deg From North)</p>
+        <p class="body">sp: [1x size double] Directional Spread (deg)</p>
+        <p class="body">winddir: [1x size double] Wind Direction (Deg From North)</p>
+        <p class="body">windspeed: [1x size double] Wind Speed (m/s)</p>
+        <p class="body">ustar: [1x size double] Friction Velocity (m/s) – this field is optional</p>
+        <p class="body">type: '2D' or ‘1D’, Specifies Directional or Non-Directional Data</p>
+        <p class="body">lat: (double) Latitude (decimal degrees +N/-S)</p>
+        <p class="body">lon: (double) Longitude (decimal degrees +E/-W)</p>
+        <p class="body">depth: (double) Water Depth (m)</p>
+        <p class="body">param_rfmt: [1x1 struct] Reformat Parameters used to Load Data Set</p>
+        <p class="body">RecordsList {size x 1 cell} Date and Time String for each Record</p> -->
+        <p class="body">&nbsp;</p>
+        <p class="subheading">Processed Wave Data</p>
+        <p class="body" id="u4355-189">Running the <a href="wave_systems_module.html#collapse0">Wave Systems Module </a>adds the following new <span id="u4355-187">wavedat</span> fields:</p>
+        <p class="body">&nbsp;</p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 style='margin-left:.5in;border-collapse:collapse;border:none;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:
+ none'>
+            <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>out: [1x1 struct]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Wave Partitioning Results (See Below)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:1'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>parsum: [1x240 struct]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Wave Partition Templates</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:2'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>windtype: (string)</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Specifies Observed or Estimated Winds</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>param_trk: [1x1 struct]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Wave System Parameters used to Process Data Set</p>
+                </td>
+            </tr>
+        </table>
+        <!-- <p class="body">out: [1x1 struct] Wave Partitioning Results (See Below)</p>
+        <p class="body">parsum: [1x240 struct] Wave Partition Templates</p>
+        <p class="body">windtype: (string) Specifies Observed or Estimated Winds</p>
+        <p class="body">param_trk: [1x1 struct] Wave System Parameters used to Process Data Set</p> -->
+        <p class="body">&nbsp;</p>
+        <p class="body">The fields in wavedat.out contain information on the individual wave components (spectral partitions):</p>
+        <p class="body">&nbsp;</p>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 style='margin-left:.5in;border-collapse:collapse;border:none;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:
+ none'>
+            <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>time: [1xM double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Date and Time of Partition Record as MATLAB Serial Date Number
+                    </p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:1'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>azimuth: [1xM double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Mean Direction (Deg from True North)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:2'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>thetap [1xM double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Peak Direction (Deg from True North)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:3'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>freq: [1xM double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Peak Frequency (Hz)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:4'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>tz: [1xM double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Zero-Crossing Period (s)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:5'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>grp: [1xM double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Wave System Number</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:6'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>sys: [1xM double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Swell Event Number</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:7'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>totnrg: [1xM double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Total Energy (m<sup>2</sup>)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:8'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>sighight: [1xM double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Significant Wave Height (m)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:9'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>dirspread: [1xM<span style='mso-spacerun:yes'> 
+  </span>double]</p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal>Directional Spread (deg)</p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:10'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>par: [1xM
+  double]<o:p></o:p></span></p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>Partition
+  Number<o:p></o:p></span></p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+                <td width=191 valign=top style='width:143.6pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>wforce: [1xM
+  double]<o:p></o:p></span></p>
+                </td>
+                <td width=564 valign=top style='width:423.0pt;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>Wave Force
+  Ratio<o:p></o:p></span></p>
+                </td>
+            </tr>
+        </table>
+        <!-- <p class="body">time: [1xM double] Date and Time of Partition Record as MATLAB Serial Date Number</p>
+        <p class="body">azimuth: [1xM double] Mean Direction (Deg from True North)</p>
+        <p class="body">thetap [1xM double] Peak Direction (Deg from True North)</p>
+        <p class="body">freq: [1xM double] Peak Frequency (Hz)</p>
+        <p class="body">tz: [1xM double] Zero-Crossing Period (s)</p>
+        <p class="body">grp: [1xM double] Wave System Number</p>
+        <p class="body">sys: [1xM double] Swell Event Number</p>
+        <p class="body">totnrg: [1xM double] Total Energy (m2)</p>
+        <p class="body">sighight: [1xM double] Significant Wave Height (m)</p>
+        <p class="body">dirspread: [1xM&nbsp; double] Directional Spread (deg)</p>
+        <p class="body">par: [1xM double] Partition Number</p>
+        <p class="body">wforce: [1xM double] Wave Force Ratio</p> -->
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">*m is the total number of partitions found in all records</p>
+        <p class="body">&nbsp;</p>
+        <p class="body">&nbsp;</p>
+        <!-- <p class="body">xr: [1x6 double] Return Values (5, 10, 25, 50, 100, and 500 yrs)</p>
+        <p class="body">xrlo: [1x6 double] Lower Limit of the 95% Confidence Interval</p>
+        <p class="body">xrup: [1x6 double] Upper Limit of the 95% Confidence Interval</p>
+        <p class="body">k: (double) Estimated Shape Parameter</p>
+        <p class="body">sigma: (double) Estimated Scale Parameter</p>
+        <p class="body">mu: (double) Estimated Location Parameter</p> -->
+
+        <p class="purple-heading">3. Export Data</p>
+        <p class="body">A variety of data export options are offered, including image files, animations, and summary tables.&nbsp; See the <a href="exporting_data.html#collapse0">Data Export Wizard </a> for details on custom export tables in a variety of formats.</p>
+        <p id="u4355-558">&nbsp;</p>
+        <!-- /m_editable -->
+    </div>
+</div>

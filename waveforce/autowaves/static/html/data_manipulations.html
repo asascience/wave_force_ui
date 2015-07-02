@@ -7,7 +7,7 @@
         <!-- m_editable region-id="editable-static-tag-U4392" template="definitions---methods.html" data-type="html" data-ice-options="disableImageResize,none" -->
         <p class="body">The following data manipulations are facilitated by the Data Utilities Module.</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">Smooth Records</p>
+        <p class="green-heading">Smooth Records</p>
         <p class="body">The Smooth Records option performs a weighted running average over the specified records.&nbsp; The utility uses a user-specified duration (h) to select directional wave spectra records to smooth.&nbsp; A weighted smooth function is generated that provides 100% weighting at the center record and 50% weighting at the tails.&nbsp; All statistical parameters are then recalculated based on the smoothed spectra.</p>
         <p class="body">&nbsp;</p>
         <p class="body">If wind and/or friction velocity data are present, the wind directions are vector-averaged and the wind speeds are scalar averaged over the smoothing window.&nbsp; No taper is applied for winds.</p>
@@ -15,30 +15,30 @@
         <p class="body">&nbsp;</p>
         <p class="body">This feature is helpful for noisy spectra, usually obtained from short time series records, and will help reduce Wave Systems processing time by eliminating spurious peaks.</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">SubSample File</p>
+        <p class="green-heading">SubSample File</p>
         <p class="body">The SubSample option reduces user data file sizes by saving only those records that occur at a user-specified time interval (h).&nbsp;&nbsp;&nbsp; Records that fall in-between this interval are removed.</p>
         <p class="body">&nbsp;</p>
         <p class="body">For example, if a 3-h data subsample interval is selected for data that is provided hourly, the first record will be saved and the second and third records will be discarded.&nbsp; This pattern will repeat through the entire data set.</p>
         <p class="body">This feature is helpful for decreasing the size of large files, and will reduce Wave Systems processing time by providing fewer records to process.</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">Spectral Resolution</p>
+        <p class="green-heading">Spectral Resolution</p>
         <p class="body">The Spectral Resolution utility is used to change the frequency range, frequency resolution, and directional resolution of the wave spectra in a file.&nbsp; The user specifies the desired frequency range, number of frequency bins, and number of angle bins.&nbsp; A two-dimensional linear interpolation is then performed on the Input spectra S(f,&theta;) to result in the requested frequency and direction resolution.&nbsp; All statistical parameters are then recalculated based on the interpolated spectra.</p>
         <p class="body">&nbsp;</p>
         <p class="body">This utility can greatly reduce output file sizes and save on Wave Systems processing times for large data sets.&nbsp; It can also be used to smooth noisy spectra.</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">Append File</p>
+        <p class="green-heading">Append File</p>
         <p class="body">The Append File utility is used to append another data set to the beginning or end of the current user data set.&nbsp; Files selected to append must have observation times that either precede or follow the observation times of the user data in memory.</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">Subset File</p>
+        <p class="green-heading">Subset File</p>
         <p class="body">The Subset File utility allows the user to create a new data file from a subset of a loaded data file.&nbsp; The subsetting is performed based on user-provided start and stop times.</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">Remove Records</p>
+        <p class="green-heading">Remove Records</p>
         <p class="body">The Remove Records utility allows the user to discard records from a loaded data file.&nbsp; The records are removed based on user-provided start and stop times.</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">Rename</p>
+        <p class="green-heading">Rename</p>
         <p class="body">The Rename utility allows the user to change the name of a loaded data set.&nbsp; Selecting Rename will not cause any other data to be reprocessed or lost.</p>
         <p class="body">&nbsp;</p>
-        <p class="blue-heading">Additional Information:</p>
+        <p class="green-heading">Additional Information:</p>
         <p class="body" id="u4392-56"><a href="data_utilities_module.html#collapse0">Data Utilities Module</a></p>
         <p id="u4392-57">&nbsp;</p>
         <!-- /m_editable -->
