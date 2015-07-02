@@ -1,6 +1,0 @@
-{
-    "Importing Data" :
-        "../static/html/import_data.html"
-    ,"Working with NetCDF Files" :
-        "../static/html/working_with_netcdf.html"
-}

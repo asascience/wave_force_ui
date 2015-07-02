@@ -1,8 +1,0 @@
-{
-    "Evaluate Overview" :
-        "../static/html/evaluation_help.html"
-    ,"Evaluate Parameters Table" :
-        "../static/html/evaluate_parameters_table.html"
-    ,"Quick Compare" :
-        "../static/html/quick_compare.html"
-}
